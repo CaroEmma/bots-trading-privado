@@ -1,0 +1,42 @@
+name: Alpaca Turtle Bot (paper trading)
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # cada 15 min; Alpaca solo evalua vela nueva cada 4h, el resto de las corridas solo revisan el stop
+  workflow_dispatch: {}      # permite correrlo manualmente desde la pestaña Actions para probar
+
+concurrency:
+  group: alpaca-turtle
+  cancel-in-progress: false  # nunca cancelar una corrida a mitad de una orden; esperar a que termine
+
+permissions:
+  contents: write   # necesario para que el workflow pueda commitear estado.json / bot.log
+
+jobs:
+  correr-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r alpaca_bot/requirements.txt
+
+      - name: Correr un ciclo del bot (paper trading, fondos ficticios)
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python alpaca_bot/bot_github_actions.py
+
+      - name: Commitear estado actualizado (estado.json, bot.log)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add alpaca_bot/estado.json alpaca_bot/bot.log
+          git diff --cached --quiet || git commit -m "chore: actualizar estado del bot Turtle Alpaca [skip ci]"
+          git push
