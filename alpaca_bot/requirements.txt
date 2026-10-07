@@ -1,0 +1,3 @@
+# Sin dependencias externas: bot_github_actions.py, brokers.py, estrategia.py
+# usan solo la libreria estandar de Python (urllib, json, math, time).
+# Este archivo existe para que el workflow tenga un "pip install -r" valido.

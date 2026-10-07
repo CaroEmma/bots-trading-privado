@@ -1,0 +1,3 @@
+# Sin dependencias externas: tracker.py usa solo la libreria estandar
+# de Python (urllib, json, time). Este archivo existe para que el
+# workflow tenga un "pip install -r" valido.
