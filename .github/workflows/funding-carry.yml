@@ -1,0 +1,39 @@
+name: Funding-Carry Tracker (simulacion, datos publicos)
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"   # cada 2 horas; el funding real liquida cada 8h, esto da margen de sobra
+  workflow_dispatch: {}      # permite correrlo manualmente desde la pestaña Actions para probar
+
+concurrency:
+  group: funding-carry
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # necesario para que el workflow pueda commitear el estado acumulado
+
+jobs:
+  correr-tracker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r funding_carry/requirements.txt
+
+      - name: Correr el tracker (solo API publica de Binance, sin login ni keys)
+        run: python funding_carry/tracker.py
+
+      - name: Commitear estado acumulado (estado_funding_carry.json)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add funding_carry/estado_funding_carry.json
+          git diff --cached --quiet || git commit -m "chore: actualizar estado del tracker funding-carry [skip ci]"
+          git push
