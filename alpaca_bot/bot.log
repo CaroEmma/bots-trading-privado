@@ -243,3 +243,6 @@
 2026-10-23 05:47:41 UTC | Conectado a Alpaca PAPER | cuenta ACTIVE | equity=99999.88 USD
 2026-10-23 05:47:43 UTC | BTC/USD: vela 2026-10-23 00:00 UTC evaluada | close=81770.06 | entrada>86988.48 | salida<79691.87 | sin posicion
 2026-10-23 05:47:45 UTC | ETH/USD: vela 2026-10-23 00:00 UTC evaluada | close=2407.48 | entrada>2738.21 | salida<2322.09 | sin posicion
+2026-10-23 10:55:00 UTC | Conectado a Alpaca PAPER | cuenta ACTIVE | equity=99999.88 USD
+2026-10-23 10:55:03 UTC | BTC/USD: vela 2026-10-23 04:00 UTC evaluada | close=81461.26 | entrada>86988.48 | salida<79691.87 | sin posicion
+2026-10-23 10:55:05 UTC | ETH/USD: vela 2026-10-23 04:00 UTC evaluada | close=2398.12 | entrada>2738.21 | salida<2322.09 | sin posicion
