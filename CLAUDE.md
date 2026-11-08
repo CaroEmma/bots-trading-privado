@@ -27,6 +27,8 @@ Resumen (todo verificado en la sesión del 2026-11-08, salvo lo marcado):
 
 Pendientes (el usuario decide): (A) instalar en su Claude real y probar en paper; (B) `budget` + `risk` — **necesita del usuario [OBLIGATORIO] capital de la cuenta y pérdida máxima por operación**; (C) revisión línea por línea de `broker`, `risk`, `budget`; (D) adaptar/combinar con sus skills para CEDEARs; (E) prueba con mercado abierto (lunes 9/11 desde 9:30 ET: `scanner orb`, `entry watch`); (F) solo archivar. Opcional: nombre y email para `sec_user_agent` (SEC, 8-K, `trader-analyst`); no cargar un email sin que el usuario lo pida.
 
+**Bitcoin (pedido del usuario, 2026-11-08): leer `proyectos/day-trader-skill/BITCOIN.md`.** Capital definido por el usuario: USD 100. El pack NO soporta BTC (risk bloquea cripto, entry asume NYSE). Propuesta de Claude pendiente de confirmación: pérdida máx USD 1 por operación, USD 3 por día, 3 operaciones por día, R:R ≥ 1,5, sin apalancamiento. El bot Turtle de Alpaca Paper del repo (cuenta de USD 100.000) lleva 0 operaciones desde 2026-10-07.
+
 Reglas de prueba acordadas: **paper primero**; solo skills de lectura antes de cualquier broker; ninguna orden sin PASS de `trader-risk` + "yes" explícito del usuario + "Allow once"; herramienta de órdenes en "Needs approval"; claves solo en variables de entorno, **nunca en el chat**; no es consejo financiero.
 
 ## Dónde está guardado el proyecto

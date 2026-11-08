@@ -22,6 +22,7 @@ Archivos de esta carpeta:
 | `INSTALACION.md` | Cómo instalar y probar el pack, con versión fijada (commit). |
 | `CONVERSACION.md` | Registro completo de la charla: qué se pidió, qué se hizo, qué falló, decisiones. |
 | `PRUEBAS.md` | Resultados de las pruebas (tests, red, cadena entry → exit → timemachine) y hallazgos. |
+| `BITCOIN.md` | Pedido de probar en BTC con USD 100: el pack no soporta BTC, costos, ATR medido, margen de pérdida y alertas propuestos, decisiones pendientes. |
 
 Entorno para repetir pruebas en vivo: en Claude Code web elegir el entorno personal **"day-trader-skill (datos de mercado)"** (hosts de solo lectura permitidos: Yahoo, Nasdaq Trader, SEC, House Clerk, Stooq).
 
