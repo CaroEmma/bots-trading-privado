@@ -88,6 +88,16 @@ Contexto del usuario relevante al proyecto (de las skills que tiene en su cuenta
 
 Sugerencia de Claude: hacer A (solo skills de lectura, sin broker) + B antes de cualquier otra cosa.
 
-## 12. Registro de cambios de este archivo
+## 12. Prueba 01 (2026-11-08, tras "perfecto, lo probemos")
+
+- El usuario autorizó probar. Tests offline en copia aislada: **315 OK** (el primer intento falló por un error mío de invocación con `-t`; no es un fallo del repo).
+- Las fuentes de datos estaban bloqueadas por la red de la sesión (403). Se creó, con aprobación del usuario, el entorno personal "day-trader-skill (datos de mercado)" con 8 hosts de solo lectura y la sesión pasó a usarlo.
+- Skills probadas: news, scanner `universe`, entry, exit, timemachine. Sin broker ni órdenes. Hoy es domingo: se repitió la sesión del viernes 6/11 con `--now`.
+- Resultado y hallazgo principal (simulación levemente positiva vs historial real levemente negativo, R −0,067 en 34 disparos): ver `PRUEBAS.md`.
+- Pendiente de datos del usuario para seguir: capital y pérdida máxima por operación (budget / risk); opcional nombre y email para `sec_user_agent`.
+
+## 13. Registro de cambios de este archivo
+
+- 2026-11-08: sección 12 agregada con la Prueba 01.
 
 - 2026-11-08: creación, tras identificar el repo, guardar en Drive, adjuntar `CaroEmma/bots-trading-privado` e instalar las skills en la sesión.

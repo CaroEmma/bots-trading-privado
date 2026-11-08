@@ -21,6 +21,9 @@ Archivos de esta carpeta:
 | `FICHA.md` | Investigación técnica del repo (qué es, verificado / no verificado, riesgos). |
 | `INSTALACION.md` | Cómo instalar y probar el pack, con versión fijada (commit). |
 | `CONVERSACION.md` | Registro completo de la charla: qué se pidió, qué se hizo, qué falló, decisiones. |
+| `PRUEBAS.md` | Resultados de las pruebas (tests, red, cadena entry → exit → timemachine) y hallazgos. |
+
+Entorno para repetir pruebas en vivo: en Claude Code web elegir el entorno personal **"day-trader-skill (datos de mercado)"** (hosts de solo lectura permitidos: Yahoo, Nasdaq Trader, SEC, House Clerk, Stooq).
 
 ## Datos clave
 
@@ -42,8 +45,10 @@ Archivos de esta carpeta:
 - [x] Ficha guardada en Drive y en este repo.
 - [x] Las 11 skills copiadas a `~/.claude/skills/` **del entorno efímero de la sesión** (ver INSTALACION.md para instalarlas en tu Claude real).
 - [ ] Instalación en tu Claude de uso diario (Desktop / Code / claude.ai): **la tiene que hacer el usuario**, comandos en INSTALACION.md.
-- [ ] Tests del repo corridos en entorno aislado (bloqueados en la sesión por política de seguridad; requieren autorización explícita).
-- [ ] Prueba funcional en modo paper.
+- [x] Tests del repo corridos en copia aislada (2026-11-08): **315 tests OK**. Ver `PRUEBAS.md`.
+- [x] Prueba 01 en vivo de las skills de lectura (news, scanner universe, entry, exit, timemachine): OK. Ver `PRUEBAS.md`.
+- [ ] Prueba de budget / risk (necesita capital y pérdida máxima por operación del usuario).
+- [ ] Prueba con mercado abierto (scanner orb, entry watch) y prueba en paper con Alpaca.
 - [ ] Decisión de adaptación (CEDEARs/BYMA, cripto, integración con skills propias).
 
 ## Qué NO está verificado (no asumir)
