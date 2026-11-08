@@ -31,7 +31,7 @@ Todo candidato (comprado u omitido, con el motivo) queda en `decisiones.jsonl`; 
 
 ## Riesgo de condiciones de uso (no resuelto)
 
-Las sesiones de ALBA (hasta 340 min, casi 6,5 h por día hábil) son un uso intensivo de GitHub Actions para algo que no es CI/CD. Versiones anteriores de las condiciones de GitHub mencionan "serverless computing" entre los usos no previstos; no pude confirmar el texto vigente (consultado 2026-11-08, ver `proyectos/halcon/README.md`). Si GitHub lo considerara abuso podría cortar jobs o restringir Actions en el repo. ALBA necesita sesiones largas porque el cron de GitHub no es puntual. Alternativas si se quiere eliminar el riesgo: un servidor propio o un servicio de ejecución continua.
+Las sesiones de ALBA (hasta 340 min, casi 6,5 h por día hábil) son un uso intensivo de GitHub Actions para algo que no es CI/CD. Versiones anteriores de las condiciones de GitHub mencionan "serverless computing" entre los usos no previstos; no pude confirmar el texto vigente (consultado 2026-11-08, ver `proyectos/halcon/README.md`). **Decisión del usuario (2026-11-08): ALBA sigue como está, aceptando este riesgo.** Si GitHub lo considerara abuso podría cortar jobs o restringir Actions en el repo. ALBA necesita sesiones largas porque el cron de GitHub no es puntual. Alternativas si se quiere eliminar el riesgo: un servidor propio o un servicio de ejecución continua.
 
 ## Seguridad
 
