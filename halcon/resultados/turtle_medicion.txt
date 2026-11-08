@@ -1,0 +1,60 @@
+Reglas del bot: entrada = máx. de 120 velas 4h previas, salida = mín. de 60 velas, stop 2 x ATR(14), riesgo 2 % de la manga, costos 0.25 % + 0.05 % por lado
+
+=== BTC/USD | 4770 velas 4h | evaluable desde 2024-09-23 08:00:00 | 775 días
+  Estado AHORA (última vela cerrada 2026-11-07 20:00:00): cierre 75867.59 | entrada si cierra > 84898.00 (falta +11.9 %) | salida si < 74888.00 | ATR 790.65
+  Turtle: retorno de la manga -1.8 % (máx. caída 23.8 %) | comprar y mantener +19.6 %
+  todo       n=24 (0.9/mes) acierto 21% R neto -0.025 IC90 [-0.88;+0.90] FB 0.98 mejor +8.4R peor -1.4R barras prom 59 | azar +0.004 p/azar 0.473 | stop 19 canal 5 abierta 0
+  ajuste     n=15 (1.0/mes) acierto 20% R neto -0.143 IC90 [-1.08;+0.99] FB 0.86 mejor +6.6R peor -1.4R barras prom 54 | azar +0.000 p/azar 0.470 | stop 12 canal 3 abierta 0
+  validacion n= 9 (0.9/mes) acierto 22% R neto +0.173 IC90 [-1.23;+2.28] FB 1.18 mejor +8.4R peor -1.3R barras prom 67 | azar +0.009 p/azar 0.303 | stop 7 canal 2 abierta 0
+  Operaciones:
+    2024-09-26 -> 2024-09-30   65263.23 ->  63757.86  stop    -1.23R  ( 23 velas, 85 % de la manga)
+    2024-10-18 -> 2024-10-21   68735.34 ->  67026.39  stop    -1.21R  ( 18 velas, 79 % de la manga)
+    2024-10-28 -> 2024-11-03   69629.99 ->  68207.79  stop    -1.26R  ( 32 velas, 96 % de la manga)
+    2024-11-06 -> 2024-12-20   74348.53 ->  92723.99  canal   +6.59R  (267 velas, 55 % de la manga)
+    2025-01-17 -> 2025-01-19  104000.00 -> 101057.61  stop    -1.18R  ( 14 velas, 69 % de la manga)
+    2025-01-20 -> 2025-01-20  107120.65 -> 102342.76  stop    -1.12R  (  3 velas, 44 % de la manga)
+    2025-04-22 -> 2025-06-05   90934.61 -> 101914.76  canal   +4.86R  (266 velas, 85 % de la manga)
+    2025-07-02 -> 2025-07-04  109676.14 -> 107892.71  stop    -1.32R  ( 11 velas, 100 % de la manga)
+    2025-07-09 -> 2025-07-25  111749.99 -> 115419.65  canal   +1.62R  ( 93 velas, 100 % de la manga)
+    2025-08-11 -> 2025-08-11  121729.00 -> 119576.45  stop    -1.30R  (  3 velas, 100 % de la manga)
+    2025-08-13 -> 2025-08-14  122744.22 -> 120325.41  stop    -1.27R  (  5 velas, 99 % de la manga)
+    2025-09-12 -> 2025-09-15  116632.51 -> 114859.19  stop    -1.34R  ( 14 velas, 100 % de la manga)
+    2025-09-16 -> 2025-09-17  116800.13 -> 115192.69  stop    -1.38R  (  6 velas, 100 % de la manga)
+    2025-09-18 -> 2025-09-19  117581.67 -> 115608.59  stop    -1.31R  (  9 velas, 100 % de la manga)
+    2025-10-02 -> 2025-10-10  118594.99 -> 116542.01  stop    -1.30R  ( 47 velas, 100 % de la manga)
+    2026-01-04 -> 2026-01-08   91236.78 ->  89713.05  stop    -1.31R  ( 25 velas, 100 % de la manga)
+    2026-01-14 -> 2026-01-19   95413.99 ->  93351.59  stop    -1.24R  ( 31 velas, 90 % de la manga)
+    2026-03-04 -> 2026-03-06   71111.40 ->  67946.72  stop    -1.12R  ( 14 velas, 44 % de la manga)
+    2026-03-17 -> 2026-03-18   74884.67 ->  72822.11  stop    -1.19R  (  9 velas, 71 % de la manga)
+    2026-04-11 -> 2026-04-12   73687.16 ->  72018.93  stop    -1.23R  (  2 velas, 86 % de la manga)
+    2026-04-14 -> 2026-05-16   74418.00 ->  78369.78  canal   +1.79R  (189 velas, 77 % de la manga)
+    2026-07-14 -> 2026-07-17   64744.00 ->  63374.62  stop    -1.25R  ( 16 velas, 92 % de la manga)
+    2026-07-21 -> 2026-07-23   66186.86 ->  64832.52  stop    -1.26R  ( 14 velas, 95 % de la manga)
+    2026-08-19 -> 2026-10-08   68554.00 ->  81037.99  canal   +8.36R  (301 velas, 96 % de la manga)
+
+=== ETH/USD | 4770 velas 4h | evaluable desde 2024-09-23 08:00:00 | 775 días
+  Estado AHORA (última vela cerrada 2026-11-07 20:00:00): cierre 2240.24 | entrada si cierra > 2526.62 (falta +12.8 %) | salida si < 2174.08 | ATR 30.52
+  Turtle: retorno de la manga +27.1 % (máx. caída 18.5 %) | comprar y mantener -15.3 %
+  todo       n=17 (0.7/mes) acierto 29% R neto +0.826 IC90 [-0.51;+2.37] FB 2.03 mejor +10.6R peor -1.8R barras prom 60 | azar +0.031 p/azar 0.143 | stop 11 canal 6 abierta 0
+  ajuste     n= 9 (0.6/mes) acierto 44% R neto +1.793 IC90 [-0.37;+4.14] FB 3.51 mejor +10.6R peor -1.8R barras prom 77 | azar +0.103 p/azar 0.074 | stop 5 canal 4 abierta 0
+  validacion n= 8 (0.8/mes) acierto 12% R neto -0.261 IC90 [-1.17;+1.20] FB 0.71 mejor +5.1R peor -1.2R barras prom 40 | azar -0.074 p/azar 0.376 | stop 6 canal 2 abierta 0
+  Operaciones:
+    2024-10-20 -> 2024-10-22    2706.58 ->   2644.77  stop    -1.23R  (  9 velas, 86 % de la manga)
+    2024-11-07 -> 2024-12-19    2852.43 ->   3439.45  canal   +4.21R  (257 velas, 42 % de la manga)
+    2025-05-08 -> 2025-06-06    1901.09 ->   2414.02  canal   +7.37R  (174 velas, 56 % de la manga)
+    2025-06-11 -> 2025-06-12    2816.41 ->   2701.98  stop    -1.13R  ( 11 velas, 49 % de la manga)
+    2025-07-09 -> 2025-08-02    2656.84 ->   3488.21  canal   +10.62R  (141 velas, 70 % de la manga)
+    2025-08-08 -> 2025-08-19    4060.98 ->   4142.00  canal   +0.36R  ( 67 velas, 52 % de la manga)
+    2025-08-22 -> 2025-08-25    4833.00 ->   4587.53  stop    -1.10R  ( 15 velas, 39 % de la manga)
+    2025-10-06 -> 2025-10-08    4673.39 ->   4447.70  stop    -1.84R  (  3 velas, 68 % de la manga)
+    2025-12-09 -> 2025-12-12    3245.88 ->   3112.28  stop    -1.13R  ( 18 velas, 48 % de la manga)
+    2026-01-05 -> 2026-01-08    3185.86 ->   3117.09  stop    -1.24R  ( 19 velas, 91 % de la manga)
+    2026-01-14 -> 2026-01-19    3325.83 ->   3226.98  stop    -1.18R  ( 31 velas, 66 % de la manga)
+    2026-03-04 -> 2026-03-06    2150.23 ->   2025.18  stop    -1.09R  ( 12 velas, 34 % de la manga)
+    2026-03-16 -> 2026-03-18    2235.67 ->   2154.33  stop    -1.14R  ( 17 velas, 54 % de la manga)
+    2026-04-08 -> 2026-04-29    2240.01 ->   2233.69  canal   -0.22R  (126 velas, 51 % de la manga)
+    2026-07-14 -> 2026-07-17    1875.22 ->   1817.17  stop    -1.17R  ( 18 velas, 64 % de la manga)
+    2026-08-19 -> 2026-09-02    2085.83 ->   2381.87  canal   +5.12R  ( 84 velas, 76 % de la manga)
+    2026-09-21 -> 2026-09-23    2725.38 ->   2640.14  stop    -1.17R  ( 14 velas, 63 % de la manga)
+
+=== Cuenta completa (2 mangas de USD 50000): retorno +12.6 % sobre USD 100000 | operaciones: 41

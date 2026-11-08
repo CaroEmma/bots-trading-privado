@@ -122,3 +122,37 @@ class TestEstadistica(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestMedirTurtle(unittest.TestCase):
+    def setUp(self):
+        import medir_turtle as mt
+        self.mt = mt
+
+    def armar(self, n=12):
+        o = [100.0] * n; l = [100.0] * n
+        ind = [{"close": 100.0, "min_salida": 90.0, "max_entrada": 120.0, "atr": 1.0} for _ in range(n)]
+        return o, l, ind
+
+    def test_stop_intravela(self):
+        o, l, ind = self.armar()
+        l[4] = 97.0                       # stop = 100*(1+slip) - 2*ATR ~ 98,05 -> se toca
+        ref, tipo, j, dist = self.mt.simular_salida(3, ind, o, l, 100.0)
+        self.assertEqual((tipo, j, dist), ("stop", 4, 2.0))
+        self.assertLess(ref, 100.0)
+
+    def test_salida_por_canal_a_la_apertura_siguiente(self):
+        o, l, ind = self.armar()
+        ind[5]["close"] = 85.0            # cierra bajo el mínimo de las 60 previas
+        o[6] = 99.5
+        ref, tipo, j, _ = self.mt.simular_salida(3, ind, o, l, 100.0)
+        self.assertEqual((tipo, ref, j), ("canal", 99.5, 6))
+
+    def test_sigue_abierta_si_no_hay_salida(self):
+        o, l, ind = self.armar()
+        self.assertEqual(self.mt.simular_salida(3, ind, o, l, 100.0)[1], "abierta")
+
+    def test_costos_del_bot(self):
+        r, R = self.mt.cerrar(100.0, 100.0, 2.0)
+        self.assertAlmostEqual(r, -0.00598, places=4)
+        self.assertAlmostEqual(R, r / 0.02)
