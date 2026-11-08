@@ -456,6 +456,9 @@ def buscar_entradas(cfg, broker, pack, est, notif, ahora, h):
     escribir_config_pack(est, cfg)
     if not preparar_universo(cfg, pack, est, h):
         return
+    if ahora.timestamp() - h.get("ultimo_scan", 0) < ec["escaneo_cada_min"] * 60:
+        return  # no martillar Yahoo: el escáner corre cada escaneo_cada_min minutos
+    h["ultimo_scan"] = ahora.timestamp()
     for hit in candidatos(cfg, pack, est, ahora, h):
         if len(est.d["abiertas"]) >= ec["max_posiciones_abiertas"] or h["entradas"] >= pc["max_trades_per_day"]:
             break
@@ -490,6 +493,7 @@ def informe_diario(cfg, est, notif, ahora, h):
 # ============================================================ ciclo principal
 def ciclo(cfg, broker, pack, est, notif, ahora=None):
     reloj = broker.reloj()
+    est.ultimo_reloj = reloj
     ahora = ahora or parsear_fecha(reloj["timestamp"]).astimezone(NY)
     h = estado_del_dia(est, ahora.date().isoformat())
     abierto = bool(reloj.get("is_open"))
@@ -507,6 +511,73 @@ def ciclo(cfg, broker, pack, est, notif, ahora=None):
     buscar_entradas(cfg, broker, pack, est, notif, ahora, h)
     est.guardar()
     return "operando"
+
+
+def publicar_estado(directorio):
+    """Sube el estado a la rama alba-estado (mejor esfuerzo; nunca rompe la sesión)."""
+    def git(*a):
+        return subprocess.run(["git", "-C", directorio, *a], capture_output=True, text=True)
+    try:
+        git("add", "-A")
+        if git("diff", "--cached", "--quiet").returncode == 0:
+            return
+        git("commit", "-q", "-m", "alba: estado %s [skip ci]" % time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()))
+        for _ in range(3):
+            if git("push", "origin", "HEAD:alba-estado").returncode == 0:
+                return
+            git("fetch", "origin", "alba-estado")
+            git("rebase", "origin/alba-estado")
+    except Exception as e:  # noqa: BLE001
+        print("(aviso) no pude publicar el estado: %s" % e, flush=True)
+
+
+def sesion(cfg, broker, pack, est, notif, duracion_max_min=None, dormir=time.sleep, mono=time.monotonic,
+           publicar=None):
+    """Una sesión larga: repite el ciclo cada intervalo_s hasta el cierre del mercado (o hasta agotar
+    duracion_max_min). Así ALBA no depende de que GitHub cumpla un cron cada 5 minutos: alcanza con que
+    dispare una vez (hay disparos de respaldo)."""
+    sc = cfg["sesion"]
+    duracion = (duracion_max_min or sc["duracion_max_min"]) * 60
+    t0 = ultima_pub = mono()
+    errores = 0
+    while True:
+        try:
+            estado = ciclo(cfg, broker, pack, est, notif)
+            errores = 0
+        except Exception as e:  # noqa: BLE001 - un fallo de red pasajero no debe tirar la sesión
+            errores += 1
+            print("(error en el ciclo %d) %s" % (errores, e), flush=True)
+            if time.time() - est.d.get("ultimo_aviso_error", 0) > 3600:
+                est.d["ultimo_aviso_error"] = time.time()
+                notif.avisar("ALBA | ERROR en el ciclo", "`%s`\n\nSigo intentando; si se repite avisaré." % str(e)[:500])
+            est.guardar()
+            if errores >= sc["errores_seguidos_max"]:
+                raise
+            estado = "error"
+        if publicar and mono() - ultima_pub >= sc["publicar_cada_min"] * 60:
+            publicar()
+            ultima_pub = mono()
+        if mono() - t0 >= duracion:
+            print("Sesión: tiempo máximo alcanzado; sigue la corrida de relevo.", flush=True)
+            break
+        if estado == "cerrado":
+            r = getattr(est, "ultimo_reloj", {}) or {}
+            h = est.d.get("hoy", {})
+            informe_pendiente = h.get("sesion") and not h.get("informe")
+            minutos_a_abrir = None
+            try:
+                ahora = parsear_fecha(r["timestamp"])
+                minutos_a_abrir = (parsear_fecha(r["next_open"]) - ahora).total_seconds() / 60
+            except (KeyError, ValueError):
+                pass
+            espera_ok = minutos_a_abrir is not None and 0 <= minutos_a_abrir <= sc["espera_apertura_max_min"] \
+                and minutos_a_abrir * 60 + (mono() - t0) < duracion
+            if not (informe_pendiente or espera_ok):
+                print("Sesión: mercado cerrado y sin tareas pendientes; termino.", flush=True)
+                break
+        dormir(sc["intervalo_s"])
+    if publicar:
+        publicar()
 
 
 def diagnostico(broker, notif):
@@ -536,6 +607,8 @@ def main(argv=None):
     ap.add_argument("--estado", required=True, help="carpeta de estado (rama alba-estado)")
     ap.add_argument("--config", default=os.path.join(AQUI, "config.json"))
     ap.add_argument("--diagnostico", action="store_true")
+    ap.add_argument("--sesion", action="store_true", help="repetir el ciclo hasta el cierre del mercado")
+    ap.add_argument("--duracion-max-min", type=int, help="tope de duración de la sesión (minutos)")
     a = ap.parse_args(argv)
     cfg = leer_json(a.config)
     key, secret = claves_desde_entorno("ALBA_")
@@ -550,7 +623,11 @@ def main(argv=None):
     est = Estado(a.estado)
     pack = Pack(est.dir)
     try:
-        print("ALBA:", ciclo(cfg, broker, pack, est, notif))
+        if a.sesion:
+            sesion(cfg, broker, pack, est, notif, a.duracion_max_min, publicar=lambda: publicar_estado(est.dir))
+            print("ALBA: sesión terminada")
+        else:
+            print("ALBA:", ciclo(cfg, broker, pack, est, notif))
     except Exception as e:  # noqa: BLE001
         ahora = time.time()
         if ahora - est.d.get("ultimo_aviso_error", 0) > 3600:

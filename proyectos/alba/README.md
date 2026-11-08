@@ -1,11 +1,11 @@
 # ALBA — acciones de EE. UU. intradía, 100 % automático, dinero ficticio (Alpaca Paper)
 
-Estado (2026-11-08): **construido y probado offline; todavía no corre en la nube** (faltan 3 pasos del usuario, abajo).
+Estado (2026-11-08): **en `main`, con claves cargadas y diagnóstico de conexiones OK (Yahoo 200, Nasdaq Trader 200, Alpaca Paper ACTIVE con equity 5.000). Primera sesión real: lunes 2026-11-09.** 33 tests offline.
 Código: carpeta `alba/` del repo. Workflow: `.github/workflows/alba.yml`. Rama de trabajo: `claude/alba-halcon-bots`.
 
 ## Qué hace
 
-Usa las skills de [day-trader-skill](https://github.com/Jakeschincariol/day-trader-skill) (copia fijada, commit `3d0f4ef`, MIT, sin modificar, en `alba/vendor/`) encadenadas por un orquestador, sin que nadie intervenga. Cada 5 minutos, de lunes a viernes, en la nube de GitHub (con la compu apagada):
+Usa las skills de [day-trader-skill](https://github.com/Jakeschincariol/day-trader-skill) (copia fijada, commit `3d0f4ef`, MIT, sin modificar, en `alba/vendor/`) encadenadas por un orquestador, sin que nadie intervenga. De lunes a viernes, en la nube de GitHub (con la compu apagada), en una **sesión larga** que repite este ciclo cada minuto (el escáner, cada 5 min):
 
 | Paso | Skill | Qué hace el bot |
 |---|---|---|
@@ -20,6 +20,14 @@ Usa las skills de [day-trader-skill](https://github.com/Jakeschincariol/day-trad
 | 9 | — | A las 15:40 ET cierra todo lo abierto. Avisa cada compra, cada cierre y el informe diario con estadísticas. |
 
 Todo candidato (comprado u omitido, con el motivo) queda en `decisiones.jsonl`; cada operación cerrada en `operaciones.jsonl` (rama `alba-estado`).
+
+## Cómo corre: sesiones largas, no un cron frecuente
+
+**Hallazgo del 2026-11-08:** GitHub no cumple los crons al minuto. El workflow del bot Turtle está programado cada 15 min y en la práctica corre unas 4 veces por día (visto en la pestaña Actions). Un cron cada 5 minutos habría hecho perder señales y el cierre de las 15:40. Por eso cada corrida de ALBA es una **sesión de hasta 340 min** que revisa el mercado cada 60 s hasta el cierre (y espera la apertura si arranca antes). Disparos (UTC, lunes a viernes): 13:05, 13:35 y 14:05 inician la sesión; 18:30 y 19:05 son el relevo (una corrida de GitHub dura como máximo 360 min). Con `concurrency`, un disparo que llega con una sesión en curso queda en espera y arranca cuando esa termina.
+- El estado se sube a la rama `alba-estado` cada 10 min y al final.
+- Los stops y objetivos de las órdenes bracket son **GTC** (no vencen al cierre): si fallara el cierre de las 15:40, la posición sigue protegida y se cierra "de arrastre" en la apertura siguiente.
+- Consumo: ~6,5 h de runner por día hábil. En repos públicos es gratis; en privados el plan Free tiene tope de 2.000 min/mes.
+- Si los disparos de GitHub fallaran todos, ALBA no opera ese día (no hay riesgo, solo se pierde la sesión). Corrida manual: Actions → ALBA → Run workflow (opciones: solo diagnóstico, o un solo ciclo).
 
 ## Seguridad
 
@@ -56,7 +64,7 @@ Canal por defecto: un **issue** en el repo por cada compra / cierre / informe, c
 
 ## Qué NO está verificado
 
-- **Datos desde GitHub Actions:** Yahoo puede bloquear o limitar los pedidos desde servidores en la nube (desde la sesión de Claude respondió 429). Por eso existe el modo diagnóstico. Si falla, hay que cambiar la fuente de datos (Alpaca).
+- **Datos desde GitHub Actions:** el diagnóstico del 2026-11-08 dio Yahoo (endpoint chart) HTTP 200 y Nasdaq Trader HTTP 200, pero fue un solo pedido suelto: **no está verificado** que Yahoo aguante el volumen del escáner ORB ni que acepte la identificación de las skills. Si empieza a dar 429, hay que espaciar los pedidos o cambiar la fuente (Alpaca).
 - Comportamiento real de Alpaca Paper (órdenes bracket, fills, estados de las patas): probado solo con un broker simulado. La primera semana hay que vigilar los avisos.
 - Demora de los crons de GitHub (hasta 15–30 min según guías de terceros) y su desactivación tras 60 días sin actividad (no confirmada en documentación oficial).
 - Que la estrategia tenga ventaja estadística: **no se sabe**. Las estadísticas con pocas operaciones no concluyen nada; el informe lo aclara hasta llegar a 30.
@@ -71,4 +79,4 @@ El repo es **público**: la rama `alba-estado` muestra operaciones y posiciones 
 python3 -m unittest discover -s alba/tests -v
 ```
 
-23 tests: guardas de seguridad, flujo completo (compra, descartes, límites, cierres por objetivo / stop / horario, informe) y una cadena real entry → exit → timemachine → budget → risk sobre los datos guardados del repo original.
+33 tests: guardas de seguridad, flujo completo (compra, descartes, límites, cierres por objetivo / stop / horario, informe) y sesión larga (espera de apertura, tope de duración, errores pasajeros, informe tras el cierre), publicación real del estado con git contra un remoto local, y una cadena real entry → exit → timemachine → budget → risk sobre los datos guardados del repo original (esta última solo corre si están los fixtures del repo original).

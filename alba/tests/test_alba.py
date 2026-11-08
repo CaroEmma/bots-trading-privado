@@ -28,9 +28,19 @@ class BrokerFalso:
     def __init__(self, abierto=True):
         self.abierto, self.pos, self.ordenes, self.colocadas, self.cerradas = abierto, {}, {}, [], []
         self.fill_precio = 102.0
+        self.secuencia = []          # lista de (abierto, timestamp); se consume de a uno
+        self.timestamp = "2026-11-09T10:15:00.123456789-05:00"
+        self.next_open = "2026-11-10T09:30:00-05:00"
+        self.fallar = 0              # cuántas llamadas a reloj() deben fallar
+        self.llamadas_reloj = 0
 
     def reloj(self):
-        return {"is_open": self.abierto, "timestamp": "2026-11-09T10:15:00.123456789-05:00"}
+        self.llamadas_reloj += 1
+        if self.fallar > 0:
+            self.fallar -= 1
+            raise RuntimeError("sin red")
+        abierto, ts = self.secuencia.pop(0) if self.secuencia else (self.abierto, self.timestamp)
+        return {"is_open": abierto, "timestamp": ts, "next_open": self.next_open}
 
     def posiciones(self):
         return dict(self.pos)
@@ -144,7 +154,7 @@ class TestSeguridad(unittest.TestCase):
         AlpacaPaper("k", "s", http=http).colocar_bracket("TSLA", 9, "361.784", 351.2)
         c = visto["cuerpo"]
         self.assertEqual((visto["m"], visto["ruta"]), ("POST", "/v2/orders"))
-        self.assertEqual((c["side"], c["order_class"], c["qty"], c["time_in_force"]), ("buy", "bracket", "9", "day"))
+        self.assertEqual((c["side"], c["order_class"], c["qty"], c["time_in_force"]), ("buy", "bracket", "9", "gtc"))
         self.assertEqual((c["take_profit"]["limit_price"], c["stop_loss"]["stop_price"]), ("361.78", "351.20"))
 
     def test_sin_claves_no_hace_nada(self):
@@ -218,7 +228,7 @@ class TestCiclo(Base):
         pack = PackFalso(self.est, mc_r=-1)
         self.ciclo(pack)
         n = len([c for c in pack.llamadas if c[0] == "entry"])
-        self.ciclo(pack)
+        self.ciclo(pack, hora="2026-11-09 10:21")
         self.assertEqual(len([c for c in pack.llamadas if c[0] == "entry"]), n)
 
     def test_limite_de_trades_del_dia(self):
@@ -295,6 +305,128 @@ class TestCiclo(Base):
         self.broker.abierto = False
         self.assertEqual(self.ciclo(PackFalso(self.est), hora="2026-11-08 12:00"), "cerrado")
         self.assertEqual(self.broker.colocadas, [])
+
+
+class TestEscaneo(Base):
+    def test_el_escaner_corre_cada_cinco_minutos(self):
+        pack = PackFalso(self.est, mc_r=-1)
+        orb = lambda: len([c for c in pack.llamadas if c[0] == "scanner" and c[1][0] == "orb"])  # noqa: E731
+        self.ciclo(pack, hora="2026-11-09 10:15")
+        self.ciclo(pack, hora="2026-11-09 10:17")
+        self.assertEqual(orb(), 1)
+        self.ciclo(pack, hora="2026-11-09 10:21")
+        self.assertEqual(orb(), 2)
+
+
+class Reloj:
+    def __init__(self):
+        self.t = 0.0
+
+    def __call__(self):
+        return self.t
+
+
+class TestSesion(Base):
+    def correr(self, pack=None, duracion=None, publicar=None):
+        mono = Reloj()
+        dormidos = []
+
+        def dormir(s):
+            dormidos.append(s)
+            mono.t += s
+        oq.sesion(self.cfg, self.broker, pack or PackFalso(self.est), self.est, self.notif,
+                  duracion_max_min=duracion, dormir=dormir, mono=mono, publicar=publicar)
+        return dormidos
+
+    def test_termina_si_esta_cerrado_y_no_hay_nada_pendiente(self):
+        self.broker.abierto = False
+        self.broker.timestamp = "2026-11-08T12:00:00-05:00"   # domingo; la apertura es en ~21 h
+        self.assertEqual(self.correr(), [])
+        self.assertEqual(self.broker.llamadas_reloj, 1)
+
+    def test_espera_una_apertura_cercana(self):
+        self.broker.next_open = "2026-11-09T09:30:00-05:00"
+        self.broker.secuencia = [(False, "2026-11-09T09:00:00-05:00"), (False, "2026-11-09T09:01:00-05:00"),
+                                 (True, "2026-11-09T09:02:00-05:00")]
+        dormidos = self.correr(duracion=120)
+        self.assertGreaterEqual(len(dormidos), 2)
+
+    def test_no_espera_una_apertura_que_no_alcanza_a_ver(self):
+        self.broker.next_open = "2026-11-09T09:30:00-05:00"
+        self.broker.secuencia = [(False, "2026-11-09T09:00:00-05:00")]
+        self.assertEqual(self.correr(duracion=5), [])
+
+    def test_respeta_la_duracion_maxima(self):
+        dormidos = self.correr(duracion=3)
+        self.assertEqual(len(dormidos), 3)
+        self.assertEqual(self.broker.llamadas_reloj, 4)
+
+    def test_espera_el_informe_diario_tras_el_cierre(self):
+        oq.estado_del_dia(self.est, "2026-11-09")
+        self.est.d["hoy"].update(sesion=True, universo=True)
+        self.broker.abierto = False
+        self.broker.secuencia = [(False, "2026-11-09T16:01:00-05:00"), (False, "2026-11-09T16:06:00-05:00")]
+        self.broker.timestamp = "2026-11-09T16:06:00-05:00"
+        dormidos = self.correr()
+        self.assertEqual(dormidos, [60])
+        self.assertEqual(len([t for t, _ in self.notif.enviado if "Informe diario" in t]), 1)
+
+    def test_un_error_pasajero_no_tira_la_sesion(self):
+        self.broker.abierto = False
+        self.broker.timestamp = "2026-11-08T12:00:00-05:00"
+        self.broker.fallar = 1
+        self.assertEqual(self.correr(), [60])
+        self.assertTrue(any("ERROR" in t for t, _ in self.notif.enviado))
+
+    def test_errores_seguidos_se_propagan(self):
+        self.broker.fallar = 999
+        self.cfg["sesion"]["errores_seguidos_max"] = 3
+        with self.assertRaises(RuntimeError):
+            self.correr()
+
+    def test_publica_el_estado(self):
+        llamadas = []
+        self.cfg["sesion"]["publicar_cada_min"] = 1
+        self.correr(duracion=3, publicar=lambda: llamadas.append(1))
+        self.assertGreaterEqual(len(llamadas), 2)
+
+
+class TestPublicarEstado(unittest.TestCase):
+    """Replica el armado del workflow (rama huérfana en un worktree) contra un remoto local."""
+
+    def test_publica_en_la_rama_alba_estado(self):
+        import subprocess
+        raiz = tempfile.mkdtemp()
+        try:
+            def g(*a, cwd=raiz):
+                return subprocess.run(["git", *a], cwd=cwd, capture_output=True, text=True, check=True).stdout
+            g("init", "-q", "--bare", "-b", "main", "remoto.git")
+            g("clone", "-q", "remoto.git", "repo")
+            repo = os.path.join(raiz, "repo")
+            g("config", "user.email", "t@t", cwd=repo)
+            g("config", "user.name", "t", cwd=repo)
+            open(os.path.join(repo, "a.txt"), "w").close()
+            g("add", ".", cwd=repo)
+            g("commit", "-q", "-m", "init", cwd=repo)
+            g("push", "-q", "origin", "HEAD:main", cwd=repo)
+            g("worktree", "add", "-q", "--detach", "estado", "HEAD", cwd=repo)
+            estado = os.path.join(repo, "estado")
+            g("checkout", "-q", "--orphan", "alba-estado", cwd=estado)
+            g("rm", "-rq", "--cached", ".", cwd=estado)
+            os.remove(os.path.join(estado, "a.txt"))
+            with open(os.path.join(estado, "alba_estado.json"), "w") as f:
+                f.write("{}")
+            oq.publicar_estado(estado)
+            self.assertIn("alba_estado.json", g("ls-tree", "--name-only", "alba-estado", cwd=os.path.join(raiz, "remoto.git")))
+            self.assertNotIn("a.txt", g("ls-tree", "--name-only", "alba-estado", cwd=os.path.join(raiz, "remoto.git")))
+            with open(os.path.join(estado, "alba_estado.json"), "w") as f:
+                f.write('{"x": 1}')
+            oq.publicar_estado(estado)   # segundo push: incremental
+            self.assertEqual(g("rev-list", "--count", "alba-estado", cwd=os.path.join(raiz, "remoto.git")).strip(), "2")
+            oq.publicar_estado(estado)   # sin cambios: no crea commit
+            self.assertEqual(g("rev-list", "--count", "alba-estado", cwd=os.path.join(raiz, "remoto.git")).strip(), "2")
+        finally:
+            shutil.rmtree(raiz, ignore_errors=True)
 
 
 @unittest.skipUnless(os.path.isdir(FIX), "fixtures del repo original no disponibles")

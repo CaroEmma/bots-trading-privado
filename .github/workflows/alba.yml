@@ -1,20 +1,31 @@
 name: ALBA - acciones intradia (paper)
 
 # Corre solo en la nube de GitHub, con la compu apagada. Dinero ficticio (Alpaca Paper).
-# Cron en UTC: 13:00-21:59 de lunes a viernes cubre la sesion de NYSE (9:30-16:00 ET) en horario de verano e invierno;
-# fuera de mercado el ciclo termina enseguida. GitHub puede demorar los crons en horas de mucha carga.
+# GitHub NO cumple los crons al minuto (el bot Turtle, programado cada 15 min, corre ~4 veces por dia). Por eso ALBA
+# no depende de un cron frecuente: cada corrida es una SESION LARGA que revisa el mercado cada minuto hasta el cierre.
+# Disparos (UTC) de lunes a viernes: 13:05 / 13:35 / 14:05 inician la sesion (la apertura NYSE es 13:30 o 14:30 UTC segun
+# horario de verano); 18:30 y 19:05 son el relevo, porque una corrida dura como maximo 340 min (limite de GitHub: 360).
+# Si una sesion esta en curso, el disparo siguiente queda en espera (concurrency) y arranca cuando ella termina.
 on:
   schedule:
-    - cron: "*/5 13-21 * * 1-5"
+    - cron: "5 13 * * 1-5"
+    - cron: "35 13 * * 1-5"
+    - cron: "5 14 * * 1-5"
+    - cron: "30 18 * * 1-5"
+    - cron: "5 19 * * 1-5"
   workflow_dispatch:
     inputs:
       diagnostico:
         description: "Solo probar conexiones (Yahoo, Nasdaq Trader, Alpaca) y avisar el resultado"
         type: boolean
         default: false
+      un_ciclo:
+        description: "Correr UN solo ciclo y terminar (en vez de la sesion larga)"
+        type: boolean
+        default: false
 
 concurrency:
-  group: alba
+  group: ${{ (github.event_name == 'workflow_dispatch' && inputs.diagnostico) && 'alba-diagnostico' || 'alba' }}
   cancel-in-progress: false   # nunca cortar un ciclo a mitad de una orden
 
 permissions:
@@ -24,7 +35,7 @@ permissions:
 jobs:
   ciclo:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 355
     steps:
       - name: Checkout (codigo)
         uses: actions/checkout@v4
@@ -79,8 +90,10 @@ jobs:
         run: |
           if [ "${{ inputs.diagnostico }}" = "true" ]; then
             python alba/orquestador.py --estado estado --diagnostico
-          else
+          elif [ "${{ inputs.un_ciclo }}" = "true" ]; then
             python alba/orquestador.py --estado estado
+          else
+            python alba/orquestador.py --estado estado --sesion
           fi
 
       - name: Guardar el estado

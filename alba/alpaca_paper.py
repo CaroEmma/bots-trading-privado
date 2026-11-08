@@ -85,10 +85,12 @@ class AlpacaPaper:
 
     # ------------------------------------------------------------ operaciones
     def colocar_bracket(self, simbolo, qty, take_profit, stop_loss):
-        """Compra a mercado con take-profit y stop-loss en el servidor (orden bracket)."""
+        """Compra a mercado con take-profit y stop-loss en el servidor (orden bracket).
+        time_in_force gtc: el stop y el objetivo NO vencen al cierre, así que si falla el cierre
+        horario la posición sigue protegida (y se cierra de arrastre en la apertura siguiente)."""
         return self._http("POST", "/v2/orders", cuerpo={
             "symbol": simbolo, "qty": str(int(qty)), "side": "buy", "type": "market",
-            "time_in_force": "day", "order_class": "bracket",
+            "time_in_force": "gtc", "order_class": "bracket",
             "take_profit": {"limit_price": "%.2f" % float(take_profit)},
             "stop_loss": {"stop_price": "%.2f" % float(stop_loss)}})
 

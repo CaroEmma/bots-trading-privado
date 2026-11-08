@@ -8,7 +8,7 @@ Regla absoluta del usuario: **nunca inventar ni suponer** datos, valores, normas
 - Cuenta de GitHub `CaroEmma` es del usuario (lo confirmó). Su Drive/Gmail: ver el contexto de la sesión; no enviar el email a servicios no relacionados.
 - Perfil profesional: dirección, coordinación y control de obras de gasoductos (QA/QC, EPC, Excel, presentaciones ejecutivas).
 - Tiene skills propias de finanzas: `asesor-financiero-portfolio` (CEDEARs, Balanz / Cocos / Bull Market) y `trading-cripto-intradia`.
-- Este repo contiene sus **bots de trading en paper** (Alpaca Turtle BTC/ETH y funding-carry) que corren por cron en GitHub Actions y **commitean a `main` cada 15 min y cada 2 h**. No tocarlos ni pisarlos.
+- Este repo contiene sus **bots de trading en paper** (Alpaca Turtle BTC/ETH y funding-carry) que corren por cron en GitHub Actions y commitean a `main`. Programados cada 15 min / cada 2 h, pero **en la práctica GitHub los corre unas 4 veces por día** (visto el 2026-11-08); el funding-carry figura "Disabled". No tocarlos ni pisarlos.
 
 ## Proyectos activos
 
@@ -32,7 +32,7 @@ Pendientes (el usuario decide): (A) instalar en su Claude real y probar en paper
 ### 2. ALBA (acciones intradía) y HALCÓN (Bitcoin) — pedido del 2026-11-08
 
 El usuario pidió dos proyectos **separados, con estrategias distintas**, probados en **Alpaca Paper** (dinero ficticio), **100 % automáticos y 24/7 en la nube con la compu apagada**, que avisen cada operación y hagan el seguimiento. Cuando la estrategia esté comprobada y fundamentada se pasa a dinero real, y **recién ahí** hay que pedirle autorización por cada orden. Hoy en paper no hace falta el "yes" (lo autorizó él).
-- **ALBA** = `day-trader-skill` automatizado (ruptura del rango de apertura, acciones de EE. UU.). Código en `alba/`, workflow `.github/workflows/alba.yml`, docs en `proyectos/alba/README.md`. Estado: construido y probado offline (23 tests); falta que el usuario cargue los secrets `ALBA_ALPACA_KEY` / `ALBA_ALPACA_SECRET` (cuenta Alpaca Paper nueva) y autorice el merge a `main` (los crons solo corren desde la rama principal).
+- **ALBA** = `day-trader-skill` automatizado (ruptura del rango de apertura, acciones de EE. UU.). Código en `alba/`, workflow `.github/workflows/alba.yml`, docs en `proyectos/alba/README.md`. Estado: en `main`, 33 tests, secrets cargados por el usuario (cuenta Alpaca Paper "ALBA", equity 5.000), diagnóstico de conexiones OK el 2026-11-08. Corre en **sesiones largas** (no cron frecuente, porque GitHub no cumple los crons al minuto), stops GTC. Primera sesión real: lunes 2026-11-09. **Pendiente: revisar el lunes los issues/avisos y la rama `alba-estado`** (leer `https://api.github.com/repos/CaroEmma/bots-trading-privado/issues` sin token funciona porque el repo es público).
 - **HALCÓN** = Bitcoin 24/7, estrategia distinta a ALBA y al Turtle de 4 h existente. **Todavía no construido**: primero backtest de 2 o 3 candidatas con datos de ajuste y de validación separados y costos de Alpaca; no se elige ganadora sin eso. Secrets futuros: `HALCON_ALPACA_KEY` / `HALCON_ALPACA_SECRET`.
 - Los nombres ALBA y HALCÓN son propuestas de Claude, no confirmadas por el usuario.
 - Rutina de seguimiento semanal de ALBA: `trig_01Qjx3KMRYZV9CsK8aDBtwYj` (viernes 17:47 ET, solo lectura, push). Creada el 2026-11-08 a pedido del usuario.

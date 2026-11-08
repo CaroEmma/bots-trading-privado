@@ -27,6 +27,7 @@
   },
   "estrategia": {
     "escaneo_orb_desde": "09:50",
+    "escaneo_cada_min": 5,
     "max_posiciones_abiertas": 1,
     "max_candidatos_por_ciclo": 3,
     "max_edad_senal_min": 10,
@@ -35,6 +36,13 @@
     "objetivo": "2R",
     "gate_timemachine": "solo_mc",
     "cerrar_desde": "15:40"
+  },
+  "sesion": {
+    "intervalo_s": 60,
+    "espera_apertura_max_min": 120,
+    "duracion_max_min": 340,
+    "publicar_cada_min": 10,
+    "errores_seguidos_max": 20
   },
   "pausa_cierre_s": 2
 }
