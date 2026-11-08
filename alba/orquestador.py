@@ -27,7 +27,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
 
 from alpaca_paper import AlpacaPaper, ErrorAlpaca, claves_desde_entorno  # noqa: E402
-from notificar import Notificador, limpio, telegram_descubrir, telegram_probar, token_con_formato  # noqa: E402
+from notificar import Notificador, limpio, telegram_descubrir, telegram_probar, telegram_quien, token_con_formato  # noqa: E402
 
 VENDOR = os.path.join(AQUI, "vendor", "day-trader-skill")
 SCRIPTS = {
@@ -620,6 +620,9 @@ def telegram_cli(modo, env=None, abrir=None):
         print("Falta ALBA_TELEGRAM_TOKEN")
         return 1
     if modo == "descubrir":
+        quien, err_quien = telegram_quien(token, **kw)
+        cabecera = ("El token pertenece al bot **@%s** (nombre: %s). Es el mismo bot con el que tenés que hablar en Telegram.\n\n"
+                    % (quien["username"], quien["nombre"])) if quien and quien.get("username") else ""
         chats, error = telegram_descubrir(token, **kw)
         if error:
             texto = "No pude leer los chats: %s. Si dice 401 el token está mal copiado." % error
@@ -629,6 +632,7 @@ def telegram_cli(modo, env=None, abrir=None):
         else:
             texto = "Chats que le escribieron al bot:\n" + "\n".join("- `%s` (%s)" % (i, t) for i, t in chats.items()) + \
                     "\n\nCargá el número del chat tipo `private` como secret `ALBA_TELEGRAM_CHAT`."
+        texto = cabecera + texto
         n._resumen("ALBA | Telegram: descubrir chat", texto)
         print(texto)
         return 0 if (chats and not error) else 1

@@ -370,6 +370,18 @@ class TestTelegram(Base):
     def test_cli_avisa_si_el_token_no_tiene_formato(self):
         self.assertEqual(oq.telegram_cli("descubrir", env={"ALBA_TELEGRAM_TOKEN": "esto no es un token"}), 1)
 
+    def test_quien_es_el_bot_del_token(self):
+        from notificar import telegram_quien
+        r = _Resp({"ok": True, "result": {"id": 1, "is_bot": True, "first_name": "ALBA-AVISOS", "username": "alba_avisos_bot"}})
+        self.assertEqual(telegram_quien("tok", abrir=lambda url, timeout: r),
+                         ({"username": "alba_avisos_bot", "nombre": "ALBA-AVISOS"}, None))
+
+        def abrir(url, timeout):
+            raise _http_error(401, "Unauthorized")
+        quien, error = telegram_quien("malo", abrir=abrir)
+        self.assertIsNone(quien)
+        self.assertIn("401", error)
+
     def test_descubrir_chat(self):
         from notificar import telegram_descubrir
         r = _Resp({"ok": True, "result": [{"message": {"chat": {"id": 123456, "type": "private"}}}]})

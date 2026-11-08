@@ -37,6 +37,21 @@ def _error_http(e):
         return str(e)
 
 
+def telegram_quien(token, abrir=urllib.request.urlopen):
+    """A qué bot pertenece el token: devuelve ({'username':..., 'nombre':...}, None) o (None, motivo)."""
+    try:
+        with abrir("https://api.telegram.org/bot%s/getMe" % token, timeout=20) as r:
+            datos = json.loads(r.read().decode())
+    except urllib.error.HTTPError as e:
+        return None, "Telegram respondió %s: %s" % (e.code, _error_http(e))
+    except Exception as e:  # noqa: BLE001
+        return None, "no pude conectar con Telegram (%s)" % type(e).__name__
+    u = datos.get("result")
+    if not isinstance(u, dict):
+        u = {}
+    return {"username": u.get("username"), "nombre": u.get("first_name")}, None
+
+
 def telegram_descubrir(token, abrir=urllib.request.urlopen):
     """Devuelve ({chat_id: tipo}, None) con los chats que le escribieron al bot, o ({}, motivo del fallo)."""
     try:
