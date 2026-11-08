@@ -29,7 +29,15 @@ Pendientes (el usuario decide): (A) instalar en su Claude real y probar en paper
 
 **Bitcoin (pedido del usuario, 2026-11-08): leer `proyectos/day-trader-skill/BITCOIN.md`.** Capital definido por el usuario: USD 100. El pack NO soporta BTC (risk bloquea cripto, entry asume NYSE). Propuesta de Claude pendiente de confirmación: pérdida máx USD 1 por operación, USD 3 por día, 3 operaciones por día, R:R ≥ 1,5, sin apalancamiento. El bot Turtle de Alpaca Paper del repo (cuenta de USD 100.000) lleva 0 operaciones desde 2026-10-07.
 
-Reglas de prueba acordadas: **paper primero**; solo skills de lectura antes de cualquier broker; ninguna orden sin PASS de `trader-risk` + "yes" explícito del usuario + "Allow once"; herramienta de órdenes en "Needs approval"; claves solo en variables de entorno, **nunca en el chat**; no es consejo financiero.
+### 2. ALBA (acciones intradía) y HALCÓN (Bitcoin) — pedido del 2026-11-08
+
+El usuario pidió dos proyectos **separados, con estrategias distintas**, probados en **Alpaca Paper** (dinero ficticio), **100 % automáticos y 24/7 en la nube con la compu apagada**, que avisen cada operación y hagan el seguimiento. Cuando la estrategia esté comprobada y fundamentada se pasa a dinero real, y **recién ahí** hay que pedirle autorización por cada orden. Hoy en paper no hace falta el "yes" (lo autorizó él).
+- **ALBA** = `day-trader-skill` automatizado (ruptura del rango de apertura, acciones de EE. UU.). Código en `alba/`, workflow `.github/workflows/alba.yml`, docs en `proyectos/alba/README.md`. Estado: construido y probado offline (23 tests); falta que el usuario cargue los secrets `ALBA_ALPACA_KEY` / `ALBA_ALPACA_SECRET` (cuenta Alpaca Paper nueva) y autorice el merge a `main` (los crons solo corren desde la rama principal).
+- **HALCÓN** = Bitcoin 24/7, estrategia distinta a ALBA y al Turtle de 4 h existente. **Todavía no construido**: primero backtest de 2 o 3 candidatas con datos de ajuste y de validación separados y costos de Alpaca; no se elige ganadora sin eso. Secrets futuros: `HALCON_ALPACA_KEY` / `HALCON_ALPACA_SECRET`.
+- Los nombres ALBA y HALCÓN son propuestas de Claude, no confirmadas por el usuario.
+- Pendientes de decisión: capital virtual de ALBA (el pack con USD 100 casi no opera), margen de pérdida y horas máximas de HALCÓN, canal de avisos extra (Telegram), repo privado.
+
+Reglas de prueba acordadas (válidas para el uso manual de las skills y para dinero real): **paper primero**; solo skills de lectura antes de cualquier broker; ninguna orden sin PASS de `trader-risk` + "yes" explícito del usuario + "Allow once"; herramienta de órdenes en "Needs approval"; claves solo en variables de entorno, **nunca en el chat**; no es consejo financiero.
 
 ## Dónde está guardado el proyecto
 
@@ -53,4 +61,5 @@ Reglas de prueba acordadas: **paper primero**; solo skills de lectura antes de c
 
 ## Historial de cambios de este archivo
 
+- 2026-11-08 (2): se agrega el proyecto 2 (ALBA / HALCÓN) y la instrucción de automatizar en paper.
 - 2026-11-08: creación. Resume el proyecto day-trader-skill, ubicaciones, reglas y pendientes.

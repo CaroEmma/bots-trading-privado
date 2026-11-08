@@ -1,0 +1,78 @@
+name: ALBA - acciones intradia (paper)
+
+# Corre solo en la nube de GitHub, con la compu apagada. Dinero ficticio (Alpaca Paper).
+# Cron en UTC: 13:00-21:59 de lunes a viernes cubre la sesion de NYSE (9:30-16:00 ET) en horario de verano e invierno;
+# fuera de mercado el ciclo termina enseguida. GitHub puede demorar los crons en horas de mucha carga.
+on:
+  schedule:
+    - cron: "*/5 13-21 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      diagnostico:
+        description: "Solo probar conexiones (Yahoo, Nasdaq Trader, Alpaca) y avisar el resultado"
+        type: boolean
+        default: false
+
+concurrency:
+  group: alba
+  cancel-in-progress: false   # nunca cortar un ciclo a mitad de una orden
+
+permissions:
+  contents: write   # guardar el estado en la rama alba-estado
+  issues: write     # avisos de cada operacion
+
+jobs:
+  ciclo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout (codigo)
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Preparar la rama de estado (alba-estado)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin alba-estado >/dev/null 2>&1; then
+            git fetch origin alba-estado
+            git worktree add --detach estado origin/alba-estado
+          else
+            git worktree add --detach estado HEAD
+            git -C estado checkout -q --orphan alba-estado
+            git -C estado rm -rq --cached . || true
+            find estado -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          fi
+
+      - name: Tests offline (si fallan no se opera)
+        run: python -m unittest discover -s alba/tests
+
+      - name: Correr un ciclo de ALBA
+        env:
+          ALBA_ALPACA_KEY: ${{ secrets.ALBA_ALPACA_KEY }}
+          ALBA_ALPACA_SECRET: ${{ secrets.ALBA_ALPACA_SECRET }}
+          ALBA_TELEGRAM_TOKEN: ${{ secrets.ALBA_TELEGRAM_TOKEN }}
+          ALBA_TELEGRAM_CHAT: ${{ secrets.ALBA_TELEGRAM_CHAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          if [ "${{ inputs.diagnostico }}" = "true" ]; then
+            python alba/orquestador.py --estado estado --diagnostico
+          else
+            python alba/orquestador.py --estado estado
+          fi
+
+      - name: Guardar el estado
+        if: always()
+        run: |
+          cd estado
+          git add -A
+          git diff --cached --quiet || git commit -q -m "alba: estado $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          for i in 1 2 3; do
+            git push origin HEAD:alba-estado && break
+            git fetch origin alba-estado && git rebase origin/alba-estado
+          done

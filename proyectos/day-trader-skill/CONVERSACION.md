@@ -101,3 +101,13 @@ Contexto del usuario relevante al proyecto (de las skills que tiene en su cuenta
 - 2026-11-08: sección 12 agregada con la Prueba 01; secciones 4, 6, 9 y 11 actualizadas.
 
 - 2026-11-08: creación, tras identificar el repo, guardar en Drive, adjuntar `CaroEmma/bots-trading-privado` e instalar las skills en la sesión.
+
+## 14. Bitcoin con USD 100 (2026-11-08)
+
+El usuario fijó el capital en USD 100 y pidió que Claude defina el margen de pérdida y las alertas, y empezar a probar ya en Bitcoin con cuenta ficticia. Resultado: el pack no soporta BTC (risk bloquea cripto, entry asume NYSE); el bot Turtle existente de Alpaca Paper lleva 0 operaciones desde 2026-10-07. Propuesta de Claude (sin confirmar): pérdida máx. USD 1 por operación, USD 3 por día, 3 operaciones, R:R ≥ 1,5, sin apalancamiento. Detalle en `BITCOIN.md`.
+
+## 15. Dos proyectos separados, 24/7, automáticos (2026-11-08)
+
+Pedido: skills de trading intradía **separadas** de Bitcoin, con estrategias distintas, ambas probadas en Alpaca Paper, con control 24/7 aunque la compu esté apagada, nombre para cada proyecto. Claude respondió con el diseño (GitHub Actions por cron, una cuenta paper por proyecto), nombres propuestos ALBA y HALCÓN, límites verificados (Alpaca ya no permite resetear la cuenta paper ni cambiar el saldo; crons de GitHub con demoras) y la lista de datos necesarios.
+
+Luego el usuario dio la autorización: usar el skill con todos sus pasos de forma automática, entradas y salidas sin intervención, con dinero ficticio; que Claude haga todo, configure rutinas, avise cada operación y haga el seguimiento. **Para dinero real sí debe pedirle autorización.** Claude construyó ALBA (`alba/`, 23 tests offline OK). Hallazgos: con USD 100 y pérdida máx. USD 1 el pack no compra ni una acción de TSLA (riesgo USD 5,29 por acción); desde la sesión de Claude no se llega a Alpaca y Yahoo respondió 429, así que lo vivo solo se prueba en Actions. Ver `proyectos/alba/README.md`.

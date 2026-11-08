@@ -1,0 +1,565 @@
+#!/usr/bin/env python3
+"""ALBA: day trading de acciones de EE. UU. con las skills de day-trader-skill, sin intervención.
+
+Corre UN ciclo por ejecución (lo lanza el cron de GitHub Actions cada 5 min). Cada ciclo:
+  1. concilia con Alpaca Paper: detecta posiciones cerradas por stop/target y las registra;
+  2. si el mercado está abierto y es hora de cerrar (>= cerrar_desde), cierra todo;
+  3. si no, y hay lugar para operar: scanner -> news -> entry -> exit -> timemachine ->
+     budget -> risk y, SOLO si trader-risk da PASS, manda la orden bracket a Alpaca PAPER;
+  4. avisa cada entrada / salida y arma el informe diario con estadísticas.
+
+Seguridad: solo paper (ver alpaca_paper.py). Las claves salen de variables de entorno.
+Este flujo reemplaza el "yes" manual del pack SOLO en paper, por pedido expreso del usuario
+(2026-11-08). Para dinero real hay que pedir autorización humana por cada orden.
+"""
+import argparse
+import datetime as dt
+import json
+import math
+import os
+import re
+import subprocess
+import sys
+import time
+from zoneinfo import ZoneInfo
+
+AQUI = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, AQUI)
+
+from alpaca_paper import AlpacaPaper, ErrorAlpaca, claves_desde_entorno  # noqa: E402
+from notificar import Notificador  # noqa: E402
+
+VENDOR = os.path.join(AQUI, "vendor", "day-trader-skill")
+SCRIPTS = {
+    "scanner": "trader-scanner/scan.py", "news": "trader-news/news.py", "entry": "trader-entry/entry.py",
+    "exit": "trader-exit/exit.py", "timemachine": "trader-timemachine/timemachine.py",
+    "size": "trader-budget/size.py", "risk": "trader-risk/check.py", "ticket": "trader-broker/ticket.py",
+    "alerts": "trader-alerts/alerts.py",
+}
+NY = ZoneInfo("America/New_York")
+ARCHIVOS_DE_CANDIDATO = ("entry.json", "plan.json", "timemachine.json", "orders.json")
+
+
+# ============================================================ utilidades
+def leer_json(ruta, defecto=None):
+    try:
+        with open(ruta, encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return defecto
+
+
+def escribir_json(ruta, dato):
+    os.makedirs(os.path.dirname(ruta), exist_ok=True)
+    tmp = ruta + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(dato, f, indent=1, ensure_ascii=False)
+    os.replace(tmp, ruta)
+
+
+def parsear_fecha(texto):
+    texto = re.sub(r"(\.\d{6})\d+", r"\1", texto.replace("Z", "+00:00"))
+    return dt.datetime.fromisoformat(texto)
+
+
+def usd(x):
+    return ("-" if x < 0 else "") + "$%.2f" % abs(x)
+
+
+def usd_s(x):
+    return ("+" if x >= 0 else "-") + "$%.2f" % abs(x)
+
+
+def signo(x, dec=2):
+    return ("+" if x >= 0 else "") + ("%." + str(dec) + "f") % x
+
+
+# ============================================================ pack (skills)
+class Pack:
+    """Ejecuta los scripts del pack (copia fijada en vendor/) como procesos aparte, aislados (-I)."""
+
+    def __init__(self, cwd, extra=None, timeout=300):
+        self.cwd, self.extra, self.timeout = cwd, extra or {}, timeout
+
+    def correr(self, skill, args):
+        cmd = [sys.executable, "-I", os.path.join(VENDOR, SCRIPTS[skill]), *args, *self.extra.get(skill, [])]
+        try:
+            p = subprocess.run(cmd, cwd=self.cwd, capture_output=True, text=True, timeout=self.timeout)
+        except subprocess.TimeoutExpired:
+            return 124, "", "timeout tras %ss" % self.timeout
+        return p.returncode, p.stdout, p.stderr
+
+
+def json_de(texto):
+    """El primer objeto JSON de la salida estándar (los scripts a veces imprimen texto antes)."""
+    i = texto.find("{")
+    if i < 0:
+        return None
+    try:
+        return json.JSONDecoder().raw_decode(texto[i:])[0]
+    except ValueError:
+        return None
+
+
+# ============================================================ estado
+class Estado:
+    def __init__(self, directorio):
+        self.dir = directorio
+        self.trader = os.path.join(directorio, "trader")
+        os.makedirs(os.path.join(self.trader, "state"), exist_ok=True)
+        self.ruta = os.path.join(directorio, "alba_estado.json")
+        self.d = leer_json(self.ruta, {}) or {}
+        self.d.setdefault("abiertas", {})
+        self.d.setdefault("hoy", {})
+
+    def guardar(self):
+        escribir_json(self.ruta, self.d)
+
+    def agregar(self, nombre, registro):
+        with open(os.path.join(self.dir, nombre), "a", encoding="utf-8") as f:
+            f.write(json.dumps(registro, ensure_ascii=False) + "\n")
+
+    def leer_lineas(self, nombre):
+        out = []
+        try:
+            with open(os.path.join(self.dir, nombre), encoding="utf-8") as f:
+                for linea in f:
+                    try:
+                        out.append(json.loads(linea))
+                    except ValueError:
+                        pass
+        except OSError:
+            pass
+        return out
+
+    def ruta_trader(self, nombre):
+        return os.path.join(self.trader, nombre)
+
+
+def estado_del_dia(est, fecha):
+    h = est.d.get("hoy") or {}
+    if h.get("fecha") != fecha:
+        h = {"fecha": fecha, "entradas": 0, "pnl": 0.0, "r": 0.0, "evaluados": {},
+             "universo": False, "sesion": False, "informe": False}
+        est.d["hoy"] = h
+    return h
+
+
+# ============================================================ estadísticas
+def estadisticas(ops):
+    n = len(ops)
+    if not n:
+        return {"n": 0}
+    rs = [o["r"] for o in ops]
+    ganadoras = [o for o in ops if o["pnl"] > 0]
+    perdedoras = [o for o in ops if o["pnl"] < 0]
+    bruto_g = sum(o["pnl"] for o in ganadoras)
+    bruto_p = -sum(o["pnl"] for o in perdedoras)
+    acumulado, pico, caida = 0.0, 0.0, 0.0
+    for o in ops:
+        acumulado += o["pnl"]
+        pico = max(pico, acumulado)
+        caida = max(caida, pico - acumulado)
+    return {"n": n, "ganadoras": len(ganadoras), "perdedoras": len(perdedoras),
+            "tasa_acierto": len(ganadoras) / n, "r_promedio": sum(rs) / n, "pnl": sum(o["pnl"] for o in ops),
+            "factor_beneficio": (bruto_g / bruto_p) if bruto_p else None, "caida_maxima": caida}
+
+
+def texto_estadisticas(e):
+    if not e.get("n"):
+        return "Todavía no hay operaciones cerradas."
+    fb = "n/d" if e["factor_beneficio"] is None else "%.2f" % e["factor_beneficio"]
+    aviso = ""
+    if e["n"] < 30:
+        aviso = "\n\nMuestra chica (%d operaciones): con tan pocos casos el resultado NO permite concluir " \
+                "si la estrategia funciona." % e["n"]
+    return ("%d operaciones | acierto %.0f%% | R promedio %s | resultado %s | factor de beneficio %s | "
+            "caída máxima %s%s" % (e["n"], e["tasa_acierto"] * 100, signo(e["r_promedio"], 3), usd(e["pnl"]), fb,
+                                   usd(e["caida_maxima"]), aviso))
+
+
+# ============================================================ pasos del pack
+def escribir_config_pack(est, cfg):
+    pc = dict(cfg["pack_config"])
+    pc["paper"] = True
+    pc["broker"] = "alpaca"
+    escribir_json(est.ruta_trader("config.json"), pc)
+
+
+def limpiar_candidato(est):
+    for n in ARCHIVOS_DE_CANDIDATO:
+        try:
+            os.remove(est.ruta_trader(n))
+        except OSError:
+            pass
+
+
+def registrar_decision(est, ahora, simbolo, accion, motivo, **datos):
+    reg = {"fecha": ahora.date().isoformat(), "hora": ahora.strftime("%H:%M"), "simbolo": simbolo,
+           "accion": accion, "motivo": motivo}
+    reg.update(datos)
+    est.agregar("decisiones.jsonl", reg)
+    return reg
+
+
+def omitir(est, h, ahora, simbolo, motivo, **datos):
+    h["evaluados"][simbolo] = "omitida: " + motivo
+    print("  - %s omitida: %s" % (simbolo, motivo), flush=True)
+    return registrar_decision(est, ahora, simbolo, "omitir", motivo, **datos)
+
+
+def evaluar(cfg, broker, pack, est, notif, ahora, h, hit):
+    """Cadena completa de skills para UN candidato. Devuelve True si compró."""
+    sym = hit["symbol"]
+    pc, ec = cfg["pack_config"], cfg["estrategia"]
+    limpiar_candidato(est)
+
+    # 1) noticias (informativo; solo un 'halt' frena)
+    titulares = []
+    rc, out, _ = pack.correr("news", ["--tickers", sym, "--hours", "24", "--no-sec", "--json"])
+    nj = json_de(out) if rc in (0, 1) else None
+    for it in (nj or {}).get("items", []):
+        tags = [str(t).lower() for t in (it.get("tags") or [])]
+        titulares.append(str(it.get("title") or it.get("headline") or "")[:140])
+        if "halt" in tags:
+            return omitir(est, h, ahora, sym, "noticia con 'halt' (suspensión)") and False
+
+    # 2) entrada
+    rc, out, err = pack.correr("entry", ["check", sym, "--write", "--json"])
+    ej = json_de(out)
+    if not ej:
+        return omitir(est, h, ahora, sym, "entry sin datos (%s)" % (err.strip()[:80] or "salida vacía")) and False
+    if ej.get("status") != "triggered":
+        return omitir(est, h, ahora, sym, "entry: %s" % ej.get("status")) and False
+    edad = ej.get("minutes_since")
+    if edad is not None and edad > ec["max_edad_senal_min"]:
+        return omitir(est, h, ahora, sym, "señal vieja (%s min)" % edad) and False
+
+    # 3) salida (stop y objetivo)
+    rc, out, err = pack.correr("exit", ["plan", "--write", "--stop", ec["stop"], "--target", ec["objetivo"]])
+    plan = leer_json(est.ruta_trader("plan.json"))
+    if rc != 0 or not plan or plan.get("symbol") != sym:
+        return omitir(est, h, ahora, sym, "exit: %s" % ((out + err).strip()[-120:] or "sin plan")) and False
+
+    # 4) máquina del tiempo
+    rc, out, err = pack.correr("timemachine", ["run", "--write"])
+    tm = leer_json(est.ruta_trader("timemachine.json"))
+    if not tm:
+        return omitir(est, h, ahora, sym, "timemachine sin resultado") and False
+    mc_r = (tm.get("mc") or {}).get("avg_R")
+    hi = tm.get("history") or {}
+    resumen_tm = {"mc_avg_R": mc_r, "p_target": (tm.get("mc") or {}).get("p_target"),
+                  "p_stop": (tm.get("mc") or {}).get("p_stop"), "hist_disparos": hi.get("triggered"),
+                  "hist_avg_R": hi.get("avg_R"), "veredicto": tm.get("verdict")}
+    gate = ec["gate_timemachine"]
+    if gate in ("solo_mc", "mc_y_historia") and not (mc_r is not None and mc_r > 0):
+        return omitir(est, h, ahora, sym, "timemachine: R promedio simulado %s no es > 0" % mc_r, tm=resumen_tm) and False
+    if gate == "mc_y_historia" and not (hi.get("avg_R") is not None and hi["avg_R"] > 0):
+        return omitir(est, h, ahora, sym, "timemachine: R promedio histórico %s no es > 0" % hi.get("avg_R"),
+                      tm=resumen_tm) and False
+
+    # 5) cotización fresca (si falla, el riesgo se mide desde el plan) + tamaño + riesgo
+    pack.correr("alerts", ["quote", sym, "--write"])
+    rc, out, err = pack.correr("size", ["--write"])
+    ordenes = leer_json(est.ruta_trader("orders.json"), {}).get("orders") or []
+    if not ordenes:
+        txt = (out + err).strip().splitlines()
+        return omitir(est, h, ahora, sym, "budget: " + (txt[-2] if len(txt) > 1 else "sin orden")[:160],
+                      tm=resumen_tm) and False
+    rc, out, err = pack.correr("risk", ["--json"])
+    rj = json_de(out) or {}
+    res = (rj.get("results") or [{}])[0]
+    if res.get("verdict") != "PASS":
+        return omitir(est, h, ahora, sym, "risk BLOCK: " + "; ".join(res.get("reasons") or ["sin veredicto"])[:200],
+                      tm=resumen_tm) and False
+
+    # 6) colocar en Alpaca PAPER
+    orden = ordenes[0]
+    qty = int(float(orden["qty"]))
+    try:
+        r = broker.colocar_bracket(sym, qty, orden["take_profit_limit_price"], orden["stop_loss_stop_price"])
+    except ErrorAlpaca as e:
+        return omitir(est, h, ahora, sym, "Alpaca rechazó la orden: %s" % str(e)[:160]) and False
+    fill = broker.esperar_fill(r["id"])
+    if fill is None:
+        broker.cancelar_ordenes(sym)
+        pos = broker.posicion(sym)
+        if pos is None:
+            return omitir(est, h, ahora, sym, "la orden no se llenó en 30 s; cancelada") and False
+        fill = pos["avg"]
+    stop, target = float(orden["stop_loss_stop_price"]), float(orden["take_profit_limit_price"])
+    plan_o = orden.get("plan") or {}
+    h["entradas"] += 1
+    h["evaluados"][sym] = "COMPRADA"
+    est.d["abiertas"][sym] = {"orden_id": r["id"], "qty": qty, "entrada": fill, "stop": stop, "target": target,
+                              "fecha": ahora.date().isoformat(), "hora": ahora.strftime("%H:%M"),
+                              "max_loss": plan_o.get("max_loss"), "tm": resumen_tm}
+    registrar_en_broker_json(est, ahora, orden, res, r["id"])
+    pack.correr("ticket", ["fill", "--symbol", sym, "--side", "buy", "--qty", str(qty), "--price", "%.4f" % fill])
+    registrar_decision(est, ahora, sym, "comprar", "todas las skills en verde", qty=qty, fill=fill, stop=stop,
+                       target=target, tm=resumen_tm)
+    p_t, p_s = resumen_tm["p_target"], resumen_tm["p_stop"]
+    cuerpo = ("**%s** — compra %d acciones a %s (paper, dinero ficticio)\n\n"
+              "- Stop: %s | Objetivo: %s | Riesgo máximo: %s | Recompensa/riesgo: %s\n"
+              "- Setup: ruptura del rango de apertura (%s)\n"
+              "- Máquina del tiempo: objetivo primero %s, stop primero %s, R promedio simulado %s; "
+              "historial: %s disparos, R promedio %s\n"
+              "- Trader-risk: PASS\n- Noticias (24 h): %s\n\n"
+              "_Estrategia en prueba. Resultado ficticio; no es consejo financiero._"
+              % (sym, qty, usd(fill), usd(stop), usd(target), usd(plan_o.get("max_loss") or 0),
+                 plan_o.get("reward_risk", "n/d"), ej.get("reason", ""),
+                 "n/d" if p_t is None else "%.0f%%" % (p_t * 100), "n/d" if p_s is None else "%.0f%%" % (p_s * 100),
+                 resumen_tm["mc_avg_R"], resumen_tm["hist_disparos"], resumen_tm["hist_avg_R"],
+                 "; ".join(titulares[:3]) if titulares else "sin titulares"))
+    notif.avisar("ALBA | COMPRA %s x%d @ %s" % (sym, qty, usd(fill)), cuerpo)
+    return True
+
+
+def registrar_en_broker_json(est, ahora, orden, res, oid):
+    """Deja en trader/state/broker.json el mismo registro que trader-broker (status 'placed'), para que
+    trader-risk cuente trades del día, pérdida diaria y duplicados. Se marca auto_paper: no hubo 'yes' humano."""
+    ruta = est.ruta_trader("state/broker.json")
+    st = leer_json(ruta, {"orders": []}) or {"orders": []}
+    plan = orden.get("plan") or {}
+    st.setdefault("orders", []).append({
+        "at": ahora.isoformat(timespec="minutes"), "date": ahora.date().isoformat(), "index": 1,
+        "fingerprint": res.get("fingerprint"), "symbol": orden["symbol"], "side": "buy", "qty": orden["qty"],
+        "kind": "entry", "max_loss": plan.get("max_loss"), "stop": float(orden["stop_loss_stop_price"]),
+        "plain": "buy %s %s (ALBA, paper automático)" % (orden["qty"], orden["symbol"]),
+        "status": "placed", "broker_order_id": oid, "auto_paper": True})
+    escribir_json(ruta, st)
+
+
+# ============================================================ cierres y conciliación
+def salida_desde_patas(broker, t):
+    try:
+        o = broker.orden(t["orden_id"])
+    except ErrorAlpaca:
+        return None, None
+    for leg in o.get("legs") or []:
+        if leg.get("status") == "filled" and leg.get("filled_avg_price"):
+            return float(leg["filled_avg_price"]), ("objetivo" if leg.get("type") == "limit" else "stop")
+    return None, None
+
+
+def finalizar(cfg, pack, est, notif, ahora, h, sym, t, salida, motivo):
+    qty, entrada = t["qty"], t["entrada"]
+    riesgo = entrada - t["stop"]
+    if salida is None:
+        registro = {"fecha": t["fecha"], "simbolo": sym, "estado": "salida_desconocida", "qty": qty,
+                    "entrada": entrada, "motivo": motivo}
+        est.agregar("anomalias.jsonl", registro)
+        notif.avisar("ALBA | ATENCIÓN %s: posición cerrada sin precio de salida" % sym,
+                     "La posición ya no existe en Alpaca Paper pero no pude leer el precio de salida. "
+                     "Revisar a mano. Entrada %s, qty %d." % (usd(entrada), qty))
+        est.d["abiertas"].pop(sym, None)
+        return
+    pnl = (salida - entrada) * qty
+    r = (salida - entrada) / riesgo if riesgo > 0 else 0.0
+    h["pnl"] += pnl
+    h["r"] += r
+    op = {"fecha": t["fecha"], "hora_entrada": t["hora"], "hora_salida": ahora.strftime("%H:%M"),
+          "simbolo": sym, "qty": qty, "entrada": entrada, "salida": salida, "stop": t["stop"],
+          "target": t["target"], "motivo": motivo, "pnl": round(pnl, 2), "r": round(r, 3), "tm": t.get("tm")}
+    est.agregar("operaciones.jsonl", op)
+    pack.correr("ticket", ["fill", "--symbol", sym, "--side", "sell", "--qty", str(qty), "--price", "%.4f" % salida])
+    est.d["abiertas"].pop(sym, None)
+    etiqueta = {"objetivo": "OBJETIVO", "stop": "STOP", "cierre_horario": "CIERRE POR HORARIO",
+                "arrastre": "CIERRE DE ARRASTRE"}.get(motivo, motivo.upper())
+    acum = estadisticas(est.leer_lineas("operaciones.jsonl"))
+    notif.avisar("ALBA | %s %s %s R (%s)" % (etiqueta, sym, signo(r), usd_s(pnl)),
+                 "**%s** — vendida a %s (entrada %s, %d acciones)\n\n- Resultado: %s (%s R)\n- Motivo: %s\n"
+                 "- Acumulado: %s\n\n_Dinero ficticio (paper)._"
+                 % (sym, usd(salida), usd(entrada), qty, usd(pnl), signo(r), motivo, texto_estadisticas(acum)))
+
+
+def conciliar(cfg, broker, pack, est, notif, ahora, h, mercado_abierto):
+    pos = broker.posiciones()
+    for sym, t in list(est.d["abiertas"].items()):
+        if sym in pos:
+            if t["fecha"] != ahora.date().isoformat() and mercado_abierto:
+                cerrar_posicion(cfg, broker, pack, est, notif, ahora, h, sym, t, "arrastre")
+            continue
+        salida, motivo = salida_desde_patas(broker, t)
+        finalizar(cfg, pack, est, notif, ahora, h, sym, t, salida, motivo or "desconocido")
+
+
+def cerrar_posicion(cfg, broker, pack, est, notif, ahora, h, sym, t, motivo):
+    broker.cancelar_ordenes(sym)
+    oid, ultimo = None, None
+    for _ in range(4):
+        time.sleep(cfg.get("pausa_cierre_s", 2))
+        try:
+            oid = broker.cerrar_posicion(sym)
+            break
+        except ErrorAlpaca as e:
+            ultimo = e
+    if not oid:
+        notif.avisar("ALBA | ERROR al cerrar %s" % sym, "No pude cerrar la posición: %s" % ultimo)
+        return
+    fill = broker.esperar_fill(oid)
+    finalizar(cfg, pack, est, notif, ahora, h, sym, t, fill, motivo)
+
+
+def cerrar_todo(cfg, broker, pack, est, notif, ahora, h):
+    for sym, t in list(est.d["abiertas"].items()):
+        cerrar_posicion(cfg, broker, pack, est, notif, ahora, h, sym, t, "cierre_horario")
+
+
+# ============================================================ búsqueda de entradas
+def preparar_universo(cfg, pack, est, h):
+    if h["universo"]:
+        return True
+    rc, out, err = pack.correr("scanner", ["universe"])
+    ok = os.path.exists(est.ruta_trader("universe.txt")) and rc == 0
+    h["universo"] = ok
+    if not ok:
+        print("(aviso) no pude armar el universo: %s" % (err or out)[-200:], flush=True)
+    return ok
+
+
+def candidatos(cfg, pack, est, ahora, h):
+    ec, pc = cfg["estrategia"], cfg["pack_config"]
+    args = ["orb", "--json", "--quiet", "--out", "trader/orb.json", "--min-price", str(ec["precio_minimo"])]
+    rc, out, err = pack.correr("scanner", args)
+    datos = leer_json(est.ruta_trader("orb.json")) if rc == 0 else None
+    if not datos:
+        print("  (el escáner ORB no devolvió candidatos: %s)" % (err.strip()[-120:] or "sin hits"), flush=True)
+        return []
+    lista = []
+    for hit in datos.get("hits", []):
+        sym = hit["symbol"]
+        if sym in h["evaluados"]:
+            continue
+        precio, medio = hit["price"], (hit["or_high"] + hit["or_low"]) / 2
+        riesgo = precio - medio
+        if ec["stop"] == "or-mid" and (riesgo <= 0 or math.floor(pc["max_loss_per_trade_usd"] / riesgo) < 1):
+            omitir(est, h, ahora, sym, "ni una acción entra en la pérdida máxima (riesgo %.2f por acción)" % riesgo)
+            continue
+        lista.append(hit)
+    lista.sort(key=lambda x: x.get("pct_over", 0))
+    return lista[:ec["max_candidatos_por_ciclo"]]
+
+
+def buscar_entradas(cfg, broker, pack, est, notif, ahora, h):
+    pc, ec = cfg["pack_config"], cfg["estrategia"]
+    hhmm = ahora.strftime("%H:%M")
+    if len(est.d["abiertas"]) >= ec["max_posiciones_abiertas"]:
+        return
+    if h["entradas"] >= pc["max_trades_per_day"]:
+        return
+    if -h["pnl"] >= pc["max_daily_loss_usd"]:
+        print("Límite de pérdida diaria alcanzado (%s): no se abren más entradas hoy." % usd(h["pnl"]), flush=True)
+        return
+    if hhmm < pc["no_entries_before"] or hhmm > pc["no_entries_after"] or hhmm < ec["escaneo_orb_desde"]:
+        return
+    escribir_config_pack(est, cfg)
+    if not preparar_universo(cfg, pack, est, h):
+        return
+    for hit in candidatos(cfg, pack, est, ahora, h):
+        if len(est.d["abiertas"]) >= ec["max_posiciones_abiertas"] or h["entradas"] >= pc["max_trades_per_day"]:
+            break
+        print("Evaluando %s ..." % hit["symbol"], flush=True)
+        evaluar(cfg, broker, pack, est, notif, ahora, h, hit)
+        est.guardar()
+
+
+# ============================================================ informes
+def informe_diario(cfg, est, notif, ahora, h):
+    fecha = ahora.date().isoformat()
+    ops = [o for o in est.leer_lineas("operaciones.jsonl") if o["fecha"] == fecha]
+    dec = [d for d in est.leer_lineas("decisiones.jsonl") if d["fecha"] == fecha]
+    motivos = {}
+    for d in dec:
+        if d["accion"] == "omitir":
+            clave = d["motivo"].split(":")[0][:60]
+            motivos[clave] = motivos.get(clave, 0) + 1
+    lineas = ["**Operaciones del día:** %d" % len(ops)]
+    for o in ops:
+        lineas.append("- %s %s→%s (%s) %s R, %s" % (o["simbolo"], usd(o["entrada"]), usd(o["salida"]), o["motivo"],
+                                                    signo(o["r"]), usd(o["pnl"])))
+    lineas.append("\n**Resultado del día:** %s | **Candidatos descartados:** %d %s"
+                  % (usd(sum(o["pnl"] for o in ops)), sum(motivos.values()),
+                     ("(" + ", ".join("%s: %d" % kv for kv in sorted(motivos.items())) + ")") if motivos else ""))
+    lineas.append("\n**Acumulado:** " + texto_estadisticas(estadisticas(est.leer_lineas("operaciones.jsonl"))))
+    lineas.append("\n_Dinero ficticio (paper). Un backtest o una racha corta no prueban que la estrategia funcione._")
+    notif.avisar("ALBA | Informe diario %s" % fecha, "\n".join(lineas))
+    h["informe"] = True
+
+
+# ============================================================ ciclo principal
+def ciclo(cfg, broker, pack, est, notif, ahora=None):
+    reloj = broker.reloj()
+    ahora = ahora or parsear_fecha(reloj["timestamp"]).astimezone(NY)
+    h = estado_del_dia(est, ahora.date().isoformat())
+    abierto = bool(reloj.get("is_open"))
+    conciliar(cfg, broker, pack, est, notif, ahora, h, abierto)
+    if not abierto:
+        if h.get("sesion") and not h["informe"] and ahora.strftime("%H:%M") >= "16:05":
+            informe_diario(cfg, est, notif, ahora, h)
+        est.guardar()
+        return "cerrado"
+    h["sesion"] = True
+    if ahora.strftime("%H:%M") >= cfg["estrategia"]["cerrar_desde"]:
+        cerrar_todo(cfg, broker, pack, est, notif, ahora, h)
+        est.guardar()
+        return "cierre"
+    buscar_entradas(cfg, broker, pack, est, notif, ahora, h)
+    est.guardar()
+    return "operando"
+
+
+def diagnostico(broker, notif):
+    import urllib.request
+    lineas = []
+    for nombre, url in (("Yahoo chart", "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=1d&interval=5m"),
+                        ("Nasdaq Trader", "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt"),
+                        ("Alpaca datos", "https://data.alpaca.markets/v2/stocks/AAPL/quotes/latest")):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (alba-diagnostico)"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                lineas.append("- %s: HTTP %s" % (nombre, r.status))
+        except Exception as e:  # noqa: BLE001
+            codigo = getattr(e, "code", type(e).__name__)
+            lineas.append("- %s: %s" % (nombre, codigo))
+    try:
+        c, cu = broker.reloj(), broker.cuenta()
+        lineas.append("- Alpaca Paper: OK | mercado %s | cuenta %s | equity %s" %
+                      ("abierto" if c["is_open"] else "cerrado", cu.get("status"), cu.get("equity")))
+    except Exception as e:  # noqa: BLE001
+        lineas.append("- Alpaca Paper: ERROR %s" % str(e)[:150])
+    notif.avisar("ALBA | Diagnóstico de conexiones", "\n".join(lineas))
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description="ALBA: un ciclo del bot de acciones intradía (paper)")
+    ap.add_argument("--estado", required=True, help="carpeta de estado (rama alba-estado)")
+    ap.add_argument("--config", default=os.path.join(AQUI, "config.json"))
+    ap.add_argument("--diagnostico", action="store_true")
+    a = ap.parse_args(argv)
+    cfg = leer_json(a.config)
+    key, secret = claves_desde_entorno("ALBA_")
+    if not key or not secret:
+        print("ALBA: faltan los secrets ALBA_ALPACA_KEY / ALBA_ALPACA_SECRET. No hago nada (ver proyectos/alba/README.md).")
+        return 0
+    broker = AlpacaPaper(key, secret)
+    notif = Notificador(mencionar=cfg.get("mencionar"))
+    if a.diagnostico:
+        diagnostico(broker, notif)
+        return 0
+    est = Estado(a.estado)
+    pack = Pack(est.dir)
+    try:
+        print("ALBA:", ciclo(cfg, broker, pack, est, notif))
+    except Exception as e:  # noqa: BLE001
+        ahora = time.time()
+        if ahora - est.d.get("ultimo_aviso_error", 0) > 3600:
+            est.d["ultimo_aviso_error"] = ahora
+            notif.avisar("ALBA | ERROR en el ciclo", "`%s`\n\nRevisar la corrida en la pestaña Actions." % str(e)[:500])
+        est.guardar()
+        raise
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
