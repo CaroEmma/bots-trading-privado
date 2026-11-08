@@ -44,10 +44,11 @@ Reglas de prueba acordadas (válidas para el uso manual de las skills y para din
 
 ## Dónde está guardado el proyecto
 
-- GitHub: `CaroEmma/bots-trading-privado`, rama `claude/proyecto-day-trader-skill`, carpeta `proyectos/day-trader-skill/` (este `CLAUDE.md` va en la raíz). Se usó una rama aparte para no chocar con los commits del bot en `main`. Si esta rama aún no está fusionada a `main`, este archivo no se carga en sesiones nuevas hasta que se haga el merge.
+- GitHub: `CaroEmma/bots-trading-privado`, rama `main` (todo está fusionado a `main` desde el 2026-11-08; este `CLAUDE.md` va en la raíz y se carga solo en sesiones nuevas con este repo). Carpetas: `proyectos/day-trader-skill/`, `proyectos/alba/`, `proyectos/halcon/`, `alba/`, `halcon/`, `alpaca_bot/`. La rama `alba-estado` guarda el estado en vivo de ALBA. Para retomar: decir "retomá el proyecto ALBA / HALCÓN / day-trader-skill".
 - Drive del usuario: carpeta "Proyecto day-trader-skill" https://drive.google.com/drive/folders/199NRUSyoTlZbSrWEdp4DWJYPgBsqnA_y
   - IDs de archivos vigentes: README `19vOgkn72dIX1_8Yor6LIwm4ZHp_IRlic`, CONVERSACION `16lqIS1oTaTOw9gsAlmJY_L1ZmNcRwcp8`, PRUEBAS `1A1XYbuKeuiGNOCH7c8CpJn2ddIG9vk99`, FICHA `1mrO1TLVhnWpv28VBWe0WCeEvTOyoUUzd`, INSTALACION `1j-Mk_Q7KZnVbbjcCFgn_qnOwRz8vy61u`.
   - Las versiones viejas de README y CONVERSACION están en la papelera de Drive.
+  - **Drive 2026-11-08:** `INDICE-Y-ESTADO.md` (id `1bmg8cjipOQyq6DfkfjYfUhSq6w-HelI9`) resume nombres, ubicaciones, estado, pendientes y cómo retomar ALBA / HALCÓN / day-trader-skill. El CLAUDE.md viejo de Drive se mandó a la papelera (el vigente es el del repo). Los demás archivos de Drive (README, CONVERSACION, PRUEBAS, FICHA, INSTALACION, BITCOIN) son fotos anteriores a ALBA/HALCÓN: **la fuente de verdad es GitHub**. Al cerrar cada hito, actualizar el INDICE (crear versión nueva y mandar la vieja a la papelera).
 - Aviso: el repo figura como **público** aunque el nombre dice "privado". No subir claves, datos personales ni datos de cuentas.
 
 ## Convenciones de trabajo (aprendidas en la sesión)
