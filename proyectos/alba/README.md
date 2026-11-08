@@ -53,7 +53,7 @@ Hasta que existan los secrets, el workflow termina sin hacer nada.
 
 Rutina `trig_01Qjx3KMRYZV9CsK8aDBtwYj` ("ALBA - evaluación semanal de resultados"): los **viernes 17:47 hora de Nueva York** (primera: 2026-11-13) abre una sesión nueva de Claude, lee la rama `alba-estado`, calcula las métricas y manda una notificación push. Es solo lectura. Si todavía no hay datos, informa qué pasos faltan. Usa la cuota de Claude del usuario. Se pausa o borra desde la lista de rutinas de claude.ai o pidiéndoselo a Claude.
 
-## Avisos por Telegram (configurado y probado el 2026-11-08: bot @alba_avisos_2026_bot, prueba OK según la API)
+## Avisos por Telegram (configurado y probado el 2026-11-08: bot @alba_avisos_2026_bot, mensaje de prueba recibido por el usuario)
 
 ALBA y el Turtle mandan a Telegram **cada compra y cada venta** (con precio, stop, objetivo, resultado en R y en USD), además del issue. Mismos secrets para los dos bots: `ALBA_TELEGRAM_TOKEN` y `ALBA_TELEGRAM_CHAT`. Pasos del usuario:
 1. En Telegram buscar `@BotFather`, enviar `/newbot`, elegir nombre y un usuario que termine en `bot`; copiar el token que entrega.
