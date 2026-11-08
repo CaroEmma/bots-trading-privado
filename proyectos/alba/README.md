@@ -45,7 +45,7 @@ Canal por defecto: un **issue** en el repo por cada compra / cierre / informe, c
 
 | Supuesto | Valor | Por qué / riesgo |
 |---|---|---|
-| Capital virtual y límites | USD 5.000, pérdida máx. USD 50 por operación y USD 150 por día, 3 operaciones por día | Son los valores de ejemplo del pack. **Con USD 100 y USD 1 de pérdida máxima el pack no compra ni una acción de TSLA** (riesgo de USD 5,29 por acción): casi nunca operaría. El capital de ALBA lo define el usuario. |
+| Capital virtual y límites | **USD 5.000 (confirmado por el usuario el 2026-11-08)**, pérdida máx. USD 50 por operación y USD 150 por día, 3 operaciones por día | Son los valores de ejemplo del pack. **Con USD 100 y USD 1 de pérdida máxima el pack no compra ni una acción de TSLA** (riesgo de USD 5,29 por acción): casi nunca operaría. El capital de ALBA lo define el usuario. |
 | Filtro de la máquina del tiempo | R simulado > 0 (`solo_mc`) | En la Prueba 01 el historial real de TSLA dio R −0,067 mientras la simulación daba +0,070. Se registra el R histórico de cada candidato para medir después si conviene exigirlo (`mc_y_historia`). |
 | Orden de candidatos | Menor distancia a la ruptura primero | Criterio mío, sin respaldo estadístico. |
 | Una sola posición abierta a la vez | `max_posiciones_abiertas: 1` | Simplifica el control del riesgo diario. |
@@ -57,9 +57,9 @@ Canal por defecto: un **issue** en el repo por cada compra / cierre / informe, c
 - Demora de los crons de GitHub (hasta 15–30 min según guías de terceros) y su desactivación tras 60 días sin actividad (no confirmada en documentación oficial).
 - Que la estrategia tenga ventaja estadística: **no se sabe**. Las estadísticas con pocas operaciones no concluyen nada; el informe lo aclara hasta llegar a 30.
 
-## Privacidad
+## Privacidad (repo público a propósito, por ahora)
 
-El repo es **público**: la rama `alba-estado` mostrará operaciones y posiciones (dinero ficticio). Recomendado pasar el repo a privado o usar uno nuevo.
+El repo es **público**: la rama `alba-estado` muestra operaciones y posiciones (dinero ficticio). El usuario pidió pasarlo a privado, pero según la documentación de GitHub (consultada 2026-11-08) el plan Free incluye **2.000 minutos de Actions por mes solo en repos privados**; en repos públicos no hay tope. Con los bots actuales (cada 15 min, 24/7) más ALBA (cada 5 min en horario de mercado) se pasa de ese tope, y el control 24/7 se cortaría o se cobraría. Además, esta sesión no tiene permiso para cambiar la visibilidad del repo. Decisión pendiente del usuario: dejarlo público mientras todo sea ficticio, y para dinero real usar un repo privado aparte (con plan pago o menos ejecuciones).
 
 ## Pruebas
 

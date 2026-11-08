@@ -29,12 +29,27 @@ jobs:
       - name: Checkout (codigo)
         uses: actions/checkout@v4
 
+      - name: Verificar que las claves estan cargadas
+        id: claves
+        env:
+          K: ${{ secrets.ALBA_ALPACA_KEY }}
+          S: ${{ secrets.ALBA_ALPACA_SECRET }}
+        run: |
+          if [ -n "$K" ] && [ -n "$S" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "Faltan los secrets ALBA_ALPACA_KEY / ALBA_ALPACA_SECRET: no se hace nada (ver proyectos/alba/README.md)."
+          fi
+
       - name: Setup Python
+        if: steps.claves.outputs.ok == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Preparar la rama de estado (alba-estado)
+        if: steps.claves.outputs.ok == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -49,9 +64,11 @@ jobs:
           fi
 
       - name: Tests offline (si fallan no se opera)
+        if: steps.claves.outputs.ok == 'true'
         run: python -m unittest discover -s alba/tests
 
       - name: Correr un ciclo de ALBA
+        if: steps.claves.outputs.ok == 'true'
         env:
           ALBA_ALPACA_KEY: ${{ secrets.ALBA_ALPACA_KEY }}
           ALBA_ALPACA_SECRET: ${{ secrets.ALBA_ALPACA_SECRET }}
@@ -67,11 +84,12 @@ jobs:
           fi
 
       - name: Guardar el estado
-        if: always()
+        if: always() && steps.claves.outputs.ok == 'true'
         run: |
           cd estado
           git add -A
           git diff --cached --quiet || git commit -q -m "alba: estado $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          git rev-parse -q --verify HEAD >/dev/null || { echo "nada que guardar todavia"; exit 0; }
           for i in 1 2 3; do
             git push origin HEAD:alba-estado && break
             git fetch origin alba-estado && git rebase origin/alba-estado
