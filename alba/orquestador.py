@@ -27,7 +27,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
 
 from alpaca_paper import AlpacaPaper, ErrorAlpaca, claves_desde_entorno  # noqa: E402
-from notificar import Notificador, telegram_descubrir, telegram_probar  # noqa: E402
+from notificar import Notificador, limpio, telegram_descubrir, telegram_probar, token_con_formato  # noqa: E402
 
 VENDOR = os.path.join(AQUI, "vendor", "day-trader-skill")
 SCRIPTS = {
@@ -607,7 +607,14 @@ def telegram_cli(modo, env=None, abrir=None):
     env = os.environ if env is None else env
     kw = {"abrir": abrir} if abrir else {}
     n = Notificador(entorno=env)
-    token, chat = env.get("ALBA_TELEGRAM_TOKEN"), env.get("ALBA_TELEGRAM_CHAT")
+    token, chat = limpio(env.get("ALBA_TELEGRAM_TOKEN")), limpio(env.get("ALBA_TELEGRAM_CHAT"))
+    if token and not token_con_formato(token):
+        texto = ("El secret `ALBA_TELEGRAM_TOKEN` NO tiene el formato de un token de bot (debe ser números, dos puntos y letras, "
+                 "sin espacios ni texto extra). Largo recibido: %d caracteres, %s dos puntos. Pedile el token a BotFather con "
+                 "`/token`, copiá solo esa línea y volvé a crear el secret." % (len(token), "con" if ":" in token else "SIN"))
+        n._resumen("ALBA | Telegram", texto)
+        print(texto)
+        return 1
     if not token:
         n._resumen("ALBA | Telegram", "Falta el secret `ALBA_TELEGRAM_TOKEN`. Cargalo en Settings > Secrets > Actions y repetí.")
         print("Falta ALBA_TELEGRAM_TOKEN")

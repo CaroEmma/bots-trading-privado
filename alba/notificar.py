@@ -14,6 +14,16 @@ import urllib.parse
 import urllib.request
 
 
+def limpio(valor):
+    """Saca espacios, saltos de línea y comillas que se cuelan al pegar un secret (causa típica de un 401)."""
+    return (valor or "").strip().strip("\"'").strip()
+
+
+def token_con_formato(token):
+    """Un token de bot tiene la forma 123456789:ABCdef... (números, dos puntos, letras)."""
+    return bool(re.fullmatch(r"\d{5,}:[A-Za-z0-9_-]{20,}", token or ""))
+
+
 def _plano(texto):
     """Telegram sin parse_mode muestra el markdown tal cual: se lo saca (negritas y cursivas de una línea)."""
     texto = texto.replace("**", "")
@@ -105,7 +115,7 @@ class Notificador:
             print("(aviso) no pude crear el issue: %s" % e)
 
     def _telegram(self, titulo, cuerpo):
-        token, chat = self.env.get("ALBA_TELEGRAM_TOKEN"), self.env.get("ALBA_TELEGRAM_CHAT")
+        token, chat = limpio(self.env.get("ALBA_TELEGRAM_TOKEN")), limpio(self.env.get("ALBA_TELEGRAM_CHAT"))
         if not token or not chat:
             return
         try:

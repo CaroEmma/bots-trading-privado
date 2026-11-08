@@ -328,7 +328,8 @@ def _http_error(codigo, descripcion):
 
 
 class TestTelegram(Base):
-    ENV = {"ALBA_TELEGRAM_TOKEN": "tok", "ALBA_TELEGRAM_CHAT": "9"}
+    TOKEN_OK = "123456789:AAH_abc-DEF1234567890abcdefghijk"
+    ENV = {"ALBA_TELEGRAM_TOKEN": "123456789:AAH_abc-DEF1234567890abcdefghijk", "ALBA_TELEGRAM_CHAT": "9"}
 
     def test_texto_plano_sin_markdown(self):
         from notificar import _plano
@@ -350,6 +351,24 @@ class TestTelegram(Base):
         self.assertIn("Resultado: +$36.00", textos[1])
         self.assertTrue(all("**" not in x for x in textos))
         self.assertTrue(all(c["chat_id"] == "9" for u, c in envios if "api.telegram.org" in u))
+
+    def test_limpio_saca_espacios_saltos_y_comillas(self):
+        from notificar import limpio, token_con_formato
+        self.assertEqual(limpio('  "123456789:AAH_abc-DEF1234567890abcdefghijk"\n'), "123456789:AAH_abc-DEF1234567890abcdefghijk")
+        self.assertTrue(token_con_formato("123456789:AAH_abc-DEF1234567890abcdefghijk"))
+        self.assertFalse(token_con_formato("token: 123456789:AAH_abc-DEF1234567890abcdefghijk"))
+        self.assertFalse(token_con_formato("ALBA-AVISOS"))
+        self.assertFalse(token_con_formato(None))
+
+    def test_un_token_pegado_con_salto_de_linea_se_usa_igual(self):
+        envios = []
+        env = {"ALBA_TELEGRAM_TOKEN": "123456789:AAH_abc-DEF1234567890abcdefghijk\n", "ALBA_TELEGRAM_CHAT": " 9 "}
+        Notificador(entorno=env, enviar=lambda url, cuerpo, headers, form=False: envios.append((url, cuerpo))).avisar("t", "c")
+        self.assertEqual(envios[0][0], "https://api.telegram.org/bot123456789:AAH_abc-DEF1234567890abcdefghijk/sendMessage")
+        self.assertEqual(envios[0][1]["chat_id"], "9")
+
+    def test_cli_avisa_si_el_token_no_tiene_formato(self):
+        self.assertEqual(oq.telegram_cli("descubrir", env={"ALBA_TELEGRAM_TOKEN": "esto no es un token"}), 1)
 
     def test_descubrir_chat(self):
         from notificar import telegram_descubrir
@@ -379,11 +398,11 @@ class TestTelegram(Base):
 
     def test_cli_pide_lo_que_falta(self):
         self.assertEqual(oq.telegram_cli("probar", env={}), 1)
-        self.assertEqual(oq.telegram_cli("probar", env={"ALBA_TELEGRAM_TOKEN": "t"}), 1)
+        self.assertEqual(oq.telegram_cli("probar", env={"ALBA_TELEGRAM_TOKEN": self.TOKEN_OK}), 1)
 
     def test_cli_descubrir_y_probar(self):
         resp = _Resp({"ok": True, "result": [{"message": {"chat": {"id": 55, "type": "private"}}}]})
-        self.assertEqual(oq.telegram_cli("descubrir", env={"ALBA_TELEGRAM_TOKEN": "t"}, abrir=lambda *a, **k: resp), 0)
+        self.assertEqual(oq.telegram_cli("descubrir", env={"ALBA_TELEGRAM_TOKEN": self.TOKEN_OK}, abrir=lambda *a, **k: resp), 0)
         self.assertEqual(oq.telegram_cli("probar", env=self.ENV, abrir=lambda *a, **k: _Resp({"ok": True})), 0)
 
 

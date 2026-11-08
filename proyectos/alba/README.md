@@ -61,6 +61,7 @@ ALBA y el Turtle mandan a Telegram **cada compra y cada venta** (con precio, sto
 3. GitHub > Settings > Secrets > Actions: crear `ALBA_TELEGRAM_TOKEN` con el token.
 4. Actions > ALBA > Run workflow > campo `telegram` = `descubrir_chat`: el número de chat aparece en el resumen de la corrida (`Summary`). Ese número es visible en un repo público (por sí solo no permite escribirle al usuario sin el token).
 5. Crear el secret `ALBA_TELEGRAM_CHAT` con ese número.
+   *Si el paso 4 dice 401:* el token está mal copiado o es de otro bot. Pedirle a BotFather `/token`, elegir el bot, copiar **solo** la línea del token (forma `123456789:ABC...`), borrar el secret y crearlo de nuevo. El bot ahora ignora espacios y saltos de línea sobrantes y avisa si el secret no tiene formato de token.
 6. Run workflow con `telegram` = `probar`: llega un mensaje de prueba. El resumen dice si falló y por qué (token mal copiado: 401; chat equivocado o sin Iniciar: "chat not found").
 **No verificado:** el envío real a Telegram (la red de la sesión de Claude no llega a `api.telegram.org`); solo está probado con respuestas simuladas.
 
