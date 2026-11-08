@@ -15,6 +15,15 @@ PREREGISTRO (fijado ANTES de correr el backtest; no se cambia después de ver re
 - REGLA DE DECISIÓN (escenario base): una variante "pasa" solo si: n >= 30 en validación, R neto promedio > 0 en ajuste Y
   en validación, y valor p de validación < 0,05 / 6 variantes = 0,0083 (corrección por probar 6 variantes).
   Si ninguna pasa, la conclusión es "ninguna validada" y NO se elige una por ser la menos mala.
+
+RONDA 1 (velas de 1 h) -> resultado: 0 de 6 variantes pasan; el costo de ida y vuelta (0,6 %) se come ~0,5 R por operación
+porque el stop de 2 x ATR en 1 h es chico (mediana 1,15 % del precio) y hasta las entradas al azar dan R neto de -0,5.
+
+PREREGISTRO RONDA 2 (fijado ANTES de correrla, a raíz del hallazgo de costos): MISMAS tres señales con MISMOS parámetros
+(medidos en velas), pero velas de 4 h (agregadas desde la 1 h, UTC, solo grupos completos) y salida por tiempo de
+12 y 24 velas (2 y 4 días). Otras 6 variantes: en total se habrán probado 12, por lo que el umbral de la ronda 2 es
+p < 0,05 / 12 = 0,0042 (corrección acumulada). Mismas condiciones de decisión (n >= 30 en validación, R neto > 0 en ajuste y
+validación, p/azar < umbral). No se probarán otras velas ni otros parámetros después de ver estos resultados.
 """
 import csv
 import datetime as dt
@@ -29,20 +38,38 @@ ATR_P, STOP_ATR, TARGET_ATR = 14, 2.0, 3.0
 HOLDS = (24, 48)
 WARM = 250
 CAPITAL, RIESGO_USD, POS_MAX = 100.0, 1.0, 75.0
-PASA_P = 0.05 / 6
+PASA_P = 0.05 / 6   # ronda 1; en la ronda 2 (4 h) se usa 0,05 / 12, ver correr()
+HOLDS_POR_TF = {1: (24, 48), 4: (12, 24)}
+PASA_P_POR_TF = {1: 0.05 / 6, 4: 0.05 / 12}
 FMT = "%Y-%m-%d %H:%M:%S"
 
 
 # ------------------------------------------------------------------ datos
-def cargar(ruta):
+def agregar(t, o, h, l, c, horas):
+    """Agrupa velas de 1 h en velas de `horas` h alineadas a UTC; descarta los grupos incompletos."""
+    grupos = {}
+    for i, x in enumerate(t):
+        grupos.setdefault((x.date(), x.hour // horas), []).append(i)
+    T, O, H, L, C = [], [], [], [], []
+    for (d, b), idx in sorted(grupos.items()):
+        if len(idx) != horas or any((t[idx[k]] - t[idx[0]]) != dt.timedelta(hours=k) for k in range(horas)):
+            continue
+        T.append(t[idx[0]]); O.append(o[idx[0]]); C.append(c[idx[-1]])
+        H.append(max(h[k] for k in idx)); L.append(min(l[k] for k in idx))
+    return T, O, H, L, C
+
+
+def cargar(ruta, tf=1):
     t, o, h, l, c = [], [], [], [], []
     with open(ruta, encoding="utf-8") as f:
         for r in csv.DictReader(f):
             t.append(dt.datetime.strptime(r["t"], FMT))
             o.append(float(r["o"])); h.append(float(r["h"])); l.append(float(r["l"])); c.append(float(r["c"]))
+    if tf > 1:
+        t, o, h, l, c = agregar(t, o, h, l, c, tf)
     seg, s = [0], 0
     for i in range(1, len(t)):
-        if t[i] - t[i - 1] > dt.timedelta(hours=1):
+        if t[i] - t[i - 1] > dt.timedelta(hours=tf):
             s += 1
         seg.append(s)
     return t, o, h, l, c, seg
@@ -182,15 +209,15 @@ def valor_p(obs, pool, n, rng, sorteos=3000):
 
 
 # ------------------------------------------------------------------ corrida completa
-def correr(ruta):
-    t, o, h, l, c, seg = cargar(ruta)
+def correr(ruta, tf=1):
+    t, o, h, l, c, seg = cargar(ruta, tf)
     n = len(c)
     atr = atr_wilder(h, l, c)
     sig = senales(o, h, l, c)
     corte = int(0.6 * n)
     tramos = {"ajuste": (WARM, corte), "validacion": (corte, n)}
     rng = random.Random(7)
-    res = {"datos": {"velas": n, "desde": str(t[0]), "hasta": str(t[-1]), "corte_ajuste_validacion": str(t[corte]),
+    res = {"tf_horas": tf, "datos": {"velas": n, "desde": str(t[0]), "hasta": str(t[-1]), "corte_ajuste_validacion": str(t[corte]),
                      "huecos": sum(1 for i in range(1, n) if seg[i] != seg[i - 1])},
            "buy_hold": {}, "variantes": []}
     for nombre, (a, b) in tramos.items():
@@ -198,7 +225,7 @@ def correr(ruta):
     stop_pcts = [STOP_ATR * atr[i] / c[i] for i in range(WARM, n) if atr[i]]
     res["stop_pct_mediano"] = statistics.median(stop_pcts)
     res["posicion_usd_mediana"] = min(POS_MAX, RIESGO_USD / res["stop_pct_mediano"])
-    for hold in HOLDS:
+    for hold in HOLDS_POR_TF[tf]:
         todas = {i: simular(i, hold, o, h, l, c, atr, seg) for i in range(WARM, n - 1)}
         for nombre_s, s in sig.items():
             v = {"senal": nombre_s, "hold": hold, "tramos": {}}
@@ -218,20 +245,20 @@ def correr(ruta):
                     v["tramos"][tn][etiqueta] = m
             aj, va = v["tramos"]["ajuste"]["base_taker"], v["tramos"]["validacion"]["base_taker"]
             v["pasa"] = bool(va.get("n", 0) >= 30 and aj.get("n", 0) > 0 and aj["R_neto"] > 0 and va["R_neto"] > 0
-                             and va.get("p_vs_azar") is not None and va["p_vs_azar"] < PASA_P)
+                             and va.get("p_vs_azar") is not None and va["p_vs_azar"] < PASA_P_POR_TF[tf])
             res["variantes"].append(v)
     return res
 
 
 def imprimir(res):
     d = res["datos"]
-    print("Datos: %d velas 1h | %s -> %s | corte ajuste/validación: %s | huecos: %d" %
-          (d["velas"], d["desde"], d["hasta"], d["corte_ajuste_validacion"], d["huecos"]))
+    print("Datos: %d velas %dh | %s -> %s | corte ajuste/validación: %s | huecos: %d" %
+          (d["velas"], res["tf_horas"], d["desde"], d["hasta"], d["corte_ajuste_validacion"], d["huecos"]))
     print("Buy&hold  ajuste %+.1f %%  validación %+.1f %%" % (res["buy_hold"]["ajuste"] * 100, res["buy_hold"]["validacion"] * 100))
     print("Stop 2xATR mediano: %.2f %% del precio -> posición mediana por USD 1 de riesgo: USD %.0f (tope %d)" %
           (res["stop_pct_mediano"] * 100, res["posicion_usd_mediana"], POS_MAX))
     for v in res["variantes"]:
-        print("\n== %s | salida por tiempo %dh | PASA: %s" % (v["senal"], v["hold"], "SÍ" if v["pasa"] else "no"))
+        print("\n== %s | salida por tiempo %d velas | PASA: %s" % (v["senal"], v["hold"], "SÍ" if v["pasa"] else "no"))
         for tn in ("ajuste", "validacion"):
             for et in ("base_taker", "sens_maker"):
                 m = v["tramos"][tn][et]
@@ -249,8 +276,9 @@ def imprimir(res):
 
 if __name__ == "__main__":
     ruta = sys.argv[1] if len(sys.argv) > 1 else "halcon/datos/btc_usd_1h_twelvedata.csv"
-    r = correr(ruta)
+    tf = int(sys.argv[3]) if len(sys.argv) > 3 else 1
+    r = correr(ruta, tf)
     imprimir(r)
-    if len(sys.argv) > 2:
+    if len(sys.argv) > 2 and sys.argv[2] != "-":
         with open(sys.argv[2], "w", encoding="utf-8") as f:
             json.dump(r, f, indent=1, ensure_ascii=False, default=str)

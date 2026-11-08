@@ -55,6 +55,28 @@ class TestSimular(unittest.TestCase):
         self.assertIsNone(bt.simular(10, 24, *self.armar(30)))
 
 
+class TestAgregar(unittest.TestCase):
+    def test_4h_completas_y_descarta_incompletas(self):
+        import datetime as dt
+        base = dt.datetime(2026, 1, 1, 0, 0)
+        t = [base + dt.timedelta(hours=k) for k in range(9)]        # 00..08 -> grupos 0-3, 4-7 completos; 8 incompleto
+        o = [float(k) for k in range(9)]
+        h = [k + 10.0 for k in range(9)]
+        l = [k - 10.0 for k in range(9)]
+        c = [k + 0.5 for k in range(9)]
+        T, O, H, L, C = bt.agregar(t, o, h, l, c, 4)
+        self.assertEqual(len(T), 2)
+        self.assertEqual((O[0], C[0], H[0], L[0]), (0.0, 3.5, 13.0, -10.0))
+        self.assertEqual((O[1], C[1]), (4.0, 7.5))
+
+    def test_grupo_con_hueco_se_descarta(self):
+        import datetime as dt
+        base = dt.datetime(2026, 1, 1, 0, 0)
+        t = [base, base + dt.timedelta(hours=1), base + dt.timedelta(hours=3)]   # falta la hora 2
+        r = bt.agregar(t, [1.0] * 3, [1.0] * 3, [1.0] * 3, [1.0] * 3, 4)
+        self.assertEqual(len(r[0]), 0)
+
+
 class TestCostos(unittest.TestCase):
     def test_costo_ida_y_vuelta(self):
         tr = {"ref_in": 100.0, "ref_out": 100.0, "stop_pct": 0.02}
