@@ -307,6 +307,86 @@ class TestCiclo(Base):
         self.assertEqual(self.broker.colocadas, [])
 
 
+class _Resp:
+    def __init__(self, datos):
+        self._d = json.dumps(datos).encode()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *a):
+        return False
+
+    def read(self):
+        return self._d
+
+
+def _http_error(codigo, descripcion):
+    import io
+    import urllib.error
+    return urllib.error.HTTPError("u", codigo, "x", {}, io.BytesIO(json.dumps({"ok": False, "description": descripcion}).encode()))
+
+
+class TestTelegram(Base):
+    ENV = {"ALBA_TELEGRAM_TOKEN": "tok", "ALBA_TELEGRAM_CHAT": "9"}
+
+    def test_texto_plano_sin_markdown(self):
+        from notificar import _plano
+        self.assertEqual(_plano("**TSLA** compra\n_Dinero ficticio (paper)._"), "TSLA compra\nDinero ficticio (paper).")
+
+    def test_cada_compra_y_cada_venta_llegan_a_telegram(self):
+        envios = []
+        self.notif = Notificador(entorno=self.ENV, enviar=lambda url, cuerpo, headers, form=False: envios.append((url, cuerpo)))
+        pack = PackFalso(self.est)
+        self.ciclo(pack)
+        self.broker.pos.clear()
+        self.broker.ordenes["o1"]["legs"] = [{"type": "limit", "status": "filled", "filled_avg_price": "106.00"}]
+        self.ciclo(pack, hora="2026-11-09 11:00")
+        textos = [c["text"] for u, c in envios if "api.telegram.org" in u]
+        self.assertEqual(len(textos), 2)
+        self.assertIn("COMPRA TSLA x9", textos[0])
+        self.assertIn("Stop: $100.00", textos[0])
+        self.assertIn("OBJETIVO TSLA", textos[1])
+        self.assertIn("Resultado: +$36.00", textos[1])
+        self.assertTrue(all("**" not in x for x in textos))
+        self.assertTrue(all(c["chat_id"] == "9" for u, c in envios if "api.telegram.org" in u))
+
+    def test_descubrir_chat(self):
+        from notificar import telegram_descubrir
+        r = _Resp({"ok": True, "result": [{"message": {"chat": {"id": 123456, "type": "private"}}}]})
+        self.assertEqual(telegram_descubrir("tok", abrir=lambda url, timeout: r), ({123456: "private"}, None))
+        vacio = _Resp({"ok": True, "result": []})
+        self.assertEqual(telegram_descubrir("tok", abrir=lambda url, timeout: vacio), ({}, None))
+
+    def test_descubrir_con_token_malo(self):
+        from notificar import telegram_descubrir
+
+        def abrir(url, timeout):
+            raise _http_error(401, "Unauthorized")
+        chats, error = telegram_descubrir("malo", abrir=abrir)
+        self.assertEqual(chats, {})
+        self.assertIn("401", error)
+
+    def test_probar_ok_y_error(self):
+        from notificar import telegram_probar
+        self.assertEqual(telegram_probar("t", "9", "hola", abrir=lambda r, timeout: _Resp({"ok": True})), (True, "enviado"))
+
+        def abrir(r, timeout):
+            raise _http_error(400, "Bad Request: chat not found")
+        ok, detalle = telegram_probar("t", "9", "hola", abrir=abrir)
+        self.assertFalse(ok)
+        self.assertIn("chat not found", detalle)
+
+    def test_cli_pide_lo_que_falta(self):
+        self.assertEqual(oq.telegram_cli("probar", env={}), 1)
+        self.assertEqual(oq.telegram_cli("probar", env={"ALBA_TELEGRAM_TOKEN": "t"}), 1)
+
+    def test_cli_descubrir_y_probar(self):
+        resp = _Resp({"ok": True, "result": [{"message": {"chat": {"id": 55, "type": "private"}}}]})
+        self.assertEqual(oq.telegram_cli("descubrir", env={"ALBA_TELEGRAM_TOKEN": "t"}, abrir=lambda *a, **k: resp), 0)
+        self.assertEqual(oq.telegram_cli("probar", env=self.ENV, abrir=lambda *a, **k: _Resp({"ok": True})), 0)
+
+
 class TestEscaneo(Base):
     def test_el_escaner_corre_cada_cinco_minutos(self):
         pack = PackFalso(self.est, mc_r=-1)

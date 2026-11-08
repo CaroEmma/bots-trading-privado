@@ -53,6 +53,17 @@ Hasta que existan los secrets, el workflow termina sin hacer nada.
 
 Rutina `trig_01Qjx3KMRYZV9CsK8aDBtwYj` ("ALBA - evaluación semanal de resultados"): los **viernes 17:47 hora de Nueva York** (primera: 2026-11-13) abre una sesión nueva de Claude, lee la rama `alba-estado`, calcula las métricas y manda una notificación push. Es solo lectura. Si todavía no hay datos, informa qué pasos faltan. Usa la cuota de Claude del usuario. Se pausa o borra desde la lista de rutinas de claude.ai o pidiéndoselo a Claude.
 
+## Avisos por Telegram (preparado 2026-11-08; falta que el usuario cargue token y chat)
+
+ALBA y el Turtle mandan a Telegram **cada compra y cada venta** (con precio, stop, objetivo, resultado en R y en USD), además del issue. Mismos secrets para los dos bots: `ALBA_TELEGRAM_TOKEN` y `ALBA_TELEGRAM_CHAT`. Pasos del usuario:
+1. En Telegram buscar `@BotFather`, enviar `/newbot`, elegir nombre y un usuario que termine en `bot`; copiar el token que entrega.
+2. Abrir el chat con el bot nuevo y tocar **Iniciar** (o escribirle `hola`); sin esto el bot no puede escribirle.
+3. GitHub > Settings > Secrets > Actions: crear `ALBA_TELEGRAM_TOKEN` con el token.
+4. Actions > ALBA > Run workflow > campo `telegram` = `descubrir_chat`: el número de chat aparece en el resumen de la corrida (`Summary`). Ese número es visible en un repo público (por sí solo no permite escribirle al usuario sin el token).
+5. Crear el secret `ALBA_TELEGRAM_CHAT` con ese número.
+6. Run workflow con `telegram` = `probar`: llega un mensaje de prueba. El resumen dice si falló y por qué (token mal copiado: 401; chat equivocado o sin Iniciar: "chat not found").
+**No verificado:** el envío real a Telegram (la red de la sesión de Claude no llega a `api.telegram.org`); solo está probado con respuestas simuladas.
+
 ## Avisos
 
 Canal por defecto: un **issue** en el repo por cada compra / cierre / informe, con mención a `@CaroEmma`; GitHub lo manda por correo y a la app móvil si las notificaciones están activas. Es opcional sumar Telegram. Siempre queda también el resumen en la pestaña Actions.

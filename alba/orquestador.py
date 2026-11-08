@@ -27,7 +27,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
 
 from alpaca_paper import AlpacaPaper, ErrorAlpaca, claves_desde_entorno  # noqa: E402
-from notificar import Notificador  # noqa: E402
+from notificar import Notificador, telegram_descubrir, telegram_probar  # noqa: E402
 
 VENDOR = os.path.join(AQUI, "vendor", "day-trader-skill")
 SCRIPTS = {
@@ -370,7 +370,7 @@ def finalizar(cfg, pack, est, notif, ahora, h, sym, t, salida, motivo):
     notif.avisar("ALBA | %s %s %s R (%s)" % (etiqueta, sym, signo(r), usd_s(pnl)),
                  "**%s** — vendida a %s (entrada %s, %d acciones)\n\n- Resultado: %s (%s R)\n- Motivo: %s\n"
                  "- Acumulado: %s\n\n_Dinero ficticio (paper)._"
-                 % (sym, usd(salida), usd(entrada), qty, usd(pnl), signo(r), motivo, texto_estadisticas(acum)))
+                 % (sym, usd(salida), usd(entrada), qty, usd_s(pnl), signo(r), motivo, texto_estadisticas(acum)))
 
 
 def conciliar(cfg, broker, pack, est, notif, ahora, h, mercado_abierto):
@@ -602,15 +602,52 @@ def diagnostico(broker, notif):
     notif.avisar("ALBA | Diagnóstico de conexiones", "\n".join(lineas))
 
 
+def telegram_cli(modo, env=None, abrir=None):
+    """Ayuda para configurar Telegram sin pasar claves por el chat (se corre desde el workflow)."""
+    env = os.environ if env is None else env
+    kw = {"abrir": abrir} if abrir else {}
+    n = Notificador(entorno=env)
+    token, chat = env.get("ALBA_TELEGRAM_TOKEN"), env.get("ALBA_TELEGRAM_CHAT")
+    if not token:
+        n._resumen("ALBA | Telegram", "Falta el secret `ALBA_TELEGRAM_TOKEN`. Cargalo en Settings > Secrets > Actions y repetí.")
+        print("Falta ALBA_TELEGRAM_TOKEN")
+        return 1
+    if modo == "descubrir":
+        chats, error = telegram_descubrir(token, **kw)
+        if error:
+            texto = "No pude leer los chats: %s. Si dice 401 el token está mal copiado." % error
+        elif not chats:
+            texto = ("El bot no recibió ningún mensaje todavía. Abrí Telegram, entrá al chat con TU bot, tocá **Iniciar** "
+                     "(o escribí `hola`) y repetí este paso.")
+        else:
+            texto = "Chats que le escribieron al bot:\n" + "\n".join("- `%s` (%s)" % (i, t) for i, t in chats.items()) + \
+                    "\n\nCargá el número del chat tipo `private` como secret `ALBA_TELEGRAM_CHAT`."
+        n._resumen("ALBA | Telegram: descubrir chat", texto)
+        print(texto)
+        return 0 if (chats and not error) else 1
+    if not chat:
+        n._resumen("ALBA | Telegram", "Falta el secret `ALBA_TELEGRAM_CHAT`. Usá el paso 'descubrir_chat' para ver el número.")
+        print("Falta ALBA_TELEGRAM_CHAT")
+        return 1
+    ok, detalle = telegram_probar(token, chat, "ALBA | Prueba de avisos: si ves este mensaje, Telegram quedó configurado. "
+                                  "Dinero ficticio (paper).", **kw)
+    n._resumen("ALBA | Telegram: prueba", "Resultado: **%s** (%s)" % ("OK, revisá tu Telegram" if ok else "FALLÓ", detalle))
+    print("Telegram:", ok, detalle)
+    return 0 if ok else 1
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="ALBA: un ciclo del bot de acciones intradía (paper)")
     ap.add_argument("--estado", required=True, help="carpeta de estado (rama alba-estado)")
     ap.add_argument("--config", default=os.path.join(AQUI, "config.json"))
     ap.add_argument("--diagnostico", action="store_true")
+    ap.add_argument("--telegram", choices=["descubrir", "probar"], help="configurar / probar los avisos por Telegram")
     ap.add_argument("--sesion", action="store_true", help="repetir el ciclo hasta el cierre del mercado")
     ap.add_argument("--duracion-max-min", type=int, help="tope de duración de la sesión (minutos)")
     a = ap.parse_args(argv)
     cfg = leer_json(a.config)
+    if a.telegram:
+        return telegram_cli(a.telegram)
     key, secret = claves_desde_entorno("ALBA_")
     if not key or not secret:
         print("ALBA: faltan los secrets ALBA_ALPACA_KEY / ALBA_ALPACA_SECRET. No hago nada (ver proyectos/alba/README.md).")

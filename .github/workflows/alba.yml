@@ -23,9 +23,14 @@ on:
         description: "Correr UN solo ciclo y terminar (en vez de la sesion larga)"
         type: boolean
         default: false
+      telegram:
+        description: "Configurar avisos por Telegram: descubrir_chat (muestra el numero de chat) o probar (manda un mensaje de prueba)"
+        type: choice
+        options: [ninguno, descubrir_chat, probar]
+        default: ninguno
 
 concurrency:
-  group: ${{ (github.event_name == 'workflow_dispatch' && inputs.diagnostico) && 'alba-diagnostico' || 'alba' }}
+  group: ${{ (github.event_name == 'workflow_dispatch' && (inputs.diagnostico || inputs.telegram != 'ninguno')) && 'alba-diagnostico' || 'alba' }}
   cancel-in-progress: false   # nunca cortar un ciclo a mitad de una orden
 
 permissions:
@@ -88,7 +93,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
-          if [ "${{ inputs.diagnostico }}" = "true" ]; then
+          if [ "${{ inputs.telegram }}" = "descubrir_chat" ]; then
+            python alba/orquestador.py --estado estado --telegram descubrir
+          elif [ "${{ inputs.telegram }}" = "probar" ]; then
+            python alba/orquestador.py --estado estado --telegram probar
+          elif [ "${{ inputs.diagnostico }}" = "true" ]; then
             python alba/orquestador.py --estado estado --diagnostico
           elif [ "${{ inputs.un_ciclo }}" = "true" ]; then
             python alba/orquestador.py --estado estado

@@ -8,8 +8,53 @@ Canales (todos opcionales, se usan los que estén configurados):
 """
 import json
 import os
+import re
+import urllib.error
 import urllib.parse
 import urllib.request
+
+
+def _plano(texto):
+    """Telegram sin parse_mode muestra el markdown tal cual: se lo saca (negritas y cursivas de una línea)."""
+    texto = texto.replace("**", "")
+    return re.sub(r"(?m)^_(.+)_$", r"\1", texto)
+
+
+def _error_http(e):
+    try:
+        return json.loads(e.read().decode()).get("description") or str(e)
+    except Exception:  # noqa: BLE001
+        return str(e)
+
+
+def telegram_descubrir(token, abrir=urllib.request.urlopen):
+    """Devuelve ({chat_id: tipo}, None) con los chats que le escribieron al bot, o ({}, motivo del fallo)."""
+    try:
+        with abrir("https://api.telegram.org/bot%s/getUpdates" % token, timeout=20) as r:
+            datos = json.loads(r.read().decode())
+    except urllib.error.HTTPError as e:
+        return {}, "Telegram respondió %s: %s" % (e.code, _error_http(e))
+    except Exception as e:  # noqa: BLE001
+        return {}, "no pude conectar con Telegram (%s)" % type(e).__name__
+    chats = {}
+    for u in datos.get("result", []):
+        c = (u.get("message") or u.get("channel_post") or {}).get("chat") or {}
+        if "id" in c:
+            chats[c["id"]] = c.get("type")
+    return chats, None
+
+
+def telegram_probar(token, chat, texto, abrir=urllib.request.urlopen):
+    """Manda un mensaje de prueba. Devuelve (ok, detalle) sin lanzar excepciones."""
+    cuerpo = urllib.parse.urlencode({"chat_id": chat, "text": texto}).encode()
+    req = urllib.request.Request("https://api.telegram.org/bot%s/sendMessage" % token, data=cuerpo, method="POST")
+    try:
+        with abrir(req, timeout=20) as r:
+            return (json.loads(r.read().decode()).get("ok") is True), "enviado"
+    except urllib.error.HTTPError as e:
+        return False, "Telegram respondió %s: %s" % (e.code, _error_http(e))
+    except Exception as e:  # noqa: BLE001
+        return False, "no pude conectar con Telegram (%s)" % type(e).__name__
 
 
 def _post(url, cuerpo, headers, form=False):
@@ -65,6 +110,6 @@ class Notificador:
             return
         try:
             self._enviar("https://api.telegram.org/bot%s/sendMessage" % token,
-                         {"chat_id": chat, "text": ("%s\n\n%s" % (titulo, cuerpo))[:3900]}, {}, form=True)
+                         {"chat_id": chat, "text": _plano("%s\n\n%s" % (titulo, cuerpo))[:3900]}, {}, form=True)
         except Exception as e:  # noqa: BLE001
             print("(aviso) no pude enviar a Telegram: %s" % type(e).__name__)

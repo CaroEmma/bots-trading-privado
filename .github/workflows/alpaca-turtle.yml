@@ -40,6 +40,8 @@ jobs:
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          ALBA_TELEGRAM_TOKEN: ${{ secrets.ALBA_TELEGRAM_TOKEN }}
+          ALBA_TELEGRAM_CHAT: ${{ secrets.ALBA_TELEGRAM_CHAT }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python alpaca_bot/bot_github_actions.py
