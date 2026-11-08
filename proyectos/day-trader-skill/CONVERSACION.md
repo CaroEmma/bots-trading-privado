@@ -33,7 +33,7 @@ Auditoría estática realizada (sin ejecutar código):
 
 | Intento | Resultado |
 |---|---|
-| Ejecutar los tests del repo (`unittest`) | **Bloqueado** por la política de seguridad de la sesión (código externo). No se forzó. Pendiente con autorización explícita. |
+| Ejecutar los tests del repo (`unittest`) | Primero **bloqueado** por la política de seguridad de la sesión (código externo). Luego, con la autorización del usuario ("lo probemos"), se corrieron en copia aislada: ver sección 12. |
 | Metadatos del repo (estrellas, forks, issues) vía `gh api` | 403: API de GitHub no habilitada para ese repo; además el token `GH_TOKEN` de la sesión es inválido. |
 | Crear un repo nuevo en GitHub | No posible (token inválido; sin herramienta de creación). |
 | Verificar afirmaciones externas del README (fin del PDT, versión del MCP de Alpaca) | No verificado. |
@@ -48,11 +48,11 @@ Auditoría estática realizada (sin ejecutar código):
 
 ## 6. Hook de la plataforma
 
-Dos veces apareció un aviso de "archivos sin seguimiento, hacer commit y push". En ambos casos el clon era el repo de un tercero (solo lectura): no se hizo push ahí. La ficha se movió fuera de ese clon.
+Tres veces apareció un aviso del hook de la plataforma. Dos veces por "archivos sin seguimiento" en el clon del repo de un tercero (solo lectura): no se hizo push ahí y la ficha se movió fuera. La tercera fue un falso positivo: la rama ya estaba subida, pero el clon superficial no tenía registrada la referencia remota; se corrigió la configuración local.
 
 ## 7. Estado de lo que hay en el repo de CaroEmma
 
-`bots-trading-privado` contiene bots de trading en paper (Alpaca Turtle BTC/ETH y funding-carry) que corren por cron en GitHub Actions y **commitean a `main` cada 15 min y cada 2 h**. Por eso este proyecto se subió en una **rama aparte**, `claude/proyecto-day-trader-skill`, carpeta `proyectos/day-trader-skill/`, para no interferir con el bot. Los workflows son solo por cron (no se disparan por push).
+`bots-trading-privado` contiene bots de trading en paper (Alpaca Turtle BTC/ETH y funding-carry) que corren por cron en GitHub Actions y **commitean a `main` cada 15 min y cada 2 h**. Por eso este proyecto se subió en una **rama aparte**, `claude/proyecto-day-trader-skill`, carpeta `proyectos/day-trader-skill/`, para no interferir con el bot. Los workflows son solo por cron (no se disparan por push). Commits `c0ca563` y `c886a8c`.
 
 ## 8. Instalación del skill
 
@@ -71,6 +71,7 @@ Dos veces apareció un aviso de "archivos sin seguimiento, hacer commit y push".
 2. La cuenta `CaroEmma` es suya; autoriza usar `bots-trading-privado`.
 3. Quiere el skill instalado para probarlo.
 4. Quiere que quede claro como proyecto y que no se pierda nada de la conversación.
+5. "Perfecto, lo probemos": autoriza correr tests y probar skills de lectura.
 
 ## 10. Preferencias de trabajo del usuario (de su perfil)
 
@@ -81,12 +82,11 @@ Contexto del usuario relevante al proyecto (de las skills que tiene en su cuenta
 ## 11. Próximos pasos (el usuario decide)
 
 - A. Instalar en el Claude real y probar en paper.
-- B. Tests en entorno aislado (requiere autorización).
+- B. `budget` + `risk` con capital y pérdida máxima por operación del usuario.
 - C. Revisión línea por línea de `broker`, `risk` y `budget`.
 - D. Adaptar / combinar con `asesor-financiero-portfolio` y `trading-cripto-intradia`.
-- E. Solo archivar.
-
-Sugerencia de Claude: hacer A (solo skills de lectura, sin broker) + B antes de cualquier otra cosa.
+- E. Prueba con mercado abierto (lunes 9/11 desde 9:30 ET).
+- F. Solo archivar.
 
 ## 12. Prueba 01 (2026-11-08, tras "perfecto, lo probemos")
 
@@ -98,6 +98,6 @@ Sugerencia de Claude: hacer A (solo skills de lectura, sin broker) + B antes de 
 
 ## 13. Registro de cambios de este archivo
 
-- 2026-11-08: sección 12 agregada con la Prueba 01.
+- 2026-11-08: sección 12 agregada con la Prueba 01; secciones 4, 6, 9 y 11 actualizadas.
 
 - 2026-11-08: creación, tras identificar el repo, guardar en Drive, adjuntar `CaroEmma/bots-trading-privado` e instalar las skills en la sesión.
