@@ -1,0 +1,41 @@
+Datos: 19084 velas 1h | 2024-09-01 00:00:00 -> 2026-11-08 00:00:00 | corte ajuste/validación: 2025-12-24 00:00:00 | huecos: 3
+Buy&hold  ajuste +54.9 %  validación -13.5 %
+Stop 2xATR mediano: 1.15 % del precio -> posición mediana por USD 1 de riesgo: USD 75 (tope 75)
+
+== S1 ruptura 48h | salida por tiempo 24h | PASA: no
+  ajuste     base_taker n=193 (2.9/sem) acierto 37% R neto -0.549 (bruto +0.020) IC90 [-0.68;-0.42] FB 0.34 DD 105.9R USD -83.3 p/azar 0.603 azar -0.526
+  ajuste     sens_maker n=193 (2.9/sem) acierto 40% R neto -0.360 (bruto +0.020) IC90 [-0.48;-0.22] FB 0.50 DD 69.4R USD -56.6 p/azar 0.587 azar -0.343
+  validacion base_taker n=113 (2.5/sem) acierto 39% R neto -0.517 (bruto +0.081) IC90 [-0.69;-0.33] FB 0.37 DD 58.4R USD -39.9 p/azar 0.199 azar -0.605
+  validacion sens_maker n=113 (2.5/sem) acierto 43% R neto -0.318 (bruto +0.081) IC90 [-0.48;-0.14] FB 0.55 DD 37.9R USD -24.0 p/azar 0.188 azar -0.405
+
+== S2 reversion RSI<30 en tendencia | salida por tiempo 24h | PASA: no
+  ajuste     base_taker n= 15 (0.2/sem) acierto 33% R neto -0.504 (bruto -0.028) IC90 [-1.01;-0.00] FB 0.42 DD 8.6R USD -5.7 p/azar 0.458 azar -0.526
+  ajuste     sens_maker n= 15 (0.2/sem) acierto 33% R neto -0.346 (bruto -0.028) IC90 [-0.85;+0.19] FB 0.54 DD 7.0R USD -3.6 p/azar 0.496 azar -0.343
+  validacion base_taker n=  8 (0.2/sem) acierto 50% R neto +0.041 (bruto +0.541) IC90 [-0.53;+0.62] FB 1.10 DD 3.4R USD -0.1 p/azar 0.054 azar -0.605
+  validacion sens_maker n=  8 (0.2/sem) acierto 62% R neto +0.207 (bruto +0.541) IC90 [-0.37;+0.81] FB 1.57 DD 2.9R USD +1.0 p/azar 0.055 azar -0.405
+
+== S3 retroceso a EMA20 en tendencia | salida por tiempo 24h | PASA: no
+  ajuste     base_taker n=221 (3.3/sem) acierto 36% R neto -0.607 (bruto -0.010) IC90 [-0.73;-0.48] FB 0.30 DD 137.5R USD -99.7 p/azar 0.875 azar -0.526
+  ajuste     sens_maker n=221 (3.3/sem) acierto 39% R neto -0.408 (bruto -0.010) IC90 [-0.52;-0.29] FB 0.45 DD 95.1R USD -68.9 p/azar 0.819 azar -0.343
+  validacion base_taker n=108 (2.4/sem) acierto 33% R neto -0.654 (bruto -0.022) IC90 [-0.83;-0.47] FB 0.28 DD 70.9R USD -49.6 p/azar 0.677 azar -0.605
+  validacion sens_maker n=108 (2.4/sem) acierto 39% R neto -0.444 (bruto -0.022) IC90 [-0.61;-0.27] FB 0.42 DD 49.3R USD -34.0 p/azar 0.642 azar -0.405
+
+== S1 ruptura 48h | salida por tiempo 48h | PASA: no
+  ajuste     base_taker n=185 (2.8/sem) acierto 38% R neto -0.554 (bruto +0.013) IC90 [-0.70;-0.41] FB 0.37 DD 102.8R USD -82.6 p/azar 0.662 azar -0.518
+  ajuste     sens_maker n=185 (2.8/sem) acierto 41% R neto -0.365 (bruto +0.013) IC90 [-0.51;-0.23] FB 0.53 DD 68.1R USD -57.1 p/azar 0.636 azar -0.335
+  validacion base_taker n=111 (2.4/sem) acierto 42% R neto -0.579 (bruto +0.020) IC90 [-0.78;-0.38] FB 0.36 DD 64.3R USD -44.8 p/azar 0.486 azar -0.582
+  validacion sens_maker n=111 (2.4/sem) acierto 43% R neto -0.380 (bruto +0.020) IC90 [-0.57;-0.19] FB 0.52 DD 42.9R USD -29.2 p/azar 0.481 azar -0.382
+
+== S2 reversion RSI<30 en tendencia | salida por tiempo 48h | PASA: no
+  ajuste     base_taker n= 15 (0.2/sem) acierto 40% R neto -0.477 (bruto +0.000) IC90 [-1.00;+0.08] FB 0.47 DD 8.5R USD -5.3 p/azar 0.438 azar -0.518
+  ajuste     sens_maker n= 15 (0.2/sem) acierto 40% R neto -0.318 (bruto +0.000) IC90 [-0.84;+0.20] FB 0.60 DD 7.0R USD -3.2 p/azar 0.463 azar -0.335
+  validacion base_taker n=  8 (0.2/sem) acierto 62% R neto +0.166 (bruto +0.667) IC90 [-0.42;+0.73] FB 1.40 DD 2.7R USD +0.5 p/azar 0.041 azar -0.582
+  validacion sens_maker n=  8 (0.2/sem) acierto 62% R neto +0.333 (bruto +0.667) IC90 [-0.28;+0.90] FB 1.91 DD 2.5R USD +1.6 p/azar 0.047 azar -0.382
+
+== S3 retroceso a EMA20 en tendencia | salida por tiempo 48h | PASA: no
+  ajuste     base_taker n=183 (2.7/sem) acierto 39% R neto -0.576 (bruto -0.015) IC90 [-0.72;-0.43] FB 0.36 DD 108.0R USD -83.0 p/azar 0.733 azar -0.518
+  ajuste     sens_maker n=183 (2.7/sem) acierto 40% R neto -0.389 (bruto -0.015) IC90 [-0.53;-0.25] FB 0.51 DD 74.6R USD -57.7 p/azar 0.729 azar -0.335
+  validacion base_taker n= 93 (2.0/sem) acierto 40% R neto -0.558 (bruto +0.059) IC90 [-0.76;-0.36] FB 0.36 DD 52.2R USD -40.0 p/azar 0.418 azar -0.582
+  validacion sens_maker n= 93 (2.0/sem) acierto 42% R neto -0.352 (bruto +0.059) IC90 [-0.55;-0.14] FB 0.53 DD 34.4R USD -26.6 p/azar 0.398 azar -0.382
+
+Variantes que pasan la regla preregistrada: 0 de 6
