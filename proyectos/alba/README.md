@@ -37,6 +37,10 @@ Todo candidato (comprado u omitido, con el motivo) queda en `decisiones.jsonl`; 
 
 Hasta que existan los secrets, el workflow termina sin hacer nada.
 
+## Seguimiento semanal (rutina de Claude)
+
+Rutina `trig_01Qjx3KMRYZV9CsK8aDBtwYj` ("ALBA - evaluación semanal de resultados"): los **viernes 17:47 hora de Nueva York** (primera: 2026-11-13) abre una sesión nueva de Claude, lee la rama `alba-estado`, calcula las métricas y manda una notificación push. Es solo lectura. Si todavía no hay datos, informa qué pasos faltan. Usa la cuota de Claude del usuario. Se pausa o borra desde la lista de rutinas de claude.ai o pidiéndoselo a Claude.
+
 ## Avisos
 
 Canal por defecto: un **issue** en el repo por cada compra / cierre / informe, con mención a `@CaroEmma`; GitHub lo manda por correo y a la app móvil si las notificaciones están activas. Es opcional sumar Telegram. Siempre queda también el resumen en la pestaña Actions.
