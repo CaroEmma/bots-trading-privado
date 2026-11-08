@@ -2,9 +2,12 @@ name: Alpaca Turtle Bot (paper trading)
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # cada 15 min; Alpaca solo evalua vela nueva cada 4h, el resto de las corridas solo revisan el stop
+    # GitHub NO cumple los crons al minuto: el "*/15" anterior corria ~4 veces por dia (visto en la pestaña Actions).
+    # Se piden corridas cada hora y al cierre de cada vela de 4 h (00/04/08/12/16/20 UTC + 3 min). El bot ahora revisa todas
+    # las velas pendientes en cada corrida, asi que las que GitHub saltee no se pierden (salvo entradas, ver alpaca_bot/bot_github_actions.py).
+    - cron: "7 * * * *"
+    - cron: "3 0,4,8,12,16,20 * * *"
   workflow_dispatch: {}      # permite correrlo manualmente desde la pestaña Actions para probar
-  
 
 concurrency:
   group: alpaca-turtle
@@ -12,10 +15,12 @@ concurrency:
 
 permissions:
   contents: write   # necesario para que el workflow pueda commitear estado.json / bot.log
+  issues: write     # avisos de cada compra / venta
 
 jobs:
   correr-bot:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout del repo
         uses: actions/checkout@v4
@@ -28,16 +33,25 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r alpaca_bot/requirements.txt
 
+      - name: Tests offline (si fallan no se opera)
+        run: python -m unittest discover -s alpaca_bot/tests
+
       - name: Correr un ciclo del bot (paper trading, fondos ficticios)
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: python alpaca_bot/bot_github_actions.py
 
       - name: Commitear estado actualizado (estado.json, bot.log)
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add alpaca_bot/estado.json alpaca_bot/bot.log
           git diff --cached --quiet || git commit -m "chore: actualizar estado del bot Turtle Alpaca [skip ci]"
-          git push
+          for i in 1 2 3; do
+            git push && break
+            git pull --rebase origin main
+          done

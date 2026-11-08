@@ -29,6 +29,10 @@ Todo candidato (comprado u omitido, con el motivo) queda en `decisiones.jsonl`; 
 - Consumo: ~6,5 h de runner por día hábil. En repos públicos es gratis; en privados el plan Free tiene tope de 2.000 min/mes.
 - Si los disparos de GitHub fallaran todos, ALBA no opera ese día (no hay riesgo, solo se pierde la sesión). Corrida manual: Actions → ALBA → Run workflow (opciones: solo diagnóstico, o un solo ciclo).
 
+## Riesgo de condiciones de uso (no resuelto)
+
+Las sesiones de ALBA (hasta 340 min, casi 6,5 h por día hábil) son un uso intensivo de GitHub Actions para algo que no es CI/CD. Versiones anteriores de las condiciones de GitHub mencionan "serverless computing" entre los usos no previstos; no pude confirmar el texto vigente (consultado 2026-11-08, ver `proyectos/halcon/README.md`). Si GitHub lo considerara abuso podría cortar jobs o restringir Actions en el repo. ALBA necesita sesiones largas porque el cron de GitHub no es puntual. Alternativas si se quiere eliminar el riesgo: un servidor propio o un servicio de ejecución continua.
+
 ## Seguridad
 
 - Solo `paper-api.alpaca.markets`; cualquier otra URL lanza error (test incluido). El modo real **no está implementado**.

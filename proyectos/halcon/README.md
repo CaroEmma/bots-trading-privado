@@ -41,6 +41,25 @@ Script `halcon/medir_turtle.py`; resultados en `halcon/resultados/turtle_medicio
 
 Limitaciones de esta medición: es una simulación (entrada a la apertura siguiente; el bot real corre unas 4 veces por día por la demora de los crons de GitHub y solo evalúa la última vela cerrada en cada corrida, así que puede entrar tarde o perder una señal); no se sabe si Alpaca Paper cobra las comisiones del replay; datos de otra fuente; n chico.
 
+## Mejora aplicada al bot Turtle (2026-11-08, autorizada por el usuario)
+
+Qué cambió (la estrategia y sus parámetros NO cambiaron; archivos: `alpaca_bot/bot_github_actions.py`, `.github/workflows/alpaca-turtle.yml`, tests en `alpaca_bot/tests/`):
+1. **Revisa todas las velas cerradas pendientes** en cada corrida, no solo la última. Las salidas por canal se aplican aunque la vela sea vieja (se loguean como "TARDIA"); las **entradas solo con la última vela** (entrar por una señal vieja sería otro trade); la primera corrida sin estado solo evalúa la última vela.
+2. **Avisa cada compra y cada venta** por issue del repo (con mención), igual que ALBA.
+3. **Workflow:** cron cada hora y al cierre de cada vela de 4 h (antes `*/15`, que GitHub corría ~4 veces por día), `issues: write`, tests antes de operar (si fallan no se opera), y reintento de push con rebase.
+4. El estado (`estado.json`) mantiene el mismo formato: no hay migración.
+
+Verificación (offline): 11 tests; el bot real reproducido vela por vela sobre 775 días hace **exactamente las mismas operaciones que la medición** (BTC: 24, ETH: 17, mismas fechas de entrada y salida). Efecto medido en BTC con corridas salteadas:
+| Frecuencia de corridas | Compras (antes → ahora) | Cierres (antes → ahora) |
+|---|---|---|
+| cada 4 h | 24 → 24 | 24 → 24 |
+| cada 8 h | 22 → 22 | 21 → **22** (una salida por canal ya no se pierde) |
+| cada 24 h | 6 → 6 | 5 → **6** |
+
+**Límite que la mejora NO arregla:** las entradas dependen de que una corrida vea la vela de ruptura como la última cerrada. Con corridas cada 24 h se pierden 3 de cada 4 compras (6 de 24). La densidad real de corridas depende de que GitHub cumpla los crons; el diseño por sesiones largas (como ALBA) la asegura, pero no se aplicó acá (ver riesgo siguiente).
+
+**Riesgo no resuelto — condiciones de uso de GitHub Actions:** versiones anteriores de las condiciones de GitHub listan "serverless computing" entre los usos no previstos de Actions y una discusión de la comunidad lo trata como fuera del alcance de CI/CD (no es política oficial). No pude confirmar el texto vigente. Un bot de trading con corridas cortas y esporádicas está en una zona gris; sesiones de 6 horas casi continuas (como las de ALBA) lo están más. Consecuencia posible: GitHub puede cortar jobs o restringir Actions. Por eso el Turtle NO se pasó a sesiones largas. Alternativa más segura a futuro: un servidor propio o un servicio de ejecución pensado para esto. Fuentes (consultadas 2026-11-08): https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features , https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies
+
 ## Limitaciones (honestas)
 - Un backtest no es un resultado real: sin latencia, rechazos ni liquidez de Alpaca. Datos de otra fuente. Posible sobreajuste de la lectura aunque no se afinaron parámetros.
 - Solo se probaron 3 familias de señal con una salida; que ninguna valga no prueba que ninguna estrategia pueda valer.
