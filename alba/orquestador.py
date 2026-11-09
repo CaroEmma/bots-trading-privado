@@ -673,6 +673,42 @@ def telegram_cli(modo, env=None, abrir=None):
     return 0 if ok else 1
 
 
+def enviar_estado(cfg, broker, est, notif):
+    """Manda a Telegram el estado del momento: cuenta y posiciones en vivo (Alpaca) + operaciones del día (rama de estado)."""
+    reloj = broker.reloj()
+    ahora = parsear_fecha(reloj["timestamp"]).astimezone(NY)
+    fecha = ahora.date().isoformat()
+    try:
+        cu = broker.cuenta()
+        equity = float(cu["equity"])
+        variacion = equity - float(cu["last_equity"]) if cu.get("last_equity") is not None else None
+    except Exception as e:  # noqa: BLE001 - sin datos de cuenta igual se manda lo demás
+        print("(estado) no pude leer la cuenta: %s" % e)
+        equity = variacion = None
+    abiertas = est.d.get("abiertas", {})
+    posiciones = []
+    for sym, p in broker.posiciones().items():
+        t = abiertas.get(sym, {})
+        posiciones.append({"sym": sym, "qty": p["qty"], "entrada": p["avg"],
+                           "actual": (p["valor"] / p["qty"]) if p["qty"] else None,
+                           "stop": t.get("stop"), "target": t.get("target")})
+    dec = [d for d in est.leer_lineas("decisiones.jsonl") if d.get("fecha") == fecha]
+    compras = [(d["hora"], d["simbolo"], d["qty"], d["fill"]) for d in dec if d.get("accion") == "comprar"]
+    cierres = [(o["hora_salida"], o["simbolo"], o["motivo"], o["r"], o["pnl"])
+               for o in est.leer_lineas("operaciones.jsonl") if o.get("fecha") == fecha]
+    descartados = sum(1 for d in dec if d.get("accion") == "omitir")
+    html = formato.estado(formato.horas(ahora, hora_ar(ahora)), bool(reloj.get("is_open")), equity, variacion,
+                          posiciones, compras, cierres, descartados)
+    plano = "ALBA | Estado: %d posición(es) abierta(s), %d compra(s) y %d cierre(s) hoy, %d candidatos descartados." % (
+        len(posiciones), len(compras), len(cierres), descartados)
+    notif._telegram("ALBA | Estado", plano, html)
+    n_resumen = "Estado enviado a Telegram: %d posición(es), %d compra(s), %d cierre(s)." % (
+        len(posiciones), len(compras), len(cierres))
+    notif._resumen("ALBA | Estado", n_resumen)
+    print(n_resumen)
+    return True
+
+
 def ejemplos_telegram(n):
     """Manda 4 mensajes de EJEMPLO (datos de muestra, marcados como tales) para ver el formato de los avisos."""
     marca = "🧪 <b>EJEMPLO</b> — datos de muestra, no es una operación real\n\n"
@@ -697,11 +733,19 @@ def main(argv=None):
     ap.add_argument("--estado", required=True, help="carpeta de estado (rama alba-estado)")
     ap.add_argument("--config", default=os.path.join(AQUI, "config.json"))
     ap.add_argument("--diagnostico", action="store_true")
-    ap.add_argument("--telegram", choices=["descubrir", "probar"], help="configurar / probar los avisos por Telegram")
+    ap.add_argument("--telegram", choices=["descubrir", "probar", "estado"],
+                    help="configurar / probar los avisos por Telegram, o mandar el estado actual")
     ap.add_argument("--sesion", action="store_true", help="repetir el ciclo hasta el cierre del mercado")
     ap.add_argument("--duracion-max-min", type=int, help="tope de duración de la sesión (minutos)")
     a = ap.parse_args(argv)
     cfg = leer_json(a.config)
+    if a.telegram == "estado":
+        key, secret = claves_desde_entorno("ALBA_")
+        if not key or not secret:
+            print("ALBA: faltan los secrets ALBA_ALPACA_KEY / ALBA_ALPACA_SECRET.")
+            return 1
+        enviar_estado(cfg, AlpacaPaper(key, secret), Estado(a.estado), Notificador(mencionar=cfg.get("mencionar")))
+        return 0
     if a.telegram:
         return telegram_cli(a.telegram)
     key, secret = claves_desde_entorno("ALBA_")

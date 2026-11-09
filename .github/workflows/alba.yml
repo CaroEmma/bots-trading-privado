@@ -34,9 +34,9 @@ on:
         type: boolean
         default: false
       telegram:
-        description: "Configurar avisos por Telegram: descubrir_chat (muestra el numero de chat) o probar (manda un mensaje de prueba)"
+        description: "Telegram: descubrir_chat (muestra el numero de chat), probar (mensaje de prueba y ejemplos) o estado (manda el estado actual de ALBA)"
         type: choice
-        options: [ninguno, descubrir_chat, probar]
+        options: [ninguno, descubrir_chat, probar, estado]
         default: ninguno
 
 concurrency:
@@ -111,6 +111,8 @@ jobs:
             python alba/orquestador.py --estado estado --telegram descubrir
           elif [ "${{ inputs.telegram }}" = "probar" ]; then
             python alba/orquestador.py --estado estado --telegram probar
+          elif [ "${{ inputs.telegram }}" = "estado" ]; then
+            python alba/orquestador.py --estado estado --telegram estado
           elif [ "${{ inputs.diagnostico }}" = "true" ]; then
             python alba/orquestador.py --estado estado --diagnostico
           elif [ "${{ inputs.un_ciclo }}" = "true" ]; then

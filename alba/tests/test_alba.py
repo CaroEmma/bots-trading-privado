@@ -45,6 +45,9 @@ class BrokerFalso:
     def posiciones(self):
         return dict(self.pos)
 
+    def cuenta(self):
+        return {"equity": "5012.50", "last_equity": "5000.00"}
+
     def posicion(self, s):
         return self.pos.get(s)
 
@@ -388,6 +391,24 @@ class TestTelegram(Base):
         self.assertIn("141,77 → 147,50", txt)
         self.assertIn("Muestra chica", txt)
         self.assertLess(len(txt), 3900)
+
+    def test_estado_por_telegram_muestra_posicion_en_vivo_y_operaciones_del_dia(self):
+        envios = []
+        self.notif = Notificador(entorno=self.ENV, enviar=lambda url, cuerpo, headers, form=False: envios.append((url, cuerpo)))
+        self.ciclo(PackFalso(self.est))                 # compra TSLA x9
+        self.broker.pos["TSLA"]["valor"] = 9 * 104.0    # el precio sube a 104
+        envios.clear()
+        self.assertTrue(oq.enviar_estado(self.cfg, self.broker, self.est, self.notif))
+        textos = [c["text"] for u, c in envios if "api.telegram.org" in u]
+        self.assertEqual(len(textos), 1)
+        t = textos[0]
+        self.assertIn("ESTADO DE ALBA", t)
+        self.assertIn("Posiciones abiertas: 1", t)
+        self.assertIn("US$ 104,00", t)                  # precio actual
+        self.assertIn("+US$ 18,00", t)                  # resultado no realizado: 9 x (104 - 102)
+        self.assertIn("COMPRA TSLA", t)                 # operación del día
+        self.assertIn("+US$ 12,50", t)                  # cambio del día de la cuenta
+        self.assertEqual([c["parse_mode"] for u, c in envios], ["HTML"])
 
     def test_limpio_saca_espacios_saltos_y_comillas(self):
         from notificar import limpio, token_con_formato

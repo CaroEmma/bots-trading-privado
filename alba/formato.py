@@ -192,3 +192,35 @@ def turtle_venta(sym, motivo, entrada, salida, pnl_pct, hora):
          "<i>TURTLE · %s · Alpaca Paper, dinero ficticio</i>" % esc(hora), "", tabla(filas), "",
          "<b>Motivo:</b> %s" % esc(motivo), "<i>Resultado sin costos.</i>"]
     return _recortar("\n".join(t))
+
+
+def estado(hora, mercado_abierto, equity, variacion_dia, posiciones, compras, cierres, descartados):
+    """Foto del momento (pedida a mano). posiciones: dicts sym/qty/entrada/actual/stop/target (datos en vivo de Alpaca);
+    compras: (hora, sym, qty, precio); cierres: (hora, sym, motivo, r, pnl) — estos dos vienen del último guardado."""
+    t = ["📌 <b>ESTADO DE ALBA</b>", "<i>%s · dinero ficticio (paper)</i>" % esc(hora), "",
+         "<b>Mercado:</b> %s" % ("abierto" if mercado_abierto else "cerrado")]
+    filas = [("Patrimonio (equity)", "n/d" if equity is None else usd(equity)),
+             ("Cambio vs. cierre previo", "n/d" if variacion_dia is None else usd(variacion_dia, True))]
+    t.append(tabla(filas))
+    t += ["", "<b>Posiciones abiertas: %d</b>" % len(posiciones)]
+    for p in posiciones:
+        f = [(p["sym"], "%s acciones" % num(p["qty"], 0)), ("Entrada", usd(p["entrada"]))]
+        if p.get("actual") is not None:
+            pnl = (p["actual"] - p["entrada"]) * p["qty"]
+            f += [("Precio actual", usd(p["actual"])),
+                  ("Resultado ahora", "%s (%s %%)" % (usd(pnl, True), num((p["actual"] / p["entrada"] - 1) * 100, 2, True)))]
+        f += [("Stop", "n/d" if p.get("stop") is None else usd(p["stop"])),
+              ("Objetivo", "n/d" if p.get("target") is None else usd(p["target"]))]
+        t.append(tabla(f))
+    t += ["", "<b>Operaciones de hoy</b> (horas de Nueva York)"]
+    filas = []
+    for h, sym, qty, precio in compras:
+        filas.append(("%s COMPRA %s" % (h, sym), "%s x %s" % (num(qty, 0), num(precio))))
+    for h, sym, motivo, r, pnl in cierres:
+        etiqueta = ETIQUETAS_SALIDA.get(motivo, ("", str(motivo).upper(), ""))[1]
+        filas += [("%s %s %s" % (h, etiqueta, sym), "%s R" % num(r, 2, True)), ("", usd(pnl, True))]
+    t.append(tabla(filas) if filas else "Todavía no hubo compras ni ventas.")
+    t += ["", "<b>Candidatos descartados hoy:</b> %d" % descartados, "",
+          "<i>Posiciones, precio y cuenta: en vivo desde Alpaca. Compras y ventas del día: según el último guardado "
+          "(hasta 10 minutos de atraso).</i>"]
+    return _recortar("\n".join(t))
