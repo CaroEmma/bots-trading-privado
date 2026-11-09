@@ -1,0 +1,30 @@
+{
+  "orders": [
+    {
+      "at": "2026-11-09T09:50-05:00",
+      "date": "2026-11-09",
+      "index": 1,
+      "fingerprint": "cf551a7630b6993e",
+      "symbol": "SPCX",
+      "side": "buy",
+      "qty": "15",
+      "kind": "entry",
+      "max_loss": 49.8,
+      "stop": 138.38,
+      "plain": "buy 15 SPCX (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "69e18256-7360-4b19-9e9a-a5c9d032f2ee",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-09T09:54:02-05:00",
+      "date": "2026-11-09",
+      "status": "filled",
+      "symbol": "SPCX",
+      "side": "buy",
+      "qty": "15",
+      "price": 141.77,
+      "plain": "BUY 15 SPCX at 141.77"
+    }
+  ]
+}

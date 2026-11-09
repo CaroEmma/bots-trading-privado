@@ -1,0 +1,28 @@
+{
+  "created_by": "trader-exit",
+  "symbol": "SPCX",
+  "side": "buy",
+  "date": "2026-11-09",
+  "setup": "orb",
+  "entry": 141.42,
+  "entry_time": "9:50 AM",
+  "entry_bar": 3,
+  "interval": "5m",
+  "opening_range": {
+    "high": 141.4,
+    "low": 135.37,
+    "minutes": 15
+  },
+  "stop": 138.38,
+  "stop_rule": "or_mid",
+  "stop_label": "opening-range midpoint",
+  "target": 147.5,
+  "target_r": 2.0,
+  "target_label": "2R (two times the risk)",
+  "risk_per_share": 3.04,
+  "reward_risk": 2.0,
+  "flat_by": "15:55",
+  "stop_detail": "($141.40 + $135.37) / 2 = $138.385, rounded down",
+  "created_at": "2026-11-09T14:53:58Z",
+  "note": "A stop is a plan, not a guarantee: a gap or a fast market can fill past it."
+}

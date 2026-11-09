@@ -1,0 +1,17 @@
+{
+  "cash": 2873.45,
+  "positions": [
+    {
+      "ticker": "SPCX",
+      "shares": 15.0,
+      "lots": [
+        {
+          "id": "SPCX-1",
+          "date": "2026-11-09",
+          "shares": 15.0,
+          "cost": 2126.55
+        }
+      ]
+    }
+  ]
+}

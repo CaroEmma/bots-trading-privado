@@ -1,0 +1,16 @@
+{
+  "as_of": "2026-11-09T14:53:59Z",
+  "source": "yahoo",
+  "note": "Delayed quotes for alerts and sizing checks. Your broker's price is the one that fills. detail.fetched is when each price was read.",
+  "prices": {
+    "SPCX": 141.7
+  },
+  "detail": {
+    "SPCX": {
+      "prev_close": 134.27,
+      "time": "2026-11-09T14:53:58Z",
+      "source": "yahoo",
+      "fetched": "2026-11-09T14:53:59Z"
+    }
+  }
+}

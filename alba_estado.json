@@ -1,13 +1,36 @@
 {
- "abiertas": {},
+ "abiertas": {
+  "SPCX": {
+   "orden_id": "69e18256-7360-4b19-9e9a-a5c9d032f2ee",
+   "qty": 15,
+   "entrada": 141.77,
+   "stop": 138.38,
+   "target": 147.5,
+   "fecha": "2026-11-09",
+   "hora": "09:50",
+   "max_loss": 49.8,
+   "tm": {
+    "mc_avg_R": 0.001,
+    "p_target": 0.0715,
+    "p_stop": 0.3463,
+    "hist_disparos": 38,
+    "hist_avg_R": -0.171,
+    "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 17 % (target first 7.1 % vs stop first 34.6 %)."
+   }
+  }
+ },
  "hoy": {
   "fecha": "2026-11-09",
-  "entradas": 0,
+  "entradas": 1,
   "pnl": 0.0,
   "r": 0.0,
-  "evaluados": {},
-  "universo": false,
+  "evaluados": {
+   "BRZE": "omitida: timemachine: R promedio simulado -0.011 no es > 0",
+   "SPCX": "COMPRADA"
+  },
+  "universo": true,
   "sesion": true,
-  "informe": false
+  "informe": false,
+  "ultimo_scan": 1794235837.849481
  }
 }
