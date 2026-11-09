@@ -25,6 +25,16 @@
       "qty": "15",
       "price": 141.77,
       "plain": "BUY 15 SPCX at 141.77"
+    },
+    {
+      "at": "2026-11-09T15:40:43-05:00",
+      "date": "2026-11-09",
+      "status": "filled",
+      "symbol": "SPCX",
+      "side": "sell",
+      "qty": "15",
+      "price": 141.74,
+      "plain": "SELL 15 SPCX at 141.74"
     }
   ]
 }
