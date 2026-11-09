@@ -69,11 +69,14 @@ class Bot:
         with open(self.ruta, "w", encoding="utf-8") as f:
             json.dump(self.estado, f, indent=1)
 
-    def _avisar(self, titulo, cuerpo):
+    def _avisar(self, titulo, cuerpo, telegram=None):
         if not self.aviso:
             return
         try:
-            self.aviso(titulo, cuerpo)
+            if telegram:
+                self.aviso(titulo, cuerpo, telegram=telegram)   # versión en español y ordenada para Telegram
+            else:
+                self.aviso(titulo, cuerpo)
         except Exception as e:  # noqa: BLE001 - un aviso nunca debe romper una orden ya enviada
             self.log("(aviso no enviado: %s)" % e)
 
@@ -160,11 +163,14 @@ class Bot:
             self.log(f"{simbolo}: AVISO no pude colocar el stop-limit en el servidor: {e}")
         self.log(f"{simbolo}: COMPRA qty={qty_real:.6f} fill={fill:.2f} stop={stop:.2f} "
                  f"(ATR={ind['atr']:.2f}, riesgo={config.RIESGO_POR_OPERACION*100:.1f}% de manga {manga:.0f} USD)")
+        tg = _telegram("turtle_compra", simbolo, qty_real, fill, stop, config.ATR_MULT_STOP * ind["atr"],
+                       ind["close"], ind["max_entrada"], ind["min_salida"], _hora_aviso())
         self._avisar(f"TURTLE | COMPRA {simbolo} @ {fill:.2f}",
                      f"**{simbolo}** — compra {qty_real:.6f} a {fill:.2f} (Alpaca Paper, dinero ficticio)\n\n"
                      f"- Stop: {stop:.2f} (2 x ATR = {config.ATR_MULT_STOP * ind['atr']:.2f})\n"
                      f"- Señal: cierre {ind['close']:.2f} > máximo de 20 días {ind['max_entrada']:.2f}\n"
-                     f"- Sale por: cierre < {ind['min_salida']:.2f} (mínimo de 10 días) o precio <= stop")
+                     f"- Sale por: cierre < {ind['min_salida']:.2f} (mínimo de 10 días) o precio <= stop",
+                     telegram=tg)
 
     def _vender(self, simbolo, motivo):
         st = self.estado[simbolo]
@@ -173,12 +179,46 @@ class Bot:
         entrada = st.get("entrada")
         pnl = (fill / entrada - 1) * 100 if (fill and entrada) else None
         self.log(f"{simbolo}: VENTA ({motivo}) fill={fill} pnl_precio={pnl if pnl is None else round(pnl, 2)}%")
+        tg = _telegram("turtle_venta", simbolo, _motivo_es(motivo), entrada, fill, pnl, _hora_aviso())
         self._avisar(f"TURTLE | VENTA {simbolo} ({motivo.split(' ')[0]})" + (f" {pnl:+.2f}%" if pnl is not None else ""),
                      f"**{simbolo}** — vendida a {fill} (entrada {entrada})\n\n- Motivo: {motivo}\n"
                      f"- Resultado sobre el precio: {'n/d' if pnl is None else '%+.2f%%' % pnl} (sin costos)\n\n"
-                     f"_Alpaca Paper, dinero ficticio._")
+                     f"_Alpaca Paper, dinero ficticio._", telegram=tg)
         self.estado[simbolo] = {"barra_ts": st.get("barra_ts")}
         self._guardar()
+
+
+def _telegram(nombre, *args):
+    """Texto de Telegram en español (alba/formato.py). None si el módulo no está: se manda el texto plano de siempre."""
+    try:
+        aqui = os.path.dirname(os.path.abspath(__file__))
+        ruta = os.path.join(os.path.dirname(aqui), "alba")
+        if ruta not in sys.path:
+            sys.path.insert(0, ruta)
+        import formato
+        return getattr(formato, nombre)(*args)
+    except Exception as e:  # noqa: BLE001 - el formato nunca debe impedir un aviso
+        print("(formato de Telegram no disponible: %s)" % e)
+        return None
+
+
+def _hora_aviso():
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    return datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).strftime("%Y-%m-%d %H:%M hora de Argentina")
+
+
+def _motivo_es(motivo):
+    """Códigos internos del bot -> texto en español para Telegram."""
+    m = str(motivo)
+    if m.startswith("stop_atr"):
+        return "Se activó el stop por volatilidad (2 x ATR)."
+    if m.startswith("ruptura_canal_salida"):
+        txt = "El cierre rompió el canal de salida (mínimo de 10 días)."
+        if "TARDIA" in m:
+            txt += " Detectado con atraso: " + m[m.index("(") + 1:].rstrip(")").replace("TARDIA: vela", "vela")
+        return txt
+    return m
 
 
 def ciclo(bot):

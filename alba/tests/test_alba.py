@@ -345,12 +345,49 @@ class TestTelegram(Base):
         self.ciclo(pack, hora="2026-11-09 11:00")
         textos = [c["text"] for u, c in envios if "api.telegram.org" in u]
         self.assertEqual(len(textos), 2)
-        self.assertIn("COMPRA TSLA x9", textos[0])
-        self.assertIn("Stop: $100.00", textos[0])
+        self.assertIn("COMPRA TSLA", textos[0])
+        self.assertIn("US$ 100,00", textos[0])            # stop, en formato rioplatense
         self.assertIn("OBJETIVO TSLA", textos[1])
-        self.assertIn("Resultado: +$36.00", textos[1])
+        self.assertIn("+US$ 36,00", textos[1])
+        self.assertIn("Objetivo alcanzado", textos[1])
         self.assertTrue(all("**" not in x for x in textos))
+        self.assertTrue(all(c.get("parse_mode") == "HTML" for u, c in envios if "api.telegram.org" in u))
+        self.assertFalse(any(" the " in x.split("Noticias")[0] for x in textos))   # nada en inglés fuera de los titulares
         self.assertTrue(all(c["chat_id"] == "9" for u, c in envios if "api.telegram.org" in u))
+
+    def test_si_telegram_rechaza_el_formato_se_reenvia_en_texto_plano(self):
+        envios = []
+
+        def enviar(url, cuerpo, headers, form=False):
+            envios.append(cuerpo)
+            if cuerpo.get("parse_mode") == "HTML":
+                raise RuntimeError("Bad Request: can't parse entities")
+        Notificador(entorno=self.ENV, enviar=enviar).avisar("ALBA | COMPRA X", "**X** compra", telegram="<b>mal")
+        self.assertEqual(len(envios), 2)
+        self.assertEqual(envios[0]["parse_mode"], "HTML")
+        self.assertNotIn("parse_mode", envios[1])
+        self.assertIn("COMPRA X", envios[1]["text"])
+
+    def test_formato_numeros_rioplatense_y_escape(self):
+        import formato
+        self.assertEqual(formato.num(1234.5), "1.234,50")
+        self.assertEqual(formato.usd(-18), "-US$ 18,00")
+        self.assertEqual(formato.usd(85.951, True), "+US$ 85,95")
+        self.assertEqual(formato.num(-0.0001), "0,00")                     # sin "-0,00"
+        self.assertIn("&lt;script&gt;", formato.alerta("t", "<script>"))   # un error con < > no rompe el HTML
+        self.assertEqual(formato.senal_es("the 9:45 bar closed above the range high"),
+                         "la vela de las 9:45 cerró por encima del máximo del rango de apertura")
+        self.assertEqual(formato.senal_es("algo desconocido"), "ruptura del rango de apertura")
+
+    def test_informe_diario_en_telegram_tiene_tabla_y_aviso_de_muestra_chica(self):
+        import formato
+        ops = [{"simbolo": "SPCX", "entrada": 141.77, "salida": 147.5, "motivo": "objetivo", "r": 1.69, "pnl": 85.95}]
+        acum = oq.estadisticas([dict(o) for o in ops])
+        txt = formato.informe_diario("2026-11-09", ops, {"timemachine": 3}, 85.95, acum)
+        self.assertIn("INFORME DIARIO ALBA", txt)
+        self.assertIn("141,77 → 147,50", txt)
+        self.assertIn("Muestra chica", txt)
+        self.assertLess(len(txt), 3900)
 
     def test_limpio_saca_espacios_saltos_y_comillas(self):
         from notificar import limpio, token_con_formato

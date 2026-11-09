@@ -97,14 +97,15 @@ class Notificador:
         self.enviado = []          # para tests y para el log
         self._enviar = enviar or _post
 
-    def avisar(self, titulo, cuerpo, importante=True):
+    def avisar(self, titulo, cuerpo, importante=True, telegram=None):
+        """telegram: versión HTML (alba/formato.py) solo para Telegram; si falta o falla se manda el texto plano."""
         self.enviado.append((titulo, cuerpo))
         print("== AVISO: %s\n%s" % (titulo, cuerpo), flush=True)
         self._resumen(titulo, cuerpo)
         if not importante:
             return
         self._issue(titulo, cuerpo)
-        self._telegram(titulo, cuerpo)
+        self._telegram(titulo, cuerpo, telegram)
 
     def _resumen(self, titulo, cuerpo):
         ruta = self.env.get("GITHUB_STEP_SUMMARY")
@@ -129,12 +130,19 @@ class Notificador:
         except Exception as e:  # noqa: BLE001 - un aviso nunca debe romper el ciclo
             print("(aviso) no pude crear el issue: %s" % e)
 
-    def _telegram(self, titulo, cuerpo):
+    def _telegram(self, titulo, cuerpo, html=None):
         token, chat = limpio(self.env.get("ALBA_TELEGRAM_TOKEN")), limpio(self.env.get("ALBA_TELEGRAM_CHAT"))
         if not token or not chat:
             return
+        url = "https://api.telegram.org/bot%s/sendMessage" % token
+        if html:
+            try:
+                self._enviar(url, {"chat_id": chat, "text": html, "parse_mode": "HTML",
+                                   "disable_web_page_preview": "true"}, {}, form=True)
+                return
+            except Exception as e:  # noqa: BLE001 - si Telegram rechaza el formato, no se pierde el aviso
+                print("(aviso) Telegram rechazó el formato (%s); reenvío en texto plano" % type(e).__name__)
         try:
-            self._enviar("https://api.telegram.org/bot%s/sendMessage" % token,
-                         {"chat_id": chat, "text": _plano("%s\n\n%s" % (titulo, cuerpo))[:3900]}, {}, form=True)
+            self._enviar(url, {"chat_id": chat, "text": _plano("%s\n\n%s" % (titulo, cuerpo))[:3900]}, {}, form=True)
         except Exception as e:  # noqa: BLE001
             print("(aviso) no pude enviar a Telegram: %s" % type(e).__name__)

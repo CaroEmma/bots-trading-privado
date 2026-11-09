@@ -27,6 +27,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
 
 from alpaca_paper import AlpacaPaper, ErrorAlpaca, claves_desde_entorno  # noqa: E402
+import formato  # noqa: E402
 from notificar import Notificador, limpio, telegram_descubrir, telegram_probar, telegram_quien, token_con_formato  # noqa: E402
 
 VENDOR = os.path.join(AQUI, "vendor", "day-trader-skill")
@@ -60,6 +61,11 @@ def escribir_json(ruta, dato):
 def parsear_fecha(texto):
     texto = re.sub(r"(\.\d{6})\d+", r"\1", texto.replace("Z", "+00:00"))
     return dt.datetime.fromisoformat(texto)
+
+
+def hora_ar(ahora):
+    """La misma hora en Argentina (para los avisos de Telegram)."""
+    return ahora.astimezone(ZoneInfo("America/Argentina/Buenos_Aires"))
 
 
 def usd(x):
@@ -299,19 +305,22 @@ def evaluar(cfg, broker, pack, est, notif, ahora, h, hit):
     registrar_decision(est, ahora, sym, "comprar", "todas las skills en verde", qty=qty, fill=fill, stop=stop,
                        target=target, tm=resumen_tm)
     p_t, p_s = resumen_tm["p_target"], resumen_tm["p_stop"]
+    senal = formato.senal_es(ej.get("reason", ""))
+    tg = formato.compra("ALBA", sym, qty, fill, stop, target, formato.horas(ahora, hora_ar(ahora)), senal,
+                        tm=resumen_tm, titulares=titulares)
     cuerpo = ("**%s** — compra %d acciones a %s (paper, dinero ficticio)\n\n"
               "- Stop: %s | Objetivo: %s | Riesgo máximo: %s | Recompensa/riesgo: %s\n"
-              "- Setup: ruptura del rango de apertura (%s)\n"
+              "- Señal: %s\n"
               "- Máquina del tiempo: objetivo primero %s, stop primero %s, R promedio simulado %s; "
               "historial: %s disparos, R promedio %s\n"
-              "- Trader-risk: PASS\n- Noticias (24 h): %s\n\n"
+              "- Trader-risk: PASS\n- Noticias (24 h, titulares originales en inglés): %s\n\n"
               "_Estrategia en prueba. Resultado ficticio; no es consejo financiero._"
               % (sym, qty, usd(fill), usd(stop), usd(target), usd(plan_o.get("max_loss") or 0),
-                 plan_o.get("reward_risk", "n/d"), ej.get("reason", ""),
+                 plan_o.get("reward_risk", "n/d"), senal,
                  "n/d" if p_t is None else "%.0f%%" % (p_t * 100), "n/d" if p_s is None else "%.0f%%" % (p_s * 100),
                  resumen_tm["mc_avg_R"], resumen_tm["hist_disparos"], resumen_tm["hist_avg_R"],
                  "; ".join(titulares[:3]) if titulares else "sin titulares"))
-    notif.avisar("ALBA | COMPRA %s x%d @ %s" % (sym, qty, usd(fill)), cuerpo)
+    notif.avisar("ALBA | COMPRA %s x%d @ %s" % (sym, qty, usd(fill)), cuerpo, telegram=tg)
     return True
 
 
@@ -351,7 +360,11 @@ def finalizar(cfg, pack, est, notif, ahora, h, sym, t, salida, motivo):
         est.agregar("anomalias.jsonl", registro)
         notif.avisar("ALBA | ATENCIÓN %s: posición cerrada sin precio de salida" % sym,
                      "La posición ya no existe en Alpaca Paper pero no pude leer el precio de salida. "
-                     "Revisar a mano. Entrada %s, qty %d." % (usd(entrada), qty))
+                     "Revisar a mano. Entrada %s, qty %d." % (usd(entrada), qty),
+                     telegram=formato.alerta("ATENCIÓN %s: posición cerrada sin precio de salida" % sym,
+                                             "La posición ya no existe en Alpaca Paper pero no pude leer el precio "
+                                             "de salida. Entrada %s, cantidad %d." % (usd(entrada), qty),
+                                             "Hay que revisarlo a mano.", "🚨"))
         est.d["abiertas"].pop(sym, None)
         return
     pnl = (salida - entrada) * qty
@@ -370,7 +383,10 @@ def finalizar(cfg, pack, est, notif, ahora, h, sym, t, salida, motivo):
     notif.avisar("ALBA | %s %s %s R (%s)" % (etiqueta, sym, signo(r), usd_s(pnl)),
                  "**%s** — vendida a %s (entrada %s, %d acciones)\n\n- Resultado: %s (%s R)\n- Motivo: %s\n"
                  "- Acumulado: %s\n\n_Dinero ficticio (paper)._"
-                 % (sym, usd(salida), usd(entrada), qty, usd_s(pnl), signo(r), motivo, texto_estadisticas(acum)))
+                 % (sym, usd(salida), usd(entrada), qty, usd_s(pnl), signo(r), motivo, texto_estadisticas(acum)),
+                 telegram=formato.venta("ALBA", sym, motivo, qty, entrada, salida, pnl, r,
+                                        "%s · salida %s" % (t.get("fecha", ""), formato.horas(ahora, hora_ar(ahora))),
+                                        acumulado=acum))
 
 
 def conciliar(cfg, broker, pack, est, notif, ahora, h, mercado_abierto):
@@ -395,7 +411,9 @@ def cerrar_posicion(cfg, broker, pack, est, notif, ahora, h, sym, t, motivo):
         except ErrorAlpaca as e:
             ultimo = e
     if not oid:
-        notif.avisar("ALBA | ERROR al cerrar %s" % sym, "No pude cerrar la posición: %s" % ultimo)
+        notif.avisar("ALBA | ERROR al cerrar %s" % sym, "No pude cerrar la posición: %s" % ultimo,
+                     telegram=formato.alerta("ERROR al cerrar %s" % sym, str(ultimo)[:500],
+                                             "No pude cerrar la posición. Revisar a mano.", "🚨"))
         return
     fill = broker.esperar_fill(oid)
     finalizar(cfg, pack, est, notif, ahora, h, sym, t, fill, motivo)
@@ -486,7 +504,9 @@ def informe_diario(cfg, est, notif, ahora, h):
                      ("(" + ", ".join("%s: %d" % kv for kv in sorted(motivos.items())) + ")") if motivos else ""))
     lineas.append("\n**Acumulado:** " + texto_estadisticas(estadisticas(est.leer_lineas("operaciones.jsonl"))))
     lineas.append("\n_Dinero ficticio (paper). Un backtest o una racha corta no prueban que la estrategia funcione._")
-    notif.avisar("ALBA | Informe diario %s" % fecha, "\n".join(lineas))
+    notif.avisar("ALBA | Informe diario %s" % fecha, "\n".join(lineas),
+                 telegram=formato.informe_diario(fecha, ops, motivos, sum(o["pnl"] for o in ops),
+                                                 estadisticas(est.leer_lineas("operaciones.jsonl"))))
     h["informe"] = True
 
 
@@ -549,7 +569,9 @@ def sesion(cfg, broker, pack, est, notif, duracion_max_min=None, dormir=time.sle
             print("(error en el ciclo %d) %s" % (errores, e), flush=True)
             if time.time() - est.d.get("ultimo_aviso_error", 0) > 3600:
                 est.d["ultimo_aviso_error"] = time.time()
-                notif.avisar("ALBA | ERROR en el ciclo", "`%s`\n\nSigo intentando; si se repite avisaré." % str(e)[:500])
+                notif.avisar("ALBA | ERROR en el ciclo", "`%s`\n\nSigo intentando; si se repite avisaré." % str(e)[:500],
+                             telegram=formato.alerta("ERROR en el ciclo", str(e)[:500],
+                                                     "Sigo intentando; si se repite, aviso."))
             est.guardar()
             if errores >= sc["errores_seguidos_max"]:
                 raise
@@ -599,7 +621,9 @@ def diagnostico(broker, notif):
                       ("abierto" if c["is_open"] else "cerrado", cu.get("status"), cu.get("equity")))
     except Exception as e:  # noqa: BLE001
         lineas.append("- Alpaca Paper: ERROR %s" % str(e)[:150])
-    notif.avisar("ALBA | Diagnóstico de conexiones", "\n".join(lineas))
+    notif.avisar("ALBA | Diagnóstico de conexiones", "\n".join(lineas),
+                 telegram=formato.diagnostico([l[2:].split(": ", 1) if l.startswith("- ") and ": " in l else (l, "")
+                                               for l in lineas]))
 
 
 def telegram_cli(modo, env=None, abrir=None):
@@ -644,7 +668,28 @@ def telegram_cli(modo, env=None, abrir=None):
                                   "Dinero ficticio (paper).", **kw)
     n._resumen("ALBA | Telegram: prueba", "Resultado: **%s** (%s)" % ("OK, revisá tu Telegram" if ok else "FALLÓ", detalle))
     print("Telegram:", ok, detalle)
+    if ok and abrir is None:
+        ejemplos_telegram(n)
     return 0 if ok else 1
+
+
+def ejemplos_telegram(n):
+    """Manda 4 mensajes de EJEMPLO (datos de muestra, marcados como tales) para ver el formato de los avisos."""
+    marca = "🧪 <b>EJEMPLO</b> — datos de muestra, no es una operación real\n\n"
+    ahora = dt.datetime.now(NY)
+    hs = formato.horas(ahora, hora_ar(ahora))
+    tm = {"p_target": 0.33, "p_stop": 0.40, "mc_avg_R": 0.15, "hist_disparos": 30, "hist_avg_R": 0.10}
+    op = {"simbolo": "XXXX", "entrada": 100.0, "salida": 104.0, "motivo": "objetivo", "r": 2.0, "pnl": 80.0}
+    acum = estadisticas([{"r": 2.0, "pnl": 80.0}])
+    textos = [
+        formato.compra("ALBA", "XXXX", 20, 100.0, 98.0, 104.0, hs, formato.senal_es(""), tm=tm,
+                       titulares=["Example headline"]),
+        formato.venta("ALBA", "XXXX", "objetivo", 20, 100.0, 104.0, 80.0, 2.0, hs, acumulado=acum),
+        formato.informe_diario(ahora.date().isoformat(), [op], {"timemachine": 2}, 80.0, acum),
+        formato.alerta("ERROR en el ciclo", "ConnectionError: ejemplo", "Sigo intentando; si se repite, aviso."),
+    ]
+    for t in textos:
+        n._telegram("EJEMPLO", "ejemplo de aviso", marca + t if t else None)
 
 
 def main(argv=None):
@@ -680,7 +725,9 @@ def main(argv=None):
         ahora = time.time()
         if ahora - est.d.get("ultimo_aviso_error", 0) > 3600:
             est.d["ultimo_aviso_error"] = ahora
-            notif.avisar("ALBA | ERROR en el ciclo", "`%s`\n\nRevisar la corrida en la pestaña Actions." % str(e)[:500])
+            notif.avisar("ALBA | ERROR en el ciclo", "`%s`\n\nRevisar la corrida en la pestaña Actions." % str(e)[:500],
+                         telegram=formato.alerta("ERROR en el ciclo", str(e)[:500],
+                                                 "Revisar la corrida en la pestaña Actions de GitHub.", "🚨"))
         est.guardar()
         raise
     return 0

@@ -71,7 +71,7 @@ class Base(unittest.TestCase):
         self.logs, self.avisos = [], []
         self.broker = BrokerFalso()
         self.bot = bga.Bot(self.broker, simbolos=["BTC/USD"], ruta_estado=os.path.join(self.dir, "estado.json"),
-                           log=self.logs.append, aviso=lambda t, c: self.avisos.append((t, c)))
+                           log=self.logs.append, aviso=lambda t, c, telegram=None: self.avisos.append((t, c)))
 
     def tearDown(self):
         import shutil
