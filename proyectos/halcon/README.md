@@ -67,3 +67,30 @@ Verificación (offline): 11 tests; el bot real reproducido vela por vela sobre 7
 
 ## Estado y decisiones pendientes del usuario
 No se construyó ningún bot ni se envió ninguna orden. Opciones: (A) no operar HALCÓN hasta tener una hipótesis nueva, preregistrada; (B) medir el bot Turtle existente (4 h, canal 20/10 días) con este mismo marco como referencia; (C) probar otra familia (por ejemplo velas diarias, con pocas operaciones). Capital de HALCÓN: USD 100 (dicho por el usuario); margen de pérdida por operación: el usuario pidió probar USD 5 (sin efecto práctico, ver arriba).
+
+
+## Ronda 3 (2026-11-09): Turtle espejo largo/corto, 4 h — resultado: 0 de 9 variantes pasan
+
+Preregistro: `PREREGISTRO_RONDA3.md` (commit `234a3d6`, anterior a los datos y a la corrida). Código: `halcon/medir_espejo.py` (+ `halcon/tests/test_espejo.py`, incluye un test de simetría: largo sobre la serie = corto sobre la serie reflejada). Resultados completos: `halcon/resultados/ronda3_espejo.txt` y `.json`. Datos: `halcon/datos/*_4h_twelvedata.csv`, `btc_usd_1d_twelvedata.csv`, limpieza en `halcon/datos/LIMPIEZA.txt`.
+
+**Límite de datos (no son 10 años en 4 h):** Twelve Data entrega BTC en 4 h desde 2020-01-06 (6,8 años) y ETH desde 2019-09-26 (7,1 años). Para BTC se agregó la serie diaria desde 2017-08-28 (9,2 años). Para tener 10 años en 4 h hace falta otra fuente (Bitstamp, `www.bitstamp.net`), hoy bloqueada por la red de la sesión. Kraken Futures demo: **dado de baja el 2026-07-14** (soporte de Kraken, artículo actualizado 2026-10-29).
+
+| Variante (USD 10.000 virtuales, riesgo 1 %) | Sentido | n (todo / validación) | R neto (todo) | Mediana R | R neto validación | p vs azar (validación) | Veredicto |
+|---|---|---|---|---|---|---|---|
+| BTC 4 h | largo | 62 / 29 | +2,64 (sin la mejor: +1,33) | −1,17 | −0,14 | 0,49 | no concluyente (n<30) |
+| BTC 4 h | corto | 50 / 26 | +0,01 | −1,18 | −0,48 | 0,63 | no concluyente (n<30) |
+| BTC 4 h | largo+corto | 112 / 55 | +1,47 | −1,17 | −0,30 | 0,59 | no pasa |
+| ETH 4 h | largo | 50 / 21 | +3,00 | −1,11 | +1,46 | 0,10 | no concluyente (n<30) |
+| ETH 4 h | corto | 55 / 24 | +0,05 | −1,11 | +0,08 | 0,33 | no concluyente (n<30) |
+| ETH 4 h | largo+corto | 105 / 45 | +1,45 | −1,11 | +0,72 | 0,10 | no pasa |
+| BTC diario | largo | 49 / 21 | +2,01 | −0,29 | +0,65 | 0,19 | no concluyente (n<30) |
+| BTC diario | corto | 46 / 19 | +0,02 | −0,63 | −0,26 | 0,41 | no concluyente (n<30) |
+| BTC diario | largo+corto | 95 / 40 | +1,05 | −0,55 | +0,22 | 0,18 | no pasa |
+
+Lectura: (1) **el corto no tiene ventaja medible**: R neto ≈ 0 en las tres series (+0,006; +0,05; +0,02), antes de cualquier costo de préstamo o financiamiento; (2) el largo gana en el total, pero por **pocas operaciones enormes** (BTC 4 h: mejor +83 R, mediana −1,17 R, 26 % de acierto) y **no se distingue de entrar al azar con la misma salida** (p 0,12–0,17); en la validación, BTC largo da −0,14 R; (3) sumar cortos **no mejora el retorno** (BTC 4 h: largo +250 % con caída 14 %, largo+corto +247 % con caída 25 %; ETH +275 % vs +278 %, caída 10 % vs 17 %) y agrega caída; (4) las operaciones por mes (0,4–0,9 por sentido) implican **años** para juntar 30 operaciones hacia adelante (BTC+ETH largo+corto ≈ 2,6 por mes, correlacionadas: ~12 meses como mínimo); (5) resultados casi idénticos excluyendo las operaciones que tocan la ventana dañada de 2023.
+
+**Desviaciones del preregistro (declaradas):** (a) la limpieza de datos se definió después de ver los errores de la fuente (no los resultados): se descartan velas abiertas, incoherentes o con mínimo/máximo/cierre fuera de [0,5x; 2x] de la apertura; BTC 4 h perdió 109 velas corruptas (2023-03 a 2023-09) y ETH 2; (b) el preregistro pedía veredicto también para largo+corto pero no definía su línea base: se usó "entrada y sentido al azar" (se calculó después de la primera corrida); (c) la segunda corrida agregó mediana y "R sin la mejor operación"; los p-valores cambian en el cuarto decimal por el orden de los sorteos.
+
+**Estado de señales al 2026-11-09 08:00 UTC:** BTC cierra 74.372; el espejo tiene un **corto ya abierto** (entrada 74.851 a la apertura del 9/11); ETH también (entrada 2.127). Un bot nuevo no debe adoptar esas posiciones: solo entra con señales nuevas.
+
+**Decisión preregistrada para este resultado:** ninguna variante pasa, así que no hay evidencia previa de ventaja; el experimento hacia adelante, en papel, solo se hace como experimento. Dinero real: no.

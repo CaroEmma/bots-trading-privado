@@ -1,0 +1,78 @@
+HALCÓN ronda 3 — Turtle espejo largo/corto | costos 0.25 % + 0.05 % por lado | riesgo 1 % | umbral p = 0,05/21 = 0.0024
+
+====================================================================================================
+BTC/USD 4h | 14873 velas | evaluable 2020-01-26 -> 2026-11-09 (6.8 años) | ajuste hasta 2024-02-21, validación después | comprar y mantener +779 %
+  Estado ahora (última vela cerrada 2026-11-09 08:00:00): cierre 74372.01 | entra LARGO si cierra > 84898.00 (+14.2 %) | entra CORTO si cierra < 73510.00 (-1.2 %) | ATR 845.98
+
+  --- LARGO ---
+  todo                n= 62 (0.8/mes) acierto  26% R neto +2.642 (mediana -1.17, sin la mejor +1.325) IC90 [+0.39;+5.43] FB 4.08 mejor +83.0R peor -1.4R | retorno +250% caída 14% | azar +1.420 p/azar 0.1699
+  ajuste              n= 33 (0.7/mes) acierto  30% R neto +5.086 (mediana -1.12, sin la mejor +2.651) IC90 [+0.93;+10.22] FB 7.55 mejor +83.0R peor -1.4R | retorno +268% caída 13% | azar +2.416 p/azar 0.1186
+  validacion          n= 29 (0.9/mes) acierto  21% R neto -0.138 (mediana -1.19, sin la mejor -0.443) IC90 [-0.84;+0.71] FB 0.85 mejor +8.4R peor -1.4R | retorno -5% caída 14% | azar -0.054 p/azar 0.4892
+  sin_ventana_danada  n= 60 (0.7/mes) acierto  23% R neto +2.718 (mediana -1.17, sin la mejor +1.357) IC90 [+0.39;+5.57] FB 4.07 mejor +83.0R peor -1.4R | retorno +248% caída 14%
+  CRITERIOS largo: n_val>=30 False | R>0 en ambos tramos False | p<0.0024 False  =>  NO CONCLUYENTE (n<30 en validación)
+
+  --- CORTO ---
+  todo                n= 50 (0.6/mes) acierto  26% R neto +0.006 (mediana -1.18, sin la mejor -0.139) IC90 [-0.49;+0.52] FB 1.01 mejor +7.1R peor -1.4R | retorno -1% caída 22% | azar -0.397 p/azar 0.0906
+  ajuste              n= 24 (0.5/mes) acierto  38% R neto +0.536 (mediana -1.12, sin la mejor +0.250) IC90 [-0.24;+1.38] FB 1.75 mejor +7.1R peor -1.4R | retorno +13% caída 7% | azar -0.472 p/azar 0.0127
+  validacion          n= 26 (0.8/mes) acierto  15% R neto -0.482 (mediana -1.21, sin la mejor -0.721) IC90 [-1.01;+0.14] FB 0.53 mejor +5.5R peor -1.3R | retorno -12% caída 19% | azar -0.285 p/azar 0.6295
+  sin_ventana_danada  n= 45 (0.6/mes) acierto  27% R neto +0.021 (mediana -1.17, sin la mejor -0.140) IC90 [-0.49;+0.56] FB 1.02 mejor +7.1R peor -1.3R | retorno -0% caída 22%
+  CRITERIOS corto: n_val>=30 False | R>0 en ambos tramos False | p<0.0024 False  =>  NO CONCLUYENTE (n<30 en validación)
+
+  --- LARGO+CORTO ---
+  Operaciones largo y corto superpuestas en el tiempo: 0
+  todo                n=112 (1.4/mes) acierto  26% R neto +1.466 (mediana -1.17, sin la mejor +0.731) IC90 [+0.22;+3.05] FB 2.69 mejor +83.0R peor -1.4R | retorno +247% caída 25% | azar +0.513 p/azar 0.0983
+  ajuste              n= 57 (1.2/mes) acierto  33% R neto +3.170 (mediana -1.12, sin la mejor +1.744) IC90 [+0.76;+6.10] FB 5.22 mejor +83.0R peor -1.4R | retorno +315% caída 9% | azar +0.972 p/azar 0.0533
+  validacion          n= 55 (1.7/mes) acierto  18% R neto -0.301 (mediana -1.20, sin la mejor -0.462) IC90 [-0.75;+0.18] FB 0.69 mejor +8.4R peor -1.4R | retorno -16% caída 25% | azar -0.169 p/azar 0.5918
+  sin_ventana_danada  n=105 (1.3/mes) acierto  25% R neto +1.562 (mediana -1.17, sin la mejor +0.779) IC90 [+0.23;+3.30] FB 2.79 mejor +83.0R peor -1.4R | retorno +247% caída 25%
+  CRITERIOS largo+corto: n_val>=30 True | R>0 en ambos tramos False | p<0.0024 False  =>  NO PASA
+  Posición corto ABIERTA hoy: entrada 2026-11-09 00:00:00 a 74851.44
+
+====================================================================================================
+ETH/USD 4h | 15553 velas | evaluable 2019-10-16 -> 2026-11-09 (7.1 años) | ajuste hasta 2024-01-12, validación después | comprar y mantener +1118 %
+  Estado ahora (última vela cerrada 2026-11-09 08:00:00): cierre 2113.30 | entra LARGO si cierra > 2526.62 (+19.6 %) | entra CORTO si cierra < 2060.00 (-2.5 %) | ATR 38.34
+
+  --- LARGO ---
+  todo                n= 50 (0.6/mes) acierto  38% R neto +2.996 (mediana -1.11, sin la mejor +1.966) IC90 [+1.18;+5.12] FB 5.42 mejor +53.5R peor -1.3R | retorno +275% caída 10% | azar +1.383 p/azar 0.1156
+  ajuste              n= 29 (0.6/mes) acierto  41% R neto +4.109 (mediana -0.78, sin la mejor +2.345) IC90 [+1.19;+7.68] FB 7.41 mejor +53.5R peor -1.3R | retorno +183% caída 10% | azar +2.097 p/azar 0.1533
+  validacion          n= 21 (0.6/mes) acierto  33% R neto +1.460 (mediana -1.13, sin la mejor +0.712) IC90 [-0.09;+3.21] FB 3.00 mejor +16.4R peor -1.2R | retorno +33% caída 9% | azar +0.316 p/azar 0.1033
+  CRITERIOS largo: n_val>=30 False | R>0 en ambos tramos True | p<0.0024 False  =>  NO CONCLUYENTE (n<30 en validación)
+
+  --- CORTO ---
+  todo                n= 55 (0.6/mes) acierto  20% R neto +0.052 (mediana -1.11, sin la mejor -0.183) IC90 [-0.55;+0.69] FB 1.06 mejor +12.7R peor -1.4R | retorno +1% caída 17% | azar -0.100 p/azar 0.3176
+  ajuste              n= 31 (0.6/mes) acierto  19% R neto +0.030 (mediana -1.09, sin la mejor -0.393) IC90 [-0.78;+1.01] FB 1.03 mejor +12.7R peor -1.4R | retorno -0% caída 12% | azar -0.110 p/azar 0.3582
+  validacion          n= 24 (0.7/mes) acierto  21% R neto +0.080 (mediana -1.12, sin la mejor -0.235) IC90 [-0.69;+0.93] FB 1.09 mejor +7.3R peor -1.2R | retorno +1% caída 8% | azar -0.086 p/azar 0.3296
+  CRITERIOS corto: n_val>=30 False | R>0 en ambos tramos True | p<0.0024 False  =>  NO CONCLUYENTE (n<30 en validación)
+
+  --- LARGO+CORTO ---
+  Operaciones largo y corto superpuestas en el tiempo: 0
+  todo                n=105 (1.2/mes) acierto  29% R neto +1.454 (mediana -1.11, sin la mejor +0.954) IC90 [+0.52;+2.60] FB 2.84 mejor +53.5R peor -1.4R | retorno +278% caída 17% | azar +0.642 p/azar 0.1036
+  ajuste              n= 60 (1.2/mes) acierto  30% R neto +2.002 (mediana -1.09, sin la mejor +1.129) IC90 [+0.48;+3.89] FB 3.54 mejor +53.5R peor -1.4R | retorno +182% caída 17% | azar +0.994 p/azar 0.1639
+  validacion          n= 45 (1.3/mes) acierto  27% R neto +0.724 (mediana -1.12, sin la mejor +0.367) IC90 [-0.12;+1.71] FB 1.91 mejor +16.4R peor -1.2R | retorno +34% caída 8% | azar +0.115 p/azar 0.1043
+  CRITERIOS largo+corto: n_val>=30 True | R>0 en ambos tramos True | p<0.0024 False  =>  NO PASA
+  Posición corto ABIERTA hoy: entrada 2026-11-09 00:00:00 a 2127.46
+
+====================================================================================================
+BTC/USD diario | 3360 velas | evaluable 2017-09-17 -> 2026-11-08 (9.2 años) | ajuste hasta 2023-03-14, validación después | comprar y mantener +1923 %
+  Estado ahora (última vela cerrada 2026-11-08 00:00:00): cierre 74851.44 | entra LARGO si cierra > 84898.00 (+13.4 %) | entra CORTO si cierra < 74888.00 (+0.0 %) | ATR 2293.88
+
+  --- LARGO ---
+  todo                n= 49 (0.4/mes) acierto  45% R neto +2.009 (mediana -0.29, sin la mejor +1.154) IC90 [+0.51;+3.84] FB 5.10 mejor +43.1R peor -1.1R | retorno +140% caída 6% | azar +1.083 p/azar 0.1256
+  ajuste              n= 28 (0.4/mes) acierto  46% R neto +3.027 (mediana -0.39, sin la mejor +1.544) IC90 [+0.58;+6.09] FB 7.21 mejor +43.1R peor -1.1R | retorno +111% caída 6% | azar +1.629 p/azar 0.1446
+  validacion          n= 21 (0.5/mes) acierto  43% R neto +0.651 (mediana -0.28, sin la mejor +0.333) IC90 [-0.15;+1.60] FB 2.32 mejor +7.0R peor -1.1R | retorno +14% caída 5% | azar +0.260 p/azar 0.1909
+  CRITERIOS largo: n_val>=30 False | R>0 en ambos tramos True | p<0.0024 False  =>  NO CONCLUYENTE (n<30 en validación)
+
+  --- CORTO ---
+  todo                n= 46 (0.4/mes) acierto  39% R neto +0.020 (mediana -0.63, sin la mejor -0.105) IC90 [-0.33;+0.37] FB 1.04 mejor +5.6R peor -1.1R | retorno +0% caída 11% | azar -0.250 p/azar 0.0600
+  ajuste              n= 27 (0.4/mes) acierto  44% R neto +0.219 (mediana -0.30, sin la mejor +0.010) IC90 [-0.20;+0.72] FB 1.50 mejor +5.6R peor -1.1R | retorno +6% caída 3% | azar -0.217 p/azar 0.0387
+  validacion          n= 19 (0.4/mes) acierto  32% R neto -0.262 (mediana -1.06, sin la mejor -0.431) IC90 [-0.70;+0.23] FB 0.64 mejor +2.8R peor -1.1R | retorno -5% caída 10% | azar -0.301 p/azar 0.4102
+  CRITERIOS corto: n_val>=30 False | R>0 en ambos tramos False | p<0.0024 False  =>  NO CONCLUYENTE (n<30 en validación)
+
+  --- LARGO+CORTO ---
+  Operaciones largo y corto superpuestas en el tiempo: 0
+  todo                n= 95 (0.9/mes) acierto  42% R neto +1.046 (mediana -0.55, sin la mejor +0.599) IC90 [+0.24;+2.01] FB 3.00 mejor +43.1R peor -1.1R | retorno +142% caída 7% | azar +0.421 p/azar 0.0863
+  ajuste              n= 55 (0.8/mes) acierto  45% R neto +1.648 (mediana -0.30, sin la mejor +0.881) IC90 [+0.36;+3.17] FB 4.55 mejor +43.1R peor -1.1R | retorno +123% caída 4% | azar +0.706 p/azar 0.0926
+  validacion          n= 40 (0.9/mes) acierto  38% R neto +0.218 (mediana -0.77, sin la mejor +0.043) IC90 [-0.27;+0.78] FB 1.36 mejor +7.0R peor -1.1R | retorno +8% caída 7% | azar -0.016 p/azar 0.1813
+  CRITERIOS largo+corto: n_val>=30 True | R>0 en ambos tramos True | p<0.0024 False  =>  NO PASA
+  Posición corto ABIERTA hoy: entrada 2026-10-30 00:00:00 a 77991.89
+
+Resultados completos en /home/user/bots-trading-privado/halcon/resultados/ronda3_espejo.json
