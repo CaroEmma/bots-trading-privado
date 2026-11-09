@@ -57,4 +57,4 @@ Es un registro de reproducibilidad; **no cambia ninguna regla** de este preregis
 - Librerías de la primera corrida: torch 2.15.0+cpu, pandas 2.2.2, numpy 2.5.4 (Python 3.12). Si una corrida posterior usa otras versiones, se anota en el registro de cada pronóstico (campo `versiones`).
 - Primer pronóstico real: vela de las 12:00 UTC del 2026-11-09; cómputo de ≈ 10 s por par en CPU de GitHub.
 - Estado y registros en la rama `kronos-sombra` (`pronosticos.jsonl`, `config_congelada.json`).
-- Contador: la evaluación formal exige 90 días corridos desde el primer pronóstico válido (2026-11-09) → **no antes del 2026-02-07**, y al menos 150 anclas válidas.
+- Contador: la evaluación formal exige 90 días corridos desde el primer pronóstico válido (2026-11-09) → **no antes del 2027-02-07**, y al menos 150 anclas válidas.
