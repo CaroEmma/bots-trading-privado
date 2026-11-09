@@ -3,16 +3,26 @@ name: ALBA - acciones intradia (paper)
 # Corre solo en la nube de GitHub, con la compu apagada. Dinero ficticio (Alpaca Paper).
 # GitHub NO cumple los crons al minuto (el bot Turtle, programado cada 15 min, corre ~4 veces por dia). Por eso ALBA
 # no depende de un cron frecuente: cada corrida es una SESION LARGA que revisa el mercado cada minuto hasta el cierre.
-# Disparos (UTC) de lunes a viernes: 13:05 / 13:35 / 14:05 inician la sesion (la apertura NYSE es 13:30 o 14:30 UTC segun
-# horario de verano); 18:30 y 19:05 son el relevo, porque una corrida dura como maximo 340 min (limite de GitHub: 360).
-# Si una sesion esta en curso, el disparo siguiente queda en espera (concurrency) y arranca cuando ella termina.
+# Disparos (UTC) de lunes a viernes: varios entre 13:05 y 15:11 inician la sesion (la apertura NYSE es 13:30 o 14:30 UTC
+# segun horario de verano). Se agregaron el 2026-11-09 porque ese dia GitHub no cumplio ninguno de los tres originales.
+# Una corrida dura como maximo 340 min (limite de GitHub: 360), asi que hace falta un relevo antes del cierre. Relevo
+# AUTOMATICO (2026-11-09): si la sesion termina por tiempo maximo, el ultimo paso lanza la corrida siguiente con
+# workflow_dispatch (no depende de un cron). Los disparos de las 18:30 / 19:05 / 20:07 quedan solo como respaldo.
+# Si una sesion esta en curso, el disparo siguiente queda en espera (concurrency) y arranca cuando ella termina; si el
+# mercado esta cerrado y no hay nada pendiente, la corrida termina en segundos.
 on:
   schedule:
     - cron: "5 13 * * 1-5"
-    - cron: "35 13 * * 1-5"
+    - cron: "23 13 * * 1-5"
+    - cron: "41 13 * * 1-5"
     - cron: "5 14 * * 1-5"
+    - cron: "17 14 * * 1-5"
+    - cron: "29 14 * * 1-5"
+    - cron: "47 14 * * 1-5"
+    - cron: "11 15 * * 1-5"
     - cron: "30 18 * * 1-5"
     - cron: "5 19 * * 1-5"
+    - cron: "7 20 * * 1-5"
   workflow_dispatch:
     inputs:
       diagnostico:
@@ -36,6 +46,7 @@ concurrency:
 permissions:
   contents: write   # guardar el estado en la rama alba-estado
   issues: write     # avisos de cada operacion
+  actions: write    # relevo automatico: lanzar la corrida siguiente
 
 jobs:
   ciclo:
@@ -44,6 +55,9 @@ jobs:
     steps:
       - name: Checkout (codigo)
         uses: actions/checkout@v4
+
+      - name: Marcar la hora de inicio (para el relevo)
+        run: echo "T0=$(date +%s)" >> "$GITHUB_ENV"
 
       - name: Verificar que las claves estan cargadas
         id: claves
@@ -116,3 +130,22 @@ jobs:
             git push origin HEAD:alba-estado && break
             git fetch origin alba-estado && git rebase origin/alba-estado
           done
+
+      - name: Relevo automatico (si la sesion termino por tiempo maximo)
+        if: always() && steps.claves.outputs.ok == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DIAG: ${{ inputs.diagnostico }}
+          UNCICLO: ${{ inputs.un_ciclo }}
+          TELE: ${{ inputs.telegram }}
+        run: |
+          if [ "$DIAG" = "true" ] || [ "$UNCICLO" = "true" ] || { [ -n "$TELE" ] && [ "$TELE" != "ninguno" ]; }; then
+            echo "Corrida corta: no hace falta relevo."; exit 0
+          fi
+          MIN=$(( ($(date +%s) - T0) / 60 ))
+          echo "La sesion duro $MIN min."
+          if [ "$MIN" -ge 330 ]; then
+            gh workflow run alba.yml --ref "${{ github.ref_name }}" && echo "Relevo lanzado."
+          else
+            echo "Termino antes del tope (cierre del mercado o fin normal): no hace falta relevo."
+          fi
