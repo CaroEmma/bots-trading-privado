@@ -50,3 +50,11 @@ Un cambio de revisión de los pesos o del código; más del 30 % de las velas an
 - No se conoce el corte de fechas del preentrenamiento de Kronos. No importa para una prueba hacia adelante (el futuro no puede estar en sus datos), pero el modelo pudo haber visto el pasado reciente de estos mismos pares.
 - 90 días permiten detectar diferencias grandes de exactitud; una ventaja pequeña requiere meses más.
 - La salida es estocástica: la semilla fija hace reproducible cada pronóstico, pero otra semilla daría otro resultado.
+
+## Anexo 1 (2026-11-09, 16:36 UTC): configuración congelada en la primera corrida
+Es un registro de reproducibilidad; **no cambia ninguna regla** de este preregistro.
+- Pesos `NeoQuasar/Kronos-small`: revisión `901c26c1332695a2a8f243eb2f37243a37bea320`. Tokenizador `NeoQuasar/Kronos-Tokenizer-base`: revisión `0e0117387f39004a9016484a186a908917e22426`. Código de Kronos: `67b630e67f6a18c9e9be918d9b4337c960db1e9a`.
+- Librerías de la primera corrida: torch 2.15.0+cpu, pandas 2.2.2, numpy 2.5.4 (Python 3.12). Si una corrida posterior usa otras versiones, se anota en el registro de cada pronóstico (campo `versiones`).
+- Primer pronóstico real: vela de las 12:00 UTC del 2026-11-09; cómputo de ≈ 10 s por par en CPU de GitHub.
+- Estado y registros en la rama `kronos-sombra` (`pronosticos.jsonl`, `config_congelada.json`).
+- Contador: la evaluación formal exige 90 días corridos desde el primer pronóstico válido (2026-11-09) → **no antes del 2026-02-07**, y al menos 150 anclas válidas.
