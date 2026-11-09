@@ -42,6 +42,9 @@ El usuario pidió dos proyectos **separados, con estrategias distintas**, probad
 
 Reglas de prueba acordadas (válidas para el uso manual de las skills y para dinero real): **paper primero**; solo skills de lectura antes de cualquier broker; ninguna orden sin PASS de `trader-risk` + "yes" explícito del usuario + "Allow once"; herramienta de órdenes en "Needs approval"; claves solo en variables de entorno, **nunca en el chat**; no es consejo financiero.
 
+- **2026-11-09 (ALBA, primer día):** GitHub no disparó ninguno de los 3 crons de la mañana; el usuario lanzó la corrida a mano (Actions → ALBA → Run workflow, **con las 3 casillas vacías**; si queda tildado "diagnóstico" corre 12 s y no opera). Primera compra: SPCX x15 a US$ 141,77 (stop 138,38, objetivo 147,50, 9:50 ET); el filtro `solo_mc` la dejó pasar con R simulado +0,001 mientras el historial de la regla daba −0,171 (38 disparos): **filtro permisivo, revisar con más datos (no se cambió)**. Cambios publicados con autorización del usuario: (1) **relevo automático** en `alba.yml` (si la sesión dura ≥330 min, el último paso lanza la siguiente con workflow_dispatch; 8 crons matutinos y 3 de respaldo; permiso `actions: write`), **pendiente verificar que funcione de verdad (primera vez ~20:15 UTC)**; (2) **avisos de Telegram en español, con tablas monoespaciadas** (`alba/formato.py`, aplica a ALBA y Turtle; reenvío en texto plano si Telegram rechaza el HTML; `telegram=probar` manda 4 mensajes de EJEMPLO). El usuario confirmó que le llegó y que se ve bien. Los issues de GitHub no cambiaron. Titulares de noticias siguen en inglés (sin traductor confiable).
+- Acceso en sesiones nuevas: `add_repo` con `push` lo bloquea el modo **Auto**; cambiar a **Accept edits** (desplegable de modo junto a la caja de mensaje) o abrir la sesión con el repo ya seleccionado. Con el repo adjunto, la API de GitHub funciona sin token (corridas, issues, dispatch con `Content-Type: application/json`).
+
 ## Dónde está guardado el proyecto
 
 - GitHub: `CaroEmma/bots-trading-privado`, rama `main` (todo está fusionado a `main` desde el 2026-11-08; este `CLAUDE.md` va en la raíz y se carga solo en sesiones nuevas con este repo). Carpetas: `proyectos/day-trader-skill/`, `proyectos/alba/`, `proyectos/halcon/`, `alba/`, `halcon/`, `alpaca_bot/`. La rama `alba-estado` guarda el estado en vivo de ALBA. Para retomar: decir "retomá el proyecto ALBA / HALCÓN / day-trader-skill".
@@ -65,5 +68,6 @@ Reglas de prueba acordadas (válidas para el uso manual de las skills y para din
 
 ## Historial de cambios de este archivo
 
+- 2026-11-09: primer día de ALBA, relevo automático, Telegram en español (ver proyecto 2).
 - 2026-11-08 (2): se agrega el proyecto 2 (ALBA / HALCÓN) y la instrucción de automatizar en paper.
 - 2026-11-08: creación. Resume el proyecto day-trader-skill, ubicaciones, reglas y pendientes.
