@@ -250,6 +250,11 @@ def main(argv=None):
         bot.enviar_estado()
         return 0
     try:
+        cu = bot.b.cuenta()                          # prueba las claves en cada ciclo: si están mal, falla acá y avisa
+        bot.s["cuenta"] = {"estado": cu.get("status"), "equity_alpaca": cu.get("equity"),
+                           "terminada_en": str(cu.get("account_number", ""))[-4:]}
+        print("HALCÓN: Alpaca Paper OK | cuenta %s (termina en %s) | equity de la cuenta %s | el bot usa su capital virtual" % (
+            cu.get("status"), bot.s["cuenta"]["terminada_en"], cu.get("equity")))
         bot.ciclo()
     except Exception as e:  # noqa: BLE001
         if time.time() - bot.s.get("ultimo_aviso_error", 0) > 3600:
