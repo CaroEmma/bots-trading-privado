@@ -141,6 +141,19 @@ class TestHalcon(unittest.TestCase):
         self.assertEqual(otro.s["cerradas"], bot.s["cerradas"])
         self.assertAlmostEqual(otro.equity(), bot.equity())
 
+    def test_el_estado_a_pedido_va_solo_a_telegram_y_no_crea_issues(self):
+        velas = velas_btc(1200)
+        bot, _ = replay(velas, hb.NE + hb.ATR_P)
+        enviados, avisos = [], []
+        bot.aviso = lambda t, c, telegram=None: avisos.append(t)
+        bot.aviso_estado = lambda t, c, html: enviados.append((t, html))
+        bot.datos.px = velas[-1].close
+        bot.enviar_estado()
+        self.assertEqual(avisos, [])                                  # nada de issues
+        self.assertEqual(len(enviados), 1)
+        self.assertIn("ESTADO DE HALCÓN", enviados[0][1])
+        self.assertIn("Entradas perdidas", enviados[0][1])
+
     def test_sin_claves_no_hace_nada(self):
         viejo = {k: os.environ.pop(k, None) for k in ("HALCON_ALPACA_KEY", "HALCON_ALPACA_SECRET")}
         try:

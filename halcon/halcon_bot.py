@@ -76,8 +76,9 @@ class DatosAlpaca:
 
 
 class Halcon:
-    def __init__(self, broker, datos, ruta_estado, aviso=None, log=print, ventana=VENTANA):
+    def __init__(self, broker, datos, ruta_estado, aviso=None, log=print, ventana=VENTANA, aviso_estado=None):
         self.b, self.datos, self.ruta, self.aviso, self.log, self.ventana = broker, datos, ruta_estado, aviso, log, ventana
+        self.aviso_estado = aviso_estado          # solo Telegram (el estado a pedido no debe crear issues)
         self.s = {"capital_inicial": CAPITAL, "pnl_total": 0.0, "pares": {}, "cerradas": [], "entradas_perdidas": 0, "eventos": []}
         if os.path.exists(ruta_estado):
             with open(ruta_estado, encoding="utf-8") as f:
@@ -231,7 +232,11 @@ class Halcon:
                     abiertas.append(dict(par[lado], lado=lado, sym=sym, actual=actual))
         html = formato.halcon_estado(_hora(int(time.time() * 1000)), self.equity(), self.s["pnl_total"], abiertas,
                                      len(self.s["cerradas"]), self.s["entradas_perdidas"], ultima)
-        self._avisar("HALCÓN | Estado", "%d posiciones abiertas, %d cerradas" % (len(abiertas), len(self.s["cerradas"])), telegram=html)
+        resumen = "%d posiciones abiertas, %d cerradas" % (len(abiertas), len(self.s["cerradas"]))
+        if self.aviso_estado:
+            self.aviso_estado("HALCÓN | Estado", resumen, html)
+        else:
+            self._avisar("HALCÓN | Estado", resumen, telegram=html)
 
 
 def main(argv=None):
@@ -245,7 +250,8 @@ def main(argv=None):
         return 0
     cfg = json.load(open(os.path.join(RAIZ, "alba", "config.json"), encoding="utf-8"))
     notif = Notificador(mencionar=cfg.get("mencionar"), etiqueta="halcon")
-    bot = Halcon(AlpacaHalcon(key, secret), DatosAlpaca(), os.path.join(a.estado, NOMBRE_ESTADO), aviso=notif.avisar)
+    bot = Halcon(AlpacaHalcon(key, secret), DatosAlpaca(), os.path.join(a.estado, NOMBRE_ESTADO), aviso=notif.avisar,
+                 aviso_estado=notif._telegram)
     if a.resumen:
         bot.enviar_estado()
         return 0

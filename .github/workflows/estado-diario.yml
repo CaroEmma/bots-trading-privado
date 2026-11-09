@@ -1,0 +1,58 @@
+name: Estado diario de ALBA y HALCON a Telegram
+
+# Cada manana manda a Telegram el estado de ALBA y el de HALCON (solo lectura: no opera, no crea issues).
+# 10:50 UTC = 07:50 hora de Argentina (UTC-3, sin horario de verano). GitHub puede demorar el cron (a veces mas de una hora).
+on:
+  schedule:
+    - cron: "50 10 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: estado-diario
+  cancel-in-progress: false
+
+jobs:
+  alba:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Traer la rama de estado de ALBA
+        run: |
+          git fetch origin alba-estado
+          git worktree add --detach estado origin/alba-estado
+      - name: Estado de ALBA a Telegram
+        env:
+          ALBA_ALPACA_KEY: ${{ secrets.ALBA_ALPACA_KEY }}
+          ALBA_ALPACA_SECRET: ${{ secrets.ALBA_ALPACA_SECRET }}
+          ALBA_TELEGRAM_TOKEN: ${{ secrets.ALBA_TELEGRAM_TOKEN }}
+          ALBA_TELEGRAM_CHAT: ${{ secrets.ALBA_TELEGRAM_CHAT }}
+        run: python alba/orquestador.py --estado estado --telegram estado
+
+  halcon:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    needs: alba
+    if: always()          # que un fallo de ALBA no impida el de HALCON
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Traer la rama de estado de HALCON
+        run: |
+          git fetch origin halcon-estado
+          git worktree add --detach estado origin/halcon-estado
+      - name: Estado de HALCON a Telegram
+        env:
+          HALCON_ALPACA_KEY: ${{ secrets.HALCON_ALPACA_KEY }}
+          HALCON_ALPACA_SECRET: ${{ secrets.HALCON_ALPACA_SECRET }}
+          ALBA_TELEGRAM_TOKEN: ${{ secrets.ALBA_TELEGRAM_TOKEN }}
+          ALBA_TELEGRAM_CHAT: ${{ secrets.ALBA_TELEGRAM_CHAT }}
+        run: python halcon/halcon_bot.py --estado estado --resumen
