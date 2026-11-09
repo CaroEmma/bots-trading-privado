@@ -1,0 +1,129 @@
+name: Kronos en modo sombra (solo pronosticos, no opera)
+
+# Experimento preregistrado: proyectos/kronos/PREREGISTRO_SOMBRA.md. NO opera, NO usa claves de Alpaca, NO toca ALBA ni HALCON.
+# Aislamiento: el paso que ejecuta codigo de terceros (Kronos, fijado por commit) no recibe ningun secreto ni el token de GitHub;
+# el token solo lo usa el paso propio que guarda el estado en la rama kronos-sombra. El informe semanal (Telegram) es otro job
+# que NO ejecuta codigo de terceros.
+on:
+  schedule:
+    - cron: "9 * * * *"          # cada hora: pronostica si cerro una vela de 4 h nueva
+    - cron: "5 0,4,8,12,16,20 * * *"
+    - cron: "30 11 * * 1"        # informe semanal: lunes 08:30 hora de Argentina
+  workflow_dispatch:
+    inputs:
+      informe:
+        description: "Solo mandar el informe a Telegram (no pronostica)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: kronos-sombra
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  pronosticar:
+    if: github.event.schedule != '30 11 * * 1' && !(github.event_name == 'workflow_dispatch' && inputs.informe)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write          # solo para guardar la rama kronos-sombra (paso final, codigo propio)
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: kronos_sombra/requirements.txt
+
+      - name: Traer la rama de estado (kronos-sombra)
+        run: |
+          URL="https://github.com/${GITHUB_REPOSITORY}"
+          if git ls-remote --exit-code --heads "$URL" kronos-sombra >/dev/null 2>&1; then
+            git fetch "$URL" kronos-sombra
+            git worktree add --detach estado FETCH_HEAD
+          else
+            git worktree add --detach estado HEAD
+            git -C estado checkout -q --orphan kronos-sombra
+            git -C estado rm -rq --cached . || true
+            find estado -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          fi
+
+      - name: Tests de la logica propia
+        run: python -m unittest discover -s kronos_sombra/tests
+
+      - name: Decidir si hay una vela nueva para pronosticar
+        id: dec
+        run: python kronos_sombra/sombra.py --estado estado --necesita >> "$GITHUB_OUTPUT"
+
+      - name: Instalar dependencias (solo si hace falta)
+        if: steps.dec.outputs.hacer == 'si'
+        run: pip install -r kronos_sombra/requirements.txt
+
+      - name: Traer Kronos fijado por commit (codigo de terceros, MIT)
+        if: steps.dec.outputs.hacer == 'si'
+        run: |
+          git clone --quiet https://github.com/shiyu-coder/Kronos "$RUNNER_TEMP/kronos"
+          git -C "$RUNNER_TEMP/kronos" checkout --quiet 67b630e67f6a18c9e9be918d9b4337c960db1e9a
+          git -C "$RUNNER_TEMP/kronos" log -1 --format='Kronos en %H (%ad)' --date=short
+
+      - name: Cache de los pesos del modelo
+        if: steps.dec.outputs.hacer == 'si'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-kronos-small-v1
+
+      - name: Pronosticar con Kronos (SIN secretos)
+        if: steps.dec.outputs.hacer == 'si'
+        env:
+          HF_HUB_DISABLE_TELEMETRY: "1"
+        run: python kronos_sombra/sombra.py --estado estado --pronosticar --kronos "$RUNNER_TEMP/kronos"
+
+      - name: Guardar el estado (codigo propio, usa el token)
+        if: always() && steps.dec.outputs.hacer == 'si'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd estado
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -q -m "kronos-sombra: $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          git rev-parse -q --verify HEAD >/dev/null || { echo "nada que guardar"; exit 0; }
+          REMOTO="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          for i in 1 2 3; do
+            git push "$REMOTO" HEAD:kronos-sombra && break
+            git fetch "$REMOTO" kronos-sombra && git rebase FETCH_HEAD
+          done
+
+  informe:
+    if: github.event.schedule == '30 11 * * 1' || (github.event_name == 'workflow_dispatch' && inputs.informe)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Traer la rama de estado
+        run: |
+          URL="https://github.com/${GITHUB_REPOSITORY}"
+          if git ls-remote --exit-code --heads "$URL" kronos-sombra >/dev/null 2>&1; then
+            git fetch "$URL" kronos-sombra
+            git worktree add --detach estado FETCH_HEAD
+          else
+            mkdir estado
+          fi
+      - name: Informe a Telegram (codigo propio, sin Kronos)
+        env:
+          ALBA_TELEGRAM_TOKEN: ${{ secrets.ALBA_TELEGRAM_TOKEN }}
+          ALBA_TELEGRAM_CHAT: ${{ secrets.ALBA_TELEGRAM_CHAT }}
+        run: python kronos_sombra/sombra.py --estado estado --informe --telegram
