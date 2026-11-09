@@ -1,0 +1,19 @@
+{
+ "capital_inicial": 10000.0,
+ "pnl_total": 0.0,
+ "pares": {
+  "BTC/USD": {
+   "barra_ts": 1794211200000,
+   "largo": null,
+   "corto": null
+  },
+  "ETH/USD": {
+   "barra_ts": 1794211200000,
+   "largo": null,
+   "corto": null
+  }
+ },
+ "cerradas": [],
+ "entradas_perdidas": 0,
+ "eventos": []
+}
