@@ -1,0 +1,99 @@
+name: HALCON - Turtle espejo largo/corto (paper, experimento hacia adelante)
+
+# Largos REALES en Alpaca Paper y cortos VIRTUALES (Alpaca no permite cortos en cripto). Dinero ficticio. Reglas en
+# proyectos/halcon/PREREGISTRO_RONDA3.md. GitHub NO cumple los crons a horario (~4 corridas por dia en el Turtle); cada corrida
+# revisa todas las velas de 4 h pendientes y cuenta las entradas que vio tarde ("entradas perdidas"), para medir esa limitacion.
+# Hasta que existan los secrets HALCON_ALPACA_KEY / HALCON_ALPACA_SECRET, el workflow termina sin hacer nada.
+on:
+  schedule:
+    - cron: "11 * * * *"
+    - cron: "3 0,4,8,12,16,20 * * *"
+  workflow_dispatch:
+    inputs:
+      resumen:
+        description: "Solo mandar el estado actual de HALCON a Telegram (no opera)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: halcon
+  cancel-in-progress: false   # nunca cortar una corrida a mitad de una orden
+
+permissions:
+  contents: write   # guardar el estado en la rama halcon-estado
+  issues: write     # avisos de cada entrada y salida
+
+jobs:
+  ciclo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout (codigo)
+        uses: actions/checkout@v4
+
+      - name: Verificar que las claves estan cargadas
+        id: claves
+        env:
+          K: ${{ secrets.HALCON_ALPACA_KEY }}
+          S: ${{ secrets.HALCON_ALPACA_SECRET }}
+        run: |
+          if [ -n "$K" ] && [ -n "$S" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "Faltan los secrets HALCON_ALPACA_KEY / HALCON_ALPACA_SECRET: no se hace nada (ver proyectos/halcon/README.md)."
+          fi
+
+      - name: Setup Python
+        if: steps.claves.outputs.ok == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Preparar la rama de estado (halcon-estado)
+        if: steps.claves.outputs.ok == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin halcon-estado >/dev/null 2>&1; then
+            git fetch origin halcon-estado
+            git worktree add --detach estado origin/halcon-estado
+          else
+            git worktree add --detach estado HEAD
+            git -C estado checkout -q --orphan halcon-estado
+            git -C estado rm -rq --cached . || true
+            find estado -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          fi
+
+      - name: Tests offline (si fallan no se opera)
+        if: steps.claves.outputs.ok == 'true'
+        run: python -m unittest discover -s halcon/tests
+
+      - name: Correr un ciclo de HALCON
+        if: steps.claves.outputs.ok == 'true'
+        env:
+          HALCON_ALPACA_KEY: ${{ secrets.HALCON_ALPACA_KEY }}
+          HALCON_ALPACA_SECRET: ${{ secrets.HALCON_ALPACA_SECRET }}
+          ALBA_TELEGRAM_TOKEN: ${{ secrets.ALBA_TELEGRAM_TOKEN }}
+          ALBA_TELEGRAM_CHAT: ${{ secrets.ALBA_TELEGRAM_CHAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          RESUMEN: ${{ inputs.resumen }}
+        run: |
+          if [ "$RESUMEN" = "true" ]; then
+            python halcon/halcon_bot.py --estado estado --resumen
+          else
+            python halcon/halcon_bot.py --estado estado
+          fi
+
+      - name: Guardar el estado
+        if: always() && steps.claves.outputs.ok == 'true'
+        run: |
+          cd estado
+          git add -A
+          git diff --cached --quiet || git commit -q -m "halcon: estado $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          git rev-parse -q --verify HEAD >/dev/null || { echo "nada que guardar todavia"; exit 0; }
+          for i in 1 2 3; do
+            git push origin HEAD:halcon-estado && break
+            git fetch origin halcon-estado && git rebase origin/halcon-estado
+          done

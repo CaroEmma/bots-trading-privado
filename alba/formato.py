@@ -224,3 +224,50 @@ def estado(hora, mercado_abierto, equity, variacion_dia, posiciones, compras, ci
           "<i>Posiciones, precio y cuenta: en vivo desde Alpaca. Compras y ventas del día: según el último guardado "
           "(hasta 10 minutos de atraso).</i>"]
     return _recortar("\n".join(t))
+
+
+def _lado_txt(lado):
+    return ("🟢", "LARGO") if lado == "largo" else ("🔻", "CORTO")
+
+
+def halcon_entrada(sym, lado, qty, entrada, stop, dist, real, hora, manga, qty_dec=6):
+    emoji, nombre = _lado_txt(lado)
+    donde = "real en Alpaca Paper" if real else "VIRTUAL (libro propio, no hay orden en Alpaca)"
+    t = ["%s <b>HALCÓN · ENTRADA %s %s</b>" % (emoji, nombre, esc(sym)), "<i>%s · %s · dinero ficticio</i>" % (esc(hora), esc(donde)), "",
+         tabla([("Cantidad", num(qty, qty_dec)), ("Entrada", usd(entrada)), ("Stop (2 ATR)", usd(stop)),
+                ("Riesgo hasta el stop", usd(-qty * dist)), ("Manga del par", usd(manga))]), "",
+         "<b>Sale por:</b> %s o por el stop." % ("cierre bajo el mínimo de 10 días" if lado == "largo" else "cierre sobre el máximo de 10 días"),
+         "<i>Experimento hacia adelante. No es asesoramiento financiero.</i>"]
+    return _recortar("\n".join(t))
+
+
+def halcon_salida(sym, lado, motivo, qty, entrada, salida, pnl_usd, r, real, hora, resumen, tardia=False, estimado=False):
+    emoji, nombre = _lado_txt(lado)
+    cab = "✅" if pnl_usd >= 0 else "❌"
+    motivos = {"stop": "Stop activado", "canal": "Cierre del canal de salida (10 días)"}
+    t = ["%s <b>HALCÓN · SALIDA %s %s</b> — %s %s" % (cab, nombre, esc(sym), "GANÓ" if pnl_usd >= 0 else "PERDIÓ", usd(abs(pnl_usd))),
+         "<i>%s · %s · dinero ficticio</i>" % (esc(hora), "real en Alpaca Paper" if real else "VIRTUAL"), "",
+         tabla([("Cantidad", num(qty, 6)), ("Entrada", usd(entrada)), ("Salida", usd(salida)),
+                ("Resultado", usd(pnl_usd, True)), ("Resultado en R", num(r, 2, True))]), "",
+         "<b>Motivo:</b> %s%s" % (esc(motivos.get(motivo, motivo)), " (detectado con atraso)" if tardia else "")]
+    if estimado:
+        t.append("⚠️ Precio de salida estimado en el stop: no pude leer el fill real.")
+    t += ["", "<b>Acumulado del experimento</b>", tabla(resumen)]
+    return _recortar("\n".join(t))
+
+
+def halcon_estado(hora, equity, pnl_total, abiertas, n_cerradas, perdidas, ultima_vela):
+    t = ["📌 <b>ESTADO DE HALCÓN</b>", "<i>%s · dinero ficticio</i>" % esc(hora), "",
+         tabla([("Capital virtual", usd(equity)), ("Resultado acumulado", usd(pnl_total, True)),
+                ("Operaciones cerradas", str(n_cerradas)), ("Entradas perdidas*", str(perdidas)),
+                ("Última vela evaluada", esc(ultima_vela))]), "", "<b>Posiciones abiertas: %d</b>" % len(abiertas)]
+    for p in abiertas:
+        _, nombre = _lado_txt(p["lado"])
+        filas = [("%s %s" % (nombre, p["sym"]), "real" if p["real"] else "virtual"), ("Entrada", usd(p["entrada"])),
+                 ("Stop", usd(p["stop"]))]
+        if p.get("actual") is not None:
+            pnl = (p["actual"] - p["entrada"]) * p["qty"] * (1 if p["lado"] == "largo" else -1)
+            filas += [("Precio actual", usd(p["actual"])), ("Resultado ahora", usd(pnl, True))]
+        t.append(tabla(filas))
+    t += ["", "<i>*Entradas perdidas: señales de entrada que el bot vio tarde porque GitHub no lo corrió a tiempo.</i>"]
+    return _recortar("\n".join(t))
