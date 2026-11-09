@@ -15,5 +15,10 @@
  },
  "cerradas": [],
  "entradas_perdidas": 0,
- "eventos": []
+ "eventos": [],
+ "cuenta": {
+  "estado": "ACTIVE",
+  "equity_alpaca": "99999.88",
+  "terminada_en": "QL05"
+ }
 }
