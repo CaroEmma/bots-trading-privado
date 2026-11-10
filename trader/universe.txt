@@ -54,7 +54,6 @@ ACGL|Arch Capital Group Ltd. - Common Stock
 ACH|Accendra Health, Inc. Common Stock
 ACHC|Acadia Healthcare Company, Inc. - Common Stock
 ACHR|Archer Aviation Inc. Class A Common Stock
-ACHV|Achieve Life Sciences, Inc. - Common Shares
 ACI|Albertsons Companies, Inc. Class A Common Stock
 ACIC|American Coastal Insurance Corporation - Common Stock
 ACIU|AC Immune SA - Common Stock
@@ -1902,7 +1901,6 @@ EYE|National Vision Holdings, Inc. - Common Stock
 EYPT|EyePoint, Inc. - Common Stock
 EZGO|EZGO Technologies Ltd. - Ordinary Shares
 EZPW|EZCORP, Inc. - Class A Non-Voting Common Stock
-EZRA|Reliance Global Group, Inc. - Common Stock
 F|Ford Motor Company Common Stock
 FA|First Advantage Corporation - Common Stock
 FABC|Fabric.AI, Inc. - Common Stock
@@ -2178,7 +2176,7 @@ GBFH|GBank Financial Holdings Inc. - Common Stock
 GBLI|Global Indemnity Group, LLC - Class A Common Shares
 GBR|New Concept Energy, Inc Common Stock
 GBX|Greenbrier Companies, Inc. (The) Common Stock
-GCBC|Greene County Bancorp, Inc. - Common Stock
+GCBC|Greene Bancorp, Inc. - Common Stock
 GCGR|General Catalyst Global Resilience Merger Corp. - Class A Ordinary Shares
 GCL|GCL Global Holdings Ltd - Ordinary Shares
 GCMG|GCM Grosvenor Inc. - Class A Common Stock
@@ -4335,7 +4333,6 @@ PSNL|Personalis, Inc. - Common Stock
 PSNY|Polestar Automotive Holding UK Limited - Class A ADS
 PSNYW|Polestar Automotive Holding UK Limited - Class C-1 ADS (ADW)
 PSO|Pearson, Plc Common Stock
-PSQH|PSQ Holdings, Inc. Class A Common Stock
 PSQL|Pasqal Holding SA - Ordinary Shares
 PSTL|Postal Realty Trust, Inc. Class A Common Stock
 PSUS|Pershing Square USA, Ltd. Common Shares
@@ -4415,6 +4412,7 @@ QUAD|Quad Graphics, Inc Class A Common Stock
 QUBT|Quantum Computing Inc. - Common Stock
 QUCY|Quantum Cyber N.V. - Ordinary Shares
 QUIK|QuickLogic Corporation - Common Stock
+QUIT|Achieve Life Sciences, Inc. - Common Shares
 QUMS|Quantumsphere Acquisition Corp. - Ordinary Shares
 QURE|uniQure N.V. - Ordinary Shares
 QVCG|QVC Group, Inc. - Common Stock
@@ -4724,6 +4722,7 @@ SCNI|Scinai Immunotherapeutics Ltd. - American Depositary Shares
 SCNX|Scienture Holdings, Inc. - Common Stock
 SCOR|comScore, Inc. - Common Stock
 SCPQ|Social Commerce Partners Corporation - Class A Ordinary Shares
+SCQC|SPACCircle Acquisition Corp. - Class A Ordinary Shares
 SCSC|ScanSource, Inc. - Common Stock
 SCTX|Scribe Therapeutics Inc. - Common Stock
 SCWO|374Water Inc. - common stock
@@ -5809,6 +5808,7 @@ XFLH|XFLH Capital Corporation Ordinary Shares
 XFLT|XAI Floating Rate & Alternative Income Trust Common Shares of Beneficial Interest
 XFOR|X4 Pharmaceuticals, Inc. - Common Stock
 XGN|Exagen Inc. - Common Stock
+XGPU|Reliance Global Group, Inc. - Common Stock
 XHG|XChange TEC.INC - American Depositary Shares
 XHLD|TEN Holdings, Inc. - Common Stock
 XHR|Xenia Hotels & Resorts, Inc. Common Stock

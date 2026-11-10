@@ -1,17 +1,18 @@
 {
  "abiertas": {},
  "hoy": {
-  "fecha": "2026-11-09",
-  "entradas": 1,
-  "pnl": -0.45000000000001705,
-  "r": -0.00884955752212419,
+  "fecha": "2026-11-10",
+  "entradas": 0,
+  "pnl": 0.0,
+  "r": 0.0,
   "evaluados": {
-   "BRZE": "omitida: timemachine: R promedio simulado -0.011 no es > 0",
-   "SPCX": "COMPRADA"
+   "LMT": "omitida: señal vieja (329 min)",
+   "YUM": "omitida: señal vieja (179 min)",
+   "TGT": "omitida: señal vieja (164 min)"
   },
   "universo": true,
   "sesion": true,
-  "informe": true,
-  "ultimo_scan": 1794235837.849481
+  "informe": false,
+  "ultimo_scan": 1794342340.053047
  }
 }
