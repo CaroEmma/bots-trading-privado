@@ -3,14 +3,28 @@
  "pnl_total": 0.0,
  "pares": {
   "BTC/USD": {
-   "barra_ts": 1794297600000,
+   "barra_ts": 1794312000000,
    "largo": null,
-   "corto": null
+   "corto": {
+    "qty": 0.026299,
+    "entrada": 73269.04715,
+    "stop": 75170.24596487592,
+    "dist": 1901.1988148759267,
+    "ts": 1794312000000,
+    "real": false
+   }
   },
   "ETH/USD": {
-   "barra_ts": 1794297600000,
+   "barra_ts": 1794312000000,
    "largo": null,
-   "corto": null
+   "corto": {
+    "qty": 0.652426,
+    "entrada": 2031.1179330000002,
+    "stop": 2107.7549506683777,
+    "dist": 76.63701766837764,
+    "ts": 1794312000000,
+    "real": false
+   }
   }
  },
  "cerradas": [],
