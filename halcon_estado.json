@@ -3,12 +3,12 @@
  "pnl_total": 0.0,
  "pares": {
   "BTC/USD": {
-   "barra_ts": 1794268800000,
+   "barra_ts": 1794297600000,
    "largo": null,
    "corto": null
   },
   "ETH/USD": {
-   "barra_ts": 1794268800000,
+   "barra_ts": 1794297600000,
    "largo": null,
    "corto": null
   }
