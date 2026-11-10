@@ -12,7 +12,7 @@
   },
   "universo": true,
   "sesion": true,
-  "informe": false,
+  "informe": true,
   "ultimo_scan": 1794342340.053047
  }
 }
