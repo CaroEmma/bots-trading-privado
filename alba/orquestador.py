@@ -28,6 +28,7 @@ sys.path.insert(0, AQUI)
 
 from alpaca_paper import AlpacaPaper, ErrorAlpaca, claves_desde_entorno  # noqa: E402
 import formato  # noqa: E402
+import sombra  # noqa: E402
 from notificar import Notificador, limpio, telegram_descubrir, telegram_probar, telegram_quien, token_con_formato  # noqa: E402
 
 VENDOR = os.path.join(AQUI, "vendor", "day-trader-skill")
@@ -510,6 +511,32 @@ def informe_diario(cfg, est, notif, ahora, h):
     h["informe"] = True
 
 
+# ============================================================ v2 en modo sombra (solo registra y mide)
+def sombra_paso(cfg, pack, est, ahora, h):
+    def escanear(archivo):
+        escribir_config_pack(est, cfg)
+        if not preparar_universo(cfg, pack, est, h):
+            return None
+        rc, _, _ = pack.correr("scanner", ["orb", "--json", "--quiet", "--out", "trader/" + os.path.basename(archivo),
+                                           "--min-price", str(cfg["estrategia"]["precio_minimo"])])
+        return leer_json(est.ruta_trader(os.path.basename(archivo))) if rc == 0 else None
+    try:
+        sombra.paso(cfg, pack, est, ahora, h, escanear, json_de, leer_json)
+    except Exception as e:  # noqa: BLE001 - v2 nunca debe afectar a v1
+        print("(sombra) error ignorado: %s" % e, flush=True)
+
+
+def sombra_cierre(cfg, est, notif, ahora, h):
+    if not (cfg.get("sombra") or {}).get("activa") or h.get("sombra_resuelto"):
+        return
+    h["sombra_resuelto"] = True
+    try:
+        sombra.resolver(est, ahora.date())
+        notif.avisar("ALBA v2 (sombra) | Resumen %s" % ahora.date().isoformat(), sombra.texto_informe(sombra.analizar(est)))
+    except Exception as e:  # noqa: BLE001
+        print("(sombra) no pude resolver el día: %s" % e, flush=True)
+
+
 # ============================================================ ciclo principal
 def ciclo(cfg, broker, pack, est, notif, ahora=None):
     reloj = broker.reloj()
@@ -521,6 +548,8 @@ def ciclo(cfg, broker, pack, est, notif, ahora=None):
     if not abierto:
         if h.get("sesion") and not h["informe"] and ahora.strftime("%H:%M") >= "16:05":
             informe_diario(cfg, est, notif, ahora, h)
+        if h.get("sesion") and ahora.strftime("%H:%M") >= "16:05":
+            sombra_cierre(cfg, est, notif, ahora, h)
         est.guardar()
         return "cerrado"
     h["sesion"] = True
@@ -529,6 +558,7 @@ def ciclo(cfg, broker, pack, est, notif, ahora=None):
         est.guardar()
         return "cierre"
     buscar_entradas(cfg, broker, pack, est, notif, ahora, h)
+    sombra_paso(cfg, pack, est, ahora, h)
     est.guardar()
     return "operando"
 
@@ -735,10 +765,14 @@ def main(argv=None):
     ap.add_argument("--diagnostico", action="store_true")
     ap.add_argument("--telegram", choices=["descubrir", "probar", "estado"],
                     help="configurar / probar los avisos por Telegram, o mandar el estado actual")
+    ap.add_argument("--sombra", choices=["informe"], help="informe de ALBA v2 en modo sombra (no necesita claves)")
     ap.add_argument("--sesion", action="store_true", help="repetir el ciclo hasta el cierre del mercado")
     ap.add_argument("--duracion-max-min", type=int, help="tope de duración de la sesión (minutos)")
     a = ap.parse_args(argv)
     cfg = leer_json(a.config)
+    if a.sombra == "informe":
+        print(sombra.texto_informe(sombra.analizar(Estado(a.estado))))
+        return 0
     if a.telegram == "estado":
         key, secret = claves_desde_entorno("ALBA_")
         if not key or not secret:

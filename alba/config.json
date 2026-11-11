@@ -44,5 +44,8 @@
     "publicar_cada_min": 10,
     "errores_seguidos_max": 20
   },
-  "pausa_cierre_s": 2
+  "pausa_cierre_s": 2,
+  "sombra": {
+    "activa": true
+  }
 }

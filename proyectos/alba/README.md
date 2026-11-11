@@ -25,6 +25,16 @@ Todo candidato (comprado u omitido, con el motivo) queda en `decisiones.jsonl`; 
 
 El cron de GitHub falló como arranque: lunes solo anduvo porque se lanzó a mano, el martes la sesión salió ~6 h tarde y el miércoles no salió ninguna. Ahora el arranque es un **push a la rama `alba-disparo`**, que GitHub ejecuta en el momento. Una rutina de Claude lo hace cada día hábil a las 13:10 UTC (la sesión espera la apertura hasta 120 min) y otra verifica a las 14:50 UTC que haya una corrida activa; si no, avisa por push. Los crons quedan de respaldo. Manual: Actions → ALBA → Run workflow.
 
+## ALBA v2 en modo sombra (desde 2026-11-12, primera sesión con el código nuevo)
+
+El usuario eligió "sombra" (2026-11-11): v2 **no opera**; registra todo hit fresco del escáner ORB con rasgos extra (volumen relativo, brecha,
+SPY, etiquetas de noticias), da el veredicto de la regla v2 y al cierre simula el resultado de cada hit. Reglas, umbrales, prueba estadística
+y criterio de adopción: `PREREGISTRO_V2_SOMBRA.md` (escrito antes del código; no se cambia con los datos). Código: `alba/sombra.py` (+ 19 tests).
+Datos: `sombra.jsonl` y `sombra_resultados.jsonl` en la rama `alba-estado`. Aviso diario "ALBA v2 (sombra) | Resumen" tras el cierre (solo
+conteos y estadística descriptiva). Informe a demanda: `python3 alba/orquestador.py --estado <carpeta> --sombra informe`.
+Límites: si Yahoo limita (429) v2 corta su registro (v1 tiene prioridad); sin filtro por SEC (falta `sec_user_agent`, lo tiene que dar el usuario).
+Desactivar: `"sombra": {"activa": false}` en `alba/config.json`.
+
 ## Cómo corre: sesiones largas, no un cron frecuente
 
 **Hallazgo del 2026-11-08:** GitHub no cumple los crons al minuto. El workflow del bot Turtle está programado cada 15 min y en la práctica corre unas 4 veces por día (visto en la pestaña Actions). Un cron cada 5 minutos habría hecho perder señales y el cierre de las 15:40. Por eso cada corrida de ALBA es una **sesión de hasta 340 min** que revisa el mercado cada 60 s hasta el cierre (y espera la apertura si arranca antes). Disparos (UTC, lunes a viernes): 13:05, 13:35 y 14:05 inician la sesión; 18:30 y 19:05 son el relevo (una corrida de GitHub dura como máximo 360 min). Con `concurrency`, un disparo que llega con una sesión en curso queda en espera y arranca cuando esa termina.

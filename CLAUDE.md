@@ -76,6 +76,10 @@ Reglas de prueba acordadas (válidas para el uso manual de las skills y para din
 - **Arreglo:** el workflow `alba.yml` ahora arranca con un **push a la rama `alba-disparo`** (inmediato). Rutina diaria de Claude (lun-vie 13:10 UTC) rearma esa rama desde `origin/main` + commit vacio y la sube con `git push -f`. Otra rutina verifica a las 14:50 UTC por la API publica que haya una corrida de ALBA activa y avisa por push si no. Los crons quedan de respaldo.
 - **Regla:** no afirmar "automatico" hasta ver la primera ejecucion real sin ayuda; todo aviso debe distinguir "no paso nada" de "no corrio".
 
+## ALBA v2 en modo sombra (2026-11-11, elegido por el usuario)
+
+Preregistro `proyectos/alba/PREREGISTRO_V2_SOMBRA.md` (commit 4c0a1b3, antes del código). Código `alba/sombra.py` enganchado en `ciclo()` de `alba/orquestador.py` (nunca rompe v1; flag `sombra.activa` en `alba/config.json`). Registra todo hit ORB fresco (no solo lo que v1 evalúa) con rvol, brecha, SPY y etiquetas de noticias; veredicto PASA/DESCARTA/SIN DATO; resultado simulado al cierre. Evaluación única (test de permutación PASA vs DESCARTA) solo con ≥ 30 + 30 hits y ≥ 10 días; antes, nada de decisiones. Activo desde la sesión del 2026-11-12 (la del 11/11 ya corría con el código viejo). **Pendiente del usuario (opcional):** nombre y email para `sec_user_agent` si se quiere detectar balances por SEC (hoy solo por titulares). No cambiar umbrales de v2 con los datos.
+
 ## Historial de cambios de este archivo
 
 - 2026-11-09: primer día de ALBA, relevo automático, Telegram en español (ver proyecto 2).
