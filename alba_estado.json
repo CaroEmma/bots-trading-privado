@@ -42,11 +42,17 @@
    "DIS": "omitida: timemachine: R promedio simulado -0.066 no es > 0",
    "NVO": "omitida: timemachine: R promedio simulado -0.087 no es > 0",
    "ABT": "omitida: señal vieja (99 min)",
-   "DAL": "omitida: señal vieja (99 min)"
+   "DAL": "omitida: señal vieja (99 min)",
+   "PSX": "omitida: señal vieja (59 min)",
+   "INTU": "omitida: señal vieja (104 min)",
+   "REGN": "omitida: señal vieja (104 min)",
+   "CL": "omitida: señal vieja (104 min)",
+   "BLK": "omitida: señal vieja (99 min)",
+   "PNC": "omitida: señal vieja (99 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794414368.397645
+  "ultimo_scan": 1794414998.229347
  }
 }
