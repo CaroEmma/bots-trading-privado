@@ -49,6 +49,35 @@ def leer_env():
 
 
 # ----------------------------------------------------------------- datos publicos
+ESPERAS_429 = (2, 5, 12)
+_dormir = time.sleep
+
+
+def _http_datos(ruta, params):
+    """GET de datos de cripto. Arreglo 2026-11-11 (autorizado por el usuario): antes iba SIN claves y sin reintentos y Alpaca
+    devolvia 429 en ~3 de cada 8 pedidos (medido). Ahora usa las claves del entorno si existen (si las rechaza con 401/403
+    prueba sin claves) y ante un 429 espera y reintenta (2, 5 y 12 s)."""
+    key, secret = leer_env()
+    con_claves = bool(key and secret)
+    intento = 0
+    while True:
+        h = {"Accept": "application/json"}
+        if con_claves:
+            h["APCA-API-KEY-ID"], h["APCA-API-SECRET-KEY"] = key, secret
+        try:
+            return _http(config.URL_DATOS, "GET", ruta, h, params=params)
+        except RuntimeError as e:
+            msg = str(e)
+            if (" 401 " in msg or " 403 " in msg) and con_claves:
+                con_claves = False
+                continue
+            if " 429 " in msg and intento < len(ESPERAS_429):
+                _dormir(ESPERAS_429[intento])
+                intento += 1
+                continue
+            raise
+
+
 def barras(simbolo, desde_ms, hasta_ms=None):
     """Velas 4h de Alpaca (datos cripto publicos, sin keys), ordenadas,
     SOLO las ya cerradas."""
@@ -58,7 +87,7 @@ def barras(simbolo, desde_ms, hasta_ms=None):
         p = {"symbols": simbolo, "timeframe": config.TIMEFRAME_ALPACA, "start": inicio, "limit": 1000}
         if token:
             p["page_token"] = token
-        r = _http(config.URL_DATOS, "GET", "/v1beta3/crypto/us/bars", {"Accept": "application/json"}, params=p)
+        r = _http_datos("/v1beta3/crypto/us/bars", p)
         for b in r["bars"].get(simbolo, []):
             out.append(Vela(_iso_a_ms(b["t"]), b["o"], b["h"], b["l"], b["c"], b["v"]))
         token = r.get("next_page_token")
@@ -69,8 +98,7 @@ def barras(simbolo, desde_ms, hasta_ms=None):
 
 
 def precio_ultimo(simbolo):
-    r = _http(config.URL_DATOS, "GET", "/v1beta3/crypto/us/latest/trades",
-              {"Accept": "application/json"}, params={"symbols": simbolo})
+    r = _http_datos("/v1beta3/crypto/us/latest/trades", {"symbols": simbolo})
     return float(r["trades"][simbolo]["p"])
 
 

@@ -65,14 +65,61 @@ class AlpacaHalcon(brokers.AlpacaPaper):
 
 
 class DatosAlpaca:
-    """Velas de 4 h cerradas y último precio (datos públicos de Alpaca, sin claves)."""
+    """Velas de 4 h cerradas y último precio de Alpaca (datos de cripto).
+
+    Arreglo 2026-11-11: los pedidos iban SIN claves y sin reintentos, y 2 de 12 corridas cayeron con "429 too many requests".
+    Ahora van con las claves de HALCÓN (si Alpaca las rechaza con 401/403 se reintenta una vez sin claves) y ante un 429 se
+    espera y se reintenta (2, 5 y 12 s; respeta el mensaje, nunca más de 3 reintentos por pedido)."""
+
+    ESPERAS = (2, 5, 12)
+
+    def __init__(self, key=None, secret=None, pedir=None, dormir=time.sleep):
+        self.key, self.secret = key, secret
+        self._pedir = pedir or brokers._http
+        self.dormir = dormir
+        self.reintentos_429 = 0          # para el log: cuántas veces hubo que esperar
+
+    def _get(self, ruta, params):
+        con_claves = bool(self.key and self.secret)
+        intento = 0
+        while True:
+            h = {"Accept": "application/json"}
+            if con_claves:
+                h["APCA-API-KEY-ID"], h["APCA-API-SECRET-KEY"] = self.key, self.secret
+            try:
+                return self._pedir(brokers.config.URL_DATOS, "GET", ruta, h, params=params)
+            except RuntimeError as e:
+                msg = str(e)
+                if (" 401 " in msg or " 403 " in msg) and con_claves:
+                    con_claves = False           # datos públicos: probar sin claves
+                    continue
+                if " 429 " in msg and intento < len(self.ESPERAS):
+                    self.reintentos_429 += 1
+                    self.dormir(self.ESPERAS[intento])
+                    intento += 1
+                    continue
+                raise
 
     def barras(self, simbolo, cantidad):
         desde = int(time.time() * 1000) - (cantidad + 5) * brokers.MS_VELA
-        return brokers.barras(simbolo, desde)[-cantidad:]
+        out, token = [], None
+        inicio = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(desde / 1000))
+        while True:
+            p = {"symbols": simbolo, "timeframe": brokers.config.TIMEFRAME_ALPACA, "start": inicio, "limit": 1000}
+            if token:
+                p["page_token"] = token
+            r = self._get("/v1beta3/crypto/us/bars", p)
+            for b in r["bars"].get(simbolo, []):
+                out.append(Vela(brokers._iso_a_ms(b["t"]), b["o"], b["h"], b["l"], b["c"], b["v"]))
+            token = r.get("next_page_token")
+            if not token:
+                break
+        ahora = int(time.time() * 1000)
+        return [v for v in out if v.ts + brokers.MS_VELA <= ahora][-cantidad:]
 
     def precio(self, simbolo):
-        return brokers.precio_ultimo(simbolo)
+        r = self._get("/v1beta3/crypto/us/latest/trades", {"symbols": simbolo})
+        return float(r["trades"][simbolo]["p"])
 
 
 class Halcon:
@@ -250,7 +297,7 @@ def main(argv=None):
         return 0
     cfg = json.load(open(os.path.join(RAIZ, "alba", "config.json"), encoding="utf-8"))
     notif = Notificador(mencionar=cfg.get("mencionar"), etiqueta="halcon")
-    bot = Halcon(AlpacaHalcon(key, secret), DatosAlpaca(), os.path.join(a.estado, NOMBRE_ESTADO), aviso=notif.avisar,
+    bot = Halcon(AlpacaHalcon(key, secret), DatosAlpaca(key, secret), os.path.join(a.estado, NOMBRE_ESTADO), aviso=notif.avisar,
                  aviso_estado=notif._telegram)
     if a.resumen:
         bot.enviar_estado()

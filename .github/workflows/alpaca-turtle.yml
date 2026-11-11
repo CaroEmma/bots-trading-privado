@@ -38,8 +38,13 @@ jobs:
 
       - name: Correr un ciclo del bot (paper trading, fondos ficticios)
         env:
-          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
-          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          # 2026-11-11: las claves ALPACA_API_KEY/ALPACA_SECRET_KEY quedaron invalidadas (Alpaca respondia 401: diagnostico del
+          # 11/11) al generar las de HALCON sobre la MISMA cuenta (termina en QL05). Mientras comparta cuenta con HALCON usa
+          # las claves vigentes de HALCON. Cuando HALCON tenga cuenta propia hay que volver a ALPACA_API_KEY/ALPACA_SECRET_KEY
+          # con claves nuevas de QL05; ALPACA_CUENTA_ESPERADA impide operar en otra cuenta por error.
+          ALPACA_API_KEY: ${{ secrets.HALCON_ALPACA_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.HALCON_ALPACA_SECRET }}
+          ALPACA_CUENTA_ESPERADA: "QL05"
           ALBA_TELEGRAM_TOKEN: ${{ secrets.ALBA_TELEGRAM_TOKEN }}
           ALBA_TELEGRAM_CHAT: ${{ secrets.ALBA_TELEGRAM_CHAT }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

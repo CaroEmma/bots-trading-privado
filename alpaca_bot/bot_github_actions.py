@@ -248,14 +248,44 @@ def _crear_aviso():
         return None
 
 
-if __name__ == "__main__":
-    key, secret = brokers.leer_env()
-    broker = brokers.AlpacaPaper(key, secret)
-    cuenta = broker.cuenta()
-    _log(f"Conectado a Alpaca PAPER | cuenta {cuenta['status']} | equity={cuenta['equity']} USD")
-    bot = Bot(broker, aviso=_crear_aviso())
+def verificar_cuenta(cuenta, esperada):
+    """Si ALPACA_CUENTA_ESPERADA esta definida (ultimos 4 del numero de cuenta), exige que coincida: evita operar en otra cuenta
+    si cambian los secrets (por ejemplo, si HALCON pasa a tener cuenta propia)."""
+    if esperada:
+        real = str(cuenta.get("account_number", ""))[-len(esperada):]
+        if real != esperada:
+            raise RuntimeError("la cuenta de Alpaca termina en %r y se esperaba %r: no opero (ver ALPACA_CUENTA_ESPERADA en el workflow)"
+                               % (real, esperada))
+
+
+def _avisar_error(aviso, ruta_estado, e, ahora=None):
+    """Un aviso por issue si el bot no pudo correr (como mucho 1 cada 6 h): antes un fallo de claves pasaba en silencio."""
+    ahora = ahora or time.time()
     try:
+        estado = json.load(open(ruta_estado, encoding="utf-8")) if os.path.exists(ruta_estado) else {}
+    except ValueError:
+        estado = {}
+    if aviso and ahora - estado.get("_ultimo_aviso_error", 0) > 6 * 3600:
+        estado["_ultimo_aviso_error"] = ahora
+        try:
+            aviso("TURTLE | ERROR: el bot no pudo correr", "`%s`\n\nRevisar la corrida en la pestaña Actions." % str(e)[:400])
+            with open(ruta_estado, "w", encoding="utf-8") as f:
+                json.dump(estado, f, indent=1)
+        except Exception as e2:  # noqa: BLE001
+            print("(no pude avisar el error: %s)" % e2)
+
+
+if __name__ == "__main__":
+    aviso = _crear_aviso()
+    try:
+        key, secret = brokers.leer_env()
+        broker = brokers.AlpacaPaper(key, secret)
+        cuenta = broker.cuenta()
+        verificar_cuenta(cuenta, os.environ.get("ALPACA_CUENTA_ESPERADA"))
+        _log(f"Conectado a Alpaca PAPER | cuenta {cuenta['status']} | equity={cuenta['equity']} USD")
+        bot = Bot(broker, aviso=aviso)
         ciclo(bot)
     except Exception as e:
         _log(f"ERROR en el ciclo: {e}")
+        _avisar_error(aviso, RUTA_ESTADO, e)
         raise  # que el workflow quede en rojo si algo fallo de verdad

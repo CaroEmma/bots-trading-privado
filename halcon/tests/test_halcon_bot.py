@@ -168,5 +168,67 @@ class TestHalcon(unittest.TestCase):
         self.assertIn("paper-api.alpaca.markets", cfg_turtle.URL_TRADING_PAPER)
 
 
+
+
+class TestDatosAlpaca(unittest.TestCase):
+    """Reintentos ante 429 y uso de claves en los pedidos de velas (arreglo 2026-11-11)."""
+
+    def datos(self, respuestas, key="K", secret="S"):
+        llamadas, esperas = [], []
+
+        def pedir(base, metodo, ruta, headers, params=None, cuerpo=None):
+            llamadas.append((ruta, dict(headers)))
+            r = respuestas.pop(0)
+            if isinstance(r, Exception):
+                raise r
+            return r
+        d = hb.DatosAlpaca(key, secret, pedir=pedir, dormir=esperas.append)
+        return d, llamadas, esperas
+
+    def test_429_se_reintenta_y_sale(self):
+        ok = {"trades": {"BTC/USD": {"p": 75000.5}}}
+        d, llamadas, esperas = self.datos([RuntimeError("Alpaca 429 en GET /x: too many requests"), ok])
+        self.assertEqual(d.precio("BTC/USD"), 75000.5)
+        self.assertEqual(esperas, [2])
+        self.assertEqual(len(llamadas), 2)
+        self.assertEqual(d.reintentos_429, 1)
+
+    def test_429_persistente_falla_tras_tres_reintentos(self):
+        e = RuntimeError("Alpaca 429 en GET /x: too many requests")
+        d, llamadas, esperas = self.datos([e, e, e, e])
+        with self.assertRaises(RuntimeError):
+            d.precio("BTC/USD")
+        self.assertEqual(esperas, [2, 5, 12])
+        self.assertEqual(len(llamadas), 4)
+
+    def test_envia_las_claves(self):
+        d, llamadas, _ = self.datos([{"trades": {"BTC/USD": {"p": 1}}}])
+        d.precio("BTC/USD")
+        self.assertEqual(llamadas[0][1]["APCA-API-KEY-ID"], "K")
+        self.assertEqual(llamadas[0][1]["APCA-API-SECRET-KEY"], "S")
+
+    def test_si_rechaza_las_claves_reintenta_sin_claves(self):
+        d, llamadas, _ = self.datos([RuntimeError("Alpaca 403 en GET /x: forbidden"), {"trades": {"BTC/USD": {"p": 2}}}])
+        self.assertEqual(d.precio("BTC/USD"), 2.0)
+        self.assertNotIn("APCA-API-KEY-ID", llamadas[1][1])
+
+    def test_otro_error_no_se_reintenta(self):
+        d, llamadas, esperas = self.datos([RuntimeError("Alpaca 500 en GET /x: boom")])
+        with self.assertRaises(RuntimeError):
+            d.precio("BTC/USD")
+        self.assertEqual((len(llamadas), esperas), (1, []))
+
+    def test_barras_devuelve_solo_cerradas(self):
+        import time as _t
+        ahora = int(_t.time())
+        iso = lambda t: _t.strftime("%Y-%m-%dT%H:%M:%SZ", _t.gmtime(t))  # noqa: E731
+        cerrada, abierta = ahora - 5 * 3600, ahora - 600
+        resp = {"bars": {"BTC/USD": [{"t": iso(cerrada), "o": 1, "h": 2, "l": 1, "c": 2, "v": 3},
+                                      {"t": iso(abierta), "o": 1, "h": 2, "l": 1, "c": 2, "v": 3}]}}
+        d, _, _ = self.datos([resp])
+        velas = d.barras("BTC/USD", 10)
+        self.assertEqual(len(velas), 1)
+
+
 if __name__ == "__main__":
     unittest.main()

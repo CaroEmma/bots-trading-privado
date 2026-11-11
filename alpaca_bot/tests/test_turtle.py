@@ -260,5 +260,67 @@ class TestReplayConHistoria(unittest.TestCase):
         self.assertLessEqual(len(compras) - len(cierres), 1)     # a lo sumo la última puede seguir abierta
 
 
+class TestFallosDeConexion(unittest.TestCase):
+    """Arreglo 2026-11-11: datos con claves y reintentos ante 429, guarda de cuenta y aviso de errores."""
+
+    def setUp(self):
+        import brokers
+        self.brokers = brokers
+        self._http, self._dormir, self._env = brokers._http, brokers._dormir, dict(os.environ)
+        self.esperas, self.llamadas = [], []
+        brokers._dormir = self.esperas.append
+        os.environ["ALPACA_API_KEY"], os.environ["ALPACA_SECRET_KEY"] = "K", "S"
+        self.addCleanup(self.restaurar)
+
+    def restaurar(self):
+        self.brokers._http, self.brokers._dormir = self._http, self._dormir
+        os.environ.clear()
+        os.environ.update(self._env)
+
+    def falso(self, respuestas):
+        def _h(base, metodo, ruta, headers, params=None, cuerpo=None):
+            self.llamadas.append(dict(headers))
+            r = respuestas.pop(0)
+            if isinstance(r, Exception):
+                raise r
+            return r
+        self.brokers._http = _h
+
+    def test_429_se_reintenta_y_usa_claves(self):
+        self.falso([RuntimeError("Alpaca 429 en GET /x: too many requests"), {"trades": {"BTC/USD": {"p": 7.5}}}])
+        self.assertEqual(self.brokers.precio_ultimo("BTC/USD"), 7.5)
+        self.assertEqual(self.esperas, [2])
+        self.assertEqual(self.llamadas[0]["APCA-API-KEY-ID"], "K")
+
+    def test_429_persistente_falla(self):
+        e = RuntimeError("Alpaca 429 en GET /x: too many requests")
+        self.falso([e, e, e, e])
+        with self.assertRaises(RuntimeError):
+            self.brokers.precio_ultimo("BTC/USD")
+        self.assertEqual(self.esperas, [2, 5, 12])
+
+    def test_claves_rechazadas_prueba_sin_claves(self):
+        self.falso([RuntimeError("Alpaca 401 en GET /x: unauthorized"), {"trades": {"BTC/USD": {"p": 1}}}])
+        self.assertEqual(self.brokers.precio_ultimo("BTC/USD"), 1.0)
+        self.assertNotIn("APCA-API-KEY-ID", self.llamadas[1])
+
+    def test_guarda_de_cuenta(self):
+        bga.verificar_cuenta({"account_number": "PA3Y9NH0QL05"}, "QL05")          # coincide: no lanza
+        bga.verificar_cuenta({"account_number": "PA3Y9NH0QL05"}, None)            # sin guarda: no lanza
+        with self.assertRaises(RuntimeError):
+            bga.verificar_cuenta({"account_number": "PA0000000ABC"}, "QL05")
+
+    def test_aviso_de_error_una_vez_cada_6_horas(self):
+        ruta = os.path.join(tempfile.mkdtemp(), "estado.json")
+        avisos = []
+        aviso = lambda t, c: avisos.append(t)  # noqa: E731
+        bga._avisar_error(aviso, ruta, RuntimeError("401"), ahora=1_700_000_000.0)
+        bga._avisar_error(aviso, ruta, RuntimeError("401"), ahora=1_700_000_000.0 + 3600)
+        self.assertEqual(len(avisos), 1)
+        bga._avisar_error(aviso, ruta, RuntimeError("401"), ahora=1_700_000_000.0 + 7 * 3600)
+        self.assertEqual(len(avisos), 2)
+        bga._avisar_error(None, ruta, RuntimeError("401"))          # sin canal de avisos: no rompe
+
+
 if __name__ == "__main__":
     unittest.main()
