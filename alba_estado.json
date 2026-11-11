@@ -18,11 +18,17 @@
    "V": "omitida: señal vieja (41 min)",
    "BKR": "omitida: señal vieja (42 min)",
    "TLN": "omitida: señal vieja (27 min)",
-   "MCHP": "omitida: señal vieja (17 min)"
+   "MCHP": "omitida: señal vieja (17 min)",
+   "MKSI": "omitida: timemachine: R promedio simulado -0.057 no es > 0",
+   "JNJ": "omitida: señal vieja (62 min)",
+   "KDP": "omitida: señal vieja (62 min)",
+   "HOOD": "omitida: timemachine: R promedio simulado -0.248 no es > 0",
+   "COP": "omitida: señal vieja (57 min)",
+   "BMNR": "omitida: señal vieja (42 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794411834.983329
+  "ultimo_scan": 1794412461.155912
  }
 }

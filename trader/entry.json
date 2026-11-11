@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "MCHP",
+  "symbol": "BMNR",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-11",
   "status": "triggered",
-  "time": "10:30 AM",
-  "bar_start": "10:25",
-  "bar_index": 11,
-  "price": 62.42,
-  "level": 62.41,
+  "time": "10:15 AM",
+  "bar_start": "10:10",
+  "bar_index": 8,
+  "price": 18.82,
+  "level": 18.81,
   "interval": "5m",
   "opening_range": {
-    "high": 62.41,
-    "low": 61.44,
+    "high": 18.81,
+    "low": 18.1,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-11T15:47:07Z",
-  "reason": "the 10:25 bar closed above the range high"
+  "checked_at": "2026-11-11T15:57:56Z",
+  "reason": "the 10:10 bar closed above the range high"
 }
