@@ -97,6 +97,16 @@
       "qty": "73",
       "price": 51.1,
       "plain": "BUY 73 SLB at 51.10"
+    },
+    {
+      "at": "2026-11-11T15:40:47-05:00",
+      "date": "2026-11-11",
+      "status": "filled",
+      "symbol": "SLB",
+      "side": "sell",
+      "qty": "73",
+      "price": 50.79,
+      "plain": "SELL 73 SLB at 50.79"
     }
   ]
 }

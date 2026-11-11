@@ -1,29 +1,10 @@
 {
- "abiertas": {
-  "SLB": {
-   "orden_id": "4e6c8e51-e038-4fdd-9434-12b68a56aa83",
-   "qty": 73,
-   "entrada": 51.1,
-   "stop": 50.55,
-   "target": 52.56,
-   "fecha": "2026-11-11",
-   "hora": "11:47",
-   "max_loss": 48.91,
-   "tm": {
-    "mc_avg_R": 0.07,
-    "p_target": 0.0333,
-    "p_stop": 0.1916,
-    "hist_disparos": 30,
-    "hist_avg_R": 0.161,
-    "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 15 % (target first 3.3 % vs stop first 19.2 %)."
-   }
-  }
- },
+ "abiertas": {},
  "hoy": {
   "fecha": "2026-11-11",
   "entradas": 2,
-  "pnl": -8.90999299999973,
-  "r": -1.2674243243242704,
+  "pnl": -31.539992999999896,
+  "r": -1.8310606879606337,
   "evaluados": {
    "CBOE": "omitida: señal vieja (36 min)",
    "LOW": "omitida: señal vieja (36 min)",
