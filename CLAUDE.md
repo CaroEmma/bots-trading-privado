@@ -80,6 +80,13 @@ Reglas de prueba acordadas (válidas para el uso manual de las skills y para din
 
 Preregistro `proyectos/alba/PREREGISTRO_V2_SOMBRA.md` (commit 4c0a1b3, antes del código). Código `alba/sombra.py` enganchado en `ciclo()` de `alba/orquestador.py` (nunca rompe v1; flag `sombra.activa` en `alba/config.json`). Registra todo hit ORB fresco (no solo lo que v1 evalúa) con rvol, brecha, SPY y etiquetas de noticias; veredicto PASA/DESCARTA/SIN DATO; resultado simulado al cierre. Evaluación única (test de permutación PASA vs DESCARTA) solo con ≥ 30 + 30 hits y ≥ 10 días; antes, nada de decisiones. Activo desde la sesión del 2026-11-12 (la del 11/11 ya corría con el código viejo). **Pendiente del usuario (opcional):** nombre y email para `sec_user_agent` si se quiere detectar balances por SEC (hoy solo por titulares). No cambiar umbrales de v2 con los datos.
 
+## Turtle y HALCÓN: claves, cuenta compartida y límites de datos (2026-11-11)
+
+- **Diagnóstico real** (workflow `diagnostico-alpaca.yml`, solo lectura, dispara con push a la rama `diagnostico-alpaca`; resultado en el issue 14): las claves `ALPACA_API_KEY/SECRET_KEY` del Turtle daban **HTTP 401** (invalidadas) desde el 9/11; las de HALCÓN funcionan y **apuntan a la misma cuenta `…QL05` (la del Turtle, equity 99.999,88)**. Datos de cripto **sin claves: 3 de 8 pedidos dieron 429; con claves 8 de 8 dieron 200**. No tengo certeza de por qué quedaron invalidadas (hipótesis: se regeneraron al crear las de HALCÓN; Alpaca tendría un solo par de claves por cuenta, no verificado).
+- **Arreglos** (autorizados por el usuario): `halcon/halcon_bot.py` `DatosAlpaca` y `alpaca_bot/brokers.py` `_http_datos` piden datos con claves y reintentan ante 429 (2, 5, 12 s); el Turtle usa en su workflow las claves vigentes de HALCÓN (`HALCON_ALPACA_KEY/SECRET`) con `ALPACA_CUENTA_ESPERADA: "QL05"` (se niega a operar en otra cuenta) y avisa por issue si no puede correr (máx. 1 cada 6 h).
+- **Pendiente / riesgo:** Turtle y HALCÓN **comparten cuenta** (el Turtle decide por las posiciones de la cuenta: un largo real de HALCÓN lo confundiría). Solución limpia = cuenta paper nueva para HALCÓN (la hace el usuario; límite 3 cuentas, hoy hay 2) + volver el Turtle a `ALPACA_*` con claves nuevas de QL05 y quitar el mapeo a HALCÓN en `alpaca-turtle.yml`.
+- La API de GitHub desde esta sesión acepta `POST .../actions/workflows/<archivo>/dispatches` (HTTP 204) sin token: sirve para lanzar y verificar corridas.
+
 ## Historial de cambios de este archivo
 
 - 2026-11-09: primer día de ALBA, relevo automático, Telegram en español (ver proyecto 2).
