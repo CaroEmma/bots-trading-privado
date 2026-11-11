@@ -36,11 +36,17 @@
    "CEG": "omitida: señal vieja (43 min)",
    "MDT": "omitida: timemachine: R promedio simulado -0.05 no es > 0",
    "AZN": "omitida: señal vieja (88 min)",
-   "ENTG": "omitida: señal vieja (28 min)"
+   "ENTG": "omitida: señal vieja (28 min)",
+   "CME": "omitida: timemachine: R promedio simulado -0.005 no es > 0",
+   "GOOG": "omitida: señal vieja (19 min)",
+   "DIS": "omitida: timemachine: R promedio simulado -0.066 no es > 0",
+   "NVO": "omitida: timemachine: R promedio simulado -0.087 no es > 0",
+   "ABT": "omitida: señal vieja (99 min)",
+   "DAL": "omitida: señal vieja (99 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794413738.353576
+  "ultimo_scan": 1794414368.397645
  }
 }
