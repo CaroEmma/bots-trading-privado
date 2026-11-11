@@ -3,7 +3,7 @@
  "pnl_total": 0.0,
  "pares": {
   "BTC/USD": {
-   "barra_ts": 1794340800000,
+   "barra_ts": 1794355200000,
    "largo": null,
    "corto": {
     "qty": 0.026299,
@@ -15,7 +15,7 @@
    }
   },
   "ETH/USD": {
-   "barra_ts": 1794340800000,
+   "barra_ts": 1794355200000,
    "largo": null,
    "corto": {
     "qty": 0.652426,
