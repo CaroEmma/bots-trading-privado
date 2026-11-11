@@ -10,7 +10,15 @@ name: ALBA - acciones intradia (paper)
 # workflow_dispatch (no depende de un cron). Los disparos de las 18:30 / 19:05 / 20:07 quedan solo como respaldo.
 # Si una sesion esta en curso, el disparo siguiente queda en espera (concurrency) y arranca cuando ella termina; si el
 # mercado esta cerrado y no hay nada pendiente, la corrida termina en segundos.
+#
+# CAMBIO 2026-11-11 (error de diseno corregido): el cron de GitHub no arranco ALBA a tiempo en 2 de 3 dias habiles (el martes la
+# primera sesion salio casi 6 h tarde y el miercoles no salio ninguna), asi que un cron NO sirve como arranque. Ahora el arranque
+# principal es un PUSH a la rama "alba-disparo": GitHub lo ejecuta en el momento. Lo hace una rutina de Claude todos los dias
+# habiles a las 13:10 UTC (la sesion espera la apertura hasta 120 min, sirve en horario de verano e invierno). Los crons quedan
+# solo como respaldo.
 on:
+  push:
+    branches: [alba-disparo]
   schedule:
     - cron: "5 13 * * 1-5"
     - cron: "23 13 * * 1-5"
@@ -147,7 +155,7 @@ jobs:
           MIN=$(( ($(date +%s) - T0) / 60 ))
           echo "La sesion duro $MIN min."
           if [ "$MIN" -ge 330 ]; then
-            gh workflow run alba.yml --ref "${{ github.ref_name }}" && echo "Relevo lanzado."
+            gh workflow run alba.yml --ref main && echo "Relevo lanzado."
           else
             echo "Termino antes del tope (cierre del mercado o fin normal): no hace falta relevo."
           fi

@@ -70,6 +70,12 @@ Reglas de prueba acordadas (válidas para el uso manual de las skills y para din
 8. Antes de empezar una tarea compleja nueva, aplicar el protocolo del usuario: listar documentación necesaria (OBLIGATORIO / OPCIONAL) y esperar.
 9. Commits con la atribución indicada por la plataforma. No poner nombres de modelo en archivos del repo.
 
+## Arranque diario de ALBA (cambio 2026-11-11) y lecciones
+
+- **Error de diseno que cometi:** hice depender el arranque de ALBA del cron de GitHub aunque ya habia visto que no cumple horarios (Turtle ~4 corridas/dia), y le dije al usuario "ALBA ya empieza a trabajar sola" sin haber visto arrancar un cron real. Resultado: lun 9 solo opero porque lo lance a mano; mar 10 la sesion salio 6 h tarde (0 operaciones, senales vencidas); mie 11 no salio ninguna. Ademas mi aviso solo hablaba si habia operaciones: el silencio no distinguia "sin senales" de "no arranco".
+- **Arreglo:** el workflow `alba.yml` ahora arranca con un **push a la rama `alba-disparo`** (inmediato). Rutina diaria de Claude (lun-vie 13:10 UTC) rearma esa rama desde `origin/main` + commit vacio y la sube con `git push -f`. Otra rutina verifica a las 14:50 UTC por la API publica que haya una corrida de ALBA activa y avisa por push si no. Los crons quedan de respaldo.
+- **Regla:** no afirmar "automatico" hasta ver la primera ejecucion real sin ayuda; todo aviso debe distinguir "no paso nada" de "no corrio".
+
 ## Historial de cambios de este archivo
 
 - 2026-11-09: primer día de ALBA, relevo automático, Telegram en español (ver proyecto 2).
