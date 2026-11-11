@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "SPOT",
+  "symbol": "ENTG",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-11",
   "status": "triggered",
-  "time": "9:50 AM",
-  "bar_start": "09:45",
-  "bar_index": 3,
-  "price": 602.91,
-  "level": 602.69,
+  "time": "10:50 AM",
+  "bar_start": "10:45",
+  "bar_index": 15,
+  "price": 148.87,
+  "level": 148.81,
   "interval": "5m",
   "opening_range": {
-    "high": 602.69,
-    "low": 596.29,
+    "high": 148.81,
+    "low": 143.66,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-11T16:08:25Z",
-  "reason": "the 9:45 bar closed above the range high"
+  "checked_at": "2026-11-11T16:18:50Z",
+  "reason": "the 10:45 bar closed above the range high"
 }

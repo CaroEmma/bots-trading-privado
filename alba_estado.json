@@ -30,11 +30,17 @@
    "AMAT": "omitida: señal vieja (33 min)",
    "GOOGL": "omitida: timemachine: R promedio simulado -0.15 no es > 0",
    "ON": "omitida: señal vieja (38 min)",
-   "SPOT": "omitida: señal vieja (78 min)"
+   "SPOT": "omitida: señal vieja (78 min)",
+   "HSY": "omitida: señal vieja (73 min)",
+   "ROK": "omitida: señal vieja (73 min)",
+   "CEG": "omitida: señal vieja (43 min)",
+   "MDT": "omitida: timemachine: R promedio simulado -0.05 no es > 0",
+   "AZN": "omitida: señal vieja (88 min)",
+   "ENTG": "omitida: señal vieja (28 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794413110.71578
+  "ultimo_scan": 1794413738.353576
  }
 }
