@@ -24,11 +24,17 @@
    "KDP": "omitida: señal vieja (62 min)",
    "HOOD": "omitida: timemachine: R promedio simulado -0.248 no es > 0",
    "COP": "omitida: señal vieja (57 min)",
-   "BMNR": "omitida: señal vieja (42 min)"
+   "BMNR": "omitida: señal vieja (42 min)",
+   "ZETA": "omitida: señal vieja (43 min)",
+   "TDG": "omitida: señal vieja (38 min)",
+   "AMAT": "omitida: señal vieja (33 min)",
+   "GOOGL": "omitida: timemachine: R promedio simulado -0.15 no es > 0",
+   "ON": "omitida: señal vieja (38 min)",
+   "SPOT": "omitida: señal vieja (78 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794412461.155912
+  "ultimo_scan": 1794413110.71578
  }
 }
