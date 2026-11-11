@@ -71,6 +71,32 @@
       "qty": "19",
       "price": 193.4111,
       "plain": "SELL 19 PM at 193.41"
+    },
+    {
+      "at": "2026-11-11T11:47-05:00",
+      "date": "2026-11-11",
+      "index": 1,
+      "fingerprint": "806b41db3941246d",
+      "symbol": "SLB",
+      "side": "buy",
+      "qty": "73",
+      "kind": "entry",
+      "max_loss": 48.91,
+      "stop": 50.55,
+      "plain": "buy 73 SLB (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "4e6c8e51-e038-4fdd-9434-12b68a56aa83",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-11T11:50:24-05:00",
+      "date": "2026-11-11",
+      "status": "filled",
+      "symbol": "SLB",
+      "side": "buy",
+      "qty": "73",
+      "price": 51.1,
+      "plain": "BUY 73 SLB at 51.10"
     }
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "created_by": "trader-exit",
+  "symbol": "SLB",
+  "side": "buy",
+  "date": "2026-11-11",
+  "setup": "orb",
+  "entry": 51.22,
+  "entry_time": "11:45 AM",
+  "entry_bar": 26,
+  "interval": "5m",
+  "opening_range": {
+    "high": 51.2,
+    "low": 49.9,
+    "minutes": 15
+  },
+  "stop": 50.55,
+  "stop_rule": "or_mid",
+  "stop_label": "opening-range midpoint",
+  "target": 52.56,
+  "target_r": 2.0,
+  "target_label": "2R (two times the risk)",
+  "risk_per_share": 0.67,
+  "reward_risk": 2.0,
+  "flat_by": "15:55",
+  "stop_detail": "($51.20 + $49.90) / 2 = $50.55",
+  "created_at": "2026-11-11T16:50:17Z",
+  "note": "A stop is a plan, not a guarantee: a gap or a fast market can fill past it."
+}

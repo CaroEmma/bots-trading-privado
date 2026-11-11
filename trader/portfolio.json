@@ -1,4 +1,17 @@
 {
-  "cash": 4990.64,
-  "positions": []
+  "cash": 1260.34,
+  "positions": [
+    {
+      "ticker": "SLB",
+      "shares": 73.0,
+      "lots": [
+        {
+          "id": "SLB-1",
+          "date": "2026-11-11",
+          "shares": 73.0,
+          "cost": 3730.3
+        }
+      ]
+    }
+  ]
 }

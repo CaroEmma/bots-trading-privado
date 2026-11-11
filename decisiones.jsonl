@@ -46,3 +46,7 @@
 {"fecha": "2026-11-11", "hora": "11:36", "simbolo": "CL", "accion": "omitir", "motivo": "señal vieja (104 min)"}
 {"fecha": "2026-11-11", "hora": "11:36", "simbolo": "BLK", "accion": "omitir", "motivo": "señal vieja (99 min)"}
 {"fecha": "2026-11-11", "hora": "11:36", "simbolo": "PNC", "accion": "omitir", "motivo": "señal vieja (99 min)"}
+{"fecha": "2026-11-11", "hora": "11:41", "simbolo": "MSI", "accion": "omitir", "motivo": "señal vieja (110 min)"}
+{"fecha": "2026-11-11", "hora": "11:41", "simbolo": "TTWO", "accion": "omitir", "motivo": "señal vieja (75 min)"}
+{"fecha": "2026-11-11", "hora": "11:41", "simbolo": "GE", "accion": "omitir", "motivo": "señal vieja (110 min)"}
+{"fecha": "2026-11-11", "hora": "11:47", "simbolo": "SLB", "accion": "comprar", "motivo": "todas las skills en verde", "qty": 73, "fill": 51.1, "stop": 50.55, "target": 52.56, "tm": {"mc_avg_R": 0.07, "p_target": 0.0333, "p_stop": 0.1916, "hist_disparos": 30, "hist_avg_R": 0.161, "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 15 % (target first 3.3 % vs stop first 19.2 %)."}}
