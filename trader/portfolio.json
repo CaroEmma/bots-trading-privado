@@ -1,4 +1,17 @@
 {
-  "cash": 4999.55,
-  "positions": []
+  "cash": 1315.83,
+  "positions": [
+    {
+      "ticker": "PM",
+      "shares": 19.0,
+      "lots": [
+        {
+          "id": "PM-1",
+          "date": "2026-11-11",
+          "shares": 19.0,
+          "cost": 3683.72
+        }
+      ]
+    }
+  ]
 }

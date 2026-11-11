@@ -457,7 +457,6 @@ ASUR|Asure Software Inc - Common Stock
 ASX|ASE Technology Holding Co., Ltd. American Depositary Shares (each representing Two Common Shares)
 ASYS|Amtech Systems, Inc. - Common Stock
 ATAT|Atour Lifestyle Holdings Limited - American Depositary Shares
-ATCH|AtlasClear Holdings, Inc. Common Stock
 ATCX|Atlas Critical Minerals Corporation - Common Stock
 ATEC|Alphatec Holdings, Inc. - Common Stock
 ATEN|A10 Networks, Inc. Common Stock
@@ -2496,7 +2495,6 @@ HLMN|Hillman Solutions Corp. - Common Stock
 HLN|Haleon plc American Depositary Shares (Each representing two Ordinary Shares)
 HLNE|Hamilton Lane Incorporated - Class A Common Stock
 HLP|Hongli Group Inc. - Class A Ordinary Shares
-HLSQ|Tessera Defense and Homeland Security Inc. Common Stock
 HLT|Hilton Worldwide Holdings Inc. - Common Stock
 HLXC|Helix Acquisition Corp. III - Class A Ordinary Shares
 HMC|Honda Motor Company, Ltd. Common Stock
@@ -2996,7 +2994,6 @@ KOYN|CSLM Digital Asset Acquisition Corp III - Class A Ordinary Shares
 KPET|KPET Ultra Paceline Corporation Class A Ordinary Shares
 KPLT|Katapult Holdings, Inc. - Common Stock
 KPRX|Kiora Pharmaceuticals, Inc. - Common Stock
-KPTI|Karyopharm Therapeutics Inc. - Common Stock
 KR|Kroger Company (The) Common Stock
 KRAQ|KRAKacquisition Corp - Class A Ordinary Shares
 KRC|Kilroy Realty Corporation Common Stock

@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "TGT",
+  "symbol": "PM",
   "setup": "orb",
   "side": "buy",
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "status": "triggered",
-  "time": "12:45 PM",
-  "bar_start": "12:40",
-  "bar_index": 38,
-  "price": 161.39,
-  "level": 161.39,
+  "time": "10:30 AM",
+  "bar_start": "10:25",
+  "bar_index": 11,
+  "price": 194.27,
+  "level": 194.27,
   "interval": "5m",
   "opening_range": {
-    "high": 161.39,
-    "low": 157.92,
+    "high": 194.27,
+    "low": 192.75,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-10T20:29:04Z",
-  "reason": "the 12:40 bar closed above the range high"
+  "checked_at": "2026-11-11T15:36:36Z",
+  "reason": "the 10:25 bar closed above the range high"
 }

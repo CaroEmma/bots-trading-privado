@@ -3,3 +3,10 @@
 {"fecha": "2026-11-10", "hora": "15:25", "simbolo": "LMT", "accion": "omitir", "motivo": "señal vieja (329 min)"}
 {"fecha": "2026-11-10", "hora": "15:25", "simbolo": "YUM", "accion": "omitir", "motivo": "señal vieja (179 min)"}
 {"fecha": "2026-11-10", "hora": "15:25", "simbolo": "TGT", "accion": "omitir", "motivo": "señal vieja (164 min)"}
+{"fecha": "2026-11-11", "hora": "10:23", "simbolo": "CBOE", "accion": "omitir", "motivo": "señal vieja (36 min)"}
+{"fecha": "2026-11-11", "hora": "10:23", "simbolo": "LOW", "accion": "omitir", "motivo": "señal vieja (36 min)"}
+{"fecha": "2026-11-11", "hora": "10:23", "simbolo": "LIN", "accion": "omitir", "motivo": "señal vieja (16 min)"}
+{"fecha": "2026-11-11", "hora": "10:28", "simbolo": "VEEV", "accion": "omitir", "motivo": "señal vieja (41 min)"}
+{"fecha": "2026-11-11", "hora": "10:28", "simbolo": "MO", "accion": "omitir", "motivo": "señal vieja (36 min)"}
+{"fecha": "2026-11-11", "hora": "10:28", "simbolo": "SKHY", "accion": "omitir", "motivo": "señal vieja (21 min)"}
+{"fecha": "2026-11-11", "hora": "10:33", "simbolo": "PM", "accion": "comprar", "motivo": "todas las skills en verde", "qty": 19, "fill": 193.88, "stop": 193.51, "target": 195.79, "tm": {"mc_avg_R": 0.046, "p_target": 0.3359, "p_stop": 0.636, "hist_disparos": 39, "hist_avg_R": -0.106, "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 35 % (target first 33.6 % vs stop first 63.6 %)."}}

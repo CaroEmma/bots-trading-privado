@@ -35,6 +35,32 @@
       "qty": "15",
       "price": 141.74,
       "plain": "SELL 15 SPCX at 141.74"
+    },
+    {
+      "at": "2026-11-11T10:33-05:00",
+      "date": "2026-11-11",
+      "index": 1,
+      "fingerprint": "6243d55b0de6aad9",
+      "symbol": "PM",
+      "side": "buy",
+      "qty": "19",
+      "kind": "entry",
+      "max_loss": 14.44,
+      "stop": 193.51,
+      "plain": "buy 19 PM (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "fa9a2cce-3064-4594-8713-c99e07359393",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-11T10:36:39-05:00",
+      "date": "2026-11-11",
+      "status": "filled",
+      "symbol": "PM",
+      "side": "buy",
+      "qty": "19",
+      "price": 193.88,
+      "plain": "BUY 19 PM at 193.88"
     }
   ]
 }

@@ -1,29 +1,29 @@
 {
-  "date": "2026-11-09",
-  "now_new_york": "2026-11-09 09:53",
+  "date": "2026-11-11",
+  "now_new_york": "2026-11-11 10:36",
   "paper": true,
   "results": [
     {
       "index": 1,
-      "symbol": "SPCX",
+      "symbol": "PM",
       "side": "buy",
       "kind": "entry",
-      "amount": "15 shares",
-      "value_usd": 2125.5,
-      "entry_ref": 141.7,
+      "amount": "19 shares",
+      "value_usd": 3691.13,
+      "entry_ref": 194.27,
       "entry_ref_from": "plan",
-      "stop": 138.38,
-      "target": 147.5,
-      "risk_per_share": 3.32,
-      "max_loss": 49.8,
-      "reward_risk": 1.75,
-      "fingerprint": "cf551a7630b6993e",
+      "stop": 193.51,
+      "target": 195.79,
+      "risk_per_share": 0.76,
+      "max_loss": 14.44,
+      "reward_risk": 2.0,
+      "fingerprint": "6243d55b0de6aad9",
       "verdict": "PASS",
       "reasons": [],
       "warnings": [],
       "info": [
-        "entry 141.70 (the plan's entry), stop 138.38, target 147.50: risk 3.32 a share",
-        "max loss $49.80 (limit $50), reward:risk 1.75 (min 1)",
+        "entry 194.27 (the plan's entry), stop 193.51, target 195.79: risk 0.76 a share",
+        "max loss $14.44 (limit $50), reward:risk 2.00 (min 1)",
         "today before this: 0 of 3 trades, $0 of $150 daily loss"
       ]
     }
@@ -31,14 +31,14 @@
   "pass": 1,
   "block": 0,
   "warnings": [],
-  "cash_after": 2874.5,
+  "cash_after": 1308.42,
   "today": {
     "orders_placed": 0,
     "entries_placed": 0,
     "loss_at_risk": 0.0,
     "day_trades_5d": null
   },
-  "prices_as_of": "2026-11-09T14:53:59Z",
-  "checked_at": "2026-11-09T14:53:59Z",
+  "prices_as_of": "2026-11-11T15:36:38Z",
+  "checked_at": "2026-11-11T15:36:38Z",
   "orders_file": "trader/orders.json"
 }
