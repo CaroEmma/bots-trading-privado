@@ -1,29 +1,10 @@
 {
- "abiertas": {
-  "PM": {
-   "orden_id": "fa9a2cce-3064-4594-8713-c99e07359393",
-   "qty": 19,
-   "entrada": 193.88,
-   "stop": 193.51,
-   "target": 195.79,
-   "fecha": "2026-11-11",
-   "hora": "10:33",
-   "max_loss": 14.44,
-   "tm": {
-    "mc_avg_R": 0.046,
-    "p_target": 0.3359,
-    "p_stop": 0.636,
-    "hist_disparos": 39,
-    "hist_avg_R": -0.106,
-    "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 35 % (target first 33.6 % vs stop first 63.6 %)."
-   }
-  }
- },
+ "abiertas": {},
  "hoy": {
   "fecha": "2026-11-11",
   "entradas": 1,
-  "pnl": 0.0,
-  "r": 0.0,
+  "pnl": -8.90999299999973,
+  "r": -1.2674243243242704,
   "evaluados": {
    "CBOE": "omitida: señal vieja (36 min)",
    "LOW": "omitida: señal vieja (36 min)",
@@ -31,11 +12,17 @@
    "VEEV": "omitida: señal vieja (41 min)",
    "MO": "omitida: señal vieja (36 min)",
    "SKHY": "omitida: señal vieja (21 min)",
-   "PM": "COMPRADA"
+   "PM": "COMPRADA",
+   "GILD": "omitida: señal vieja (51 min)",
+   "XOM": "omitida: señal vieja (46 min)",
+   "V": "omitida: señal vieja (41 min)",
+   "BKR": "omitida: señal vieja (42 min)",
+   "TLN": "omitida: señal vieja (27 min)",
+   "MCHP": "omitida: señal vieja (17 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794411205.80915
+  "ultimo_scan": 1794411834.983329
  }
 }

@@ -61,6 +61,16 @@
       "qty": "19",
       "price": 193.88,
       "plain": "BUY 19 PM at 193.88"
+    },
+    {
+      "at": "2026-11-11T10:38:43-05:00",
+      "date": "2026-11-11",
+      "status": "filled",
+      "symbol": "PM",
+      "side": "sell",
+      "qty": "19",
+      "price": 193.4111,
+      "plain": "SELL 19 PM at 193.41"
     }
   ]
 }

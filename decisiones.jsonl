@@ -10,3 +10,9 @@
 {"fecha": "2026-11-11", "hora": "10:28", "simbolo": "MO", "accion": "omitir", "motivo": "señal vieja (36 min)"}
 {"fecha": "2026-11-11", "hora": "10:28", "simbolo": "SKHY", "accion": "omitir", "motivo": "señal vieja (21 min)"}
 {"fecha": "2026-11-11", "hora": "10:33", "simbolo": "PM", "accion": "comprar", "motivo": "todas las skills en verde", "qty": 19, "fill": 193.88, "stop": 193.51, "target": 195.79, "tm": {"mc_avg_R": 0.046, "p_target": 0.3359, "p_stop": 0.636, "hist_disparos": 39, "hist_avg_R": -0.106, "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 35 % (target first 33.6 % vs stop first 63.6 %)."}}
+{"fecha": "2026-11-11", "hora": "10:38", "simbolo": "GILD", "accion": "omitir", "motivo": "señal vieja (51 min)"}
+{"fecha": "2026-11-11", "hora": "10:38", "simbolo": "XOM", "accion": "omitir", "motivo": "señal vieja (46 min)"}
+{"fecha": "2026-11-11", "hora": "10:38", "simbolo": "V", "accion": "omitir", "motivo": "señal vieja (41 min)"}
+{"fecha": "2026-11-11", "hora": "10:43", "simbolo": "BKR", "accion": "omitir", "motivo": "señal vieja (42 min)"}
+{"fecha": "2026-11-11", "hora": "10:43", "simbolo": "TLN", "accion": "omitir", "motivo": "señal vieja (27 min)"}
+{"fecha": "2026-11-11", "hora": "10:43", "simbolo": "MCHP", "accion": "omitir", "motivo": "señal vieja (17 min)"}

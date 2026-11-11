@@ -1,6 +1,6 @@
 {
   "created_by": "trader-entry",
-  "symbol": "PM",
+  "symbol": "MCHP",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-11",
@@ -8,15 +8,15 @@
   "time": "10:30 AM",
   "bar_start": "10:25",
   "bar_index": 11,
-  "price": 194.27,
-  "level": 194.27,
+  "price": 62.42,
+  "level": 62.41,
   "interval": "5m",
   "opening_range": {
-    "high": 194.27,
-    "low": 192.75,
+    "high": 62.41,
+    "low": 61.44,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-11T15:36:36Z",
+  "checked_at": "2026-11-11T15:47:07Z",
   "reason": "the 10:25 bar closed above the range high"
 }
