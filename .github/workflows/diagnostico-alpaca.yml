@@ -1,0 +1,32 @@
+name: Diagnostico de claves y limites de Alpaca (solo lectura)
+
+# Solo LEE: prueba GET /v2/account con las claves del Turtle y de HALCON, y los pedidos de datos de cripto con y sin claves.
+# Publica un issue con codigos de estado y mensajes de error de Alpaca. NUNCA imprime claves. No opera, no escribe en Alpaca.
+# Se dispara con un push a la rama "diagnostico-alpaca" o a mano (Actions > Run workflow).
+on:
+  push:
+    branches: [diagnostico-alpaca]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  diagnostico:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Probar claves y limites
+        env:
+          TURTLE_KEY: ${{ secrets.ALPACA_API_KEY }}
+          TURTLE_SECRET: ${{ secrets.ALPACA_SECRET_KEY }}
+          HALCON_KEY: ${{ secrets.HALCON_ALPACA_KEY }}
+          HALCON_SECRET: ${{ secrets.HALCON_ALPACA_SECRET }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/diagnostico_alpaca.py
