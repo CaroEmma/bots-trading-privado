@@ -56,7 +56,8 @@
   },
   "universo": true,
   "sesion": true,
-  "informe": false,
-  "ultimo_scan": 1794415625.802964
+  "informe": true,
+  "ultimo_scan": 1794415625.802964,
+  "sombra_resuelto": true
  }
 }
