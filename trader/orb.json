@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-12T19:23:42Z",
+  "created_at": "2026-11-12T19:35:32Z",
   "mode": "orb",
-  "as_of": "2026-11-12 14:23 ET",
+  "as_of": "2026-11-12 14:35 ET",
   "universe": 5928,
-  "scanned": 929,
+  "scanned": 900,
   "failed": 0,
-  "unconfirmed": 500,
+  "unconfirmed": 475,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -288,19 +288,6 @@
       "or_high": 536.11,
       "or_low": 516.78,
       "pct_over": 0.16
-    },
-    {
-      "symbol": "SYF",
-      "setups": [
-        "orb"
-      ],
-      "price": 72.76,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 72.58,
-      "or_low": 71.74,
-      "pct_over": 0.24
     },
     {
       "symbol": "VRT",
@@ -849,19 +836,6 @@
       "pct_over": 0.02
     },
     {
-      "symbol": "GPN",
-      "setups": [
-        "orb"
-      ],
-      "price": 100.39,
-      "at": "10:40 AM",
-      "bar_start": "10:35",
-      "bar_index": 13,
-      "or_high": 100.23,
-      "or_low": 98.51,
-      "pct_over": 0.16
-    },
-    {
       "symbol": "ORCL",
       "setups": [
         "orb"
@@ -938,6 +912,19 @@
       "or_high": 234.62,
       "or_low": 227.63,
       "pct_over": 0.07
+    },
+    {
+      "symbol": "MSI",
+      "setups": [
+        "orb"
+      ],
+      "price": 537.57,
+      "at": "10:45 AM",
+      "bar_start": "10:40",
+      "bar_index": 14,
+      "or_high": 536.89,
+      "or_low": 529.95,
+      "pct_over": 0.13
     },
     {
       "symbol": "MSTR",
@@ -1746,6 +1733,19 @@
       "pct_over": 0.51
     },
     {
+      "symbol": "ORLY",
+      "setups": [
+        "orb"
+      ],
+      "price": 92.04,
+      "at": "11:45 AM",
+      "bar_start": "11:40",
+      "bar_index": 26,
+      "or_high": 91.98,
+      "or_low": 91.03,
+      "pct_over": 0.06
+    },
+    {
       "symbol": "ARGX",
       "setups": [
         "orb"
@@ -1809,19 +1809,6 @@
       "or_high": 285.48,
       "or_low": 282.0,
       "pct_over": 0.09
-    },
-    {
-      "symbol": "KO",
-      "setups": [
-        "orb"
-      ],
-      "price": 98.35,
-      "at": "12:25 PM",
-      "bar_start": "12:20",
-      "bar_index": 34,
-      "or_high": 98.34,
-      "or_low": 97.44,
-      "pct_over": 0.01
     },
     {
       "symbol": "TRV",

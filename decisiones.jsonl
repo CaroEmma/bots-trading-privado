@@ -82,3 +82,9 @@
 {"fecha": "2026-11-12", "hora": "14:23", "simbolo": "GOOG", "accion": "omitir", "motivo": "señal vieja (267 min)"}
 {"fecha": "2026-11-12", "hora": "14:23", "simbolo": "CRWV", "accion": "omitir", "motivo": "señal vieja (222 min)"}
 {"fecha": "2026-11-12", "hora": "14:23", "simbolo": "INSM", "accion": "omitir", "motivo": "señal vieja (272 min)"}
+{"fecha": "2026-11-12", "hora": "14:29", "simbolo": "ORLY", "accion": "omitir", "motivo": "señal vieja (168 min)"}
+{"fecha": "2026-11-12", "hora": "14:29", "simbolo": "LRCX", "accion": "omitir", "motivo": "señal vieja (228 min)"}
+{"fecha": "2026-11-12", "hora": "14:29", "simbolo": "CRWD", "accion": "omitir", "motivo": "señal vieja (198 min)"}
+{"fecha": "2026-11-12", "hora": "14:35", "simbolo": "ZS", "accion": "omitir", "motivo": "señal vieja (194 min)"}
+{"fecha": "2026-11-12", "hora": "14:35", "simbolo": "CLX", "accion": "omitir", "motivo": "señal vieja (109 min)"}
+{"fecha": "2026-11-12", "hora": "14:35", "simbolo": "ADBE", "accion": "omitir", "motivo": "señal vieja (59 min)"}

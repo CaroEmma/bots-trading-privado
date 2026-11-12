@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "INSM",
+  "symbol": "ADBE",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-12",
   "status": "triggered",
-  "time": "9:55 AM",
-  "bar_start": "09:50",
-  "bar_index": 4,
-  "price": 119.74,
-  "level": 119.66,
+  "time": "1:40 PM",
+  "bar_start": "13:35",
+  "bar_index": 49,
+  "price": 240.18,
+  "level": 240.0,
   "interval": "5m",
   "opening_range": {
-    "high": 119.66,
-    "low": 118.25,
+    "high": 240.0,
+    "low": 233.51,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-12T19:27:38Z",
-  "reason": "the 9:50 bar closed above the range high"
+  "checked_at": "2026-11-12T19:39:23Z",
+  "reason": "the 13:35 bar closed above the range high"
 }

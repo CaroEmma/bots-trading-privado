@@ -37,12 +37,18 @@
    "PSX": "omitida: señal vieja (271 min)",
    "GOOG": "omitida: señal vieja (267 min)",
    "CRWV": "omitida: señal vieja (222 min)",
-   "INSM": "omitida: señal vieja (272 min)"
+   "INSM": "omitida: señal vieja (272 min)",
+   "ORLY": "omitida: señal vieja (168 min)",
+   "LRCX": "omitida: señal vieja (228 min)",
+   "CRWD": "omitida: señal vieja (198 min)",
+   "ZS": "omitida: señal vieja (194 min)",
+   "CLX": "omitida: señal vieja (109 min)",
+   "ADBE": "omitida: señal vieja (59 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794511422.206412,
+  "ultimo_scan": 1794512132.509276,
   "sombra": {
    "vistos": [
     "BLK",
