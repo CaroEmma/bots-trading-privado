@@ -254,7 +254,8 @@
     "SLB",
     "CTRE",
     "ADBE",
-    "UNH"
+    "UNH",
+    "TSLA"
    ],
    "perdidos": [
     "ROK",
@@ -313,7 +314,7 @@
     "CSX",
     "KEYS"
    ],
-   "ultimo_scan": 1794514915.305373,
+   "ultimo_scan": 1794515267.071802,
    "limitado": 0,
    "errores": 0
   }
