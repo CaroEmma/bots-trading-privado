@@ -19,12 +19,18 @@
    "SPOT": "omitida: señal vieja (143 min)",
    "XOM": "omitida: señal vieja (143 min)",
    "ENB": "omitida: señal vieja (103 min)",
-   "KO": "omitida: señal vieja (88 min)"
+   "KO": "omitida: señal vieja (88 min)",
+   "TRV": "omitida: señal vieja (88 min)",
+   "MRVL": "omitida: señal vieja (238 min)",
+   "PM": "omitida: señal vieja (203 min)",
+   "MS": "omitida: señal vieja (168 min)",
+   "RKT": "omitida: señal vieja (253 min)",
+   "ETN": "omitida: señal vieja (223 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794509434.659902,
+  "ultimo_scan": 1794510045.587808,
   "sombra": {
    "vistos": [
     "BLK",

@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "KO",
+  "symbol": "ETN",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-12",
   "status": "triggered",
-  "time": "12:25 PM",
-  "bar_start": "12:20",
-  "bar_index": 34,
-  "price": 98.35,
-  "level": 98.34,
+  "time": "10:20 AM",
+  "bar_start": "10:15",
+  "bar_index": 9,
+  "price": 356.2,
+  "level": 356.08,
   "interval": "5m",
   "opening_range": {
-    "high": 98.34,
-    "low": 97.44,
+    "high": 356.08,
+    "low": 349.57,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-12T18:53:38Z",
-  "reason": "the 12:20 bar closed above the range high"
+  "checked_at": "2026-11-12T19:03:51Z",
+  "reason": "the 10:15 bar closed above the range high"
 }
