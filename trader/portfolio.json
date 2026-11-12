@@ -1,17 +1,4 @@
 {
-  "cash": 1296.51,
-  "positions": [
-    {
-      "ticker": "MSFT",
-      "shares": 7.0,
-      "lots": [
-        {
-          "id": "MSFT-1",
-          "date": "2026-11-12",
-          "shares": 7.0,
-          "cost": 3671.5
-        }
-      ]
-    }
-  ]
+  "cash": 4973.46,
+  "positions": []
 }

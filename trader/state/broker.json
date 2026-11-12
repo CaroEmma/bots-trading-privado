@@ -133,6 +133,16 @@
       "qty": "7",
       "price": 524.5,
       "plain": "BUY 7 MSFT at 524.50"
+    },
+    {
+      "at": "2026-11-12T13:45:29-05:00",
+      "date": "2026-11-12",
+      "status": "filled",
+      "symbol": "MSFT",
+      "side": "sell",
+      "qty": "7",
+      "price": 525.2786,
+      "plain": "SELL 7 MSFT at 525.28"
     }
   ]
 }
