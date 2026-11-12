@@ -49,12 +49,18 @@
    "ORCL": "omitida: señal vieja (245 min)",
    "URI": "omitida: señal vieja (236 min)",
    "RKLB": "omitida: señal vieja (216 min)",
-   "JNJ": "omitida: señal vieja (151 min)"
+   "JNJ": "omitida: señal vieja (151 min)",
+   "XEL": "omitida: señal vieja (267 min)",
+   "BTI": "omitida: señal vieja (262 min)",
+   "VLO": "omitida: señal vieja (297 min)",
+   "SAP": "omitida: señal vieja (253 min)",
+   "CSCO": "omitida: señal vieja (313 min)",
+   "ISRG": "omitida: señal vieja (313 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794512836.863365,
+  "ultimo_scan": 1794513542.468597,
   "sombra": {
    "vistos": [
     "BLK",
