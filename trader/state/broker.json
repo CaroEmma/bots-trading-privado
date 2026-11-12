@@ -143,6 +143,32 @@
       "qty": "7",
       "price": 525.2786,
       "plain": "SELL 7 MSFT at 525.28"
+    },
+    {
+      "at": "2026-11-12T15:15-05:00",
+      "date": "2026-11-12",
+      "index": 1,
+      "fingerprint": "3beaadaa745153b7",
+      "symbol": "UNH",
+      "side": "buy",
+      "qty": "9",
+      "kind": "entry",
+      "max_loss": 27.36,
+      "stop": 402.85,
+      "plain": "buy 9 UNH (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "32b000d7-4dc3-482a-b635-6e82de1488f8",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-12T15:19:52-05:00",
+      "date": "2026-11-12",
+      "status": "filled",
+      "symbol": "UNH",
+      "side": "buy",
+      "qty": "9",
+      "price": 405.88,
+      "plain": "BUY 9 UNH at 405.88"
     }
   ]
 }

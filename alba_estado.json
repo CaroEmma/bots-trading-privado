@@ -1,8 +1,27 @@
 {
- "abiertas": {},
+ "abiertas": {
+  "UNH": {
+   "orden_id": "32b000d7-4dc3-482a-b635-6e82de1488f8",
+   "qty": 9,
+   "entrada": 405.88,
+   "stop": 402.85,
+   "target": 411.97,
+   "fecha": "2026-11-12",
+   "hora": "15:15",
+   "max_loss": 27.36,
+   "tm": {
+    "mc_avg_R": 0.016,
+    "p_target": 0.0009,
+    "p_stop": 0.0855,
+    "hist_disparos": 31,
+    "hist_avg_R": -0.34,
+    "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 1 % (target first 0.1 % vs stop first 8.6 %)."
+   }
+  }
+ },
  "hoy": {
   "fecha": "2026-11-12",
-  "entradas": 1,
+  "entradas": 2,
   "pnl": 5.449997000000394,
   "r": 0.5853917293233326,
   "evaluados": {
@@ -61,12 +80,13 @@
    "ODFL": "omitida: señal vieja (317 min)",
    "MRNA": "omitida: señal vieja (233 min)",
    "MSI": "omitida: señal vieja (268 min)",
-   "SNPS": "omitida: señal vieja (263 min)"
+   "SNPS": "omitida: señal vieja (263 min)",
+   "UNH": "COMPRADA"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794514199.021396,
+  "ultimo_scan": 1794514556.087936,
   "sombra": {
    "vistos": [
     "BLK",
@@ -233,7 +253,8 @@
     "CLX",
     "SLB",
     "CTRE",
-    "ADBE"
+    "ADBE",
+    "UNH"
    ],
    "perdidos": [
     "ROK",
@@ -289,9 +310,10 @@
     "CORZ",
     "MSI",
     "IR",
-    "CSX"
+    "CSX",
+    "KEYS"
    ],
-   "ultimo_scan": 1794508884.172035,
+   "ultimo_scan": 1794514915.305373,
    "limitado": 0,
    "errores": 0
   }

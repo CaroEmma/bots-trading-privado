@@ -1,4 +1,17 @@
 {
-  "cash": 4973.46,
-  "positions": []
+  "cash": 1320.54,
+  "positions": [
+    {
+      "ticker": "UNH",
+      "shares": 9.0,
+      "lots": [
+        {
+          "id": "UNH-1",
+          "date": "2026-11-12",
+          "shares": 9.0,
+          "cost": 3652.92
+        }
+      ]
+    }
+  ]
 }

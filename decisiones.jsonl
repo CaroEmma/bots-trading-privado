@@ -106,3 +106,4 @@
 {"fecha": "2026-11-12", "hora": "15:09", "simbolo": "MRNA", "accion": "omitir", "motivo": "señal vieja (233 min)"}
 {"fecha": "2026-11-12", "hora": "15:09", "simbolo": "MSI", "accion": "omitir", "motivo": "señal vieja (268 min)"}
 {"fecha": "2026-11-12", "hora": "15:09", "simbolo": "SNPS", "accion": "omitir", "motivo": "señal vieja (263 min)"}
+{"fecha": "2026-11-12", "hora": "15:15", "simbolo": "UNH", "accion": "comprar", "motivo": "todas las skills en verde", "qty": 9, "fill": 405.88, "stop": 402.85, "target": 411.97, "tm": {"mc_avg_R": 0.016, "p_target": 0.0009, "p_stop": 0.0855, "hist_disparos": 31, "hist_avg_R": -0.34, "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 1 % (target first 0.1 % vs stop first 8.6 %)."}}

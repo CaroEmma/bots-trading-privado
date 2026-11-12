@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "SNPS",
+  "symbol": "UNH",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-12",
   "status": "triggered",
-  "time": "10:50 AM",
-  "bar_start": "10:45",
-  "bar_index": 15,
-  "price": 463.61,
-  "level": 463.01,
+  "time": "3:15 PM",
+  "bar_start": "15:10",
+  "bar_index": 68,
+  "price": 405.89,
+  "level": 405.72,
   "interval": "5m",
   "opening_range": {
-    "high": 463.01,
-    "low": 452.63,
+    "high": 405.72,
+    "low": 399.99,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-12T20:13:54Z",
-  "reason": "the 10:45 bar closed above the range high"
+  "checked_at": "2026-11-12T20:19:48Z",
+  "reason": "the 15:10 bar closed above the range high"
 }
