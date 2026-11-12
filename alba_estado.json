@@ -106,7 +106,15 @@
     "BP",
     "CARR",
     "KMI",
-    "OXY"
+    "OXY",
+    "ETN",
+    "U",
+    "APP",
+    "CDNS",
+    "CEG",
+    "NVT",
+    "USAR",
+    "FRO"
    ],
    "perdidos": [
     "ROK",
@@ -136,9 +144,10 @@
     "HUT",
     "SANM",
     "WDC",
-    "TWST"
+    "TWST",
+    "IBP"
    ],
-   "ultimo_scan": 1794496607.439026,
+   "ultimo_scan": 1794497222.480652,
    "limitado": 0,
    "errores": 0
   }
