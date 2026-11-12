@@ -1,6 +1,6 @@
 {
   "created_by": "trader-entry",
-  "symbol": "AXTI",
+  "symbol": "INSM",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-12",
@@ -8,15 +8,15 @@
   "time": "9:55 AM",
   "bar_start": "09:50",
   "bar_index": 4,
-  "price": 43.32,
-  "level": 43.3,
+  "price": 119.74,
+  "level": 119.66,
   "interval": "5m",
   "opening_range": {
-    "high": 43.3,
-    "low": 39.91,
+    "high": 119.66,
+    "low": 118.25,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-12T19:15:49Z",
+  "checked_at": "2026-11-12T19:27:38Z",
   "reason": "the 9:50 bar closed above the range high"
 }
