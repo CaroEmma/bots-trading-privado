@@ -55,12 +55,18 @@
    "VLO": "omitida: señal vieja (297 min)",
    "SAP": "omitida: señal vieja (253 min)",
    "CSCO": "omitida: señal vieja (313 min)",
-   "ISRG": "omitida: señal vieja (313 min)"
+   "ISRG": "omitida: señal vieja (313 min)",
+   "IR": "omitida: señal vieja (237 min)",
+   "CSX": "omitida: señal vieja (232 min)",
+   "ODFL": "omitida: señal vieja (317 min)",
+   "MRNA": "omitida: señal vieja (233 min)",
+   "MSI": "omitida: señal vieja (268 min)",
+   "SNPS": "omitida: señal vieja (263 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794513542.468597,
+  "ultimo_scan": 1794514199.021396,
   "sombra": {
    "vistos": [
     "BLK",
@@ -281,7 +287,9 @@
     "EOG",
     "ZS",
     "CORZ",
-    "MSI"
+    "MSI",
+    "IR",
+    "CSX"
    ],
    "ultimo_scan": 1794508884.172035,
    "limitado": 0,

@@ -100,3 +100,9 @@
 {"fecha": "2026-11-12", "hora": "14:59", "simbolo": "SAP", "accion": "omitir", "motivo": "señal vieja (253 min)"}
 {"fecha": "2026-11-12", "hora": "14:59", "simbolo": "CSCO", "accion": "omitir", "motivo": "señal vieja (313 min)"}
 {"fecha": "2026-11-12", "hora": "14:59", "simbolo": "ISRG", "accion": "omitir", "motivo": "señal vieja (313 min)"}
+{"fecha": "2026-11-12", "hora": "15:04", "simbolo": "IR", "accion": "omitir", "motivo": "señal vieja (237 min)"}
+{"fecha": "2026-11-12", "hora": "15:04", "simbolo": "CSX", "accion": "omitir", "motivo": "señal vieja (232 min)"}
+{"fecha": "2026-11-12", "hora": "15:04", "simbolo": "ODFL", "accion": "omitir", "motivo": "señal vieja (317 min)"}
+{"fecha": "2026-11-12", "hora": "15:09", "simbolo": "MRNA", "accion": "omitir", "motivo": "señal vieja (233 min)"}
+{"fecha": "2026-11-12", "hora": "15:09", "simbolo": "MSI", "accion": "omitir", "motivo": "señal vieja (268 min)"}
+{"fecha": "2026-11-12", "hora": "15:09", "simbolo": "SNPS", "accion": "omitir", "motivo": "señal vieja (263 min)"}

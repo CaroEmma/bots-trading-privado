@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "ISRG",
+  "symbol": "SNPS",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-12",
   "status": "triggered",
-  "time": "9:50 AM",
-  "bar_start": "09:45",
-  "bar_index": 3,
-  "price": 451.26,
-  "level": 450.71,
+  "time": "10:50 AM",
+  "bar_start": "10:45",
+  "bar_index": 15,
+  "price": 463.61,
+  "level": 463.01,
   "interval": "5m",
   "opening_range": {
-    "high": 450.71,
-    "low": 446.45,
+    "high": 463.01,
+    "low": 452.63,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-12T20:03:05Z",
-  "reason": "the 9:45 bar closed above the range high"
+  "checked_at": "2026-11-12T20:13:54Z",
+  "reason": "the 10:45 bar closed above the range high"
 }

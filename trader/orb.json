@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-12T19:59:02Z",
+  "created_at": "2026-11-12T20:09:59Z",
   "mode": "orb",
-  "as_of": "2026-11-12 14:59 ET",
+  "as_of": "2026-11-12 15:09 ET",
   "universe": 5928,
-  "scanned": 857,
+  "scanned": 836,
   "failed": 0,
-  "unconfirmed": 442,
+  "unconfirmed": 429,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -41,19 +41,6 @@
       "or_high": 1232.54,
       "or_low": 1221.1,
       "pct_over": 0.01
-    },
-    {
-      "symbol": "CIFR",
-      "setups": [
-        "orb"
-      ],
-      "price": 7.01,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 6.96,
-      "or_low": 6.52,
-      "pct_over": 0.68
     },
     {
       "symbol": "CSCO",
@@ -1096,6 +1083,19 @@
       "pct_over": 0.51
     },
     {
+      "symbol": "CRCL",
+      "setups": [
+        "orb"
+      ],
+      "price": 64.59,
+      "at": "10:55 AM",
+      "bar_start": "10:50",
+      "bar_index": 16,
+      "or_high": 64.48,
+      "or_low": 62.77,
+      "pct_over": 0.17
+    },
+    {
       "symbol": "FIX",
       "setups": [
         "orb"
@@ -1304,19 +1304,6 @@
       "pct_over": 0.27
     },
     {
-      "symbol": "CORZ",
-      "setups": [
-        "orb"
-      ],
-      "price": 14.36,
-      "at": "11:00 AM",
-      "bar_start": "10:55",
-      "bar_index": 17,
-      "or_high": 14.27,
-      "or_low": 13.81,
-      "pct_over": 0.67
-    },
-    {
       "symbol": "CRDO",
       "setups": [
         "orb"
@@ -1486,6 +1473,19 @@
       "pct_over": 0.15
     },
     {
+      "symbol": "IR",
+      "setups": [
+        "orb"
+      ],
+      "price": 85.83,
+      "at": "11:10 AM",
+      "bar_start": "11:05",
+      "bar_index": 19,
+      "or_high": 85.81,
+      "or_low": 84.42,
+      "pct_over": 0.02
+    },
+    {
       "symbol": "NET",
       "setups": [
         "orb"
@@ -1562,6 +1562,19 @@
       "or_high": 226.97,
       "or_low": 218.0,
       "pct_over": 0.07
+    },
+    {
+      "symbol": "CSX",
+      "setups": [
+        "orb"
+      ],
+      "price": 52.6,
+      "at": "11:15 AM",
+      "bar_start": "11:10",
+      "bar_index": 20,
+      "or_high": 52.58,
+      "or_low": 52.23,
+      "pct_over": 0.04
     },
     {
       "symbol": "EOG",
