@@ -239,9 +239,11 @@
     "INTC",
     "Q",
     "CDE",
-    "STRL"
+    "STRL",
+    "CNP",
+    "LYV"
    ],
-   "ultimo_scan": 1794502781.892982,
+   "ultimo_scan": 1794503391.013538,
    "limitado": 0,
    "errores": 0
   }
