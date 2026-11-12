@@ -131,7 +131,26 @@
     "TXN",
     "LITE",
     "ENTG",
-    "TER"
+    "TER",
+    "UL",
+    "SAP",
+    "SNPS",
+    "CRL",
+    "CRCL",
+    "FIX",
+    "VALE",
+    "ON",
+    "BKR",
+    "STM",
+    "ADI",
+    "MCHP",
+    "FTNT",
+    "PWR",
+    "SNDK",
+    "ARM",
+    "TEM",
+    "CAT",
+    "BMNR"
    ],
    "perdidos": [
     "ROK",
@@ -166,7 +185,7 @@
     "HLT",
     "TEVA"
    ],
-   "ultimo_scan": 1794498445.074401,
+   "ultimo_scan": 1794499063.999729,
    "limitado": 0,
    "errores": 0
   }
