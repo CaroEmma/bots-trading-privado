@@ -187,7 +187,10 @@
     "MS",
     "CRWD",
     "RKLB",
-    "TEAM"
+    "TEAM",
+    "MRNA",
+    "AVGO",
+    "SPOT"
    ],
    "perdidos": [
     "ROK",
@@ -229,7 +232,7 @@
     "COHR",
     "INTC"
    ],
-   "ultimo_scan": 1794500330.365352,
+   "ultimo_scan": 1794500946.614605,
    "limitado": 0,
    "errores": 0
   }
