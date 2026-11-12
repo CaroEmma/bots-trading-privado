@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-12T17:30:16Z",
+  "created_at": "2026-11-12T17:40:28Z",
   "mode": "orb",
-  "as_of": "2026-11-12 12:30 ET",
+  "as_of": "2026-11-12 12:40 ET",
   "universe": 5928,
-  "scanned": 1261,
+  "scanned": 1227,
   "failed": 0,
-  "unconfirmed": 716,
+  "unconfirmed": 687,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -132,6 +132,19 @@
       "or_high": 1502.0,
       "or_low": 1493.48,
       "pct_over": 0.01
+    },
+    {
+      "symbol": "HLT",
+      "setups": [
+        "orb"
+      ],
+      "price": 378.67,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 378.45,
+      "or_low": 376.31,
+      "pct_over": 0.06
     },
     {
       "symbol": "ISRG",
@@ -966,6 +979,19 @@
       "pct_over": 0.42
     },
     {
+      "symbol": "ATI",
+      "setups": [
+        "orb"
+      ],
+      "price": 187.11,
+      "at": "10:50 AM",
+      "bar_start": "10:45",
+      "bar_index": 15,
+      "or_high": 186.19,
+      "or_low": 183.73,
+      "pct_over": 0.49
+    },
+    {
       "symbol": "SAP",
       "setups": [
         "orb"
@@ -1250,19 +1276,6 @@
       "or_high": 604.8,
       "or_low": 592.7,
       "pct_over": 0.29
-    },
-    {
-      "symbol": "Q",
-      "setups": [
-        "orb"
-      ],
-      "price": 125.61,
-      "at": "10:55 AM",
-      "bar_start": "10:50",
-      "bar_index": 16,
-      "or_high": 125.49,
-      "or_low": 122.82,
-      "pct_over": 0.1
     },
     {
       "symbol": "SMTC",
@@ -1668,19 +1681,6 @@
       "pct_over": 0.09
     },
     {
-      "symbol": "TEAM",
-      "setups": [
-        "orb"
-      ],
-      "price": 152.86,
-      "at": "11:15 AM",
-      "bar_start": "11:10",
-      "bar_index": 20,
-      "or_high": 152.33,
-      "or_low": 147.56,
-      "pct_over": 0.35
-    },
-    {
       "symbol": "AVGO",
       "setups": [
         "orb"
@@ -1783,6 +1783,32 @@
       "or_high": 983.64,
       "or_low": 973.18,
       "pct_over": 0.29
+    },
+    {
+      "symbol": "CNP",
+      "setups": [
+        "orb"
+      ],
+      "price": 41.35,
+      "at": "11:50 AM",
+      "bar_start": "11:45",
+      "bar_index": 27,
+      "or_high": 41.3,
+      "or_low": 40.93,
+      "pct_over": 0.11
+    },
+    {
+      "symbol": "ENB",
+      "setups": [
+        "orb"
+      ],
+      "price": 48.35,
+      "at": "12:10 PM",
+      "bar_start": "12:05",
+      "bar_index": 31,
+      "or_high": 48.35,
+      "or_low": 47.89,
+      "pct_over": 0.01
     },
     {
       "symbol": "MRK",
