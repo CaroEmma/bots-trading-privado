@@ -200,7 +200,8 @@
     "MRK",
     "JNJ",
     "KO",
-    "TRV"
+    "TRV",
+    "CLX"
    ],
    "perdidos": [
     "ROK",
@@ -250,7 +251,7 @@
     "ENB",
     "ATI"
    ],
-   "ultimo_scan": 1794505227.708119,
+   "ultimo_scan": 1794505837.755488,
    "limitado": 0,
    "errores": 0
   }
