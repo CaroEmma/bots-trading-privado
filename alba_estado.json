@@ -201,7 +201,8 @@
     "JNJ",
     "KO",
     "TRV",
-    "CLX"
+    "CLX",
+    "SLB"
    ],
    "perdidos": [
     "ROK",
@@ -249,9 +250,10 @@
     "LYV",
     "BTI",
     "ENB",
-    "ATI"
+    "ATI",
+    "ORLY"
    ],
-   "ultimo_scan": 1794505837.755488,
+   "ultimo_scan": 1794506447.644742,
    "limitado": 0,
    "errores": 0
   }
