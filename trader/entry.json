@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "SLB",
+  "symbol": "EQIX",
   "setup": "orb",
   "side": "buy",
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "status": "triggered",
-  "time": "11:45 AM",
-  "bar_start": "11:40",
-  "bar_index": 26,
-  "price": 51.22,
-  "level": 51.2,
+  "time": "9:50 AM",
+  "bar_start": "09:45",
+  "bar_index": 3,
+  "price": 1071.16,
+  "level": 1070.98,
   "interval": "5m",
   "opening_range": {
-    "high": 51.2,
-    "low": 49.9,
+    "high": 1070.98,
+    "low": 1055.79,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-11T16:50:17Z",
-  "reason": "the 11:40 bar closed above the range high"
+  "checked_at": "2026-11-12T14:58:46Z",
+  "reason": "the 9:45 bar closed above the range high"
 }

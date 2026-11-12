@@ -5,9 +5,55 @@
   "entradas": 0,
   "pnl": 0.0,
   "r": 0.0,
-  "evaluados": {},
-  "universo": false,
+  "evaluados": {
+   "BLK": "omitida: timemachine: R promedio simulado -0.129 no es > 0",
+   "CCJ": "omitida: timemachine: R promedio simulado -0.065 no es > 0",
+   "GWW": "omitida: timemachine: R promedio simulado -0.162 no es > 0",
+   "A": "omitida: timemachine: R promedio simulado -0.003 no es > 0",
+   "DELL": "omitida: timemachine: R promedio simulado -0.138 no es > 0",
+   "EQIX": "omitida: timemachine: R promedio simulado -0.025 no es > 0"
+  },
+  "universo": true,
   "sesion": true,
-  "informe": false
+  "informe": false,
+  "ultimo_scan": 1794495341.284437,
+  "sombra": {
+   "vistos": [
+    "BLK",
+    "CCJ",
+    "GWW",
+    "DELL",
+    "EMR",
+    "EQIX",
+    "ETSY",
+    "RKT",
+    "P",
+    "QCOM",
+    "TLN",
+    "APLD",
+    "PSX",
+    "TOST",
+    "BRZE",
+    "A",
+    "LNG",
+    "AXTI",
+    "INSM",
+    "HONA",
+    "DIS",
+    "CSCO",
+    "ISRG",
+    "ODFL",
+    "WMB",
+    "CLSK",
+    "TJX",
+    "WULF",
+    "STX",
+    "VST"
+   ],
+   "perdidos": [],
+   "ultimo_scan": 0,
+   "limitado": 0,
+   "errores": 0
+  }
  }
 }
