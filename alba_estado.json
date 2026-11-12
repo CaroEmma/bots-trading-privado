@@ -25,12 +25,18 @@
    "PM": "omitida: señal vieja (203 min)",
    "MS": "omitida: señal vieja (168 min)",
    "RKT": "omitida: señal vieja (253 min)",
-   "ETN": "omitida: señal vieja (223 min)"
+   "ETN": "omitida: señal vieja (223 min)",
+   "CTRE": "omitida: señal vieja (44 min)",
+   "U": "omitida: señal vieja (229 min)",
+   "APP": "omitida: señal vieja (229 min)",
+   "QCOM": "omitida: señal vieja (265 min)",
+   "ROK": "omitida: señal vieja (265 min)",
+   "AXTI": "omitida: señal vieja (260 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794510045.587808,
+  "ultimo_scan": 1794510719.45867,
   "sombra": {
    "vistos": [
     "BLK",
@@ -250,7 +256,8 @@
     "URI",
     "EOG",
     "ZS",
-    "CORZ"
+    "CORZ",
+    "MSI"
    ],
    "ultimo_scan": 1794508884.172035,
    "limitado": 0,

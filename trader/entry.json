@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "ETN",
+  "symbol": "AXTI",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-12",
   "status": "triggered",
-  "time": "10:20 AM",
-  "bar_start": "10:15",
-  "bar_index": 9,
-  "price": 356.2,
-  "level": 356.08,
+  "time": "9:55 AM",
+  "bar_start": "09:50",
+  "bar_index": 4,
+  "price": 43.32,
+  "level": 43.3,
   "interval": "5m",
   "opening_range": {
-    "high": 356.08,
-    "low": 349.57,
+    "high": 43.3,
+    "low": 39.91,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-12T19:03:51Z",
-  "reason": "the 10:15 bar closed above the range high"
+  "checked_at": "2026-11-12T19:15:49Z",
+  "reason": "the 9:50 bar closed above the range high"
 }
