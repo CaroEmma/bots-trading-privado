@@ -1,44 +1,44 @@
 {
-  "date": "2026-11-11",
-  "now_new_york": "2026-11-11 11:50",
+  "date": "2026-11-12",
+  "now_new_york": "2026-11-12 10:04",
   "paper": true,
   "results": [
     {
       "index": 1,
-      "symbol": "SLB",
+      "symbol": "MSFT",
       "side": "buy",
       "kind": "entry",
-      "amount": "73 shares",
-      "value_usd": 3739.06,
-      "entry_ref": 51.22,
+      "amount": "7 shares",
+      "value_usd": 3681.16,
+      "entry_ref": 525.88,
       "entry_ref_from": "plan",
-      "stop": 50.55,
-      "target": 52.56,
-      "risk_per_share": 0.67,
-      "max_loss": 48.91,
+      "stop": 523.17,
+      "target": 531.3,
+      "risk_per_share": 2.71,
+      "max_loss": 18.97,
       "reward_risk": 2.0,
-      "fingerprint": "806b41db3941246d",
+      "fingerprint": "8edf2002bbb9c490",
       "verdict": "PASS",
       "reasons": [],
       "warnings": [],
       "info": [
-        "entry 51.22 (the plan's entry), stop 50.55, target 52.56: risk 0.67 a share",
-        "max loss $48.91 (limit $50), reward:risk 2.00 (min 1)",
-        "today before this: 1 of 3 trades, $14.44 of $150 daily loss"
+        "entry 525.88 (the plan's entry), stop 523.17, target 531.30: risk 2.71 a share",
+        "max loss $18.97 (limit $50), reward:risk 2.00 (min 1)",
+        "today before this: 0 of 3 trades, $0 of $150 daily loss"
       ]
     }
   ],
   "pass": 1,
   "block": 0,
   "warnings": [],
-  "cash_after": 1251.58,
+  "cash_after": 1286.85,
   "today": {
-    "orders_placed": 1,
-    "entries_placed": 1,
-    "loss_at_risk": 14.44,
+    "orders_placed": 0,
+    "entries_placed": 0,
+    "loss_at_risk": 0.0,
     "day_trades_5d": null
   },
-  "prices_as_of": "2026-11-11T16:50:19Z",
-  "checked_at": "2026-11-11T16:50:19Z",
+  "prices_as_of": "2026-11-12T15:04:08Z",
+  "checked_at": "2026-11-12T15:04:08Z",
   "orders_file": "trader/orders.json"
 }

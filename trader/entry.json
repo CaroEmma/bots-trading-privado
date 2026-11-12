@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "EQIX",
+  "symbol": "MSFT",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-12",
   "status": "triggered",
-  "time": "9:50 AM",
-  "bar_start": "09:45",
-  "bar_index": 3,
-  "price": 1071.16,
-  "level": 1070.98,
+  "time": "10:00 AM",
+  "bar_start": "09:55",
+  "bar_index": 5,
+  "price": 525.88,
+  "level": 525.83,
   "interval": "5m",
   "opening_range": {
-    "high": 1070.98,
-    "low": 1055.79,
+    "high": 525.83,
+    "low": 520.51,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-12T14:58:46Z",
-  "reason": "the 9:45 bar closed above the range high"
+  "checked_at": "2026-11-12T15:04:06Z",
+  "reason": "the 9:55 bar closed above the range high"
 }

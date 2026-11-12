@@ -107,6 +107,32 @@
       "qty": "73",
       "price": 50.79,
       "plain": "SELL 73 SLB at 50.79"
+    },
+    {
+      "at": "2026-11-12T10:01-05:00",
+      "date": "2026-11-12",
+      "index": 1,
+      "fingerprint": "8edf2002bbb9c490",
+      "symbol": "MSFT",
+      "side": "buy",
+      "qty": "7",
+      "kind": "entry",
+      "max_loss": 18.97,
+      "stop": 523.17,
+      "plain": "buy 7 MSFT (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "1ae3ef9f-375f-49e3-b170-79ee9cec07bc",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-12T10:04:09-05:00",
+      "date": "2026-11-12",
+      "status": "filled",
+      "symbol": "MSFT",
+      "side": "buy",
+      "qty": "7",
+      "price": 524.5,
+      "plain": "BUY 7 MSFT at 524.50"
     }
   ]
 }
