@@ -120,7 +120,18 @@
     "CCEP",
     "MP",
     "MO",
-    "YUM"
+    "YUM",
+    "ORCL",
+    "GPN",
+    "TTMI",
+    "CRWV",
+    "LRCX",
+    "MSTR",
+    "FOXA",
+    "TXN",
+    "LITE",
+    "ENTG",
+    "TER"
    ],
    "perdidos": [
     "ROK",
@@ -155,7 +166,7 @@
     "HLT",
     "TEVA"
    ],
-   "ultimo_scan": 1794497830.386825,
+   "ultimo_scan": 1794498445.074401,
    "limitado": 0,
    "errores": 0
   }
