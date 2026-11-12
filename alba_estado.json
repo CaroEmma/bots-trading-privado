@@ -251,9 +251,11 @@
     "BTI",
     "ENB",
     "ATI",
-    "ORLY"
+    "ORLY",
+    "URI",
+    "EOG"
    ],
-   "ultimo_scan": 1794506447.644742,
+   "ultimo_scan": 1794507057.223392,
    "limitado": 0,
    "errores": 0
   }
