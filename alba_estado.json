@@ -203,7 +203,8 @@
     "TRV",
     "CLX",
     "SLB",
-    "CTRE"
+    "CTRE",
+    "ADBE"
    ],
    "perdidos": [
     "ROK",
@@ -258,7 +259,7 @@
     "ZS",
     "CORZ"
    ],
-   "ultimo_scan": 1794508276.356342,
+   "ultimo_scan": 1794508884.172035,
    "limitado": 0,
    "errores": 0
   }
