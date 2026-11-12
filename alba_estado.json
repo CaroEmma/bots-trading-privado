@@ -99,7 +99,14 @@
     "SMCI",
     "CBRS",
     "OKTA",
-    "ALAB"
+    "ALAB",
+    "FROG",
+    "ZTS",
+    "FIGR",
+    "BP",
+    "CARR",
+    "KMI",
+    "OXY"
    ],
    "perdidos": [
     "ROK",
@@ -126,9 +133,12 @@
     "EXPE",
     "TXG",
     "RBLX",
-    "HUT"
+    "HUT",
+    "SANM",
+    "WDC",
+    "TWST"
    ],
-   "ultimo_scan": 1794495985.614871,
+   "ultimo_scan": 1794496607.439026,
    "limitado": 0,
    "errores": 0
   }
