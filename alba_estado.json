@@ -167,7 +167,27 @@
     "CRDO",
     "NOK",
     "AMD",
-    "FPS"
+    "FPS",
+    "NET",
+    "GS",
+    "C",
+    "DLR",
+    "SKHY",
+    "ASTS",
+    "CMI",
+    "PLTR",
+    "FCX",
+    "SNOW",
+    "RDDT",
+    "FN",
+    "APH",
+    "MARA",
+    "SOFI",
+    "COP",
+    "MS",
+    "CRWD",
+    "RKLB",
+    "TEAM"
    ],
    "perdidos": [
     "ROK",
@@ -209,7 +229,7 @@
     "COHR",
     "INTC"
    ],
-   "ultimo_scan": 1794499705.331682,
+   "ultimo_scan": 1794500330.365352,
    "limitado": 0,
    "errores": 0
   }
