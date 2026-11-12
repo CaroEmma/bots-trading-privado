@@ -43,12 +43,18 @@
    "CRWD": "omitida: señal vieja (198 min)",
    "ZS": "omitida: señal vieja (194 min)",
    "CLX": "omitida: señal vieja (109 min)",
-   "ADBE": "omitida: señal vieja (59 min)"
+   "ADBE": "omitida: señal vieja (59 min)",
+   "HONA": "omitida: señal vieja (295 min)",
+   "MP": "omitida: señal vieja (250 min)",
+   "ORCL": "omitida: señal vieja (245 min)",
+   "URI": "omitida: señal vieja (236 min)",
+   "RKLB": "omitida: señal vieja (216 min)",
+   "JNJ": "omitida: señal vieja (151 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794512132.509276,
+  "ultimo_scan": 1794512836.863365,
   "sombra": {
    "vistos": [
     "BLK",
