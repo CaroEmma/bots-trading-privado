@@ -202,7 +202,8 @@
     "KO",
     "TRV",
     "CLX",
-    "SLB"
+    "SLB",
+    "CTRE"
    ],
    "perdidos": [
     "ROK",
@@ -254,9 +255,10 @@
     "ORLY",
     "URI",
     "EOG",
-    "ZS"
+    "ZS",
+    "CORZ"
    ],
-   "ultimo_scan": 1794507666.47083,
+   "ultimo_scan": 1794508276.356342,
    "limitado": 0,
    "errores": 0
   }
