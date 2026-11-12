@@ -150,7 +150,24 @@
     "ARM",
     "TEM",
     "CAT",
-    "BMNR"
+    "BMNR",
+    "HUBB",
+    "GOOGL",
+    "TSM",
+    "ASML",
+    "JCI",
+    "COIN",
+    "LSCC",
+    "MKSI",
+    "IREN",
+    "ILMN",
+    "HOOD",
+    "BE",
+    "ASX",
+    "CRDO",
+    "NOK",
+    "AMD",
+    "FPS"
    ],
    "perdidos": [
     "ROK",
@@ -183,9 +200,16 @@
     "TWST",
     "IBP",
     "HLT",
-    "TEVA"
+    "TEVA",
+    "MTSI",
+    "AMAT",
+    "AAOI",
+    "KLAC",
+    "SMTC",
+    "COHR",
+    "INTC"
    ],
-   "ultimo_scan": 1794499063.999729,
+   "ultimo_scan": 1794499705.331682,
    "limitado": 0,
    "errores": 0
   }
