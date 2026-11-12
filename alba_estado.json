@@ -192,7 +192,9 @@
     "AVGO",
     "SPOT",
     "XOM",
-    "CVX"
+    "CVX",
+    "GH",
+    "NTRA"
    ],
    "perdidos": [
     "ROK",
@@ -234,9 +236,10 @@
     "COHR",
     "INTC",
     "Q",
-    "CDE"
+    "CDE",
+    "STRL"
    ],
-   "ultimo_scan": 1794501560.639124,
+   "ultimo_scan": 1794502171.654329,
    "limitado": 0,
    "errores": 0
   }
