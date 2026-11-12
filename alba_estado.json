@@ -190,7 +190,9 @@
     "TEAM",
     "MRNA",
     "AVGO",
-    "SPOT"
+    "SPOT",
+    "XOM",
+    "CVX"
    ],
    "perdidos": [
     "ROK",
@@ -230,9 +232,11 @@
     "KLAC",
     "SMTC",
     "COHR",
-    "INTC"
+    "INTC",
+    "Q",
+    "CDE"
    ],
-   "ultimo_scan": 1794500946.614605,
+   "ultimo_scan": 1794501560.639124,
    "limitado": 0,
    "errores": 0
   }
