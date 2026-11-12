@@ -169,6 +169,16 @@
       "qty": "9",
       "price": 405.88,
       "plain": "BUY 9 UNH at 405.88"
+    },
+    {
+      "at": "2026-11-12T15:40:52-05:00",
+      "date": "2026-11-12",
+      "status": "filled",
+      "symbol": "UNH",
+      "side": "sell",
+      "qty": "9",
+      "price": 405.17,
+      "plain": "SELL 9 UNH at 405.17"
     }
   ]
 }
