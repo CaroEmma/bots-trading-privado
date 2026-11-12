@@ -198,7 +198,9 @@
     "ARGX",
     "B",
     "MRK",
-    "JNJ"
+    "JNJ",
+    "KO",
+    "TRV"
    ],
    "perdidos": [
     "ROK",
@@ -243,9 +245,10 @@
     "CDE",
     "STRL",
     "CNP",
-    "LYV"
+    "LYV",
+    "BTI"
    ],
-   "ultimo_scan": 1794504005.011893,
+   "ultimo_scan": 1794504615.770184,
    "limitado": 0,
    "errores": 0
   }
