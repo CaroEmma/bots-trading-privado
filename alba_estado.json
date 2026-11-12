@@ -196,7 +196,9 @@
     "GH",
     "NTRA",
     "ARGX",
-    "B"
+    "B",
+    "MRK",
+    "JNJ"
    ],
    "perdidos": [
     "ROK",
@@ -243,7 +245,7 @@
     "CNP",
     "LYV"
    ],
-   "ultimo_scan": 1794503391.013538,
+   "ultimo_scan": 1794504005.011893,
    "limitado": 0,
    "errores": 0
   }

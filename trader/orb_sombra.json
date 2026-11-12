@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-12T17:09:51Z",
+  "created_at": "2026-11-12T17:20:05Z",
   "mode": "orb",
-  "as_of": "2026-11-12 12:09 ET",
+  "as_of": "2026-11-12 12:20 ET",
   "universe": 5928,
-  "scanned": 1414,
+  "scanned": 1320,
   "failed": 0,
-  "unconfirmed": 817,
+  "unconfirmed": 761,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -680,19 +680,6 @@
       "pct_over": 0.06
     },
     {
-      "symbol": "PBR",
-      "setups": [
-        "orb"
-      ],
-      "price": 17.89,
-      "at": "10:05 AM",
-      "bar_start": "10:00",
-      "bar_index": 6,
-      "or_high": 17.82,
-      "or_low": 17.64,
-      "pct_over": 0.42
-    },
-    {
       "symbol": "FIGR",
       "setups": [
         "orb"
@@ -1265,6 +1252,19 @@
       "pct_over": 0.29
     },
     {
+      "symbol": "Q",
+      "setups": [
+        "orb"
+      ],
+      "price": 125.61,
+      "at": "10:55 AM",
+      "bar_start": "10:50",
+      "bar_index": 16,
+      "or_high": 125.49,
+      "or_low": 122.82,
+      "pct_over": 0.1
+    },
+    {
       "symbol": "SMTC",
       "setups": [
         "orb"
@@ -1380,19 +1380,6 @@
       "or_high": 22.27,
       "or_low": 20.4,
       "pct_over": 1.0
-    },
-    {
-      "symbol": "GOOGL",
-      "setups": [
-        "orb"
-      ],
-      "price": 297.29,
-      "at": "11:00 AM",
-      "bar_start": "10:55",
-      "bar_index": 17,
-      "or_high": 296.85,
-      "or_low": 293.8,
-      "pct_over": 0.15
     },
     {
       "symbol": "HOOD",
@@ -1694,19 +1681,6 @@
       "pct_over": 0.09
     },
     {
-      "symbol": "SOFI",
-      "setups": [
-        "orb"
-      ],
-      "price": 16.13,
-      "at": "11:15 AM",
-      "bar_start": "11:10",
-      "bar_index": 20,
-      "or_high": 16.13,
-      "or_low": 15.8,
-      "pct_over": 0.0
-    },
-    {
       "symbol": "TEAM",
       "setups": [
         "orb"
@@ -1837,17 +1811,30 @@
       "pct_over": 0.11
     },
     {
-      "symbol": "B",
+      "symbol": "MRK",
       "setups": [
         "orb"
       ],
-      "price": 38.62,
-      "at": "11:55 AM",
-      "bar_start": "11:50",
-      "bar_index": 28,
-      "or_high": 38.61,
-      "or_low": 37.84,
-      "pct_over": 0.01
+      "price": 149.04,
+      "at": "12:10 PM",
+      "bar_start": "12:05",
+      "bar_index": 31,
+      "or_high": 148.8,
+      "or_low": 147.1,
+      "pct_over": 0.16
+    },
+    {
+      "symbol": "JNJ",
+      "setups": [
+        "orb"
+      ],
+      "price": 285.74,
+      "at": "12:20 PM",
+      "bar_start": "12:15",
+      "bar_index": 33,
+      "or_high": 285.48,
+      "or_low": 282.0,
+      "pct_over": 0.09
     }
   ]
 }
