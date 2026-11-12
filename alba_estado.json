@@ -114,7 +114,13 @@
     "CEG",
     "NVT",
     "USAR",
-    "FRO"
+    "FRO",
+    "XEL",
+    "PM",
+    "CCEP",
+    "MP",
+    "MO",
+    "YUM"
    ],
    "perdidos": [
     "ROK",
@@ -145,9 +151,11 @@
     "SANM",
     "WDC",
     "TWST",
-    "IBP"
+    "IBP",
+    "HLT",
+    "TEVA"
    ],
-   "ultimo_scan": 1794497222.480652,
+   "ultimo_scan": 1794497830.386825,
    "limitado": 0,
    "errores": 0
   }
