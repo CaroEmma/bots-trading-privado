@@ -194,7 +194,9 @@
     "XOM",
     "CVX",
     "GH",
-    "NTRA"
+    "NTRA",
+    "ARGX",
+    "B"
    ],
    "perdidos": [
     "ROK",
@@ -239,7 +241,7 @@
     "CDE",
     "STRL"
    ],
-   "ultimo_scan": 1794502171.654329,
+   "ultimo_scan": 1794502781.892982,
    "limitado": 0,
    "errores": 0
   }
