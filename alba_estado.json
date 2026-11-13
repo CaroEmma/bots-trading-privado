@@ -244,9 +244,12 @@
     "AEE",
     "ALC",
     "RSG",
-    "CGON"
+    "CGON",
+    "IP",
+    "UTHR",
+    "IONS"
    ],
-   "ultimo_scan": 1794595689.786214,
+   "ultimo_scan": 1794596385.663675,
    "limitado": 0,
    "errores": 0
   }
