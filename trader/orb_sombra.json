@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-13T17:38:21Z",
+  "created_at": "2026-11-13T17:49:58Z",
   "mode": "orb",
-  "as_of": "2026-11-13 12:38 ET",
+  "as_of": "2026-11-13 12:49 ET",
   "universe": 5932,
-  "scanned": 1247,
+  "scanned": 1202,
   "failed": 0,
-  "unconfirmed": 438,
+  "unconfirmed": 408,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -121,19 +121,6 @@
       "pct_over": 0.26
     },
     {
-      "symbol": "BTI",
-      "setups": [
-        "orb"
-      ],
-      "price": 61.49,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 61.32,
-      "or_low": 61.04,
-      "pct_over": 0.28
-    },
-    {
       "symbol": "CL",
       "setups": [
         "orb"
@@ -197,6 +184,19 @@
       "or_high": 122.01,
       "or_low": 120.63,
       "pct_over": 0.02
+    },
+    {
+      "symbol": "ES",
+      "setups": [
+        "orb"
+      ],
+      "price": 71.96,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 71.89,
+      "or_low": 71.46,
+      "pct_over": 0.09
     },
     {
       "symbol": "EW",
@@ -589,19 +589,6 @@
       "pct_over": 0.23
     },
     {
-      "symbol": "STE",
-      "setups": [
-        "orb"
-      ],
-      "price": 262.4,
-      "at": "9:55 AM",
-      "bar_start": "09:50",
-      "bar_index": 4,
-      "or_high": 262.34,
-      "or_low": 258.72,
-      "pct_over": 0.02
-    },
-    {
       "symbol": "TTD",
       "setups": [
         "orb"
@@ -706,6 +693,19 @@
       "pct_over": 0.09
     },
     {
+      "symbol": "NVS",
+      "setups": [
+        "orb"
+      ],
+      "price": 160.42,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 160.27,
+      "or_low": 159.48,
+      "pct_over": 0.09
+    },
+    {
       "symbol": "PG",
       "setups": [
         "orb"
@@ -797,32 +797,6 @@
       "pct_over": 0.07
     },
     {
-      "symbol": "LVS",
-      "setups": [
-        "orb"
-      ],
-      "price": 40.18,
-      "at": "10:05 AM",
-      "bar_start": "10:00",
-      "bar_index": 6,
-      "or_high": 40.15,
-      "or_low": 39.47,
-      "pct_over": 0.07
-    },
-    {
-      "symbol": "PEP",
-      "setups": [
-        "orb"
-      ],
-      "price": 144.32,
-      "at": "10:05 AM",
-      "bar_start": "10:00",
-      "bar_index": 6,
-      "or_high": 144.16,
-      "or_low": 142.53,
-      "pct_over": 0.11
-    },
-    {
       "symbol": "LII",
       "setups": [
         "orb"
@@ -847,6 +821,19 @@
       "or_high": 411.05,
       "or_low": 406.35,
       "pct_over": 0.06
+    },
+    {
+      "symbol": "YETI",
+      "setups": [
+        "orb"
+      ],
+      "price": 38.69,
+      "at": "10:15 AM",
+      "bar_start": "10:10",
+      "bar_index": 8,
+      "or_high": 38.6,
+      "or_low": 37.5,
+      "pct_over": 0.23
     },
     {
       "symbol": "COP",
@@ -925,6 +912,19 @@
       "or_high": 376.5,
       "or_low": 373.8,
       "pct_over": 0.12
+    },
+    {
+      "symbol": "CROX",
+      "setups": [
+        "orb"
+      ],
+      "price": 159.28,
+      "at": "10:35 AM",
+      "bar_start": "10:30",
+      "bar_index": 12,
+      "or_high": 159.01,
+      "or_low": 157.75,
+      "pct_over": 0.17
     },
     {
       "symbol": "CVX",
@@ -1275,6 +1275,19 @@
       "bar_index": 15,
       "or_high": 111.67,
       "or_low": 106.81,
+      "pct_over": 0.19
+    },
+    {
+      "symbol": "CASY",
+      "setups": [
+        "orb"
+      ],
+      "price": 714.58,
+      "at": "11:00 AM",
+      "bar_start": "10:55",
+      "bar_index": 17,
+      "or_high": 713.26,
+      "or_low": 710.0,
       "pct_over": 0.19
     },
     {
@@ -1653,6 +1666,19 @@
       "or_high": 90.26,
       "or_low": 89.47,
       "pct_over": 0.12
+    },
+    {
+      "symbol": "BIDU",
+      "setups": [
+        "orb"
+      ],
+      "price": 77.71,
+      "at": "12:40 PM",
+      "bar_start": "12:35",
+      "bar_index": 37,
+      "or_high": 77.7,
+      "or_low": 76.39,
+      "pct_over": 0.01
     }
   ]
 }

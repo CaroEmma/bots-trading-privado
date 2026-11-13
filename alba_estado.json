@@ -136,7 +136,8 @@
     "MELI",
     "APA",
     "REGN",
-    "CCI"
+    "CCI",
+    "BIDU"
    ],
    "perdidos": [
     "BRK.A",
@@ -228,9 +229,12 @@
     "CDW",
     "HWC",
     "TRMK",
-    "YUM"
+    "YUM",
+    "CROX",
+    "CASY",
+    "YETI"
    ],
-   "ultimo_scan": 1794591501.695964,
+   "ultimo_scan": 1794592198.504453,
    "limitado": 0,
    "errores": 0
   }
