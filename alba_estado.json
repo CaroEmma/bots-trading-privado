@@ -140,7 +140,8 @@
     "BIDU",
     "FIS",
     "ECL",
-    "IBM"
+    "IBM",
+    "HIMS"
    ],
    "perdidos": [
     "BRK.A",
@@ -236,9 +237,10 @@
     "CROX",
     "CASY",
     "YETI",
-    "INSM"
+    "INSM",
+    "AEE"
    ],
-   "ultimo_scan": 1794592895.603589,
+   "ultimo_scan": 1794593592.748253,
    "limitado": 0,
    "errores": 0
   }
