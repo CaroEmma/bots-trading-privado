@@ -144,7 +144,8 @@
     "HIMS",
     "TSCO",
     "NOW",
-    "CHYM"
+    "CHYM",
+    "SWKS"
    ],
    "perdidos": [
     "BRK.A",
@@ -247,9 +248,11 @@
     "CGON",
     "IP",
     "UTHR",
-    "IONS"
+    "IONS",
+    "WYNN",
+    "EXPD"
    ],
-   "ultimo_scan": 1794596385.663675,
+   "ultimo_scan": 1794597087.028568,
    "limitado": 0,
    "errores": 0
   }
