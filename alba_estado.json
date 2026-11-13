@@ -126,7 +126,8 @@
     "HPQ",
     "PODD",
     "VKTX",
-    "AAL"
+    "AAL",
+    "AXON"
    ],
    "perdidos": [
     "BRK.A",
@@ -214,9 +215,10 @@
     "ASND",
     "PATH",
     "WDAY",
-    "OKE"
+    "OKE",
+    "CDW"
    ],
-   "ultimo_scan": 1794588711.78448,
+   "ultimo_scan": 1794589406.659454,
    "limitado": 0,
    "errores": 0
   }
