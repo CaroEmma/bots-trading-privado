@@ -111,7 +111,12 @@
     "LOW",
     "RKT",
     "KR",
-    "TWST"
+    "TWST",
+    "BMY",
+    "EPD",
+    "MDLN",
+    "CAH",
+    "ULTA"
    ],
    "perdidos": [
     "BRK.A",
@@ -195,7 +200,7 @@
     "EPAM",
     "PSA"
    ],
-   "ultimo_scan": 1794585927.461227,
+   "ultimo_scan": 1794586627.05863,
    "limitado": 0,
    "errores": 0
   }
