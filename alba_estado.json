@@ -150,7 +150,11 @@
     "MSTR",
     "HUM",
     "BIIB",
-    "DHR"
+    "DHR",
+    "ELF",
+    "ZTS",
+    "CNC",
+    "UNH"
    ],
    "perdidos": [
     "BRK.A",
@@ -258,9 +262,10 @@
     "EXPD",
     "ROL",
     "GEHC",
-    "WST"
+    "WST",
+    "PCOR"
    ],
-   "ultimo_scan": 1794600592.739125,
+   "ultimo_scan": 1794601295.166292,
    "limitado": 0,
    "errores": 0
   }
