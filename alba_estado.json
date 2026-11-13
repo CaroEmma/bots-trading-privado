@@ -145,7 +145,9 @@
     "TSCO",
     "NOW",
     "CHYM",
-    "SWKS"
+    "SWKS",
+    "FROG",
+    "MSTR"
    ],
    "perdidos": [
     "BRK.A",
@@ -252,7 +254,7 @@
     "WYNN",
     "EXPD"
    ],
-   "ultimo_scan": 1794597087.028568,
+   "ultimo_scan": 1794597787.257942,
    "limitado": 0,
    "errores": 0
   }
