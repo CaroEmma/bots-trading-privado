@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-13T18:36:29Z",
+  "created_at": "2026-11-13T18:48:10Z",
   "mode": "orb",
-  "as_of": "2026-11-13 13:36 ET",
+  "as_of": "2026-11-13 13:48 ET",
   "universe": 5932,
-  "scanned": 1001,
+  "scanned": 970,
   "failed": 0,
-  "unconfirmed": 317,
+  "unconfirmed": 303,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -147,19 +147,6 @@
       "pct_over": 0.05
     },
     {
-      "symbol": "DUK",
-      "setups": [
-        "orb"
-      ],
-      "price": 128.79,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 128.59,
-      "or_low": 127.94,
-      "pct_over": 0.16
-    },
-    {
       "symbol": "EBAY",
       "setups": [
         "orb"
@@ -171,19 +158,6 @@
       "or_high": 122.01,
       "or_low": 120.63,
       "pct_over": 0.02
-    },
-    {
-      "symbol": "EMBJ",
-      "setups": [
-        "orb"
-      ],
-      "price": 78.82,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 78.79,
-      "or_low": 77.93,
-      "pct_over": 0.04
     },
     {
       "symbol": "ES",
@@ -394,6 +368,19 @@
       "pct_over": 0.36
     },
     {
+      "symbol": "ACN",
+      "setups": [
+        "orb"
+      ],
+      "price": 253.8,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 253.5,
+      "or_low": 249.0,
+      "pct_over": 0.12
+    },
+    {
       "symbol": "APP",
       "setups": [
         "orb"
@@ -405,19 +392,6 @@
       "or_high": 408.7,
       "or_low": 391.49,
       "pct_over": 0.89
-    },
-    {
-      "symbol": "AU",
-      "setups": [
-        "orb"
-      ],
-      "price": 87.98,
-      "at": "9:55 AM",
-      "bar_start": "09:50",
-      "bar_index": 4,
-      "or_high": 87.81,
-      "or_low": 86.31,
-      "pct_over": 0.19
     },
     {
       "symbol": "BZ",
@@ -652,19 +626,6 @@
       "or_high": 660.49,
       "or_low": 655.0,
       "pct_over": 0.01
-    },
-    {
-      "symbol": "NVS",
-      "setups": [
-        "orb"
-      ],
-      "price": 160.42,
-      "at": "10:00 AM",
-      "bar_start": "09:55",
-      "bar_index": 5,
-      "or_high": 160.27,
-      "or_low": 159.48,
-      "pct_over": 0.09
     },
     {
       "symbol": "PG",
@@ -979,6 +940,19 @@
       "pct_over": 0.35
     },
     {
+      "symbol": "MSCI",
+      "setups": [
+        "orb"
+      ],
+      "price": 657.35,
+      "at": "10:35 AM",
+      "bar_start": "10:30",
+      "bar_index": 12,
+      "or_high": 656.32,
+      "or_low": 652.27,
+      "pct_over": 0.16
+    },
+    {
       "symbol": "ODFL",
       "setups": [
         "orb"
@@ -1042,6 +1016,19 @@
       "or_high": 99.03,
       "or_low": 98.28,
       "pct_over": 0.06
+    },
+    {
+      "symbol": "STZ",
+      "setups": [
+        "orb"
+      ],
+      "price": 146.22,
+      "at": "10:35 AM",
+      "bar_start": "10:30",
+      "bar_index": 12,
+      "or_high": 145.9,
+      "or_low": 144.88,
+      "pct_over": 0.22
     },
     {
       "symbol": "TDG",
@@ -1718,6 +1705,19 @@
       "or_high": 102.2,
       "or_low": 100.58,
       "pct_over": 0.15
+    },
+    {
+      "symbol": "CHYM",
+      "setups": [
+        "orb"
+      ],
+      "price": 33.5,
+      "at": "1:40 PM",
+      "bar_start": "13:35",
+      "bar_index": 49,
+      "or_high": 33.48,
+      "or_low": 33.12,
+      "pct_over": 0.05
     }
   ]
 }
