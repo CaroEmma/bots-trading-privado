@@ -116,7 +116,10 @@
     "EPD",
     "MDLN",
     "CAH",
-    "ULTA"
+    "ULTA",
+    "CLX",
+    "DHI",
+    "LEN"
    ],
    "perdidos": [
     "BRK.A",
@@ -200,7 +203,7 @@
     "EPAM",
     "PSA"
    ],
-   "ultimo_scan": 1794586627.05863,
+   "ultimo_scan": 1794587319.900996,
    "limitado": 0,
    "errores": 0
   }
