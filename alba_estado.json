@@ -135,7 +135,8 @@
     "RBLX",
     "MELI",
     "APA",
-    "REGN"
+    "REGN",
+    "CCI"
    ],
    "perdidos": [
     "BRK.A",
@@ -226,9 +227,10 @@
     "OKE",
     "CDW",
     "HWC",
-    "TRMK"
+    "TRMK",
+    "YUM"
    ],
-   "ultimo_scan": 1794590804.339196,
+   "ultimo_scan": 1794591501.695964,
    "limitado": 0,
    "errores": 0
   }
