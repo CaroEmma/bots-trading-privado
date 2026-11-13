@@ -148,7 +148,8 @@
     "SWKS",
     "FROG",
     "MSTR",
-    "HUM"
+    "HUM",
+    "BIIB"
    ],
    "perdidos": [
     "BRK.A",
@@ -254,9 +255,10 @@
     "IONS",
     "WYNN",
     "EXPD",
-    "ROL"
+    "ROL",
+    "GEHC"
    ],
-   "ultimo_scan": 1794599192.619818,
+   "ultimo_scan": 1794599892.091107,
    "limitado": 0,
    "errores": 0
   }
