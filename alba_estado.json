@@ -133,7 +133,9 @@
     "TWLO",
     "SPOT",
     "RBLX",
-    "MELI"
+    "MELI",
+    "APA",
+    "REGN"
    ],
    "perdidos": [
     "BRK.A",
@@ -223,9 +225,10 @@
     "WDAY",
     "OKE",
     "CDW",
-    "HWC"
+    "HWC",
+    "TRMK"
    ],
-   "ultimo_scan": 1794590102.98002,
+   "ultimo_scan": 1794590804.339196,
    "limitado": 0,
    "errores": 0
   }
