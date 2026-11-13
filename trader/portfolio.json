@@ -1,17 +1,4 @@
 {
-  "cash": 1265.97,
-  "positions": [
-    {
-      "ticker": "COP",
-      "shares": 26.0,
-      "lots": [
-        {
-          "id": "COP-1",
-          "date": "2026-11-13",
-          "shares": 26.0,
-          "cost": 3701.1
-        }
-      ]
-    }
-  ]
+  "cash": 4962.39,
+  "positions": []
 }

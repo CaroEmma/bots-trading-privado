@@ -205,6 +205,16 @@
       "qty": "26",
       "price": 142.35,
       "plain": "BUY 26 COP at 142.35"
+    },
+    {
+      "at": "2026-11-13T15:40:27-05:00",
+      "date": "2026-11-13",
+      "status": "filled",
+      "symbol": "COP",
+      "side": "sell",
+      "qty": "26",
+      "price": 142.17,
+      "plain": "SELL 26 COP at 142.17"
     }
   ]
 }

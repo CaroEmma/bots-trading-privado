@@ -1,29 +1,10 @@
 {
- "abiertas": {
-  "COP": {
-   "orden_id": "6db57008-1909-44f4-8343-11066be7ff63",
-   "qty": 26,
-   "entrada": 142.35,
-   "stop": 141.29,
-   "target": 143.51,
-   "fecha": "2026-11-13",
-   "hora": "10:30",
-   "max_loss": 27.56,
-   "tm": {
-    "mc_avg_R": 0.045,
-    "p_target": 0.2936,
-    "p_stop": 0.5895,
-    "hist_disparos": 37,
-    "hist_avg_R": -0.064,
-    "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 33 % (target first 29.4 % vs stop first 59.0 %)."
-   }
-  }
- },
+ "abiertas": {},
  "hoy": {
   "fecha": "2026-11-13",
   "entradas": 1,
-  "pnl": 0.0,
-  "r": 0.0,
+  "pnl": -4.680000000000177,
+  "r": -0.16981132075472305,
   "evaluados": {
    "BRK.A": "omitida: ni una acción entra en la pérdida máxima (riesgo 1878.75 por acción)",
    "EW": "omitida: señal vieja (22 min)",
