@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-13T16:40:18Z",
+  "created_at": "2026-11-13T16:51:52Z",
   "mode": "orb",
-  "as_of": "2026-11-13 11:40 ET",
+  "as_of": "2026-11-13 11:51 ET",
   "universe": 5932,
-  "scanned": 1479,
+  "scanned": 1465,
   "failed": 0,
-  "unconfirmed": 520,
+  "unconfirmed": 512,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -628,19 +628,6 @@
       "pct_over": 0.21
     },
     {
-      "symbol": "SNAP",
-      "setups": [
-        "orb"
-      ],
-      "price": 5.32,
-      "at": "9:55 AM",
-      "bar_start": "09:50",
-      "bar_index": 4,
-      "or_high": 5.32,
-      "or_low": 5.16,
-      "pct_over": 0.09
-    },
-    {
       "symbol": "SO",
       "setups": [
         "orb"
@@ -927,32 +914,6 @@
       "pct_over": 0.23
     },
     {
-      "symbol": "NU",
-      "setups": [
-        "orb"
-      ],
-      "price": 12.73,
-      "at": "10:10 AM",
-      "bar_start": "10:05",
-      "bar_index": 7,
-      "or_high": 12.69,
-      "or_low": 12.1,
-      "pct_over": 0.32
-    },
-    {
-      "symbol": "SAP",
-      "setups": [
-        "orb"
-      ],
-      "price": 236.87,
-      "at": "10:10 AM",
-      "bar_start": "10:05",
-      "bar_index": 7,
-      "or_high": 236.71,
-      "or_low": 234.61,
-      "pct_over": 0.07
-    },
-    {
       "symbol": "RACE",
       "setups": [
         "orb"
@@ -964,6 +925,19 @@
       "or_high": 411.05,
       "or_low": 406.35,
       "pct_over": 0.06
+    },
+    {
+      "symbol": "COP",
+      "setups": [
+        "orb"
+      ],
+      "price": 142.03,
+      "at": "10:25 AM",
+      "bar_start": "10:20",
+      "bar_index": 10,
+      "or_high": 142.0,
+      "or_low": 140.58,
+      "pct_over": 0.02
     },
     {
       "symbol": "UPS",
@@ -1146,19 +1120,6 @@
       "or_high": 173.8,
       "or_low": 171.64,
       "pct_over": 0.1
-    },
-    {
-      "symbol": "ORLY",
-      "setups": [
-        "orb"
-      ],
-      "price": 92.1,
-      "at": "10:35 AM",
-      "bar_start": "10:30",
-      "bar_index": 12,
-      "or_high": 91.99,
-      "or_low": 91.5,
-      "pct_over": 0.12
     },
     {
       "symbol": "SHEL",
@@ -1460,6 +1421,19 @@
       "pct_over": 0.05
     },
     {
+      "symbol": "OKE",
+      "setups": [
+        "orb"
+      ],
+      "price": 90.1,
+      "at": "11:15 AM",
+      "bar_start": "11:10",
+      "bar_index": 20,
+      "or_high": 90.02,
+      "or_low": 89.17,
+      "pct_over": 0.09
+    },
+    {
       "symbol": "ULTA",
       "setups": [
         "orb"
@@ -1551,30 +1525,69 @@
       "pct_over": 0.03
     },
     {
-      "symbol": "PODD",
+      "symbol": "WDAY",
       "setups": [
         "orb"
       ],
-      "price": 150.79,
+      "price": 193.8,
       "at": "11:30 AM",
       "bar_start": "11:25",
       "bar_index": 23,
-      "or_high": 150.64,
-      "or_low": 145.31,
-      "pct_over": 0.1
+      "or_high": 193.67,
+      "or_low": 190.97,
+      "pct_over": 0.07
     },
     {
       "symbol": "WSM",
       "setups": [
         "orb"
       ],
-      "price": 252.12,
+      "price": 252.23,
       "at": "11:30 AM",
       "bar_start": "11:25",
       "bar_index": 23,
       "or_high": 251.9,
       "or_low": 242.8,
-      "pct_over": 0.09
+      "pct_over": 0.13
+    },
+    {
+      "symbol": "PATH",
+      "setups": [
+        "orb"
+      ],
+      "price": 13.21,
+      "at": "11:35 AM",
+      "bar_start": "11:30",
+      "bar_index": 24,
+      "or_high": 13.21,
+      "or_low": 12.95,
+      "pct_over": 0.02
+    },
+    {
+      "symbol": "VKTX",
+      "setups": [
+        "orb"
+      ],
+      "price": 28.23,
+      "at": "11:40 AM",
+      "bar_start": "11:35",
+      "bar_index": 25,
+      "or_high": 27.69,
+      "or_low": 26.91,
+      "pct_over": 1.96
+    },
+    {
+      "symbol": "AAL",
+      "setups": [
+        "orb"
+      ],
+      "price": 13.54,
+      "at": "11:50 AM",
+      "bar_start": "11:45",
+      "bar_index": 27,
+      "or_high": 13.54,
+      "or_low": 13.29,
+      "pct_over": 0.0
     }
   ]
 }
