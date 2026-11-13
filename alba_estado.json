@@ -127,7 +127,13 @@
     "PODD",
     "VKTX",
     "AAL",
-    "AXON"
+    "AXON",
+    "ABNB",
+    "SN",
+    "TWLO",
+    "SPOT",
+    "RBLX",
+    "MELI"
    ],
    "perdidos": [
     "BRK.A",
@@ -216,9 +222,10 @@
     "PATH",
     "WDAY",
     "OKE",
-    "CDW"
+    "CDW",
+    "HWC"
    ],
-   "ultimo_scan": 1794589406.659454,
+   "ultimo_scan": 1794590102.98002,
    "limitado": 0,
    "errores": 0
   }
