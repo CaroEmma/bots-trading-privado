@@ -107,3 +107,13 @@
 {"fecha": "2026-11-12", "hora": "15:09", "simbolo": "MSI", "accion": "omitir", "motivo": "señal vieja (268 min)"}
 {"fecha": "2026-11-12", "hora": "15:09", "simbolo": "SNPS", "accion": "omitir", "motivo": "señal vieja (263 min)"}
 {"fecha": "2026-11-12", "hora": "15:15", "simbolo": "UNH", "accion": "comprar", "motivo": "todas las skills en verde", "qty": 9, "fill": 405.88, "stop": 402.85, "target": 411.97, "tm": {"mc_avg_R": 0.016, "p_target": 0.0009, "p_stop": 0.0855, "hist_disparos": 31, "hist_avg_R": -0.34, "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 1 % (target first 0.1 % vs stop first 8.6 %)."}}
+{"fecha": "2026-11-13", "hora": "10:08", "simbolo": "BRK.A", "accion": "omitir", "motivo": "ni una acción entra en la pérdida máxima (riesgo 1878.75 por acción)"}
+{"fecha": "2026-11-13", "hora": "10:08", "simbolo": "EW", "accion": "omitir", "motivo": "señal vieja (22 min)"}
+{"fecha": "2026-11-13", "hora": "10:08", "simbolo": "COF", "accion": "omitir", "motivo": "timemachine: R promedio simulado -0.136 no es > 0", "tm": {"mc_avg_R": -0.136, "p_target": 0.2844, "p_stop": 0.7081, "hist_disparos": 31, "hist_avg_R": -0.31, "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 29 % (target first 28.4 % vs stop first 70.8 %)."}}
+{"fecha": "2026-11-13", "hora": "10:08", "simbolo": "EXC", "accion": "omitir", "motivo": "señal vieja (22 min)"}
+{"fecha": "2026-11-13", "hora": "10:13", "simbolo": "KMB", "accion": "omitir", "motivo": "señal vieja (27 min)"}
+{"fecha": "2026-11-13", "hora": "10:13", "simbolo": "MA", "accion": "omitir", "motivo": "señal vieja (17 min)"}
+{"fecha": "2026-11-13", "hora": "10:13", "simbolo": "MRSH", "accion": "omitir", "motivo": "señal vieja (17 min)"}
+{"fecha": "2026-11-13", "hora": "10:19", "simbolo": "EBAY", "accion": "omitir", "motivo": "señal vieja (33 min)"}
+{"fecha": "2026-11-13", "hora": "10:19", "simbolo": "JD", "accion": "omitir", "motivo": "señal vieja (33 min)"}
+{"fecha": "2026-11-13", "hora": "10:19", "simbolo": "SBUX", "accion": "omitir", "motivo": "señal vieja (33 min)"}
