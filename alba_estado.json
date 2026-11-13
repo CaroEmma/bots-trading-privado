@@ -107,7 +107,11 @@
     "HD",
     "JNJ",
     "GIS",
-    "DPZ"
+    "DPZ",
+    "LOW",
+    "RKT",
+    "KR",
+    "TWST"
    ],
    "perdidos": [
     "BRK.A",
@@ -187,9 +191,10 @@
     "RBA",
     "SYY",
     "AWK",
-    "ES"
+    "ES",
+    "EPAM"
    ],
-   "ultimo_scan": 1794584530.65582,
+   "ultimo_scan": 1794585232.036287,
    "limitado": 0,
    "errores": 0
   }
