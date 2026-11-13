@@ -1,0 +1,28 @@
+{
+  "created_by": "trader-exit",
+  "symbol": "COP",
+  "side": "buy",
+  "date": "2026-11-13",
+  "setup": "orb",
+  "entry": 142.03,
+  "entry_time": "10:25 AM",
+  "entry_bar": 10,
+  "interval": "5m",
+  "opening_range": {
+    "high": 142.0,
+    "low": 140.58,
+    "minutes": 15
+  },
+  "stop": 141.29,
+  "stop_rule": "or_mid",
+  "stop_label": "opening-range midpoint",
+  "target": 143.51,
+  "target_r": 2.0,
+  "target_label": "2R (two times the risk)",
+  "risk_per_share": 0.74,
+  "reward_risk": 2.0,
+  "flat_by": "15:55",
+  "stop_detail": "($142.00 + $140.58) / 2 = $141.29",
+  "created_at": "2026-11-13T15:33:59Z",
+  "note": "A stop is a plan, not a guarantee: a gap or a fast market can fill past it."
+}

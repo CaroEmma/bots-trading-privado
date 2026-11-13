@@ -117,3 +117,8 @@
 {"fecha": "2026-11-13", "hora": "10:19", "simbolo": "EBAY", "accion": "omitir", "motivo": "señal vieja (33 min)"}
 {"fecha": "2026-11-13", "hora": "10:19", "simbolo": "JD", "accion": "omitir", "motivo": "señal vieja (33 min)"}
 {"fecha": "2026-11-13", "hora": "10:19", "simbolo": "SBUX", "accion": "omitir", "motivo": "señal vieja (33 min)"}
+{"fecha": "2026-11-13", "hora": "10:25", "simbolo": "ENB", "accion": "omitir", "motivo": "timemachine: R promedio simulado -0.106 no es > 0", "tm": {"mc_avg_R": -0.106, "p_target": 0.2849, "p_stop": 0.6888, "hist_disparos": 34, "hist_avg_R": -0.417, "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 29 % (target first 28.5 % vs stop first 68.9 %)."}}
+{"fecha": "2026-11-13", "hora": "10:25", "simbolo": "STE", "accion": "omitir", "motivo": "señal vieja (34 min)"}
+{"fecha": "2026-11-13", "hora": "10:25", "simbolo": "V", "accion": "omitir", "motivo": "señal vieja (29 min)"}
+{"fecha": "2026-11-13", "hora": "10:30", "simbolo": "RBA", "accion": "omitir", "motivo": "señal vieja (18 min)"}
+{"fecha": "2026-11-13", "hora": "10:30", "simbolo": "COP", "accion": "comprar", "motivo": "todas las skills en verde", "qty": 26, "fill": 142.35, "stop": 141.29, "target": 143.51, "tm": {"mc_avg_R": 0.045, "p_target": 0.2936, "p_stop": 0.5895, "hist_disparos": 37, "hist_avg_R": -0.064, "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 33 % (target first 29.4 % vs stop first 59.0 %)."}}

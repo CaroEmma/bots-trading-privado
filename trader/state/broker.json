@@ -179,6 +179,32 @@
       "qty": "9",
       "price": 405.17,
       "plain": "SELL 9 UNH at 405.17"
+    },
+    {
+      "at": "2026-11-13T10:30-05:00",
+      "date": "2026-11-13",
+      "index": 1,
+      "fingerprint": "57931d86c5630761",
+      "symbol": "COP",
+      "side": "buy",
+      "qty": "26",
+      "kind": "entry",
+      "max_loss": 27.56,
+      "stop": 141.29,
+      "plain": "buy 26 COP (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "6db57008-1909-44f4-8343-11066be7ff63",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-13T10:34:06-05:00",
+      "date": "2026-11-13",
+      "status": "filled",
+      "symbol": "COP",
+      "side": "buy",
+      "qty": "26",
+      "price": 142.35,
+      "plain": "BUY 26 COP at 142.35"
     }
   ]
 }

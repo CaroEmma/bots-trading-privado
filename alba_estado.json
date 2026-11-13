@@ -1,8 +1,27 @@
 {
- "abiertas": {},
+ "abiertas": {
+  "COP": {
+   "orden_id": "6db57008-1909-44f4-8343-11066be7ff63",
+   "qty": 26,
+   "entrada": 142.35,
+   "stop": 141.29,
+   "target": 143.51,
+   "fecha": "2026-11-13",
+   "hora": "10:30",
+   "max_loss": 27.56,
+   "tm": {
+    "mc_avg_R": 0.045,
+    "p_target": 0.2936,
+    "p_stop": 0.5895,
+    "hist_disparos": 37,
+    "hist_avg_R": -0.064,
+    "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 33 % (target first 29.4 % vs stop first 59.0 %)."
+   }
+  }
+ },
  "hoy": {
   "fecha": "2026-11-13",
-  "entradas": 0,
+  "entradas": 1,
   "pnl": 0.0,
   "r": 0.0,
   "evaluados": {
@@ -15,12 +34,17 @@
    "MRSH": "omitida: señal vieja (17 min)",
    "EBAY": "omitida: señal vieja (33 min)",
    "JD": "omitida: señal vieja (33 min)",
-   "SBUX": "omitida: señal vieja (33 min)"
+   "SBUX": "omitida: señal vieja (33 min)",
+   "ENB": "omitida: timemachine: R promedio simulado -0.106 no es > 0",
+   "STE": "omitida: señal vieja (34 min)",
+   "V": "omitida: señal vieja (29 min)",
+   "RBA": "omitida: señal vieja (18 min)",
+   "COP": "COMPRADA"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794583164.112993,
+  "ultimo_scan": 1794583815.954713,
   "sombra": {
    "vistos": [
     "COF",
@@ -47,7 +71,13 @@
     "CDNL",
     "NU",
     "DECK",
-    "RACE"
+    "RACE",
+    "ENB",
+    "COP",
+    "UPS",
+    "ED",
+    "OTIS",
+    "CME"
    ],
    "perdidos": [
     "BRK.A",
@@ -123,7 +153,10 @@
     "APP",
     "TTD",
     "PPL",
-    "GFL"
+    "GFL",
+    "RBA",
+    "SYY",
+    "AWK"
    ],
    "ultimo_scan": 0,
    "limitado": 0,

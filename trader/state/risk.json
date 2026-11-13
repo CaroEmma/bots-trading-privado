@@ -1,44 +1,44 @@
 {
-  "date": "2026-11-12",
-  "now_new_york": "2026-11-12 15:19",
+  "date": "2026-11-13",
+  "now_new_york": "2026-11-13 10:34",
   "paper": true,
   "results": [
     {
       "index": 1,
-      "symbol": "UNH",
+      "symbol": "COP",
       "side": "buy",
       "kind": "entry",
-      "amount": "9 shares",
-      "value_usd": 3653.01,
-      "entry_ref": 405.89,
+      "amount": "26 shares",
+      "value_usd": 3701.1,
+      "entry_ref": 142.35,
       "entry_ref_from": "plan",
-      "stop": 402.85,
-      "target": 411.97,
-      "risk_per_share": 3.04,
-      "max_loss": 27.36,
-      "reward_risk": 2.0,
-      "fingerprint": "3beaadaa745153b7",
+      "stop": 141.29,
+      "target": 143.51,
+      "risk_per_share": 1.06,
+      "max_loss": 27.56,
+      "reward_risk": 1.09,
+      "fingerprint": "57931d86c5630761",
       "verdict": "PASS",
       "reasons": [],
       "warnings": [],
       "info": [
-        "entry 405.89 (the plan's entry), stop 402.85, target 411.97: risk 3.04 a share",
-        "max loss $27.36 (limit $50), reward:risk 2.00 (min 1)",
-        "today before this: 1 of 3 trades, $18.97 of $150 daily loss"
+        "entry 142.35 (the plan's entry), stop 141.29, target 143.51: risk 1.06 a share",
+        "max loss $27.56 (limit $50), reward:risk 1.09 (min 1)",
+        "today before this: 0 of 3 trades, $0 of $150 daily loss"
       ]
     }
   ],
   "pass": 1,
   "block": 0,
   "warnings": [],
-  "cash_after": 1320.45,
+  "cash_after": 1265.97,
   "today": {
-    "orders_placed": 1,
-    "entries_placed": 1,
-    "loss_at_risk": 18.97,
+    "orders_placed": 0,
+    "entries_placed": 0,
+    "loss_at_risk": 0.0,
     "day_trades_5d": null
   },
-  "prices_as_of": "2026-11-12T20:19:48Z",
-  "checked_at": "2026-11-12T20:19:49Z",
+  "prices_as_of": "2026-11-13T15:34:01Z",
+  "checked_at": "2026-11-13T15:34:01Z",
   "orders_file": "trader/orders.json"
 }
