@@ -141,7 +141,9 @@
     "FIS",
     "ECL",
     "IBM",
-    "HIMS"
+    "HIMS",
+    "TSCO",
+    "NOW"
    ],
    "perdidos": [
     "BRK.A",
@@ -238,9 +240,12 @@
     "CASY",
     "YETI",
     "INSM",
-    "AEE"
+    "AEE",
+    "ALC",
+    "RSG",
+    "CGON"
    ],
-   "ultimo_scan": 1794594290.579964,
+   "ultimo_scan": 1794594989.102513,
    "limitado": 0,
    "errores": 0
   }
