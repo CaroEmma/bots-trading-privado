@@ -119,7 +119,12 @@
     "ULTA",
     "CLX",
     "DHI",
-    "LEN"
+    "LEN",
+    "HUBS",
+    "FERG",
+    "WSM",
+    "HPQ",
+    "PODD"
    ],
    "perdidos": [
     "BRK.A",
@@ -201,9 +206,12 @@
     "AWK",
     "ES",
     "EPAM",
-    "PSA"
+    "PSA",
+    "TW",
+    "AVY",
+    "ASND"
    ],
-   "ultimo_scan": 1794587319.900996,
+   "ultimo_scan": 1794588017.747345,
    "limitado": 0,
    "errores": 0
   }
