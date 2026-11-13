@@ -137,7 +137,10 @@
     "APA",
     "REGN",
     "CCI",
-    "BIDU"
+    "BIDU",
+    "FIS",
+    "ECL",
+    "IBM"
    ],
    "perdidos": [
     "BRK.A",
@@ -232,9 +235,10 @@
     "YUM",
     "CROX",
     "CASY",
-    "YETI"
+    "YETI",
+    "INSM"
    ],
-   "ultimo_scan": 1794592198.504453,
+   "ultimo_scan": 1794592895.603589,
    "limitado": 0,
    "errores": 0
   }
