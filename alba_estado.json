@@ -260,9 +260,10 @@
     "WST",
     "WSM",
     "SITM",
-    "LSCC"
+    "LSCC",
+    "PCTY"
    ],
-   "ultimo_scan": 1794856835.900305,
+   "ultimo_scan": 1794857524.415014,
    "limitado": 0,
    "errores": 0
   }
