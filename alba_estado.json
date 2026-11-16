@@ -261,9 +261,13 @@
     "WSM",
     "SITM",
     "LSCC",
-    "PCTY"
+    "PCTY",
+    "EXPD",
+    "QLYS",
+    "BR",
+    "D"
    ],
-   "ultimo_scan": 1794858181.271299,
+   "ultimo_scan": 1794858837.255872,
    "limitado": 0,
    "errores": 0
   }
