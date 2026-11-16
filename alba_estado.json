@@ -182,7 +182,8 @@
     "ARMK",
     "ADP",
     "CHTR",
-    "TPR"
+    "TPR",
+    "CBRS"
    ],
    "perdidos": [
     "TEL",
@@ -229,9 +230,10 @@
     "RL",
     "GFL",
     "KVYO",
-    "FTS"
+    "FTS",
+    "WST"
    ],
-   "ultimo_scan": 1794851098.743204,
+   "ultimo_scan": 1794851724.339881,
    "limitado": 0,
    "errores": 0
   }
