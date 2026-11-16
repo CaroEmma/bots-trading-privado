@@ -22,12 +22,18 @@
    "ADSK": "omitida: señal vieja (165 min)",
    "FLEX": "omitida: señal vieja (170 min)",
    "WSM": "omitida: señal vieja (165 min)",
-   "SWKS": "omitida: señal vieja (90 min)"
+   "SWKS": "omitida: señal vieja (90 min)",
+   "CHTR": "omitida: señal vieja (65 min)",
+   "ELV": "omitida: señal vieja (205 min)",
+   "FTS": "omitida: señal vieja (205 min)",
+   "OXY": "omitida: señal vieja (180 min)",
+   "MU": "omitida: señal vieja (145 min)",
+   "ADP": "omitida: señal vieja (86 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794854232.07278,
+  "ultimo_scan": 1794854865.993013,
   "sombra": {
    "vistos": [
     "BRZE",
@@ -219,7 +225,9 @@
     "KVYO",
     "FTS",
     "WST",
-    "WSM"
+    "WSM",
+    "SITM",
+    "LSCC"
    ],
    "ultimo_scan": 1794853602.518551,
    "limitado": 0,
