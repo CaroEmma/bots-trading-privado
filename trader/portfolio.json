@@ -1,4 +1,17 @@
 {
-  "cash": 4915.42,
-  "positions": []
+  "cash": 1279.87,
+  "positions": [
+    {
+      "ticker": "CHRW",
+      "shares": 27.0,
+      "lots": [
+        {
+          "id": "CHRW-1",
+          "date": "2026-11-16",
+          "shares": 27.0,
+          "cost": 3635.55
+        }
+      ]
+    }
+  ]
 }

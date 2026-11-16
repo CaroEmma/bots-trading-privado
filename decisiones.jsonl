@@ -157,3 +157,4 @@
 {"fecha": "2026-11-16", "hora": "14:09", "simbolo": "DPZ", "accion": "omitir", "motivo": "señal vieja (263 min)"}
 {"fecha": "2026-11-16", "hora": "14:09", "simbolo": "PEP", "accion": "omitir", "motivo": "señal vieja (248 min)"}
 {"fecha": "2026-11-16", "hora": "14:09", "simbolo": "MAR", "accion": "omitir", "motivo": "señal vieja (243 min)"}
+{"fecha": "2026-11-16", "hora": "14:15", "simbolo": "CHRW", "accion": "comprar", "motivo": "todas las skills en verde", "qty": 27, "fill": 134.65, "stop": 134.29, "target": 136.39, "tm": {"mc_avg_R": 0.137, "p_target": 0.2341, "p_stop": 0.4793, "hist_disparos": 35, "hist_avg_R": -0.098, "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 33 % (target first 23.4 % vs stop first 47.9 %)."}}

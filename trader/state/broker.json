@@ -251,6 +251,32 @@
       "qty": "64",
       "price": 45.6889,
       "plain": "SELL 64 LUV at 45.69"
+    },
+    {
+      "at": "2026-11-16T14:15-05:00",
+      "date": "2026-11-16",
+      "index": 1,
+      "fingerprint": "2c94c9d565c54b0a",
+      "symbol": "CHRW",
+      "side": "buy",
+      "qty": "27",
+      "kind": "entry",
+      "max_loss": 18.9,
+      "stop": 134.29,
+      "plain": "buy 27 CHRW (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "898be517-09da-4be7-add5-cd3ba8471bc1",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-16T14:19:33-05:00",
+      "date": "2026-11-16",
+      "status": "filled",
+      "symbol": "CHRW",
+      "side": "buy",
+      "qty": "27",
+      "price": 134.65,
+      "plain": "BUY 27 CHRW at 134.65"
     }
   ]
 }

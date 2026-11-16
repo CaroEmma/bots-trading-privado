@@ -1,8 +1,27 @@
 {
- "abiertas": {},
+ "abiertas": {
+  "CHRW": {
+   "orden_id": "898be517-09da-4be7-add5-cd3ba8471bc1",
+   "qty": 27,
+   "entrada": 134.65,
+   "stop": 134.29,
+   "target": 136.39,
+   "fecha": "2026-11-16",
+   "hora": "14:15",
+   "max_loss": 18.9,
+   "tm": {
+    "mc_avg_R": 0.137,
+    "p_target": 0.2341,
+    "p_stop": 0.4793,
+    "hist_disparos": 35,
+    "hist_avg_R": -0.098,
+    "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 33 % (target first 23.4 % vs stop first 47.9 %)."
+   }
+  }
+ },
  "hoy": {
   "fecha": "2026-11-16",
-  "entradas": 1,
+  "entradas": 2,
   "pnl": -46.96998399999984,
   "r": -1.0295912111591687,
   "evaluados": {
@@ -40,12 +59,13 @@
    "UPS": "omitida: señal vieja (107 min)",
    "DPZ": "omitida: señal vieja (263 min)",
    "PEP": "omitida: señal vieja (248 min)",
-   "MAR": "omitida: señal vieja (243 min)"
+   "MAR": "omitida: señal vieja (243 min)",
+   "CHRW": "COMPRADA"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794856172.819428,
+  "ultimo_scan": 1794856519.570838,
   "sombra": {
    "vistos": [
     "BRZE",
@@ -188,7 +208,8 @@
     "ADP",
     "CHTR",
     "TPR",
-    "CBRS"
+    "CBRS",
+    "CHRW"
    ],
    "perdidos": [
     "TEL",
@@ -241,7 +262,7 @@
     "SITM",
     "LSCC"
    ],
-   "ultimo_scan": 1794853602.518551,
+   "ultimo_scan": 1794856835.900305,
    "limitado": 0,
    "errores": 0
   }

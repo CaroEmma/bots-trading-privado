@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-16T15:10:31Z",
+  "as_of": "2026-11-16T19:19:31Z",
   "source": "yahoo",
   "note": "Delayed quotes for alerts and sizing checks. Your broker's price is the one that fills. detail.fetched is when each price was read.",
   "prices": {
@@ -12,7 +12,8 @@
     "JD": 27.885,
     "TECK": 59.35,
     "RIVN": 12.225,
-    "LUV": 46.45
+    "LUV": 46.45,
+    "CHRW": 134.58
   },
   "detail": {
     "SPCX": {
@@ -74,6 +75,12 @@
       "time": "2026-11-16T15:10:17Z",
       "source": "yahoo",
       "fetched": "2026-11-16T15:10:31Z"
+    },
+    "CHRW": {
+      "prev_close": 134.46,
+      "time": "2026-11-16T19:18:56Z",
+      "source": "yahoo",
+      "fetched": "2026-11-16T19:19:31Z"
     }
   }
 }

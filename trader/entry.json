@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "MAR",
+  "symbol": "CHRW",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-16",
   "status": "triggered",
-  "time": "10:10 AM",
-  "bar_start": "10:05",
-  "bar_index": 7,
-  "price": 428.88,
-  "level": 428.65,
+  "time": "2:10 PM",
+  "bar_start": "14:05",
+  "bar_index": 55,
+  "price": 134.99,
+  "level": 134.95,
   "interval": "5m",
   "opening_range": {
-    "high": 428.65,
-    "low": 425.0,
+    "high": 134.95,
+    "low": 133.64,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-16T19:13:17Z",
-  "reason": "the 10:05 bar closed above the range high"
+  "checked_at": "2026-11-16T19:19:30Z",
+  "reason": "the 14:05 bar closed above the range high"
 }

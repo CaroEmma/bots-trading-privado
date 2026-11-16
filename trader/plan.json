@@ -1,0 +1,28 @@
+{
+  "created_by": "trader-exit",
+  "symbol": "CHRW",
+  "side": "buy",
+  "date": "2026-11-16",
+  "setup": "orb",
+  "entry": 134.99,
+  "entry_time": "2:10 PM",
+  "entry_bar": 55,
+  "interval": "5m",
+  "opening_range": {
+    "high": 134.95,
+    "low": 133.64,
+    "minutes": 15
+  },
+  "stop": 134.29,
+  "stop_rule": "or_mid",
+  "stop_label": "opening-range midpoint",
+  "target": 136.39,
+  "target_r": 2.0,
+  "target_label": "2R (two times the risk)",
+  "risk_per_share": 0.7,
+  "reward_risk": 2.0,
+  "flat_by": "15:55",
+  "stop_detail": "($134.95 + $133.64) / 2 = $134.295, rounded down",
+  "created_at": "2026-11-16T19:19:31Z",
+  "note": "A stop is a plan, not a guarantee: a gap or a fast market can fill past it."
+}
