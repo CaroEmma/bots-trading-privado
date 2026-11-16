@@ -241,6 +241,16 @@
       "qty": "64",
       "price": 46.4228,
       "plain": "BUY 64 LUV at 46.42"
+    },
+    {
+      "at": "2026-11-16T13:31:55-05:00",
+      "date": "2026-11-16",
+      "status": "filled",
+      "symbol": "LUV",
+      "side": "sell",
+      "qty": "64",
+      "price": 45.6889,
+      "plain": "SELL 64 LUV at 45.69"
     }
   ]
 }

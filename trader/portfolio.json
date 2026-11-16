@@ -1,17 +1,4 @@
 {
-  "cash": 1991.33,
-  "positions": [
-    {
-      "ticker": "LUV",
-      "shares": 64.0,
-      "lots": [
-        {
-          "id": "LUV-1",
-          "date": "2026-11-16",
-          "shares": 64.0,
-          "cost": 2971.06
-        }
-      ]
-    }
-  ]
+  "cash": 4915.42,
+  "positions": []
 }

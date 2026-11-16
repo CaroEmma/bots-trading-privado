@@ -1,29 +1,10 @@
 {
- "abiertas": {
-  "LUV": {
-   "orden_id": "a6a9554c-3722-49d0-a0db-9a2c3096ed42",
-   "qty": 64,
-   "entrada": 46.422813,
-   "stop": 45.71,
-   "target": 48.02,
-   "fecha": "2026-11-16",
-   "hora": "10:07",
-   "max_loss": 49.28,
-   "tm": {
-    "mc_avg_R": 0.021,
-    "p_target": 0.0466,
-    "p_stop": 0.2852,
-    "hist_disparos": 28,
-    "hist_avg_R": 0.022,
-    "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 14 % (target first 4.7 % vs stop first 28.5 %)."
-   }
-  }
- },
+ "abiertas": {},
  "hoy": {
   "fecha": "2026-11-16",
   "entradas": 1,
-  "pnl": 0.0,
-  "r": 0.0,
+  "pnl": -46.96998399999984,
+  "r": -1.0295912111591687,
   "evaluados": {
    "BRZE": "omitida: timemachine: R promedio simulado -0.052 no es > 0",
    "LPLA": "omitida: timemachine: R promedio simulado -0.088 no es > 0",
@@ -35,12 +16,18 @@
    "ASTS": "omitida: timemachine: R promedio simulado -0.132 no es > 0",
    "RIVN": "omitida: risk BLOCK: position: RIVN would be $3,742.38, 75.4% of the $4,962.39 account, over your 75% cap",
    "STWD": "omitida: timemachine: R promedio simulado -0.183 no es > 0",
-   "LUV": "COMPRADA"
+   "LUV": "COMPRADA",
+   "LNG": "omitida: señal vieja (135 min)",
+   "APP": "omitida: señal vieja (100 min)",
+   "ADSK": "omitida: señal vieja (165 min)",
+   "FLEX": "omitida: señal vieja (170 min)",
+   "WSM": "omitida: señal vieja (165 min)",
+   "SWKS": "omitida: señal vieja (90 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794841638.611665,
+  "ultimo_scan": 1794854232.07278,
   "sombra": {
    "vistos": [
     "BRZE",
@@ -231,7 +218,8 @@
     "GFL",
     "KVYO",
     "FTS",
-    "WST"
+    "WST",
+    "WSM"
    ],
    "ultimo_scan": 1794853602.518551,
    "limitado": 0,

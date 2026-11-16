@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "LUV",
+  "symbol": "SWKS",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-16",
   "status": "triggered",
-  "time": "10:05 AM",
-  "bar_start": "10:00",
-  "bar_index": 6,
-  "price": 46.48,
-  "level": 46.47,
+  "time": "12:10 PM",
+  "bar_start": "12:05",
+  "bar_index": 31,
+  "price": 89.2,
+  "level": 89.19,
   "interval": "5m",
   "opening_range": {
-    "high": 46.47,
-    "low": 44.95,
+    "high": 89.19,
+    "low": 87.35,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-16T15:10:30Z",
-  "reason": "the 10:00 bar closed above the range high"
+  "checked_at": "2026-11-16T18:40:27Z",
+  "reason": "the 12:05 bar closed above the range high"
 }
