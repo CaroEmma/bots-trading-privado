@@ -137,7 +137,9 @@
     "CAH",
     "MSI",
     "INSM",
-    "BRK.B"
+    "BRK.B",
+    "T",
+    "ZBRA"
    ],
    "perdidos": [
     "TEL",
@@ -177,9 +179,10 @@
     "IAG",
     "ASO",
     "COF",
-    "ES"
+    "ES",
+    "BUD"
    ],
-   "ultimo_scan": 1794843548.707015,
+   "ultimo_scan": 1794844179.128297,
    "limitado": 0,
    "errores": 0
   }
