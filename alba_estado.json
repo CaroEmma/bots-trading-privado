@@ -152,7 +152,10 @@
     "INTU",
     "ENTG",
     "CRDO",
-    "SIMO"
+    "SIMO",
+    "SHOP",
+    "HTHT",
+    "VEEV"
    ],
    "perdidos": [
     "TEL",
@@ -195,7 +198,7 @@
     "ES",
     "BUD"
    ],
-   "ultimo_scan": 1794844808.87112,
+   "ultimo_scan": 1794845440.159936,
    "limitado": 0,
    "errores": 0
   }
