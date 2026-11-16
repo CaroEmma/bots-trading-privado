@@ -179,7 +179,8 @@
     "PAYX",
     "UPS",
     "CHD",
-    "ARMK"
+    "ARMK",
+    "ADP"
    ],
    "perdidos": [
     "TEL",
@@ -227,7 +228,7 @@
     "GFL",
     "KVYO"
    ],
-   "ultimo_scan": 1794849838.274947,
+   "ultimo_scan": 1794850472.177865,
    "limitado": 0,
    "errores": 0
   }
