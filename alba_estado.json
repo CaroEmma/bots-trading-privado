@@ -171,7 +171,8 @@
     "KLAC",
     "MTSI",
     "HUBS",
-    "FN"
+    "FN",
+    "MPWR"
    ],
    "perdidos": [
     "TEL",
@@ -212,9 +213,10 @@
     "ASO",
     "COF",
     "ES",
-    "BUD"
+    "BUD",
+    "LNG"
    ],
-   "ultimo_scan": 1794846708.905296,
+   "ultimo_scan": 1794847339.842478,
    "limitado": 0,
    "errores": 0
   }
