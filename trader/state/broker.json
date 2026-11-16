@@ -215,6 +215,32 @@
       "qty": "26",
       "price": 142.17,
       "plain": "SELL 26 COP at 142.17"
+    },
+    {
+      "at": "2026-11-16T10:07-05:00",
+      "date": "2026-11-16",
+      "index": 1,
+      "fingerprint": "ee4da38d63fc0522",
+      "symbol": "LUV",
+      "side": "buy",
+      "qty": "64",
+      "kind": "entry",
+      "max_loss": 49.28,
+      "stop": 45.71,
+      "plain": "buy 64 LUV (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "a6a9554c-3722-49d0-a0db-9a2c3096ed42",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-16T10:10:35-05:00",
+      "date": "2026-11-16",
+      "status": "filled",
+      "symbol": "LUV",
+      "side": "buy",
+      "qty": "64",
+      "price": 46.4228,
+      "plain": "BUY 64 LUV at 46.42"
     }
   ]
 }

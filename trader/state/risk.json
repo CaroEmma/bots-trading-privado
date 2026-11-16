@@ -1,46 +1,44 @@
 {
   "date": "2026-11-16",
-  "now_new_york": "2026-11-16 09:59",
+  "now_new_york": "2026-11-16 10:10",
   "paper": true,
   "results": [
     {
       "index": 1,
-      "symbol": "TECK",
+      "symbol": "LUV",
       "side": "buy",
       "kind": "entry",
-      "amount": "63 shares",
-      "value_usd": 3746.61,
-      "entry_ref": 59.47,
+      "amount": "64 shares",
+      "value_usd": 2974.72,
+      "entry_ref": 46.48,
       "entry_ref_from": "plan",
-      "stop": 59.14,
-      "target": 60.13,
-      "risk_per_share": 0.33,
-      "max_loss": 20.79,
+      "stop": 45.71,
+      "target": 48.02,
+      "risk_per_share": 0.77,
+      "max_loss": 49.28,
       "reward_risk": 2.0,
-      "fingerprint": "092dba254bc74006",
-      "verdict": "BLOCK",
-      "reasons": [
-        "position: TECK would be $3,746.61, 75.5% of the $4,962.39 account, over your 75% cap"
-      ],
+      "fingerprint": "ee4da38d63fc0522",
+      "verdict": "PASS",
+      "reasons": [],
       "warnings": [],
       "info": [
-        "entry 59.47 (the plan's entry), stop 59.14, target 60.13: risk 0.33 a share",
-        "max loss $20.79 (limit $50), reward:risk 2.00 (min 1)",
+        "entry 46.48 (the plan's entry), stop 45.71, target 48.02: risk 0.77 a share",
+        "max loss $49.28 (limit $50), reward:risk 2.00 (min 1)",
         "today before this: 0 of 3 trades, $0 of $150 daily loss"
       ]
     }
   ],
-  "pass": 0,
-  "block": 1,
+  "pass": 1,
+  "block": 0,
   "warnings": [],
-  "cash_after": 4962.39,
+  "cash_after": 1987.67,
   "today": {
     "orders_placed": 0,
     "entries_placed": 0,
     "loss_at_risk": 0.0,
     "day_trades_5d": null
   },
-  "prices_as_of": "2026-11-16T14:59:31Z",
-  "checked_at": "2026-11-16T14:59:31Z",
+  "prices_as_of": "2026-11-16T15:10:31Z",
+  "checked_at": "2026-11-16T15:10:31Z",
   "orders_file": "trader/orders.json"
 }
