@@ -277,6 +277,16 @@
       "qty": "27",
       "price": 134.65,
       "plain": "BUY 27 CHRW at 134.65"
+    },
+    {
+      "at": "2026-11-16T15:40:35-05:00",
+      "date": "2026-11-16",
+      "status": "filled",
+      "symbol": "CHRW",
+      "side": "sell",
+      "qty": "27",
+      "price": 134.7,
+      "plain": "SELL 27 CHRW at 134.70"
     }
   ]
 }
