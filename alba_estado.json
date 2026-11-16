@@ -173,7 +173,8 @@
     "HUBS",
     "FN",
     "MPWR",
-    "APP"
+    "APP",
+    "SWKS"
    ],
    "perdidos": [
     "TEL",
@@ -217,9 +218,10 @@
     "BUD",
     "LNG",
     "TIGO",
-    "RL"
+    "RL",
+    "GFL"
    ],
-   "ultimo_scan": 1794848581.1436,
+   "ultimo_scan": 1794849209.68913,
    "limitado": 0,
    "errores": 0
   }
