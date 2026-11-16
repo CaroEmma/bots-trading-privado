@@ -101,7 +101,25 @@
     "ABNB",
     "SMCI",
     "NKE",
-    "MOH"
+    "MOH",
+    "LEN",
+    "MAR",
+    "RKT",
+    "KMB",
+    "NTES",
+    "GIS",
+    "ODFL",
+    "VMC",
+    "AWK",
+    "DUK",
+    "FE",
+    "CL",
+    "CB",
+    "ALL",
+    "OLLI",
+    "SBUX",
+    "DRI",
+    "FDX"
    ],
    "perdidos": [
     "TEL",
@@ -138,9 +156,10 @@
     "POWL",
     "BROS",
     "SEZL",
-    "IAG"
+    "IAG",
+    "ASO"
    ],
-   "ultimo_scan": 0,
+   "ultimo_scan": 1794842286.271285,
    "limitado": 0,
    "errores": 0
   }
