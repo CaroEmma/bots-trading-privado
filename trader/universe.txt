@@ -726,7 +726,6 @@ BJDX|Bluejay Diagnostics, Inc. - Common Stock
 BJRI|BJ's Restaurants, Inc. - Common Stock
 BKD|Brookdale Senior Living Inc. Common Stock
 BKE|Buckle, Inc. (The) Common Stock
-BKH|Black Hills Corporation Common Stock
 BKHA|Black Hawk Acquisition Corporation - Class A Ordinary Shares
 BKKT|Bakkt, Inc. Class A Common Stock
 BKNG|Booking Holdings Inc. - Common Stock
@@ -840,6 +839,7 @@ BRN|Barnwell Industries, Inc. Common Stock
 BRNX|BrenX Ltd. - Ordinary Shares
 BRO|Brown & Brown, Inc. Common Stock
 BROS|Dutch Bros Inc. Class A Common Stock
+BRRK|Bluerock Acquisition Corp. II - Class A Ordinary Shares
 BRSL|Brightstar Lottery PLC Trading under the Legal Name to begin at the market open on July 21, 2025. Ordinary Shares
 BRSP|BrightSpire Capital, Inc. Class A Common Stock
 BRT|BRT Apartments Corp. (MD) Common Stock
@@ -2054,7 +2054,7 @@ FNWD|Finward Bancorp - common stock
 FOA|Finance of America Companies Inc. Class A Common Stock
 FOCL|EDAP TMS S.A. - American Depositary Shares, each representing One Ordinary Share
 FOF|Cohen & Steers Closed-End Opportunity Fund, Inc. Common Stock
-FOFO|Hang Feng Technology Innovation Co., Ltd. - Ordinary Shares
+FOFO|Hang Feng Technology Innovation Co., Ltd. - Class A Ordinary Shares
 FOIL|Londian Wason New Energy Tech Inc. American Depositary Shares, each representing five Ordinary Shares
 FOR|Forestar Group Inc Common Stock
 FORM|FormFactor, Inc. - Common Stock
@@ -2604,6 +2604,7 @@ HYNE|Hoyne Bancorp, Inc. - Common Stock
 HYPD|Hyperion DeFi, Inc. - Common Stock
 HYPR|Hyperfine, Inc. - Class A Common Stock
 HYT|Blackrock Corporate High Yield Fund, Inc. Common Stock
+HZN|Bright Horizon Energy Corporation Common Stock
 HZO|MarineMax, Inc. (FL) Common Stock
 IA|Innovative Solutions and Support, Inc. - Common Stock
 IACO|Idea Acquisition Corp. - Class A Ordinary Shares
@@ -2810,7 +2811,6 @@ ISRG|Intuitive Surgical, Inc. - Common Stock
 ISTR|Investar Holding Corporation - Common Stock
 IT|Gartner, Inc. Common Stock
 ITG|ITG, Inc. - Class A Common Stock
-ITGR|Integer Holdings Corporation Common Stock
 ITHA|ITHAX Acquisition Corp III - Class A Ordinary Shares
 ITIC|Investors Title Company - Common Stock
 ITOC|iTonic Holdings Ltd - Class A Ordinary Shares
@@ -3017,7 +3017,6 @@ KSS|Kohl's Corporation Common Stock
 KT|KT Corporation Common Stock
 KTB|Kontoor Brands, Inc. Common Stock
 KTCC|Key Tronic Corporation - Common Stock
-KTF|DWS Municipal Income Trust
 KTOS|Kratos Defense & Security Solutions, Inc. - Common Stock
 KTTA|Pasithea Therapeutics Corp. - Common Stock
 KTWO|K2 Capital Acquisition Corporation - Class A Ordinary Share
@@ -3834,7 +3833,6 @@ NVX|NOVONIX Limited - American Depository Shares
 NWAX|New America Acquisition I Corp. Class A Common Stock
 NWBI|Northwest Bancshares, Inc. - Common Stock
 NWCL|newcleo plc - Ordinary Shares
-NWE|NorthWestern Energy Group, Inc. - Common Stock
 NWFL|Norwood Financial Corp. - Common Stock
 NWG|NatWest Group plc American Depositary Shares, (each representing two (2) Ordinary Shares)
 NWGL|CL Workshop Group Limited - American Depositary Shares
@@ -4202,7 +4200,6 @@ PLAY|Dave & Buster's Entertainment, Inc. - Common Stock
 PLBC|Plumas Bancorp - Common Stock
 PLBL|Polibeli Group Ltd - Class A Ordinary Shares
 PLBY|Playboy, Inc. - Common Stock
-PLCE|Children's Place, Inc. (The) - Common Stock
 PLCI|Pelican Acquisition II Corporation - Ordinary Shares
 PLD|Prologis, Inc. Common Stock
 PLG|Platinum Group Metals Ltd. Ordinary Shares (Canada)
@@ -4263,6 +4260,7 @@ PONO|Pono Capital Four, Inc. - Class A Ordinary Shares
 PONY|Pony AI Inc. - American Depositary Shares
 POOL|Pool Corporation - Common Stock
 POR|Portland General Electric Co Common Stock
+PORT|Southport Acquisition Corp. II Class A Ordinary Shares
 POST|Post Holdings, Inc. Common Stock
 POWI|Power Integrations, Inc. - Common Stock
 POWL|Powell Industries, Inc. - Common Stock

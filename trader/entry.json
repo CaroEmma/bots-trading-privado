@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "COP",
+  "symbol": "FTAI",
   "setup": "orb",
   "side": "buy",
-  "date": "2026-11-13",
+  "date": "2026-11-16",
   "status": "triggered",
-  "time": "10:25 AM",
-  "bar_start": "10:20",
-  "bar_index": 10,
-  "price": 142.03,
-  "level": 142.0,
+  "time": "9:50 AM",
+  "bar_start": "09:45",
+  "bar_index": 3,
+  "price": 176.62,
+  "level": 176.57,
   "interval": "5m",
   "opening_range": {
-    "high": 142.0,
-    "low": 140.58,
+    "high": 176.57,
+    "low": 172.26,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-13T15:33:59Z",
-  "reason": "the 10:20 bar closed above the range high"
+  "checked_at": "2026-11-16T14:59:31Z",
+  "reason": "the 9:45 bar closed above the range high"
 }

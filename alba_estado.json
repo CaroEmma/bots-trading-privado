@@ -5,9 +5,55 @@
   "entradas": 0,
   "pnl": 0.0,
   "r": 0.0,
-  "evaluados": {},
-  "universo": false,
+  "evaluados": {
+   "BRZE": "omitida: timemachine: R promedio simulado -0.052 no es > 0",
+   "LPLA": "omitida: timemachine: R promedio simulado -0.088 no es > 0",
+   "BB": "omitida: timemachine: R promedio simulado -0.002 no es > 0",
+   "JD": "omitida: budget: No order: reward:risk 0.64 (target 28.03, entry 27.89, stop 27.67) is under your minimum 1, so trader-risk would block it. No order. Skip it, or make a new plan",
+   "TECK": "omitida: risk BLOCK: position: TECK would be $3,746.61, 75.5% of the $4,962.39 account, over your 75% cap",
+   "FTAI": "omitida: timemachine: R promedio simulado -0.01 no es > 0"
+  },
+  "universo": true,
   "sesion": true,
-  "informe": false
+  "informe": false,
+  "ultimo_scan": 1794840987.207206,
+  "sombra": {
+   "vistos": [
+    "BRZE",
+    "LPLA",
+    "BB",
+    "GNRC",
+    "JD",
+    "FTAI",
+    "TECK",
+    "CACI",
+    "FBIN",
+    "DPZ",
+    "SO",
+    "BTSG",
+    "RYAAY",
+    "STLD",
+    "TSCO",
+    "PWR",
+    "MKC",
+    "CELH",
+    "RBRK",
+    "SNX",
+    "ATI",
+    "PCG",
+    "BHP",
+    "CDNA",
+    "BCE",
+    "UBER",
+    "CMCSA",
+    "COIN",
+    "TSN",
+    "APH"
+   ],
+   "perdidos": [],
+   "ultimo_scan": 0,
+   "limitado": 0,
+   "errores": 0
+  }
  }
 }

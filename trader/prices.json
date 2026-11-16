@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-13T15:34:01Z",
+  "as_of": "2026-11-16T14:59:31Z",
   "source": "yahoo",
   "note": "Delayed quotes for alerts and sizing checks. Your broker's price is the one that fills. detail.fetched is when each price was read.",
   "prices": {
@@ -8,7 +8,9 @@
     "SLB": 51.105,
     "MSFT": 524.4,
     "UNH": 405.87,
-    "COP": 142.35
+    "COP": 142.35,
+    "JD": 27.885,
+    "TECK": 59.35
   },
   "detail": {
     "SPCX": {
@@ -46,6 +48,18 @@
       "time": "2026-11-13T15:34:00Z",
       "source": "yahoo",
       "fetched": "2026-11-13T15:34:01Z"
+    },
+    "JD": {
+      "prev_close": 27.91,
+      "time": "2026-11-16T14:59:27Z",
+      "source": "yahoo",
+      "fetched": "2026-11-16T14:59:29Z"
+    },
+    "TECK": {
+      "prev_close": 60.19,
+      "time": "2026-11-16T14:59:14Z",
+      "source": "yahoo",
+      "fetched": "2026-11-16T14:59:31Z"
     }
   }
 }
