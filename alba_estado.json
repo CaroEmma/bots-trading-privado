@@ -28,12 +28,18 @@
    "FTS": "omitida: señal vieja (205 min)",
    "OXY": "omitida: señal vieja (180 min)",
    "MU": "omitida: señal vieja (145 min)",
-   "ADP": "omitida: señal vieja (86 min)"
+   "ADP": "omitida: señal vieja (86 min)",
+   "AJG": "omitida: señal vieja (216 min)",
+   "RL": "omitida: señal vieja (196 min)",
+   "AVGO": "omitida: señal vieja (156 min)",
+   "XYL": "omitida: señal vieja (241 min)",
+   "TIGO": "omitida: señal vieja (206 min)",
+   "HTHT": "omitida: señal vieja (171 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794854865.993013,
+  "ultimo_scan": 1794855494.052622,
   "sombra": {
    "vistos": [
     "BRZE",
