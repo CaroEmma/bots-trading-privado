@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-16T17:55:24Z",
+  "created_at": "2026-11-16T18:05:52Z",
   "mode": "orb",
-  "as_of": "2026-11-16 12:55 ET",
+  "as_of": "2026-11-16 13:05 ET",
   "universe": 5930,
-  "scanned": 1141,
+  "scanned": 1120,
   "failed": 0,
-  "unconfirmed": 411,
+  "unconfirmed": 397,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -41,19 +41,6 @@
       "or_high": 13.19,
       "or_low": 12.93,
       "pct_over": 0.3
-    },
-    {
-      "symbol": "B",
-      "setups": [
-        "orb"
-      ],
-      "price": 37.7,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 37.6,
-      "or_low": 36.92,
-      "pct_over": 0.27
     },
     {
       "symbol": "BHP",
@@ -251,6 +238,19 @@
       "pct_over": 1.12
     },
     {
+      "symbol": "SCCO",
+      "setups": [
+        "orb"
+      ],
+      "price": 160.59,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 159.77,
+      "or_low": 157.04,
+      "pct_over": 0.51
+    },
+    {
       "symbol": "SEZL",
       "setups": [
         "orb"
@@ -379,6 +379,19 @@
       "or_high": 256.91,
       "or_low": 253.01,
       "pct_over": 0.25
+    },
+    {
+      "symbol": "NXT",
+      "setups": [
+        "orb"
+      ],
+      "price": 94.0,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 93.59,
+      "or_low": 90.69,
+      "pct_over": 0.44
     },
     {
       "symbol": "PWR",
@@ -706,19 +719,6 @@
       "pct_over": 0.29
     },
     {
-      "symbol": "SBUX",
-      "setups": [
-        "orb"
-      ],
-      "price": 109.68,
-      "at": "10:15 AM",
-      "bar_start": "10:10",
-      "bar_index": 8,
-      "or_high": 109.47,
-      "or_low": 107.69,
-      "pct_over": 0.2
-    },
-    {
       "symbol": "AJG",
       "setups": [
         "orb"
@@ -899,19 +899,6 @@
       "or_high": 594.99,
       "or_low": 588.55,
       "pct_over": 0.08
-    },
-    {
-      "symbol": "GFL",
-      "setups": [
-        "orb"
-      ],
-      "price": 42.48,
-      "at": "10:35 AM",
-      "bar_start": "10:30",
-      "bar_index": 12,
-      "or_high": 42.47,
-      "or_low": 42.01,
-      "pct_over": 0.02
     },
     {
       "symbol": "TIGO",
