@@ -155,7 +155,14 @@
     "SIMO",
     "SHOP",
     "HTHT",
-    "VEEV"
+    "VEEV",
+    "COP",
+    "AVGO",
+    "EOG",
+    "MSCI",
+    "TRGP",
+    "ONTO",
+    "U"
    ],
    "perdidos": [
     "TEL",
@@ -198,7 +205,7 @@
     "ES",
     "BUD"
    ],
-   "ultimo_scan": 1794845440.159936,
+   "ultimo_scan": 1794846075.630013,
    "limitado": 0,
    "errores": 0
   }
