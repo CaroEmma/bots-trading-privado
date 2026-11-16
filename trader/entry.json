@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "HTHT",
+  "symbol": "MAR",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-16",
   "status": "triggered",
-  "time": "11:10 AM",
-  "bar_start": "11:05",
-  "bar_index": 19,
-  "price": 55.51,
-  "level": 55.49,
+  "time": "10:10 AM",
+  "bar_start": "10:05",
+  "bar_index": 7,
+  "price": 428.88,
+  "level": 428.65,
   "interval": "5m",
   "opening_range": {
-    "high": 55.49,
-    "low": 52.08,
+    "high": 428.65,
+    "low": 425.0,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-16T19:01:32Z",
-  "reason": "the 11:05 bar closed above the range high"
+  "checked_at": "2026-11-16T19:13:17Z",
+  "reason": "the 10:05 bar closed above the range high"
 }

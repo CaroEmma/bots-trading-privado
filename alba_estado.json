@@ -34,12 +34,18 @@
    "AVGO": "omitida: señal vieja (156 min)",
    "XYL": "omitida: señal vieja (241 min)",
    "TIGO": "omitida: señal vieja (206 min)",
-   "HTHT": "omitida: señal vieja (171 min)"
+   "HTHT": "omitida: señal vieja (171 min)",
+   "VEEV": "omitida: señal vieja (177 min)",
+   "SYY": "omitida: señal vieja (112 min)",
+   "UPS": "omitida: señal vieja (107 min)",
+   "DPZ": "omitida: señal vieja (263 min)",
+   "PEP": "omitida: señal vieja (248 min)",
+   "MAR": "omitida: señal vieja (243 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1794855494.052622,
+  "ultimo_scan": 1794856172.819428,
   "sombra": {
    "vistos": [
     "BRZE",
