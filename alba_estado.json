@@ -180,7 +180,9 @@
     "UPS",
     "CHD",
     "ARMK",
-    "ADP"
+    "ADP",
+    "CHTR",
+    "TPR"
    ],
    "perdidos": [
     "TEL",
@@ -226,9 +228,10 @@
     "TIGO",
     "RL",
     "GFL",
-    "KVYO"
+    "KVYO",
+    "FTS"
    ],
-   "ultimo_scan": 1794850472.177865,
+   "ultimo_scan": 1794851098.743204,
    "limitado": 0,
    "errores": 0
   }
