@@ -139,7 +139,20 @@
     "INSM",
     "BRK.B",
     "T",
-    "ZBRA"
+    "ZBRA",
+    "ADSK",
+    "FLEX",
+    "OXY",
+    "EXE",
+    "WDC",
+    "SYNA",
+    "HLT",
+    "COHR",
+    "ADBE",
+    "INTU",
+    "ENTG",
+    "CRDO",
+    "SIMO"
    ],
    "perdidos": [
     "TEL",
@@ -182,7 +195,7 @@
     "ES",
     "BUD"
    ],
-   "ultimo_scan": 1794844179.128297,
+   "ultimo_scan": 1794844808.87112,
    "limitado": 0,
    "errores": 0
   }
