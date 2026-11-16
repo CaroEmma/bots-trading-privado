@@ -119,7 +119,20 @@
     "OLLI",
     "SBUX",
     "DRI",
-    "FDX"
+    "FDX",
+    "AJG",
+    "BXDC",
+    "XYZ",
+    "EXC",
+    "SHW",
+    "UL",
+    "HDB",
+    "MDLN",
+    "GWW",
+    "WCN",
+    "HD",
+    "ELV",
+    "MDGL"
    ],
    "perdidos": [
     "TEL",
@@ -157,9 +170,11 @@
     "BROS",
     "SEZL",
     "IAG",
-    "ASO"
+    "ASO",
+    "COF",
+    "ES"
    ],
-   "ultimo_scan": 1794842286.271285,
+   "ultimo_scan": 1794842919.12221,
    "limitado": 0,
    "errores": 0
   }
