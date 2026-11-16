@@ -174,7 +174,12 @@
     "FN",
     "MPWR",
     "APP",
-    "SWKS"
+    "SWKS",
+    "SYY",
+    "PAYX",
+    "UPS",
+    "CHD",
+    "ARMK"
    ],
    "perdidos": [
     "TEL",
@@ -219,9 +224,10 @@
     "LNG",
     "TIGO",
     "RL",
-    "GFL"
+    "GFL",
+    "KVYO"
    ],
-   "ultimo_scan": 1794849209.68913,
+   "ultimo_scan": 1794849838.274947,
    "limitado": 0,
    "errores": 0
   }
