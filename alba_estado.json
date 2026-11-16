@@ -172,7 +172,8 @@
     "MTSI",
     "HUBS",
     "FN",
-    "MPWR"
+    "MPWR",
+    "APP"
    ],
    "perdidos": [
     "TEL",
@@ -215,9 +216,10 @@
     "ES",
     "BUD",
     "LNG",
-    "TIGO"
+    "TIGO",
+    "RL"
    ],
-   "ultimo_scan": 1794847961.69668,
+   "ultimo_scan": 1794848581.1436,
    "limitado": 0,
    "errores": 0
   }
