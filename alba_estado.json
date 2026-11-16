@@ -162,7 +162,16 @@
     "MSCI",
     "TRGP",
     "ONTO",
-    "U"
+    "U",
+    "MU",
+    "TEAM",
+    "TXN",
+    "ASX",
+    "SKHY",
+    "KLAC",
+    "MTSI",
+    "HUBS",
+    "FN"
    ],
    "perdidos": [
     "TEL",
@@ -205,7 +214,7 @@
     "ES",
     "BUD"
    ],
-   "ultimo_scan": 1794846075.630013,
+   "ultimo_scan": 1794846708.905296,
    "limitado": 0,
    "errores": 0
   }
