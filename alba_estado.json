@@ -132,7 +132,12 @@
     "WCN",
     "HD",
     "ELV",
-    "MDGL"
+    "MDGL",
+    "CMS",
+    "CAH",
+    "MSI",
+    "INSM",
+    "BRK.B"
    ],
    "perdidos": [
     "TEL",
@@ -174,7 +179,7 @@
     "COF",
     "ES"
    ],
-   "ultimo_scan": 1794842919.12221,
+   "ultimo_scan": 1794843548.707015,
    "limitado": 0,
    "errores": 0
   }
