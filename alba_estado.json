@@ -209,7 +209,10 @@
     "CHTR",
     "TPR",
     "CBRS",
-    "CHRW"
+    "CHRW",
+    "ZETA",
+    "FFIV",
+    "STX"
    ],
    "perdidos": [
     "TEL",
@@ -265,9 +268,10 @@
     "EXPD",
     "QLYS",
     "BR",
-    "D"
+    "D",
+    "BJ"
    ],
-   "ultimo_scan": 1794858837.255872,
+   "ultimo_scan": 1794859497.246314,
    "limitado": 0,
    "errores": 0
   }
