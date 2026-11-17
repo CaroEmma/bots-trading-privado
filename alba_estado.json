@@ -217,9 +217,11 @@
     "AMP",
     "MLM",
     "PNC",
-    "HSY"
+    "HSY",
+    "DHI",
+    "TSN"
    ],
-   "ultimo_scan": 1794946495.179891,
+   "ultimo_scan": 1794947110.588929,
    "limitado": 0,
    "errores": 0
   }
