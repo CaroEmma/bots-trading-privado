@@ -219,9 +219,10 @@
     "PNC",
     "HSY",
     "DHI",
-    "TSN"
+    "TSN",
+    "ARMK"
    ],
-   "ultimo_scan": 1794947110.588929,
+   "ultimo_scan": 1794947418.353872,
    "limitado": 0,
    "errores": 0
   }

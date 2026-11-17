@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-17T20:25:10Z",
+  "created_at": "2026-11-17T20:30:18Z",
   "mode": "orb",
-  "as_of": "2026-11-17 15:25 ET",
+  "as_of": "2026-11-17 15:30 ET",
   "universe": 5929,
-  "scanned": 887,
+  "scanned": 897,
   "failed": 0,
-  "unconfirmed": 382,
+  "unconfirmed": 391,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -69,17 +69,30 @@
       "pct_over": 0.13
     },
     {
-      "symbol": "BAC",
+      "symbol": "ARMK",
       "setups": [
         "orb"
       ],
-      "price": 49.97,
+      "price": 57.41,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 49.92,
-      "or_low": 49.63,
-      "pct_over": 0.11
+      "or_high": 56.96,
+      "or_low": 55.78,
+      "pct_over": 0.79
+    },
+    {
+      "symbol": "B",
+      "setups": [
+        "orb"
+      ],
+      "price": 37.14,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 37.03,
+      "or_low": 36.47,
+      "pct_over": 0.3
     },
     {
       "symbol": "BLK",
@@ -145,6 +158,19 @@
       "or_high": 138.71,
       "or_low": 136.51,
       "pct_over": 0.14
+    },
+    {
+      "symbol": "CRH",
+      "setups": [
+        "orb"
+      ],
+      "price": 93.46,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 93.39,
+      "or_low": 91.2,
+      "pct_over": 0.07
     },
     {
       "symbol": "ECL",
@@ -405,19 +431,6 @@
       "or_high": 113.14,
       "or_low": 110.44,
       "pct_over": 0.59
-    },
-    {
-      "symbol": "O",
-      "setups": [
-        "orb"
-      ],
-      "price": 58.34,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 58.33,
-      "or_low": 57.72,
-      "pct_over": 0.02
     },
     {
       "symbol": "ORLY",
@@ -1265,19 +1278,6 @@
       "pct_over": 0.66
     },
     {
-      "symbol": "VFC",
-      "setups": [
-        "orb"
-      ],
-      "price": 20.58,
-      "at": "10:10 AM",
-      "bar_start": "10:05",
-      "bar_index": 7,
-      "or_high": 20.57,
-      "or_low": 20.2,
-      "pct_over": 0.02
-    },
-    {
       "symbol": "STZ",
       "setups": [
         "orb"
@@ -1380,19 +1380,6 @@
       "or_high": 182.35,
       "or_low": 181.08,
       "pct_over": 0.22
-    },
-    {
-      "symbol": "BBIO",
-      "setups": [
-        "orb"
-      ],
-      "price": 76.57,
-      "at": "10:35 AM",
-      "bar_start": "10:30",
-      "bar_index": 12,
-      "or_high": 76.57,
-      "or_low": 74.95,
-      "pct_over": 0.01
     },
     {
       "symbol": "ELV",
