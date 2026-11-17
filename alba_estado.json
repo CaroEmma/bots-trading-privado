@@ -115,7 +115,10 @@
     "LMT",
     "BILL",
     "CVS",
-    "RYTM"
+    "RYTM",
+    "ARGX",
+    "ALAB",
+    "FOXA"
    ],
    "perdidos": [
     "HDB",
@@ -194,7 +197,7 @@
     "HLT",
     "RKT"
    ],
-   "ultimo_scan": 1794935575.891637,
+   "ultimo_scan": 1794936203.631568,
    "limitado": 0,
    "errores": 0
   }

@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-17T17:12:56Z",
+  "created_at": "2026-11-17T17:23:23Z",
   "mode": "orb",
-  "as_of": "2026-11-17 12:12 ET",
+  "as_of": "2026-11-17 12:23 ET",
   "universe": 5929,
-  "scanned": 1524,
+  "scanned": 1501,
   "failed": 0,
-  "unconfirmed": 766,
+  "unconfirmed": 771,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -431,19 +431,6 @@
       "or_high": 350.95,
       "or_low": 345.42,
       "pct_over": 0.3
-    },
-    {
-      "symbol": "T",
-      "setups": [
-        "orb"
-      ],
-      "price": 22.41,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 22.4,
-      "or_low": 22.19,
-      "pct_over": 0.02
     },
     {
       "symbol": "TGT",
@@ -938,19 +925,6 @@
       "or_high": 78.85,
       "or_low": 78.1,
       "pct_over": 0.06
-    },
-    {
-      "symbol": "NWG",
-      "setups": [
-        "orb"
-      ],
-      "price": 15.61,
-      "at": "9:55 AM",
-      "bar_start": "09:50",
-      "bar_index": 4,
-      "or_high": 15.61,
-      "or_low": 15.53,
-      "pct_over": 0.05
     },
     {
       "symbol": "PG",
@@ -1484,6 +1458,45 @@
       "or_high": 107.68,
       "or_low": 106.05,
       "pct_over": 1.69
+    },
+    {
+      "symbol": "ALAB",
+      "setups": [
+        "orb"
+      ],
+      "price": 209.66,
+      "at": "12:20 PM",
+      "bar_start": "12:15",
+      "bar_index": 33,
+      "or_high": 209.4,
+      "or_low": 203.0,
+      "pct_over": 0.12
+    },
+    {
+      "symbol": "ARGX",
+      "setups": [
+        "orb"
+      ],
+      "price": 947.13,
+      "at": "12:20 PM",
+      "bar_start": "12:15",
+      "bar_index": 33,
+      "or_high": 946.12,
+      "or_low": 934.66,
+      "pct_over": 0.11
+    },
+    {
+      "symbol": "FOXA",
+      "setups": [
+        "orb"
+      ],
+      "price": 67.87,
+      "at": "12:20 PM",
+      "bar_start": "12:15",
+      "bar_index": 33,
+      "or_high": 67.65,
+      "or_low": 66.57,
+      "pct_over": 0.32
     }
   ]
 }
