@@ -1,15 +1,15 @@
 {
-  "cash": 1520.37,
+  "cash": 1617.45,
   "positions": [
     {
-      "ticker": "V",
-      "shares": 8.0,
+      "ticker": "NOC",
+      "shares": 6.0,
       "lots": [
         {
-          "id": "V-1",
+          "id": "NOC-1",
           "date": "2026-11-17",
-          "shares": 8.0,
-          "cost": 3396.4
+          "shares": 6.0,
+          "cost": 3293.64
         }
       ]
     }

@@ -313,6 +313,42 @@
       "qty": "8",
       "price": 424.55,
       "plain": "BUY 8 V at 424.55"
+    },
+    {
+      "at": "2026-11-17T10:00:35-05:00",
+      "date": "2026-11-17",
+      "status": "filled",
+      "symbol": "V",
+      "side": "sell",
+      "qty": "8",
+      "price": 423.84,
+      "plain": "SELL 8 V at 423.84"
+    },
+    {
+      "at": "2026-11-17T10:07-05:00",
+      "date": "2026-11-17",
+      "index": 1,
+      "fingerprint": "0ca7256152d4193f",
+      "symbol": "NOC",
+      "side": "buy",
+      "qty": "6",
+      "kind": "entry",
+      "max_loss": 25.74,
+      "stop": 545.75,
+      "plain": "buy 6 NOC (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "ef603b41-5afb-4014-860f-650a889e6773",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-17T10:10:19-05:00",
+      "date": "2026-11-17",
+      "status": "filled",
+      "symbol": "NOC",
+      "side": "buy",
+      "qty": "6",
+      "price": 548.94,
+      "plain": "BUY 6 NOC at 548.94"
     }
   ]
 }
