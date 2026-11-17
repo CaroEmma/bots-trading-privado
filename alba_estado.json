@@ -110,7 +110,9 @@
     "BBIO",
     "ABBV",
     "CI",
-    "AZN"
+    "AZN",
+    "ELV",
+    "LMT"
    ],
    "perdidos": [
     "HDB",
@@ -176,7 +178,7 @@
     "FERG",
     "MDGL"
    ],
-   "ultimo_scan": 1794929909.527014,
+   "ultimo_scan": 1794930538.673361,
    "limitado": 0,
    "errores": 0
   }
