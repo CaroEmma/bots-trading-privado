@@ -1,29 +1,10 @@
 {
- "abiertas": {
-  "NOC": {
-   "orden_id": "ef603b41-5afb-4014-860f-650a889e6773",
-   "qty": 6,
-   "entrada": 548.94,
-   "stop": 545.75,
-   "target": 558.62,
-   "fecha": "2026-11-17",
-   "hora": "10:07",
-   "max_loss": 25.74,
-   "tm": {
-    "mc_avg_R": 0.01,
-    "p_target": 0.1947,
-    "p_stop": 0.5055,
-    "hist_disparos": 32,
-    "hist_avg_R": -0.352,
-    "veredicto": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 28 % (target first 19.5 % vs stop first 50.5 %)."
-   }
-  }
- },
+ "abiertas": {},
  "hoy": {
   "fecha": "2026-11-17",
   "entradas": 2,
-  "pnl": -5.680000000000291,
-  "r": -0.8987341772152126,
+  "pnl": 22.63999999999919,
+  "r": 0.5808896472361456,
   "evaluados": {
    "LH": "omitida: timemachine: R promedio simulado -0.001 no es > 0",
    "PH": "omitida: timemachine: R promedio simulado -0.117 no es > 0",

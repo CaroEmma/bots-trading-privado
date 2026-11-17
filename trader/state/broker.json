@@ -349,6 +349,16 @@
       "qty": "6",
       "price": 548.94,
       "plain": "BUY 6 NOC at 548.94"
+    },
+    {
+      "at": "2026-11-17T15:40:36-05:00",
+      "date": "2026-11-17",
+      "status": "filled",
+      "symbol": "NOC",
+      "side": "sell",
+      "qty": "6",
+      "price": 553.66,
+      "plain": "SELL 6 NOC at 553.66"
     }
   ]
 }

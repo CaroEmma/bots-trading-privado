@@ -1,17 +1,4 @@
 {
-  "cash": 1617.45,
-  "positions": [
-    {
-      "ticker": "NOC",
-      "shares": 6.0,
-      "lots": [
-        {
-          "id": "NOC-1",
-          "date": "2026-11-17",
-          "shares": 6.0,
-          "cost": 3293.64
-        }
-      ]
-    }
-  ]
+  "cash": 4939.41,
+  "positions": []
 }
