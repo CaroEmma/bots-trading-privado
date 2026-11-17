@@ -215,9 +215,11 @@
     "TPR",
     "MET",
     "AMP",
-    "MLM"
+    "MLM",
+    "PNC",
+    "HSY"
    ],
-   "ultimo_scan": 1794945879.010186,
+   "ultimo_scan": 1794946495.179891,
    "limitado": 0,
    "errores": 0
   }
