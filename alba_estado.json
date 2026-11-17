@@ -122,7 +122,9 @@
     "VIK",
     "ILMN",
     "VRTX",
-    "NVO"
+    "NVO",
+    "AKAM",
+    "AXON"
    ],
    "perdidos": [
     "HDB",
@@ -213,7 +215,7 @@
     "MET",
     "AMP"
    ],
-   "ultimo_scan": 1794942804.620416,
+   "ultimo_scan": 1794943420.972503,
    "limitado": 0,
    "errores": 0
   }
