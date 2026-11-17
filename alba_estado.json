@@ -183,9 +183,11 @@
     "TXRH",
     "JBHT",
     "NVS",
-    "EXPE"
+    "EXPE",
+    "GWW",
+    "PHM"
    ],
-   "ultimo_scan": 1794932417.213575,
+   "ultimo_scan": 1794933046.874984,
    "limitado": 0,
    "errores": 0
   }
