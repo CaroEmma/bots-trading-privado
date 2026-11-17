@@ -121,7 +121,8 @@
     "FOXA",
     "VIK",
     "ILMN",
-    "VRTX"
+    "VRTX",
+    "NVO"
    ],
    "perdidos": [
     "HDB",
@@ -206,7 +207,7 @@
     "KKR",
     "QXO"
    ],
-   "ultimo_scan": 1794939985.152762,
+   "ultimo_scan": 1794940616.783207,
    "limitado": 0,
    "errores": 0
   }
