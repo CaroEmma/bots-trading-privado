@@ -113,7 +113,8 @@
     "AZN",
     "ELV",
     "LMT",
-    "BILL"
+    "BILL",
+    "CVS"
    ],
    "perdidos": [
     "HDB",
@@ -190,7 +191,7 @@
     "NWG",
     "D"
    ],
-   "ultimo_scan": 1794933672.503647,
+   "ultimo_scan": 1794934299.537717,
    "limitado": 0,
    "errores": 0
   }
