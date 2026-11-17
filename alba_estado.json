@@ -114,7 +114,8 @@
     "ELV",
     "LMT",
     "BILL",
-    "CVS"
+    "CVS",
+    "RYTM"
    ],
    "perdidos": [
     "HDB",
@@ -189,9 +190,10 @@
     "GWW",
     "PHM",
     "NWG",
-    "D"
+    "D",
+    "HLT"
    ],
-   "ultimo_scan": 1794934299.537717,
+   "ultimo_scan": 1794934927.176607,
    "limitado": 0,
    "errores": 0
   }
