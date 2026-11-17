@@ -92,7 +92,14 @@
     "AMAT",
     "NSIT",
     "RDDT",
-    "AS"
+    "AS",
+    "FER",
+    "NEE",
+    "RIVN",
+    "LYV",
+    "VFC",
+    "MOH",
+    "PYPL"
    ],
    "perdidos": [
     "HDB",
@@ -151,9 +158,12 @@
     "AG",
     "HONA",
     "SYK",
-    "DIS"
+    "DIS",
+    "BNY",
+    "CAH",
+    "FNV"
    ],
-   "ultimo_scan": 0,
+   "ultimo_scan": 1794928665.773313,
    "limitado": 0,
    "errores": 0
   }
