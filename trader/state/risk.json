@@ -1,44 +1,44 @@
 {
-  "date": "2026-11-16",
-  "now_new_york": "2026-11-16 14:19",
+  "date": "2026-11-17",
+  "now_new_york": "2026-11-17 09:59",
   "paper": true,
   "results": [
     {
       "index": 1,
-      "symbol": "CHRW",
+      "symbol": "V",
       "side": "buy",
       "kind": "entry",
-      "amount": "27 shares",
-      "value_usd": 3644.73,
-      "entry_ref": 134.99,
+      "amount": "8 shares",
+      "value_usd": 3400.16,
+      "entry_ref": 425.02,
       "entry_ref_from": "plan",
-      "stop": 134.29,
-      "target": 136.39,
-      "risk_per_share": 0.7,
-      "max_loss": 18.9,
+      "stop": 423.76,
+      "target": 427.54,
+      "risk_per_share": 1.26,
+      "max_loss": 10.08,
       "reward_risk": 2.0,
-      "fingerprint": "2c94c9d565c54b0a",
+      "fingerprint": "0258b0d702673579",
       "verdict": "PASS",
       "reasons": [],
       "warnings": [],
       "info": [
-        "entry 134.99 (the plan's entry), stop 134.29, target 136.39: risk 0.70 a share",
-        "max loss $18.90 (limit $50), reward:risk 2.00 (min 1)",
-        "today before this: 1 of 3 trades, $49.28 of $150 daily loss"
+        "entry 425.02 (the plan's entry), stop 423.76, target 427.54: risk 1.26 a share",
+        "max loss $10.08 (limit $50), reward:risk 2.00 (min 1)",
+        "today before this: 0 of 3 trades, $0 of $150 daily loss"
       ]
     }
   ],
   "pass": 1,
   "block": 0,
   "warnings": [],
-  "cash_after": 1270.69,
+  "cash_after": 1516.61,
   "today": {
-    "orders_placed": 1,
-    "entries_placed": 1,
-    "loss_at_risk": 49.28,
+    "orders_placed": 0,
+    "entries_placed": 0,
+    "loss_at_risk": 0.0,
     "day_trades_5d": null
   },
-  "prices_as_of": "2026-11-16T19:19:31Z",
-  "checked_at": "2026-11-16T19:19:31Z",
+  "prices_as_of": "2026-11-17T14:59:14Z",
+  "checked_at": "2026-11-17T14:59:15Z",
   "orders_file": "trader/orders.json"
 }

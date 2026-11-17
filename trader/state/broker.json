@@ -287,6 +287,32 @@
       "qty": "27",
       "price": 134.7,
       "plain": "SELL 27 CHRW at 134.70"
+    },
+    {
+      "at": "2026-11-17T09:56-05:00",
+      "date": "2026-11-17",
+      "index": 1,
+      "fingerprint": "0258b0d702673579",
+      "symbol": "V",
+      "side": "buy",
+      "qty": "8",
+      "kind": "entry",
+      "max_loss": 10.08,
+      "stop": 423.76,
+      "plain": "buy 8 V (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "9ce4b42b-7f3c-4170-b3e1-8fb838a3a837",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-17T09:59:16-05:00",
+      "date": "2026-11-17",
+      "status": "filled",
+      "symbol": "V",
+      "side": "buy",
+      "qty": "8",
+      "price": 424.55,
+      "plain": "BUY 8 V at 424.55"
     }
   ]
 }

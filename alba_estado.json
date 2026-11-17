@@ -1,13 +1,76 @@
 {
- "abiertas": {},
+ "abiertas": {
+  "V": {
+   "orden_id": "9ce4b42b-7f3c-4170-b3e1-8fb838a3a837",
+   "qty": 8,
+   "entrada": 424.55,
+   "stop": 423.76,
+   "target": 427.54,
+   "fecha": "2026-11-17",
+   "hora": "09:56",
+   "max_loss": 10.08,
+   "tm": {
+    "mc_avg_R": 0.121,
+    "p_target": 0.3633,
+    "p_stop": 0.6151,
+    "hist_disparos": 32,
+    "hist_avg_R": 0.037,
+    "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 37 % (target first 36.3 % vs stop first 61.5 %)."
+   }
+  }
+ },
  "hoy": {
   "fecha": "2026-11-17",
-  "entradas": 0,
+  "entradas": 1,
   "pnl": 0.0,
   "r": 0.0,
-  "evaluados": {},
-  "universo": false,
+  "evaluados": {
+   "LH": "omitida: timemachine: R promedio simulado -0.001 no es > 0",
+   "PH": "omitida: timemachine: R promedio simulado -0.117 no es > 0",
+   "TGT": "omitida: timemachine: R promedio simulado -0.063 no es > 0",
+   "V": "COMPRADA"
+  },
+  "universo": true,
   "sesion": true,
-  "informe": false
+  "informe": false,
+  "ultimo_scan": 1794927367.33952,
+  "sombra": {
+   "vistos": [
+    "LH",
+    "PH",
+    "TGT",
+    "XYZ",
+    "DOV",
+    "LEN",
+    "O",
+    "T",
+    "CRH",
+    "MCHP",
+    "USB",
+    "CTAS",
+    "GM",
+    "NBIS",
+    "MCD",
+    "V",
+    "CART",
+    "CVX",
+    "JNJ",
+    "WMT",
+    "KDP",
+    "COST",
+    "XOM",
+    "CHRW",
+    "WFC",
+    "HBAN",
+    "MO",
+    "PG",
+    "MOD",
+    "TMO"
+   ],
+   "perdidos": [],
+   "ultimo_scan": 0,
+   "limitado": 0,
+   "errores": 0
+  }
  }
 }

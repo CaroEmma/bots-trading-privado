@@ -51,7 +51,6 @@ ACET|Adicet Bio, Inc. - Common Stock
 ACFN|Acorn Energy, Inc. - Common Stock
 ACGC|ACP Holdings Acquisition Corp. - Class A Ordinary Shares
 ACGL|Arch Capital Group Ltd. - Common Stock
-ACH|Accendra Health, Inc. Common Stock
 ACHC|Acadia Healthcare Company, Inc. - Common Stock
 ACHR|Archer Aviation Inc. Class A Common Stock
 ACI|Albertsons Companies, Inc. Class A Common Stock
@@ -1628,7 +1627,6 @@ DUOL|Duolingo, Inc. - Class A Common Stock
 DUOT|Duos Technologies Group, Inc. - Common Stock
 DV|DoubleVerify Holdings, Inc. Common Stock
 DVA|DaVita Inc. Common Stock
-DVLT|Datavault AI Inc. - Common Stock
 DVN|Devon Energy Corporation Common Stock
 DWSN|Dawson Geophysical Company - Common Stock
 DWTX|Dogwood Therapeutics, Inc. - Common Stock
@@ -2284,7 +2282,7 @@ GLV|Clough Global Dividend and Income Fund Common Shares of beneficial interest
 GLW|Corning Incorporated Common Stock
 GLXG|Galaxy Payroll Group Limited - Class A Ordinary Shares
 GLXY|Galaxy Digital Inc. - Class A common stock
-GM|General Motors Company Common Stock
+GM|General Motors Company - Common Stock
 GMAB|Genmab A/S - American Depositary Shares
 GME|GameStop Corporation Common Stock
 GMED|Globus Medical, Inc. Class A Common Stock
@@ -3446,7 +3444,7 @@ MO|Altria Group, Inc.
 MOB|Mobilicom Limited - Ordinary Shares
 MOBI|Mobia Medical, Inc. - Common Stock
 MOBX|Mobix Labs, Inc. - Class A Common Stock
-MOD|Modine Manufacturing Company Common Stock
+MOD|Modexus Solutions, Inc. Common Stock
 MODD|Modular Medical, Inc. - common stock
 MOG.A|Moog Inc. Class A Common Stock
 MOG.B|Moog Inc. Class B Common Stock
@@ -5382,6 +5380,7 @@ TXMD|TherapeuticsMD, Inc. - Common Stock
 TXN|Texas Instruments Incorporated - Common Stock
 TXNM|TXNM Energy, Inc. Common Stock
 TXO|TXO Partners, L.P. Common Units Representing Limited Partner Interests
+TXR|Torex Resources Inc. Common Shares
 TXRH|Texas Roadhouse, Inc. - Common Stock
 TXT|Textron Inc. Common Stock
 TY|Tri Continental Corporation Common Stock
@@ -5505,7 +5504,6 @@ VANI|Vivani Medical, Inc. - Common Stock
 VATE|INNOVATE Corp. Common Stock
 VBF|Invesco Bond Fund Common Stock
 VBIO|Valion Bio, Inc. - Common stock
-VBNK|VersaBank - Common Shares
 VC|Visteon Corporation - Common Stock
 VCEL|Vericel Corporation - Common Stock
 VCIG|VCI Global Limited - Ordinary Share
@@ -5607,6 +5605,7 @@ VREX|Varex Imaging Corporation - Common Stock
 VRM|Vroom, Inc. - Common Stock
 VRNS|Varonis Systems, Inc. - Common Stock
 VRRM|Verra Mobility Corporation - Class A Common Stock
+VRSA|Versa Bancorp - Common Stock
 VRSK|Verisk Analytics, Inc. - Common Stock
 VRSN|VeriSign, Inc. - Common Stock
 VRT|Vertiv Holdings, LLC Class A Common Stock

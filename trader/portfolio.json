@@ -1,4 +1,17 @@
 {
-  "cash": 4916.77,
-  "positions": []
+  "cash": 1520.37,
+  "positions": [
+    {
+      "ticker": "V",
+      "shares": 8.0,
+      "lots": [
+        {
+          "id": "V-1",
+          "date": "2026-11-17",
+          "shares": 8.0,
+          "cost": 3396.4
+        }
+      ]
+    }
+  ]
 }
