@@ -124,7 +124,8 @@
     "VRTX",
     "NVO",
     "AKAM",
-    "AXON"
+    "AXON",
+    "WELL"
    ],
    "perdidos": [
     "HDB",
@@ -215,7 +216,7 @@
     "MET",
     "AMP"
    ],
-   "ultimo_scan": 1794944035.259844,
+   "ultimo_scan": 1794944648.037279,
    "limitado": 0,
    "errores": 0
   }
