@@ -176,9 +176,11 @@
     "CAH",
     "FNV",
     "FERG",
-    "MDGL"
+    "MDGL",
+    "KHC",
+    "BX"
    ],
-   "ultimo_scan": 1794930538.673361,
+   "ultimo_scan": 1794931163.87815,
    "limitado": 0,
    "errores": 0
   }
