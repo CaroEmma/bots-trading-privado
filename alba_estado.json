@@ -99,7 +99,10 @@
     "LYV",
     "VFC",
     "MOH",
-    "PYPL"
+    "PYPL",
+    "STZ",
+    "MRK",
+    "RTX"
    ],
    "perdidos": [
     "HDB",
@@ -161,9 +164,10 @@
     "DIS",
     "BNY",
     "CAH",
-    "FNV"
+    "FNV",
+    "FERG"
    ],
-   "ultimo_scan": 1794928665.773313,
+   "ultimo_scan": 1794929284.687017,
    "limitado": 0,
    "errores": 0
   }
