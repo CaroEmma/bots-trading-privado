@@ -118,7 +118,10 @@
     "RYTM",
     "ARGX",
     "ALAB",
-    "FOXA"
+    "FOXA",
+    "VIK",
+    "ILMN",
+    "VRTX"
    ],
    "perdidos": [
     "HDB",
@@ -195,9 +198,10 @@
     "NWG",
     "D",
     "HLT",
-    "RKT"
+    "RKT",
+    "EW"
    ],
-   "ultimo_scan": 1794936203.631568,
+   "ultimo_scan": 1794936836.77759,
    "limitado": 0,
    "errores": 0
   }
