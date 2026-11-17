@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-17T19:03:13Z",
+  "created_at": "2026-11-17T19:13:24Z",
   "mode": "orb",
-  "as_of": "2026-11-17 14:03 ET",
+  "as_of": "2026-11-17 14:13 ET",
   "universe": 5929,
-  "scanned": 1109,
+  "scanned": 1075,
   "failed": 0,
-  "unconfirmed": 521,
+  "unconfirmed": 504,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -54,6 +54,19 @@
       "or_high": 173.39,
       "or_low": 170.97,
       "pct_over": 0.35
+    },
+    {
+      "symbol": "AMP",
+      "setups": [
+        "orb"
+      ],
+      "price": 514.39,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 513.73,
+      "or_low": 510.5,
+      "pct_over": 0.13
     },
     {
       "symbol": "B",
@@ -277,19 +290,6 @@
       "pct_over": 0.1
     },
     {
-      "symbol": "KEY",
-      "setups": [
-        "orb"
-      ],
-      "price": 21.23,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 21.2,
-      "or_low": 21.08,
-      "pct_over": 0.12
-    },
-    {
       "symbol": "KKR",
       "setups": [
         "orb"
@@ -379,19 +379,6 @@
       "or_high": 181.79,
       "or_low": 179.93,
       "pct_over": 0.33
-    },
-    {
-      "symbol": "MOD",
-      "setups": [
-        "orb"
-      ],
-      "price": 134.98,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 134.88,
-      "or_low": 131.73,
-      "pct_over": 0.07
     },
     {
       "symbol": "MS",
@@ -626,6 +613,19 @@
       "or_high": 270.73,
       "or_low": 268.24,
       "pct_over": 0.35
+    },
+    {
+      "symbol": "AXP",
+      "setups": [
+        "orb"
+      ],
+      "price": 319.19,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 318.79,
+      "or_low": 316.97,
+      "pct_over": 0.13
     },
     {
       "symbol": "AZO",
@@ -1213,19 +1213,6 @@
       "pct_over": 0.01
     },
     {
-      "symbol": "TTD",
-      "setups": [
-        "orb"
-      ],
-      "price": 14.94,
-      "at": "10:00 AM",
-      "bar_start": "09:55",
-      "bar_index": 5,
-      "or_high": 14.86,
-      "or_low": 14.54,
-      "pct_over": 0.5
-    },
-    {
       "symbol": "AS",
       "setups": [
         "orb"
@@ -1250,19 +1237,6 @@
       "or_high": 329.64,
       "or_low": 323.28,
       "pct_over": 0.11
-    },
-    {
-      "symbol": "VFC",
-      "setups": [
-        "orb"
-      ],
-      "price": 20.58,
-      "at": "10:10 AM",
-      "bar_start": "10:05",
-      "bar_index": 7,
-      "or_high": 20.57,
-      "or_low": 20.2,
-      "pct_over": 0.02
     },
     {
       "symbol": "STZ",
