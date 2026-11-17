@@ -181,9 +181,11 @@
     "BX",
     "SYF",
     "TXRH",
-    "JBHT"
+    "JBHT",
+    "NVS",
+    "EXPE"
    ],
-   "ultimo_scan": 1794931789.348535,
+   "ultimo_scan": 1794932417.213575,
    "limitado": 0,
    "errores": 0
   }

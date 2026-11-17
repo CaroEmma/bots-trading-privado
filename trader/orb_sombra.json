@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-17T16:09:49Z",
+  "created_at": "2026-11-17T16:20:17Z",
   "mode": "orb",
-  "as_of": "2026-11-17 11:09 ET",
+  "as_of": "2026-11-17 11:20 ET",
   "universe": 5929,
-  "scanned": 1790,
+  "scanned": 1704,
   "failed": 0,
-  "unconfirmed": 899,
+  "unconfirmed": 856,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -615,6 +615,19 @@
       "pct_over": 0.13
     },
     {
+      "symbol": "BX",
+      "setups": [
+        "orb"
+      ],
+      "price": 117.83,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 117.12,
+      "or_low": 116.3,
+      "pct_over": 0.61
+    },
+    {
       "symbol": "CAH",
       "setups": [
         "orb"
@@ -797,17 +810,17 @@
       "pct_over": 0.28
     },
     {
-      "symbol": "FERG",
+      "symbol": "EXPE",
       "setups": [
         "orb"
       ],
-      "price": 255.68,
+      "price": 254.06,
       "at": "9:55 AM",
       "bar_start": "09:50",
       "bar_index": 4,
-      "or_high": 253.94,
-      "or_low": 249.78,
-      "pct_over": 0.68
+      "or_high": 252.94,
+      "or_low": 250.2,
+      "pct_over": 0.44
     },
     {
       "symbol": "GS",
@@ -940,19 +953,6 @@
       "pct_over": 0.06
     },
     {
-      "symbol": "PG",
-      "setups": [
-        "orb"
-      ],
-      "price": 172.7,
-      "at": "9:55 AM",
-      "bar_start": "09:50",
-      "bar_index": 4,
-      "or_high": 172.6,
-      "or_low": 171.24,
-      "pct_over": 0.06
-    },
-    {
       "symbol": "PGR",
       "setups": [
         "orb"
@@ -1070,19 +1070,6 @@
       "pct_over": 0.28
     },
     {
-      "symbol": "TXRH",
-      "setups": [
-        "orb"
-      ],
-      "price": 189.95,
-      "at": "9:55 AM",
-      "bar_start": "09:50",
-      "bar_index": 4,
-      "or_high": 189.71,
-      "or_low": 186.44,
-      "pct_over": 0.13
-    },
-    {
       "symbol": "UPS",
       "setups": [
         "orb"
@@ -1172,19 +1159,6 @@
       "or_high": 354.29,
       "or_low": 348.84,
       "pct_over": 0.2
-    },
-    {
-      "symbol": "AMZN",
-      "setups": [
-        "orb"
-      ],
-      "price": 259.26,
-      "at": "10:00 AM",
-      "bar_start": "09:55",
-      "bar_index": 5,
-      "or_high": 258.98,
-      "or_low": 257.35,
-      "pct_over": 0.11
     },
     {
       "symbol": "ASML",
@@ -1406,6 +1380,19 @@
       "or_high": 103.69,
       "or_low": 102.27,
       "pct_over": 0.01
+    },
+    {
+      "symbol": "NVS",
+      "setups": [
+        "orb"
+      ],
+      "price": 159.26,
+      "at": "10:30 AM",
+      "bar_start": "10:25",
+      "bar_index": 11,
+      "or_high": 159.21,
+      "or_low": 158.37,
+      "pct_over": 0.03
     },
     {
       "symbol": "WEC",
