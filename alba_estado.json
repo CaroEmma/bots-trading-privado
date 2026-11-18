@@ -158,7 +158,8 @@
     "SNAP",
     "MSFT",
     "TYL",
-    "EQIX"
+    "EQIX",
+    "DUK"
    ],
    "perdidos": [
     "NCLH",
@@ -241,9 +242,11 @@
     "RYTM",
     "CAH",
     "SITE",
-    "BBIO"
+    "BBIO",
+    "VTRS",
+    "RBRK"
    ],
-   "ultimo_scan": 1795033130.056353,
+   "ultimo_scan": 1795033835.746592,
    "limitado": 0,
    "errores": 0
   }
