@@ -118,7 +118,8 @@
     "ORLY",
     "HD",
     "WCN",
-    "MOD"
+    "MOD",
+    "D"
    ],
    "perdidos": [
     "NCLH",
@@ -169,9 +170,13 @@
     "SN",
     "CORZ",
     "S",
-    "GNRC"
+    "GNRC",
+    "LULU",
+    "WSM",
+    "FE",
+    "EXPE"
    ],
-   "ultimo_scan": 1795016261.810516,
+   "ultimo_scan": 1795016883.932767,
    "limitado": 0,
    "errores": 0
   }
