@@ -2388,6 +2388,7 @@ GTN.A|Gray Media, Inc. Class A Common Stock
 GTX|Garrett Motion Inc. - Common Stock
 GTY|Getty Realty Corporation Common Stock
 GUAC|Berto Acquisition Corp. II - Ordinary Shares
+GUER|Guerrilla RF, Inc. - Common Stock
 GUG|Guggenheim Active Allocation Fund Common Shares of Beneficial Interest
 GUNN|Gunnison Copper Corp. American Depositary Shares (each representing thirty (30) Common Shares)
 GURE|Gulf Resources, Inc. - Common Stock
@@ -2620,7 +2621,6 @@ IBIO|iBio, Inc. - Common Stock
 IBKR|Interactive Brokers Group, Inc. - Class A Common Stock
 IBM|International Business Machines Corporation Common Stock
 IBN|ICICI Bank Limited Common Stock
-IBO|Impact BioMedical, Inc. Common Stock
 IBOC|International Bancshares Corporation Common Stock
 IBP|Installed Building Products, Inc. Common Stock
 IBRX|ImmunityBio, Inc. - Common Stock
@@ -4100,7 +4100,6 @@ PCM|PCM Fund, Inc. Common Stock
 PCN|Pimco Corporate & Income Strategy Fund Common Stock
 PCOR|Procore Technologies, Inc. Common Stock
 PCQ|PIMCO California Municipal Income Fund Common Stock
-PCRX|Pacira BioSciences, Inc. - Common Stock
 PCSA|Processa Pharmaceuticals, Inc. - Common Stock
 PCT|PureCycle Technologies, Inc. - Common stock
 PCTY|Paylocity Holding Corporation - Common Stock
@@ -4783,7 +4782,6 @@ SHBI|Shore Bancshares, Inc. - Common Stock
 SHC|Sotera Health Company - Common Stock
 SHEL|Shell PLC American Depositary Shares (each representing two (2) Ordinary Shares)
 SHEN|Shenandoah Telecommunications Co - Common Stock
-SHFS|SHF Holdings, Inc. - Class A Common Stock
 SHG|Shinhan Financial Group Co Ltd American Depositary Shares
 SHIM|Shimmick Corporation - Common Stock
 SHIP|Seanergy Maritime Holdings Corp. - Common Stock
@@ -5910,6 +5908,7 @@ ZLAB|Zai Lab Limited - American Depositary Shares
 ZM|Zoom Communications, Inc. - Class A Common Stock
 ZNB|Zeta Network Group - Class A Ordinary Shares
 ZNTL|Zentalis Pharmaceuticals, Inc. - common stock
+ZOAR|Zoar Limited Ordinary Shares
 ZONE|Zone Frontier Inc. Class B Common Stock
 ZOOZ|ZOOZ Strategy Ltd. - Ordinary Shares
 ZS|Zscaler, Inc. - Common Stock

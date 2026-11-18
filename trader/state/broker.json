@@ -359,6 +359,32 @@
       "qty": "6",
       "price": 553.66,
       "plain": "SELL 6 NOC at 553.66"
+    },
+    {
+      "at": "2026-11-18T09:50-05:00",
+      "date": "2026-11-18",
+      "index": 1,
+      "fingerprint": "9f9da95622772b4c",
+      "symbol": "FERG",
+      "side": "buy",
+      "qty": "14",
+      "kind": "entry",
+      "max_loss": 39.06,
+      "stop": 248.29,
+      "plain": "buy 14 FERG (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "7651efea-4eaf-4d0c-bc2d-7e70689ba4a7",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-18T09:53:20-05:00",
+      "date": "2026-11-18",
+      "status": "filled",
+      "symbol": "FERG",
+      "side": "buy",
+      "qty": "14",
+      "price": 251.38,
+      "plain": "BUY 14 FERG at 251.38"
     }
   ]
 }

@@ -1,13 +1,75 @@
 {
- "abiertas": {},
+ "abiertas": {
+  "FERG": {
+   "orden_id": "7651efea-4eaf-4d0c-bc2d-7e70689ba4a7",
+   "qty": 14,
+   "entrada": 251.38,
+   "stop": 248.29,
+   "target": 255.13,
+   "fecha": "2026-11-18",
+   "hora": "09:50",
+   "max_loss": 39.06,
+   "tm": {
+    "mc_avg_R": 0.004,
+    "p_target": 0.1996,
+    "p_stop": 0.5195,
+    "hist_disparos": 39,
+    "hist_avg_R": -0.249,
+    "veredicto": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 28 % (target first 20.0 % vs stop first 51.9 %)."
+   }
+  }
+ },
  "hoy": {
   "fecha": "2026-11-18",
-  "entradas": 0,
+  "entradas": 1,
   "pnl": 0.0,
   "r": 0.0,
-  "evaluados": {},
-  "universo": false,
+  "evaluados": {
+   "JD": "omitida: timemachine: R promedio simulado -0.017 no es > 0",
+   "OHI": "omitida: timemachine: R promedio simulado -0.054 no es > 0",
+   "FERG": "COMPRADA"
+  },
+  "universo": true,
   "sesion": true,
-  "informe": false
+  "informe": false,
+  "ultimo_scan": 1795013401.449896,
+  "sombra": {
+   "vistos": [
+    "JD",
+    "OHI",
+    "FERG",
+    "BRX",
+    "HZO",
+    "SNA",
+    "TKO",
+    "VVV",
+    "MAIN",
+    "PKG",
+    "UGI",
+    "CMPS",
+    "MIR",
+    "AHR",
+    "PAYP",
+    "TROW",
+    "EMR",
+    "ACM",
+    "HAS",
+    "ANF",
+    "DLR",
+    "FIX",
+    "UNP",
+    "AER",
+    "ATI",
+    "FDX",
+    "OKTA",
+    "SW",
+    "TJX",
+    "ROST"
+   ],
+   "perdidos": [],
+   "ultimo_scan": 1795013716.226167,
+   "limitado": 0,
+   "errores": 0
+  }
  }
 }
