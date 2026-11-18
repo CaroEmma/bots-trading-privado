@@ -119,7 +119,10 @@
     "HD",
     "WCN",
     "MOD",
-    "D"
+    "D",
+    "APH",
+    "JCI",
+    "DDOG"
    ],
    "perdidos": [
     "NCLH",
@@ -177,9 +180,10 @@
     "EXPE",
     "LEN",
     "MLM",
-    "DTM"
+    "DTM",
+    "CHKP"
    ],
-   "ultimo_scan": 1795017509.26094,
+   "ultimo_scan": 1795018137.189115,
    "limitado": 0,
    "errores": 0
   }
