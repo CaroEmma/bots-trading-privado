@@ -114,7 +114,11 @@
     "AVGO",
     "NKE",
     "AZO",
-    "PWR"
+    "PWR",
+    "ORLY",
+    "HD",
+    "WCN",
+    "MOD"
    ],
    "perdidos": [
     "NCLH",
@@ -164,9 +168,10 @@
     "CLRO",
     "SN",
     "CORZ",
-    "S"
+    "S",
+    "GNRC"
    ],
-   "ultimo_scan": 1795015635.487163,
+   "ultimo_scan": 1795016261.810516,
    "limitado": 0,
    "errores": 0
   }
