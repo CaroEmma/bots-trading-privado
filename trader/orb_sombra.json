@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-18T19:20:15Z",
+  "created_at": "2026-11-18T19:32:04Z",
   "mode": "orb",
-  "as_of": "2026-11-18 14:20 ET",
+  "as_of": "2026-11-18 14:32 ET",
   "universe": 5928,
-  "scanned": 1085,
+  "scanned": 1056,
   "failed": 0,
-  "unconfirmed": 620,
+  "unconfirmed": 593,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -472,6 +472,19 @@
       "pct_over": 0.18
     },
     {
+      "symbol": "ECL",
+      "setups": [
+        "orb"
+      ],
+      "price": 302.41,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 301.7,
+      "or_low": 298.78,
+      "pct_over": 0.24
+    },
+    {
       "symbol": "EMR",
       "setups": [
         "orb"
@@ -483,6 +496,19 @@
       "or_high": 159.76,
       "or_low": 157.8,
       "pct_over": 0.85
+    },
+    {
+      "symbol": "ETR",
+      "setups": [
+        "orb"
+      ],
+      "price": 108.66,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 108.62,
+      "or_low": 106.92,
+      "pct_over": 0.04
     },
     {
       "symbol": "FSLR",
@@ -561,19 +587,6 @@
       "or_high": 923.53,
       "or_low": 915.0,
       "pct_over": 0.23
-    },
-    {
-      "symbol": "QXO",
-      "setups": [
-        "orb"
-      ],
-      "price": 11.58,
-      "at": "10:00 AM",
-      "bar_start": "09:55",
-      "bar_index": 5,
-      "or_high": 11.4,
-      "or_low": 10.94,
-      "pct_over": 1.58
     },
     {
       "symbol": "RDDT",
