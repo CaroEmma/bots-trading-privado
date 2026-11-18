@@ -130,7 +130,9 @@
     "CPRT",
     "MMM",
     "KR",
-    "PEP"
+    "PEP",
+    "SHW",
+    "ZTS"
    ],
    "perdidos": [
     "NCLH",
@@ -192,9 +194,11 @@
     "CHKP",
     "OMC",
     "FER",
-    "WWD"
+    "WWD",
+    "LYV",
+    "XYL"
    ],
-   "ultimo_scan": 1795020649.794248,
+   "ultimo_scan": 1795021277.586011,
    "limitado": 0,
    "errores": 0
   }
