@@ -385,6 +385,16 @@
       "qty": "14",
       "price": 251.38,
       "plain": "BUY 14 FERG at 251.38"
+    },
+    {
+      "at": "2026-11-18T15:40:36-05:00",
+      "date": "2026-11-18",
+      "status": "filled",
+      "symbol": "FERG",
+      "side": "sell",
+      "qty": "14",
+      "price": 252.09,
+      "plain": "SELL 14 FERG at 252.09"
     }
   ]
 }

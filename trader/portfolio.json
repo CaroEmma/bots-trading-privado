@@ -1,17 +1,4 @@
 {
-  "cash": 1420.09,
-  "positions": [
-    {
-      "ticker": "FERG",
-      "shares": 14.0,
-      "lots": [
-        {
-          "id": "FERG-1",
-          "date": "2026-11-18",
-          "shares": 14.0,
-          "cost": 3519.32
-        }
-      ]
-    }
-  ]
+  "cash": 4949.35,
+  "positions": []
 }
