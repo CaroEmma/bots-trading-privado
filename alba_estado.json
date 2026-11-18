@@ -122,7 +122,8 @@
     "D",
     "APH",
     "JCI",
-    "DDOG"
+    "DDOG",
+    "TTWO"
    ],
    "perdidos": [
     "NCLH",
@@ -183,7 +184,7 @@
     "DTM",
     "CHKP"
    ],
-   "ultimo_scan": 1795018137.189115,
+   "ultimo_scan": 1795018762.48647,
    "limitado": 0,
    "errores": 0
   }

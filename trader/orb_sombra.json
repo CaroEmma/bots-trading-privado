@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-18T16:08:57Z",
+  "created_at": "2026-11-18T16:19:22Z",
   "mode": "orb",
-  "as_of": "2026-11-18 11:08 ET",
+  "as_of": "2026-11-18 11:19 ET",
   "universe": 5928,
-  "scanned": 1870,
+  "scanned": 1827,
   "failed": 0,
-  "unconfirmed": 983,
+  "unconfirmed": 954,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -82,19 +82,6 @@
       "pct_over": 0.01
     },
     {
-      "symbol": "LYFT",
-      "setups": [
-        "orb"
-      ],
-      "price": 17.75,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 17.66,
-      "or_low": 16.65,
-      "pct_over": 0.51
-    },
-    {
       "symbol": "MP",
       "setups": [
         "orb"
@@ -132,19 +119,6 @@
       "or_high": 299.96,
       "or_low": 295.0,
       "pct_over": 0.08
-    },
-    {
-      "symbol": "USAR",
-      "setups": [
-        "orb"
-      ],
-      "price": 6.91,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 6.76,
-      "or_low": 6.51,
-      "pct_over": 2.25
     },
     {
       "symbol": "VRNS",
@@ -1005,6 +979,19 @@
       "pct_over": 0.17
     },
     {
+      "symbol": "FE",
+      "setups": [
+        "orb"
+      ],
+      "price": 47.62,
+      "at": "10:10 AM",
+      "bar_start": "10:05",
+      "bar_index": 7,
+      "or_high": 47.59,
+      "or_low": 46.81,
+      "pct_over": 0.06
+    },
+    {
       "symbol": "MDB",
       "setups": [
         "orb"
@@ -1276,6 +1263,19 @@
       "or_high": 137.4,
       "or_low": 134.84,
       "pct_over": 0.15
+    },
+    {
+      "symbol": "TTWO",
+      "setups": [
+        "orb"
+      ],
+      "price": 221.26,
+      "at": "11:10 AM",
+      "bar_start": "11:05",
+      "bar_index": 19,
+      "or_high": 221.0,
+      "or_low": 210.5,
+      "pct_over": 0.12
     }
   ]
 }
