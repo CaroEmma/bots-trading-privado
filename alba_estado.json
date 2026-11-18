@@ -237,9 +237,11 @@
     "DAL",
     "WAT",
     "COR",
-    "RYTM"
+    "RYTM",
+    "CAH",
+    "SITE"
    ],
-   "ultimo_scan": 1795031721.026147,
+   "ultimo_scan": 1795032428.844961,
    "limitado": 0,
    "errores": 0
   }
