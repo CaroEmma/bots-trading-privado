@@ -105,7 +105,16 @@
     "CSL",
     "SPCX",
     "SNOW",
-    "FLEX"
+    "FLEX",
+    "TPR",
+    "CCL",
+    "NEE",
+    "DE",
+    "NXT",
+    "AVGO",
+    "NKE",
+    "AZO",
+    "PWR"
    ],
    "perdidos": [
     "NCLH",
@@ -154,9 +163,10 @@
     "USAR",
     "CLRO",
     "SN",
-    "CORZ"
+    "CORZ",
+    "S"
    ],
-   "ultimo_scan": 1795015006.829413,
+   "ultimo_scan": 1795015635.487163,
    "limitado": 0,
    "errores": 0
   }
