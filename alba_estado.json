@@ -151,7 +151,9 @@
     "WMB",
     "SPOT",
     "AEP",
-    "CCI"
+    "CCI",
+    "NFLX",
+    "CMCSA"
    ],
    "perdidos": [
     "NCLH",
@@ -224,7 +226,7 @@
     "BIPC",
     "ROK"
    ],
-   "ultimo_scan": 1795026333.202362,
+   "ultimo_scan": 1795026969.22503,
    "limitado": 0,
    "errores": 0
   }
