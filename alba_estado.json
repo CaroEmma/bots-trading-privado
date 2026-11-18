@@ -146,7 +146,9 @@
     "ANET",
     "LIN",
     "TMO",
-    "AMD"
+    "AMD",
+    "MCHP",
+    "WMB"
    ],
    "perdidos": [
     "NCLH",
@@ -215,7 +217,7 @@
     "AS",
     "QXO"
    ],
-   "ultimo_scan": 1795023176.535545,
+   "ultimo_scan": 1795023810.126997,
    "limitado": 0,
    "errores": 0
   }
