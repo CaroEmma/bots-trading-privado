@@ -126,7 +126,10 @@
     "TTWO",
     "SCHW",
     "RCL",
-    "VZ"
+    "VZ",
+    "CPRT",
+    "MMM",
+    "KR"
    ],
    "perdidos": [
     "NCLH",
@@ -186,9 +189,10 @@
     "MLM",
     "DTM",
     "CHKP",
-    "OMC"
+    "OMC",
+    "FER"
    ],
-   "ultimo_scan": 1795019389.531873,
+   "ultimo_scan": 1795020021.222325,
    "limitado": 0,
    "errores": 0
   }
