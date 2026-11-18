@@ -157,7 +157,8 @@
     "PDD",
     "SNAP",
     "MSFT",
-    "TYL"
+    "TYL",
+    "EQIX"
    ],
    "perdidos": [
     "NCLH",
@@ -239,9 +240,10 @@
     "COR",
     "RYTM",
     "CAH",
-    "SITE"
+    "SITE",
+    "BBIO"
    ],
-   "ultimo_scan": 1795032428.844961,
+   "ultimo_scan": 1795033130.056353,
    "limitado": 0,
    "errores": 0
   }
