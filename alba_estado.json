@@ -148,7 +148,8 @@
     "TMO",
     "AMD",
     "MCHP",
-    "WMB"
+    "WMB",
+    "SPOT"
    ],
    "perdidos": [
     "NCLH",
@@ -221,7 +222,7 @@
     "BIPC",
     "ROK"
    ],
-   "ultimo_scan": 1795025072.868043,
+   "ultimo_scan": 1795025702.865221,
    "limitado": 0,
    "errores": 0
   }
