@@ -134,7 +134,12 @@
     "SHW",
     "ZTS",
     "PYPL",
-    "SBUX"
+    "SBUX",
+    "BX",
+    "EQT",
+    "AMT",
+    "CSCO",
+    "BA"
    ],
    "perdidos": [
     "NCLH",
@@ -199,9 +204,10 @@
     "WWD",
     "LYV",
     "XYL",
-    "CARR"
+    "CARR",
+    "AS"
    ],
-   "ultimo_scan": 1795021912.638141,
+   "ultimo_scan": 1795022539.990761,
    "limitado": 0,
    "errores": 0
   }
