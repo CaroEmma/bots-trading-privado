@@ -139,7 +139,14 @@
     "EQT",
     "AMT",
     "CSCO",
-    "BA"
+    "BA",
+    "ADSK",
+    "COST",
+    "HOOD",
+    "ANET",
+    "LIN",
+    "TMO",
+    "AMD"
    ],
    "perdidos": [
     "NCLH",
@@ -205,9 +212,10 @@
     "LYV",
     "XYL",
     "CARR",
-    "AS"
+    "AS",
+    "QXO"
    ],
-   "ultimo_scan": 1795022539.990761,
+   "ultimo_scan": 1795023176.535545,
    "limitado": 0,
    "errores": 0
   }
