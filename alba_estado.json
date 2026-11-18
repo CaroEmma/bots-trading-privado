@@ -156,7 +156,8 @@
     "CMCSA",
     "PDD",
     "SNAP",
-    "MSFT"
+    "MSFT",
+    "TYL"
    ],
    "perdidos": [
     "NCLH",
@@ -229,9 +230,11 @@
     "BIPC",
     "ROK",
     "ENTG",
-    "FROG"
+    "FROG",
+    "HTHT",
+    "HUT"
    ],
-   "ultimo_scan": 1795028235.956216,
+   "ultimo_scan": 1795028913.323146,
    "limitado": 0,
    "errores": 0
   }
