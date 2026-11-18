@@ -149,7 +149,9 @@
     "AMD",
     "MCHP",
     "WMB",
-    "SPOT"
+    "SPOT",
+    "AEP",
+    "CCI"
    ],
    "perdidos": [
     "NCLH",
@@ -222,7 +224,7 @@
     "BIPC",
     "ROK"
    ],
-   "ultimo_scan": 1795025702.865221,
+   "ultimo_scan": 1795026333.202362,
    "limitado": 0,
    "errores": 0
   }
