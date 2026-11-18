@@ -132,7 +132,9 @@
     "KR",
     "PEP",
     "SHW",
-    "ZTS"
+    "ZTS",
+    "PYPL",
+    "SBUX"
    ],
    "perdidos": [
     "NCLH",
@@ -196,9 +198,10 @@
     "FER",
     "WWD",
     "LYV",
-    "XYL"
+    "XYL",
+    "CARR"
    ],
-   "ultimo_scan": 1795021277.586011,
+   "ultimo_scan": 1795021912.638141,
    "limitado": 0,
    "errores": 0
   }
