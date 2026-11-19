@@ -121,7 +121,7 @@
   },
   "universo": true,
   "sesion": true,
-  "informe": false,
+  "informe": true,
   "ultimo_scan": 1795120090.308469,
   "sombra": {
    "vistos": [
@@ -283,6 +283,7 @@
    "ultimo_scan": 1795108643.500689,
    "limitado": 0,
    "errores": 0
-  }
+  },
+  "sombra_resuelto": true
  }
 }
