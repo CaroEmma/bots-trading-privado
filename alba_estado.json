@@ -45,12 +45,18 @@
    "ETN": "omitida: señal vieja (207 min)",
    "P": "omitida: señal vieja (213 min)",
    "TJX": "omitida: señal vieja (213 min)",
-   "CARR": "omitida: señal vieja (198 min)"
+   "CARR": "omitida: señal vieja (198 min)",
+   "NOW": "omitida: señal vieja (204 min)",
+   "WFC": "omitida: señal vieja (219 min)",
+   "WMT": "omitida: señal vieja (209 min)",
+   "STZ": "omitida: timemachine: R promedio simulado -0.133 no es > 0",
+   "GIS": "omitida: señal vieja (95 min)",
+   "GLW": "omitida: señal vieja (210 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795112392.815242,
+  "ultimo_scan": 1795113101.833812,
   "sombra": {
    "vistos": [
     "NTAP",
@@ -139,7 +145,8 @@
     "GIS",
     "AON",
     "BJ",
-    "NOC"
+    "NOC",
+    "STZ"
    ],
    "perdidos": [
     "DLR",

@@ -1,6 +1,6 @@
 {
   "created_by": "trader-entry",
-  "symbol": "CARR",
+  "symbol": "GLW",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-19",
@@ -8,15 +8,15 @@
   "time": "10:05 AM",
   "bar_start": "10:00",
   "bar_index": 6,
-  "price": 52.57,
-  "level": 52.48,
+  "price": 113.89,
+  "level": 113.68,
   "interval": "5m",
   "opening_range": {
-    "high": 52.48,
-    "low": 51.92,
+    "high": 113.68,
+    "low": 111.79,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-19T18:23:46Z",
+  "checked_at": "2026-11-19T18:35:25Z",
   "reason": "the 10:00 bar closed above the range high"
 }
