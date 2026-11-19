@@ -75,12 +75,18 @@
    "BLK": "omitida: señal vieja (263 min)",
    "VRSN": "omitida: señal vieja (268 min)",
    "COF": "omitida: señal vieja (268 min)",
-   "AXON": "omitida: señal vieja (263 min)"
+   "AXON": "omitida: señal vieja (263 min)",
+   "XYL": "omitida: señal vieja (259 min)",
+   "ON": "omitida: señal vieja (274 min)",
+   "ALAB": "omitida: señal vieja (274 min)",
+   "CFG": "omitida: señal vieja (279 min)",
+   "FLEX": "omitida: señal vieja (279 min)",
+   "LSCC": "omitida: señal vieja (264 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795115746.782481,
+  "ultimo_scan": 1795116363.314368,
   "sombra": {
    "vistos": [
     "NTAP",
@@ -231,7 +237,9 @@
     "LSCC",
     "PNR",
     "VFC",
-    "PHM"
+    "PHM",
+    "XYL",
+    "CFG"
    ],
    "ultimo_scan": 1795108643.500689,
    "limitado": 0,

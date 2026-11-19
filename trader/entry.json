@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "AXON",
+  "symbol": "LSCC",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-19",
   "status": "triggered",
-  "time": "9:55 AM",
-  "bar_start": "09:50",
-  "bar_index": 4,
-  "price": 321.32,
-  "level": 320.5,
+  "time": "10:05 AM",
+  "bar_start": "10:00",
+  "bar_index": 6,
+  "price": 118.27,
+  "level": 117.93,
   "interval": "5m",
   "opening_range": {
-    "high": 320.5,
-    "low": 305.04,
+    "high": 117.93,
+    "low": 114.75,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-19T19:18:52Z",
-  "reason": "the 9:50 bar closed above the range high"
+  "checked_at": "2026-11-19T19:29:10Z",
+  "reason": "the 10:00 bar closed above the range high"
 }
