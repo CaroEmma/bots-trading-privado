@@ -27,12 +27,18 @@
    "UAL": "omitida: señal vieja (73 min)",
    "NOC": "omitida: timemachine: R promedio simulado -0.121 no es > 0",
    "CME": "omitida: señal vieja (179 min)",
-   "LHX": "omitida: señal vieja (165 min)"
+   "LHX": "omitida: señal vieja (165 min)",
+   "TDG": "omitida: señal vieja (144 min)",
+   "EXPD": "omitida: señal vieja (169 min)",
+   "PGR": "omitida: señal vieja (59 min)",
+   "HD": "omitida: señal vieja (185 min)",
+   "STM": "omitida: señal vieja (190 min)",
+   "LYG": "omitida: señal vieja (190 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795110351.959324,
+  "ultimo_scan": 1795111018.701039,
   "sombra": {
    "vistos": [
     "NTAP",

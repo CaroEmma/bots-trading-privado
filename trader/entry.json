@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "LHX",
+  "symbol": "LYG",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-19",
   "status": "triggered",
-  "time": "10:05 AM",
-  "bar_start": "10:00",
-  "bar_index": 6,
-  "price": 258.12,
-  "level": 257.98,
+  "time": "9:50 AM",
+  "bar_start": "09:45",
+  "bar_index": 3,
+  "price": 5.12,
+  "level": 5.12,
   "interval": "5m",
   "opening_range": {
-    "high": 257.98,
-    "low": 255.96,
+    "high": 5.12,
+    "low": 5.1,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-19T17:50:00Z",
-  "reason": "the 10:00 bar closed above the range high"
+  "checked_at": "2026-11-19T18:00:57Z",
+  "reason": "the 9:45 bar closed above the range high"
 }

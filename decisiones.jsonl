@@ -191,3 +191,9 @@
 {"fecha": "2026-11-19", "hora": "12:45", "simbolo": "NOC", "accion": "omitir", "motivo": "timemachine: R promedio simulado -0.121 no es > 0", "tm": {"mc_avg_R": -0.121, "p_target": 0.1033, "p_stop": 0.4801, "hist_disparos": 32, "hist_avg_R": -0.319, "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 18 % (target first 10.3 % vs stop first 48.0 %)."}}
 {"fecha": "2026-11-19", "hora": "12:45", "simbolo": "CME", "accion": "omitir", "motivo": "señal vieja (179 min)"}
 {"fecha": "2026-11-19", "hora": "12:45", "simbolo": "LHX", "accion": "omitir", "motivo": "señal vieja (165 min)"}
+{"fecha": "2026-11-19", "hora": "12:51", "simbolo": "TDG", "accion": "omitir", "motivo": "señal vieja (144 min)"}
+{"fecha": "2026-11-19", "hora": "12:51", "simbolo": "EXPD", "accion": "omitir", "motivo": "señal vieja (169 min)"}
+{"fecha": "2026-11-19", "hora": "12:51", "simbolo": "PGR", "accion": "omitir", "motivo": "señal vieja (59 min)"}
+{"fecha": "2026-11-19", "hora": "12:56", "simbolo": "HD", "accion": "omitir", "motivo": "señal vieja (185 min)"}
+{"fecha": "2026-11-19", "hora": "12:56", "simbolo": "STM", "accion": "omitir", "motivo": "señal vieja (190 min)"}
+{"fecha": "2026-11-19", "hora": "12:56", "simbolo": "LYG", "accion": "omitir", "motivo": "señal vieja (190 min)"}

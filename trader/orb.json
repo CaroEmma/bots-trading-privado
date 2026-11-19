@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-19T17:45:52Z",
+  "created_at": "2026-11-19T17:56:58Z",
   "mode": "orb",
-  "as_of": "2026-11-19 12:45 ET",
+  "as_of": "2026-11-19 12:56 ET",
   "universe": 5927,
-  "scanned": 1433,
+  "scanned": 1409,
   "failed": 0,
-  "unconfirmed": 490,
+  "unconfirmed": 481,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -1031,6 +1031,19 @@
       "pct_over": 0.03
     },
     {
+      "symbol": "LSCC",
+      "setups": [
+        "orb"
+      ],
+      "price": 118.27,
+      "at": "10:05 AM",
+      "bar_start": "10:00",
+      "bar_index": 6,
+      "or_high": 117.93,
+      "or_low": 114.75,
+      "pct_over": 0.28
+    },
+    {
       "symbol": "MCHP",
       "setups": [
         "orb"
@@ -1328,19 +1341,6 @@
       "or_high": 34.0,
       "or_low": 33.54,
       "pct_over": 0.12
-    },
-    {
-      "symbol": "AON",
-      "setups": [
-        "orb"
-      ],
-      "price": 330.49,
-      "at": "12:20 PM",
-      "bar_start": "12:15",
-      "bar_index": 33,
-      "or_high": 330.0,
-      "or_low": 326.57,
-      "pct_over": 0.15
     },
     {
       "symbol": "CBOE",
