@@ -227,3 +227,9 @@
 {"fecha": "2026-11-19", "hora": "13:55", "simbolo": "CL", "accion": "omitir", "motivo": "señal vieja (24 min)"}
 {"fecha": "2026-11-19", "hora": "13:55", "simbolo": "BMNR", "accion": "omitir", "motivo": "señal vieja (249 min)"}
 {"fecha": "2026-11-19", "hora": "13:55", "simbolo": "JPM", "accion": "omitir", "motivo": "señal vieja (249 min)"}
+{"fecha": "2026-11-19", "hora": "14:00", "simbolo": "JD", "accion": "omitir", "motivo": "señal vieja (253 min)"}
+{"fecha": "2026-11-19", "hora": "14:00", "simbolo": "DOCN", "accion": "omitir", "motivo": "señal vieja (253 min)"}
+{"fecha": "2026-11-19", "hora": "14:00", "simbolo": "MP", "accion": "omitir", "motivo": "señal vieja (143 min)"}
+{"fecha": "2026-11-19", "hora": "14:05", "simbolo": "PHM", "accion": "omitir", "motivo": "señal vieja (258 min)"}
+{"fecha": "2026-11-19", "hora": "14:05", "simbolo": "MDLZ", "accion": "omitir", "motivo": "timemachine: R promedio simulado -0.016 no es > 0", "tm": {"mc_avg_R": -0.016, "p_target": 0.0036, "p_stop": 0.1403, "hist_disparos": 36, "hist_avg_R": -0.095, "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 3 % (target first 0.4 % vs stop first 14.0 %)."}}
+{"fecha": "2026-11-19", "hora": "14:05", "simbolo": "INTC", "accion": "omitir", "motivo": "señal vieja (258 min)"}

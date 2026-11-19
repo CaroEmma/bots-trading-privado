@@ -63,12 +63,18 @@
    "NUE": "omitida: señal vieja (243 min)",
    "CL": "omitida: señal vieja (24 min)",
    "BMNR": "omitida: señal vieja (249 min)",
-   "JPM": "omitida: señal vieja (249 min)"
+   "JPM": "omitida: señal vieja (249 min)",
+   "JD": "omitida: señal vieja (253 min)",
+   "DOCN": "omitida: señal vieja (253 min)",
+   "MP": "omitida: señal vieja (143 min)",
+   "PHM": "omitida: señal vieja (258 min)",
+   "MDLZ": "omitida: timemachine: R promedio simulado -0.016 no es > 0",
+   "INTC": "omitida: señal vieja (258 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795114504.803783,
+  "ultimo_scan": 1795115126.616645,
   "sombra": {
    "vistos": [
     "NTAP",
@@ -162,7 +168,8 @@
     "ED",
     "ECL",
     "NLY",
-    "CL"
+    "CL",
+    "MDLZ"
    ],
    "perdidos": [
     "DLR",
@@ -216,7 +223,9 @@
     "DOCN",
     "LHX",
     "LSCC",
-    "PNR"
+    "PNR",
+    "VFC",
+    "PHM"
    ],
    "ultimo_scan": 1795108643.500689,
    "limitado": 0,
