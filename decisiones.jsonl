@@ -275,3 +275,9 @@
 {"fecha": "2026-11-19", "hora": "15:17", "simbolo": "FN", "accion": "omitir", "motivo": "señal vieja (330 min)"}
 {"fecha": "2026-11-19", "hora": "15:17", "simbolo": "NTRA", "accion": "omitir", "motivo": "señal vieja (320 min)"}
 {"fecha": "2026-11-19", "hora": "15:17", "simbolo": "GAP", "accion": "omitir", "motivo": "señal vieja (330 min)"}
+{"fecha": "2026-11-19", "hora": "15:22", "simbolo": "NXPI", "accion": "omitir", "motivo": "señal vieja (336 min)"}
+{"fecha": "2026-11-19", "hora": "15:22", "simbolo": "SMCI", "accion": "omitir", "motivo": "señal vieja (336 min)"}
+{"fecha": "2026-11-19", "hora": "15:22", "simbolo": "URI", "accion": "omitir", "motivo": "señal vieja (336 min)"}
+{"fecha": "2026-11-19", "hora": "15:28", "simbolo": "ALL", "accion": "omitir", "motivo": "timemachine: R promedio simulado -0.087 no es > 0", "tm": {"mc_avg_R": -0.087, "p_target": 0.0011, "p_stop": 0.122, "hist_disparos": 31, "hist_avg_R": -0.133, "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 1 % (target first 0.1 % vs stop first 12.2 %)."}}
+{"fecha": "2026-11-19", "hora": "15:28", "simbolo": "AKAM", "accion": "omitir", "motivo": "señal vieja (341 min)"}
+{"fecha": "2026-11-19", "hora": "15:28", "simbolo": "TPR", "accion": "omitir", "motivo": "señal vieja (341 min)"}

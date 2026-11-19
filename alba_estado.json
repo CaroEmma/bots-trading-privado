@@ -111,12 +111,18 @@
    "MCHP": "omitida: señal vieja (310 min)",
    "FN": "omitida: señal vieja (330 min)",
    "NTRA": "omitida: señal vieja (320 min)",
-   "GAP": "omitida: señal vieja (330 min)"
+   "GAP": "omitida: señal vieja (330 min)",
+   "NXPI": "omitida: señal vieja (336 min)",
+   "SMCI": "omitida: señal vieja (336 min)",
+   "URI": "omitida: señal vieja (336 min)",
+   "ALL": "omitida: timemachine: R promedio simulado -0.087 no es > 0",
+   "AKAM": "omitida: señal vieja (341 min)",
+   "TPR": "omitida: señal vieja (341 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795119468.90313,
+  "ultimo_scan": 1795120090.308469,
   "sombra": {
    "vistos": [
     "NTAP",
@@ -211,7 +217,8 @@
     "ECL",
     "NLY",
     "CL",
-    "MDLZ"
+    "MDLZ",
+    "ALL"
    ],
    "perdidos": [
     "DLR",

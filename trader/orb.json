@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-19T20:17:49Z",
+  "created_at": "2026-11-19T20:28:10Z",
   "mode": "orb",
-  "as_of": "2026-11-19 15:17 ET",
+  "as_of": "2026-11-19 15:28 ET",
   "universe": 5927,
-  "scanned": 1036,
+  "scanned": 1019,
   "failed": 0,
-  "unconfirmed": 338,
+  "unconfirmed": 328,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -810,6 +810,19 @@
       "pct_over": 0.03
     },
     {
+      "symbol": "WMT",
+      "setups": [
+        "orb"
+      ],
+      "price": 125.55,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 125.33,
+      "or_low": 123.29,
+      "pct_over": 0.18
+    },
+    {
       "symbol": "APH",
       "setups": [
         "orb"
@@ -1226,19 +1239,6 @@
       "pct_over": 0.05
     },
     {
-      "symbol": "MP",
-      "setups": [
-        "orb"
-      ],
-      "price": 37.48,
-      "at": "11:40 AM",
-      "bar_start": "11:35",
-      "bar_index": 25,
-      "or_high": 37.39,
-      "or_low": 35.95,
-      "pct_over": 0.24
-    },
-    {
       "symbol": "GIS",
       "setups": [
         "orb"
@@ -1354,6 +1354,19 @@
       "or_high": 65.7,
       "or_low": 64.9,
       "pct_over": 0.06
+    },
+    {
+      "symbol": "ALL",
+      "setups": [
+        "orb"
+      ],
+      "price": 266.58,
+      "at": "3:25 PM",
+      "bar_start": "15:20",
+      "bar_index": 70,
+      "or_high": 266.47,
+      "or_low": 263.48,
+      "pct_over": 0.04
     }
   ]
 }
