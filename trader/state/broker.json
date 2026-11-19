@@ -395,6 +395,32 @@
       "qty": "14",
       "price": 252.09,
       "plain": "SELL 14 FERG at 252.09"
+    },
+    {
+      "at": "2026-11-19T10:00-05:00",
+      "date": "2026-11-19",
+      "index": 1,
+      "fingerprint": "83cc956f9029f70b",
+      "symbol": "WELL",
+      "side": "buy",
+      "qty": "15",
+      "kind": "entry",
+      "max_loss": 14.1,
+      "stop": 245.44,
+      "plain": "buy 15 WELL (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "53fb9288-5210-4eb8-bf5f-fb4e6f9468de",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-19T10:04:49-05:00",
+      "date": "2026-11-19",
+      "status": "filled",
+      "symbol": "WELL",
+      "side": "buy",
+      "qty": "15",
+      "price": 245.92,
+      "plain": "BUY 15 WELL at 245.92"
     }
   ]
 }
