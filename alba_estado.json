@@ -120,7 +120,8 @@
     "UAL",
     "ARGX",
     "RKT",
-    "MP"
+    "MP",
+    "PGR"
    ],
    "perdidos": [
     "DLR",
@@ -170,9 +171,10 @@
     "BMRN",
     "ABVX",
     "CARR",
-    "CG"
+    "CG",
+    "DOCN"
    ],
-   "ultimo_scan": 1795106879.596286,
+   "ultimo_scan": 1795107586.139538,
    "limitado": 0,
    "errores": 0
   }
