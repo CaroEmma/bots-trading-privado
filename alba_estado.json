@@ -57,12 +57,18 @@
    "NLY": "omitida: timemachine: R promedio simulado -0.144 no es > 0",
    "NOK": "omitida: señal vieja (237 min)",
    "CIEN": "omitida: señal vieja (222 min)",
-   "TGT": "omitida: señal vieja (222 min)"
+   "TGT": "omitida: señal vieja (222 min)",
+   "PNR": "omitida: señal vieja (218 min)",
+   "KEYS": "omitida: señal vieja (243 min)",
+   "NUE": "omitida: señal vieja (243 min)",
+   "CL": "omitida: señal vieja (24 min)",
+   "BMNR": "omitida: señal vieja (249 min)",
+   "JPM": "omitida: señal vieja (249 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795113801.477137,
+  "ultimo_scan": 1795114504.803783,
   "sombra": {
    "vistos": [
     "NTAP",
@@ -209,7 +215,8 @@
     "CG",
     "DOCN",
     "LHX",
-    "LSCC"
+    "LSCC",
+    "PNR"
    ],
    "ultimo_scan": 1795108643.500689,
    "limitado": 0,

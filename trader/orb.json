@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-19T18:43:21Z",
+  "created_at": "2026-11-19T18:55:05Z",
   "mode": "orb",
-  "as_of": "2026-11-19 13:43 ET",
+  "as_of": "2026-11-19 13:55 ET",
   "universe": 5927,
-  "scanned": 1272,
+  "scanned": 1204,
   "failed": 0,
-  "unconfirmed": 446,
+  "unconfirmed": 411,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -1109,6 +1109,19 @@
       "pct_over": 1.0
     },
     {
+      "symbol": "PNR",
+      "setups": [
+        "orb"
+      ],
+      "price": 68.97,
+      "at": "10:15 AM",
+      "bar_start": "10:10",
+      "bar_index": 8,
+      "or_high": 68.94,
+      "or_low": 68.06,
+      "pct_over": 0.04
+    },
+    {
       "symbol": "AZO",
       "setups": [
         "orb"
@@ -1321,26 +1334,13 @@
       "setups": [
         "orb"
       ],
-      "price": 299.89,
+      "price": 299.94,
       "at": "1:35 PM",
       "bar_start": "13:30",
       "bar_index": 48,
       "or_high": 299.74,
       "or_low": 296.34,
-      "pct_over": 0.05
-    },
-    {
-      "symbol": "ED",
-      "setups": [
-        "orb"
-      ],
-      "price": 118.6,
-      "at": "1:35 PM",
-      "bar_start": "13:30",
-      "bar_index": 48,
-      "or_high": 118.56,
-      "or_low": 117.64,
-      "pct_over": 0.04
+      "pct_over": 0.07
     },
     {
       "symbol": "NLY",
