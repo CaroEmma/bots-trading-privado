@@ -1,6 +1,6 @@
 {
   "created_by": "trader-entry",
-  "symbol": "TU",
+  "symbol": "GAP",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-19",
@@ -8,15 +8,15 @@
   "time": "9:50 AM",
   "bar_start": "09:45",
   "bar_index": 3,
-  "price": 10.4,
-  "level": 10.33,
+  "price": 19.78,
+  "level": 19.62,
   "interval": "5m",
   "opening_range": {
-    "high": 10.33,
-    "low": 9.98,
+    "high": 19.62,
+    "low": 19.35,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-19T20:10:35Z",
+  "checked_at": "2026-11-19T20:20:57Z",
   "reason": "the 9:45 bar closed above the range high"
 }

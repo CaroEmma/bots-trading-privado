@@ -105,12 +105,18 @@
    "MPWR": "omitida: señal vieja (300 min)",
    "HPE": "omitida: señal vieja (320 min)",
    "MCD": "omitida: señal vieja (315 min)",
-   "TU": "omitida: señal vieja (320 min)"
+   "TU": "omitida: señal vieja (320 min)",
+   "QCOM": "omitida: señal vieja (325 min)",
+   "SMTC": "omitida: señal vieja (310 min)",
+   "MCHP": "omitida: señal vieja (310 min)",
+   "FN": "omitida: señal vieja (330 min)",
+   "NTRA": "omitida: señal vieja (320 min)",
+   "GAP": "omitida: señal vieja (330 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795118838.86164,
+  "ultimo_scan": 1795119468.90313,
   "sombra": {
    "vistos": [
     "NTAP",
