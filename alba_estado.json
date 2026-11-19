@@ -87,12 +87,18 @@
    "BJ": "omitida: señal vieja (124 min)",
    "SPOT": "omitida: señal vieja (289 min)",
    "AZO": "omitida: señal vieja (259 min)",
-   "CRWV": "omitida: señal vieja (289 min)"
+   "CRWV": "omitida: señal vieja (289 min)",
+   "TTMI": "omitida: señal vieja (294 min)",
+   "GS": "omitida: señal vieja (294 min)",
+   "CG": "omitida: señal vieja (274 min)",
+   "MU": "omitida: señal vieja (284 min)",
+   "BE": "omitida: señal vieja (289 min)",
+   "VVV": "omitida: señal vieja (284 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795116981.530384,
+  "ultimo_scan": 1795117600.208447,
   "sombra": {
    "vistos": [
     "NTAP",
