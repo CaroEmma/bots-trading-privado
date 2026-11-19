@@ -15,12 +15,18 @@
    "WELL": "COMPRADA",
    "DLR": "omitida: señal vieja (155 min)",
    "LRCX": "omitida: señal vieja (141 min)",
-   "MRVL": "omitida: señal vieja (141 min)"
+   "MRVL": "omitida: señal vieja (141 min)",
+   "MDT": "omitida: señal vieja (121 min)",
+   "ARGX": "omitida: señal vieja (51 min)",
+   "CBOE": "omitida: señal vieja (11 min)",
+   "LIN": "omitida: señal vieja (157 min)",
+   "FFIV": "omitida: señal vieja (132 min)",
+   "TSCO": "omitida: señal vieja (87 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795108931.50051,
+  "ultimo_scan": 1795109639.392153,
   "sombra": {
    "vistos": [
     "NTAP",
@@ -107,7 +113,8 @@
     "MP",
     "PGR",
     "GIS",
-    "AON"
+    "AON",
+    "BJ"
    ],
    "perdidos": [
     "DLR",

@@ -179,3 +179,9 @@
 {"fecha": "2026-11-19", "hora": "12:22", "simbolo": "DLR", "accion": "omitir", "motivo": "señal vieja (155 min)"}
 {"fecha": "2026-11-19", "hora": "12:22", "simbolo": "LRCX", "accion": "omitir", "motivo": "señal vieja (141 min)"}
 {"fecha": "2026-11-19", "hora": "12:22", "simbolo": "MRVL", "accion": "omitir", "motivo": "señal vieja (141 min)"}
+{"fecha": "2026-11-19", "hora": "12:28", "simbolo": "MDT", "accion": "omitir", "motivo": "señal vieja (121 min)"}
+{"fecha": "2026-11-19", "hora": "12:28", "simbolo": "ARGX", "accion": "omitir", "motivo": "señal vieja (51 min)"}
+{"fecha": "2026-11-19", "hora": "12:28", "simbolo": "CBOE", "accion": "omitir", "motivo": "señal vieja (11 min)"}
+{"fecha": "2026-11-19", "hora": "12:33", "simbolo": "LIN", "accion": "omitir", "motivo": "señal vieja (157 min)"}
+{"fecha": "2026-11-19", "hora": "12:33", "simbolo": "FFIV", "accion": "omitir", "motivo": "señal vieja (132 min)"}
+{"fecha": "2026-11-19", "hora": "12:33", "simbolo": "TSCO", "accion": "omitir", "motivo": "señal vieja (87 min)"}
