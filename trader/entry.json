@@ -1,6 +1,6 @@
 {
   "created_by": "trader-entry",
-  "symbol": "CORZ",
+  "symbol": "TU",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-19",
@@ -8,15 +8,15 @@
   "time": "9:50 AM",
   "bar_start": "09:45",
   "bar_index": 3,
-  "price": 14.87,
-  "level": 14.79,
+  "price": 10.4,
+  "level": 10.33,
   "interval": "5m",
   "opening_range": {
-    "high": 14.79,
-    "low": 14.51,
+    "high": 10.33,
+    "low": 9.98,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-19T20:00:06Z",
+  "checked_at": "2026-11-19T20:10:35Z",
   "reason": "the 9:45 bar closed above the range high"
 }

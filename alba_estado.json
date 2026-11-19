@@ -99,12 +99,18 @@
    "APO": "omitida: señal vieja (304 min)",
    "FSLR": "omitida: señal vieja (310 min)",
    "BX": "omitida: señal vieja (310 min)",
-   "CORZ": "omitida: señal vieja (310 min)"
+   "CORZ": "omitida: señal vieja (310 min)",
+   "BURL": "omitida: señal vieja (315 min)",
+   "APH": "omitida: señal vieja (300 min)",
+   "MPWR": "omitida: señal vieja (300 min)",
+   "HPE": "omitida: señal vieja (320 min)",
+   "MCD": "omitida: señal vieja (315 min)",
+   "TU": "omitida: señal vieja (320 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795118218.829682,
+  "ultimo_scan": 1795118838.86164,
   "sombra": {
    "vistos": [
     "NTAP",
@@ -258,7 +264,8 @@
     "PHM",
     "XYL",
     "CFG",
-    "RXO"
+    "RXO",
+    "BURL"
    ],
    "ultimo_scan": 1795108643.500689,
    "limitado": 0,
