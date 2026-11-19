@@ -81,12 +81,18 @@
    "ALAB": "omitida: señal vieja (274 min)",
    "CFG": "omitida: señal vieja (279 min)",
    "FLEX": "omitida: señal vieja (279 min)",
-   "LSCC": "omitida: señal vieja (264 min)"
+   "LSCC": "omitida: señal vieja (264 min)",
+   "RXO": "omitida: señal vieja (164 min)",
+   "ADI": "omitida: señal vieja (284 min)",
+   "BJ": "omitida: señal vieja (124 min)",
+   "SPOT": "omitida: señal vieja (289 min)",
+   "AZO": "omitida: señal vieja (259 min)",
+   "CRWV": "omitida: señal vieja (289 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795116363.314368,
+  "ultimo_scan": 1795116981.530384,
   "sombra": {
    "vistos": [
     "NTAP",
@@ -239,7 +245,8 @@
     "VFC",
     "PHM",
     "XYL",
-    "CFG"
+    "CFG",
+    "RXO"
    ],
    "ultimo_scan": 1795108643.500689,
    "limitado": 0,
