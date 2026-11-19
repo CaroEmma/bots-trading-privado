@@ -121,7 +121,8 @@
     "ARGX",
     "RKT",
     "MP",
-    "PGR"
+    "PGR",
+    "GIS"
    ],
    "perdidos": [
     "DLR",
@@ -172,9 +173,10 @@
     "ABVX",
     "CARR",
     "CG",
-    "DOCN"
+    "DOCN",
+    "LHX"
    ],
-   "ultimo_scan": 1795107586.139538,
+   "ultimo_scan": 1795108291.820902,
    "limitado": 0,
    "errores": 0
   }

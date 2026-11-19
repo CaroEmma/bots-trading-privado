@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-19T16:59:46Z",
+  "created_at": "2026-11-19T17:11:32Z",
   "mode": "orb",
-  "as_of": "2026-11-19 11:59 ET",
+  "as_of": "2026-11-19 12:11 ET",
   "universe": 5927,
-  "scanned": 1600,
+  "scanned": 1554,
   "failed": 0,
-  "unconfirmed": 540,
+  "unconfirmed": 521,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -355,19 +355,6 @@
       "pct_over": 0.65
     },
     {
-      "symbol": "HSBC",
-      "setups": [
-        "orb"
-      ],
-      "price": 85.72,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 85.56,
-      "or_low": 85.29,
-      "pct_over": 0.19
-    },
-    {
       "symbol": "INTC",
       "setups": [
         "orb"
@@ -444,19 +431,6 @@
       "or_high": 109.45,
       "or_low": 108.26,
       "pct_over": 0.05
-    },
-    {
-      "symbol": "LYG",
-      "setups": [
-        "orb"
-      ],
-      "price": 5.12,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 5.12,
-      "or_low": 5.1,
-      "pct_over": 0.1
     },
     {
       "symbol": "MSFT",
@@ -1252,6 +1226,19 @@
       "pct_over": 0.05
     },
     {
+      "symbol": "TDG",
+      "setups": [
+        "orb"
+      ],
+      "price": 1179.9,
+      "at": "10:30 AM",
+      "bar_start": "10:25",
+      "bar_index": 11,
+      "or_high": 1179.2,
+      "or_low": 1170.94,
+      "pct_over": 0.06
+    },
+    {
       "symbol": "TSCO",
       "setups": [
         "orb"
@@ -1321,13 +1308,26 @@
       "setups": [
         "orb"
       ],
-      "price": 227.79,
+      "price": 227.8,
       "at": "11:55 AM",
       "bar_start": "11:50",
       "bar_index": 28,
       "or_high": 227.64,
       "or_low": 225.56,
       "pct_over": 0.07
+    },
+    {
+      "symbol": "GIS",
+      "setups": [
+        "orb"
+      ],
+      "price": 34.04,
+      "at": "12:00 PM",
+      "bar_start": "11:55",
+      "bar_index": 29,
+      "or_high": 34.0,
+      "or_low": 33.54,
+      "pct_over": 0.12
     }
   ]
 }
