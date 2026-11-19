@@ -109,7 +109,10 @@
     "COHR",
     "RVMD",
     "STX",
-    "PCG"
+    "PCG",
+    "DHR",
+    "AZO",
+    "FFIV"
    ],
    "perdidos": [
     "DLR",
@@ -159,7 +162,7 @@
     "BMRN",
     "ABVX"
    ],
-   "ultimo_scan": 1795101375.425789,
+   "ultimo_scan": 1795102031.460566,
    "limitado": 0,
    "errores": 0
   }
