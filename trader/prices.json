@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-18T14:53:16Z",
+  "as_of": "2026-11-19T14:59:30Z",
   "source": "yahoo",
   "note": "Delayed quotes for alerts and sizing checks. Your broker's price is the one that fills. detail.fetched is when each price was read.",
   "prices": {
@@ -16,7 +16,9 @@
     "CHRW": 134.58,
     "V": 424.48,
     "NOC": 548.51,
-    "FERG": 251.075
+    "FERG": 251.075,
+    "GME": 26.69,
+    "LULU": 108.87
   },
   "detail": {
     "SPCX": {
@@ -102,6 +104,18 @@
       "time": "2026-11-18T14:52:57Z",
       "source": "yahoo",
       "fetched": "2026-11-18T14:53:16Z"
+    },
+    "GME": {
+      "prev_close": 26.53,
+      "time": "2026-11-19T14:54:10Z",
+      "source": "yahoo",
+      "fetched": "2026-11-19T14:54:21Z"
+    },
+    "LULU": {
+      "prev_close": 110.78,
+      "time": "2026-11-19T14:59:23Z",
+      "source": "yahoo",
+      "fetched": "2026-11-19T14:59:30Z"
     }
   }
 }

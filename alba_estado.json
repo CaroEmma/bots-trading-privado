@@ -5,9 +5,55 @@
   "entradas": 0,
   "pnl": 0.0,
   "r": 0.0,
-  "evaluados": {},
-  "universo": false,
+  "evaluados": {
+   "NTAP": "omitida: timemachine: R promedio simulado -0.075 no es > 0",
+   "FHN": "omitida: timemachine: R promedio simulado -0.204 no es > 0",
+   "GME": "omitida: risk BLOCK: position: GME would be $3,736.60, 75.5% of the $4,949.35 account, over your 75% cap",
+   "TSN": "omitida: timemachine: R promedio simulado -0.022 no es > 0",
+   "WDC": "omitida: timemachine: R promedio simulado -0.014 no es > 0",
+   "LULU": "omitida: risk BLOCK: position: LULU would be $3,723, 75.2% of the $4,949.35 account, over your 75% cap"
+  },
+  "universo": true,
   "sesion": true,
-  "informe": false
+  "informe": false,
+  "ultimo_scan": 1795100140.344954,
+  "sombra": {
+   "vistos": [
+    "NTAP",
+    "FHN",
+    "GME",
+    "TSN",
+    "WDC",
+    "LULU",
+    "CME",
+    "IBKR",
+    "STM",
+    "VRSN",
+    "LYG",
+    "PYPL",
+    "SKHY",
+    "MSFT",
+    "TSM",
+    "INSM",
+    "HD",
+    "TJX",
+    "NTSK",
+    "BABA",
+    "C",
+    "ETN",
+    "MTSI",
+    "P",
+    "VVV",
+    "TEL",
+    "USB",
+    "HSBC",
+    "NOK",
+    "SUNB"
+   ],
+   "perdidos": [],
+   "ultimo_scan": 0,
+   "limitado": 0,
+   "errores": 0
+  }
  }
 }

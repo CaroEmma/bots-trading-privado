@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-18T14:50:03Z",
+  "created_at": "2026-11-19T14:55:40Z",
   "mode": "orb",
-  "as_of": "2026-11-18 09:50 ET",
-  "universe": 5928,
-  "scanned": 2553,
-  "failed": 1,
-  "unconfirmed": 259,
+  "as_of": "2026-11-19 09:55 ET",
+  "universe": 5927,
+  "scanned": 2309,
+  "failed": 0,
+  "unconfirmed": 451,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -17,719 +17,1109 @@
   "note": "A scan is a list of charts that match a rule, not a list of stocks to buy.",
   "hits": [
     {
-      "symbol": "ABSI",
+      "symbol": "ADI",
       "setups": [
         "orb"
       ],
-      "price": 8.21,
+      "price": 394.04,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 8.12,
-      "or_low": 7.6,
-      "pct_over": 1.11
+      "or_high": 392.89,
+      "or_low": 388.53,
+      "pct_over": 0.29
     },
     {
-      "symbol": "AHR",
+      "symbol": "AKAM",
       "setups": [
         "orb"
       ],
-      "price": 58.31,
+      "price": 95.86,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 58.27,
-      "or_low": 57.08,
-      "pct_over": 0.08
+      "or_high": 95.09,
+      "or_low": 92.11,
+      "pct_over": 0.81
     },
     {
-      "symbol": "BJRI",
+      "symbol": "ALAB",
       "setups": [
         "orb"
       ],
-      "price": 58.21,
+      "price": 235.27,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 58.06,
-      "or_low": 56.24,
-      "pct_over": 0.25
+      "or_high": 234.6,
+      "or_low": 225.81,
+      "pct_over": 0.28
     },
     {
-      "symbol": "BNL",
+      "symbol": "AMBA",
       "setups": [
         "orb"
       ],
-      "price": 17.84,
+      "price": 62.17,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 17.74,
-      "or_low": 17.39,
-      "pct_over": 0.56
+      "or_high": 61.62,
+      "or_low": 58.55,
+      "pct_over": 0.89
     },
     {
-      "symbol": "BRX",
+      "symbol": "AMD",
       "setups": [
         "orb"
       ],
-      "price": 30.29,
+      "price": 554.47,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 30.28,
-      "or_low": 29.94,
-      "pct_over": 0.03
+      "or_high": 552.0,
+      "or_low": 537.09,
+      "pct_over": 0.45
     },
     {
-      "symbol": "CDW",
+      "symbol": "APO",
       "setups": [
         "orb"
       ],
-      "price": 164.44,
+      "price": 120.07,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 163.85,
-      "or_low": 161.03,
-      "pct_over": 0.36
+      "or_high": 119.44,
+      "or_low": 117.46,
+      "pct_over": 0.52
     },
     {
-      "symbol": "CHDN",
+      "symbol": "ASX",
       "setups": [
         "orb"
       ],
-      "price": 97.39,
+      "price": 32.73,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 97.25,
-      "or_low": 95.52,
-      "pct_over": 0.15
+      "or_high": 32.63,
+      "or_low": 31.73,
+      "pct_over": 0.29
     },
     {
-      "symbol": "CMG",
+      "symbol": "BABA",
       "setups": [
         "orb"
       ],
-      "price": 36.53,
+      "price": 87.76,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 36.47,
-      "or_low": 35.08,
-      "pct_over": 0.15
+      "or_high": 87.62,
+      "or_low": 83.25,
+      "pct_over": 0.16
     },
     {
-      "symbol": "CMPS",
+      "symbol": "BBY",
       "setups": [
         "orb"
       ],
-      "price": 8.05,
+      "price": 100.47,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 8.05,
-      "or_low": 7.94,
-      "pct_over": 0.05
+      "or_high": 100.0,
+      "or_low": 99.27,
+      "pct_over": 0.47
     },
     {
-      "symbol": "COCO",
+      "symbol": "BCS",
       "setups": [
         "orb"
       ],
-      "price": 66.46,
+      "price": 21.98,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 65.23,
-      "or_low": 63.31,
-      "pct_over": 1.89
+      "or_high": 21.93,
+      "or_low": 21.81,
+      "pct_over": 0.21
     },
     {
-      "symbol": "CTRE",
+      "symbol": "BLK",
       "setups": [
         "orb"
       ],
-      "price": 37.58,
+      "price": 1186.0,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 37.51,
-      "or_low": 36.8,
-      "pct_over": 0.17
+      "or_high": 1182.96,
+      "or_low": 1175.48,
+      "pct_over": 0.26
     },
     {
-      "symbol": "CVLT",
+      "symbol": "BMNR",
       "setups": [
         "orb"
       ],
-      "price": 145.17,
+      "price": 16.36,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 145.0,
-      "or_low": 141.6,
-      "pct_over": 0.12
+      "or_high": 16.33,
+      "or_low": 16.08,
+      "pct_over": 0.21
     },
     {
-      "symbol": "CX",
+      "symbol": "BX",
       "setups": [
         "orb"
       ],
-      "price": 10.0,
+      "price": 118.11,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 9.99,
-      "or_low": 9.9,
-      "pct_over": 0.1
+      "or_high": 117.48,
+      "or_low": 114.9,
+      "pct_over": 0.54
     },
     {
-      "symbol": "DASH",
+      "symbol": "C",
       "setups": [
         "orb"
       ],
-      "price": 168.62,
+      "price": 119.22,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 168.36,
-      "or_low": 164.4,
-      "pct_over": 0.15
+      "or_high": 119.04,
+      "or_low": 117.88,
+      "pct_over": 0.16
     },
     {
-      "symbol": "DIS",
+      "symbol": "CLS",
       "setups": [
         "orb"
       ],
-      "price": 119.1,
+      "price": 262.34,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 118.98,
-      "or_low": 116.65,
-      "pct_over": 0.1
+      "or_high": 259.78,
+      "or_low": 251.06,
+      "pct_over": 0.99
     },
     {
-      "symbol": "ESS",
+      "symbol": "CME",
       "setups": [
         "orb"
       ],
-      "price": 271.39,
+      "price": 309.67,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 271.1,
-      "or_low": 267.93,
-      "pct_over": 0.11
+      "or_high": 309.47,
+      "or_low": 307.74,
+      "pct_over": 0.06
     },
     {
-      "symbol": "EXPE",
+      "symbol": "COF",
       "setups": [
         "orb"
       ],
-      "price": 247.68,
+      "price": 187.73,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 245.99,
-      "or_low": 241.52,
-      "pct_over": 0.69
+      "or_high": 187.02,
+      "or_low": 184.95,
+      "pct_over": 0.38
     },
     {
-      "symbol": "EXPO",
+      "symbol": "CORZ",
       "setups": [
         "orb"
       ],
-      "price": 88.47,
+      "price": 14.87,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 88.38,
-      "or_low": 87.42,
-      "pct_over": 0.1
+      "or_high": 14.79,
+      "or_low": 14.51,
+      "pct_over": 0.54
     },
     {
-      "symbol": "FERG",
+      "symbol": "CRSP",
       "setups": [
         "orb"
       ],
-      "price": 250.57,
+      "price": 41.44,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 250.53,
-      "or_low": 246.06,
+      "or_high": 41.28,
+      "or_low": 39.93,
+      "pct_over": 0.4
+    },
+    {
+      "symbol": "CRWV",
+      "setups": [
+        "orb"
+      ],
+      "price": 52.35,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 52.17,
+      "or_low": 50.06,
+      "pct_over": 0.34
+    },
+    {
+      "symbol": "DOCN",
+      "setups": [
+        "orb"
+      ],
+      "price": 86.21,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 86.01,
+      "or_low": 83.69,
+      "pct_over": 0.24
+    },
+    {
+      "symbol": "ETN",
+      "setups": [
+        "orb"
+      ],
+      "price": 346.06,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 345.49,
+      "or_low": 341.35,
+      "pct_over": 0.16
+    },
+    {
+      "symbol": "FLEX",
+      "setups": [
+        "orb"
+      ],
+      "price": 79.82,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 79.59,
+      "or_low": 77.43,
+      "pct_over": 0.28
+    },
+    {
+      "symbol": "FN",
+      "setups": [
+        "orb"
+      ],
+      "price": 337.2,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 334.55,
+      "or_low": 324.82,
+      "pct_over": 0.79
+    },
+    {
+      "symbol": "FSLR",
+      "setups": [
+        "orb"
+      ],
+      "price": 157.69,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 156.88,
+      "or_low": 151.81,
+      "pct_over": 0.52
+    },
+    {
+      "symbol": "FSLY",
+      "setups": [
+        "orb"
+      ],
+      "price": 19.19,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 19.08,
+      "or_low": 18.12,
+      "pct_over": 0.58
+    },
+    {
+      "symbol": "FUTU",
+      "setups": [
+        "orb"
+      ],
+      "price": 90.07,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 88.97,
+      "or_low": 85.52,
+      "pct_over": 1.24
+    },
+    {
+      "symbol": "GAP",
+      "setups": [
+        "orb"
+      ],
+      "price": 19.78,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 19.62,
+      "or_low": 19.35,
+      "pct_over": 0.79
+    },
+    {
+      "symbol": "GME",
+      "setups": [
+        "orb"
+      ],
+      "price": 26.67,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 26.66,
+      "or_low": 26.31,
       "pct_over": 0.02
     },
     {
-      "symbol": "H",
+      "symbol": "GNRC",
       "setups": [
         "orb"
       ],
-      "price": 193.5,
+      "price": 217.32,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 193.29,
-      "or_low": 190.26,
-      "pct_over": 0.11
+      "or_high": 214.14,
+      "or_low": 207.47,
+      "pct_over": 1.49
     },
     {
-      "symbol": "HZO",
+      "symbol": "GS",
       "setups": [
         "orb"
       ],
-      "price": 52.87,
+      "price": 889.97,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 52.85,
-      "or_low": 52.81,
-      "pct_over": 0.03
+      "or_high": 886.7,
+      "or_low": 879.98,
+      "pct_over": 0.37
     },
     {
-      "symbol": "IPAR",
+      "symbol": "HPE",
       "setups": [
         "orb"
       ],
-      "price": 132.7,
+      "price": 48.03,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 132.38,
-      "or_low": 131.05,
-      "pct_over": 0.24
+      "or_high": 47.7,
+      "or_low": 46.7,
+      "pct_over": 0.69
+    },
+    {
+      "symbol": "HSBC",
+      "setups": [
+        "orb"
+      ],
+      "price": 85.71,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 85.56,
+      "or_low": 85.29,
+      "pct_over": 0.18
+    },
+    {
+      "symbol": "IBKR",
+      "setups": [
+        "orb"
+      ],
+      "price": 79.06,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 79.01,
+      "or_low": 78.12,
+      "pct_over": 0.06
+    },
+    {
+      "symbol": "INTC",
+      "setups": [
+        "orb"
+      ],
+      "price": 59.15,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 59.0,
+      "or_low": 57.28,
+      "pct_over": 0.25
+    },
+    {
+      "symbol": "JBL",
+      "setups": [
+        "orb"
+      ],
+      "price": 258.42,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 257.29,
+      "or_low": 254.0,
+      "pct_over": 0.44
     },
     {
       "symbol": "JD",
       "setups": [
         "orb"
       ],
-      "price": 25.39,
+      "price": 25.67,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 25.38,
-      "or_low": 24.94,
+      "or_high": 25.61,
+      "or_low": 25.04,
+      "pct_over": 0.23
+    },
+    {
+      "symbol": "JPM",
+      "setups": [
+        "orb"
+      ],
+      "price": 328.14,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 327.42,
+      "or_low": 325.87,
+      "pct_over": 0.22
+    },
+    {
+      "symbol": "KEYS",
+      "setups": [
+        "orb"
+      ],
+      "price": 297.2,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 296.56,
+      "or_low": 291.01,
+      "pct_over": 0.22
+    },
+    {
+      "symbol": "LULU",
+      "setups": [
+        "orb"
+      ],
+      "price": 109.5,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 109.45,
+      "or_low": 108.26,
+      "pct_over": 0.05
+    },
+    {
+      "symbol": "LYG",
+      "setups": [
+        "orb"
+      ],
+      "price": 5.12,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 5.12,
+      "or_low": 5.1,
+      "pct_over": 0.1
+    },
+    {
+      "symbol": "MSFT",
+      "setups": [
+        "orb"
+      ],
+      "price": 525.35,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 524.78,
+      "or_low": 518.42,
+      "pct_over": 0.11
+    },
+    {
+      "symbol": "MTSI",
+      "setups": [
+        "orb"
+      ],
+      "price": 232.98,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 232.61,
+      "or_low": 224.93,
+      "pct_over": 0.16
+    },
+    {
+      "symbol": "NDAQ",
+      "setups": [
+        "orb"
+      ],
+      "price": 106.87,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 106.61,
+      "or_low": 105.42,
+      "pct_over": 0.24
+    },
+    {
+      "symbol": "NOK",
+      "setups": [
+        "orb"
+      ],
+      "price": 7.84,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 7.82,
+      "or_low": 7.73,
+      "pct_over": 0.19
+    },
+    {
+      "symbol": "NTAP",
+      "setups": [
+        "orb"
+      ],
+      "price": 179.65,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 179.64,
+      "or_low": 175.5,
       "pct_over": 0.01
     },
     {
-      "symbol": "JJSF",
+      "symbol": "NTSK",
       "setups": [
         "orb"
       ],
-      "price": 96.43,
+      "price": 25.85,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 95.22,
-      "or_low": 90.25,
-      "pct_over": 1.28
+      "or_high": 25.81,
+      "or_low": 24.25,
+      "pct_over": 0.14
     },
     {
-      "symbol": "KRYS",
+      "symbol": "NUE",
       "setups": [
         "orb"
       ],
-      "price": 303.08,
+      "price": 253.28,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 302.64,
-      "or_low": 297.6,
-      "pct_over": 0.15
+      "or_high": 252.76,
+      "or_low": 249.87,
+      "pct_over": 0.21
     },
     {
-      "symbol": "LQDA",
+      "symbol": "NVTS",
       "setups": [
         "orb"
       ],
-      "price": 57.03,
+      "price": 7.89,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 56.97,
-      "or_low": 56.24,
-      "pct_over": 0.12
+      "or_high": 7.84,
+      "or_low": 7.54,
+      "pct_over": 0.57
     },
     {
-      "symbol": "LYFT",
+      "symbol": "NXPI",
       "setups": [
         "orb"
       ],
-      "price": 17.75,
+      "price": 261.33,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 17.66,
-      "or_low": 16.65,
-      "pct_over": 0.51
+      "or_high": 259.25,
+      "or_low": 255.29,
+      "pct_over": 0.8
     },
     {
-      "symbol": "MAIN",
+      "symbol": "ON",
       "setups": [
         "orb"
       ],
-      "price": 55.77,
+      "price": 69.82,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 55.75,
-      "or_low": 55.15,
-      "pct_over": 0.04
-    },
-    {
-      "symbol": "MIR",
-      "setups": [
-        "orb"
-      ],
-      "price": 17.0,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 16.99,
-      "or_low": 16.6,
-      "pct_over": 0.06
-    },
-    {
-      "symbol": "MP",
-      "setups": [
-        "orb"
-      ],
-      "price": 36.34,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 35.57,
-      "or_low": 34.69,
-      "pct_over": 2.17
-    },
-    {
-      "symbol": "MSA",
-      "setups": [
-        "orb"
-      ],
-      "price": 176.3,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 173.8,
-      "or_low": 170.02,
-      "pct_over": 1.44
-    },
-    {
-      "symbol": "NSIT",
-      "setups": [
-        "orb"
-      ],
-      "price": 157.99,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 157.0,
-      "or_low": 155.03,
-      "pct_over": 0.63
-    },
-    {
-      "symbol": "NXE",
-      "setups": [
-        "orb"
-      ],
-      "price": 7.37,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 7.35,
-      "or_low": 7.14,
+      "or_high": 69.63,
+      "or_low": 68.64,
       "pct_over": 0.27
     },
     {
-      "symbol": "OHI",
+      "symbol": "P",
       "setups": [
         "orb"
       ],
-      "price": 47.13,
+      "price": 112.42,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 47.13,
-      "or_low": 46.29,
-      "pct_over": 0.01
+      "or_high": 112.24,
+      "or_low": 103.5,
+      "pct_over": 0.16
     },
     {
-      "symbol": "PAYP",
+      "symbol": "PDD",
       "setups": [
         "orb"
       ],
-      "price": 13.0,
+      "price": 87.09,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 12.99,
-      "or_low": 12.72,
-      "pct_over": 0.08
+      "or_high": 86.15,
+      "or_low": 82.02,
+      "pct_over": 1.09
     },
     {
-      "symbol": "PKG",
+      "symbol": "POWL",
       "setups": [
         "orb"
       ],
-      "price": 246.07,
+      "price": 164.63,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 245.97,
-      "or_low": 242.19,
-      "pct_over": 0.04
+      "or_high": 162.39,
+      "or_low": 157.48,
+      "pct_over": 1.38
     },
     {
-      "symbol": "PRCT",
+      "symbol": "PURR",
       "setups": [
         "orb"
       ],
-      "price": 24.36,
+      "price": 8.98,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 24.31,
-      "or_low": 23.55,
-      "pct_over": 0.22
+      "or_high": 8.88,
+      "or_low": 8.28,
+      "pct_over": 1.18
     },
     {
-      "symbol": "RACE",
+      "symbol": "PYPL",
       "setups": [
         "orb"
       ],
-      "price": 407.7,
+      "price": 57.99,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 406.79,
-      "or_low": 402.35,
-      "pct_over": 0.22
+      "or_high": 57.93,
+      "or_low": 57.5,
+      "pct_over": 0.1
     },
     {
-      "symbol": "SAIA",
+      "symbol": "QCOM",
       "setups": [
         "orb"
       ],
-      "price": 336.29,
+      "price": 170.7,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 334.5,
-      "or_low": 329.66,
-      "pct_over": 0.53
+      "or_high": 169.5,
+      "or_low": 163.28,
+      "pct_over": 0.71
     },
     {
-      "symbol": "SG",
+      "symbol": "RYAAY",
       "setups": [
         "orb"
       ],
-      "price": 12.7,
+      "price": 56.63,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 12.59,
-      "or_low": 12.16,
-      "pct_over": 0.87
+      "or_high": 56.49,
+      "or_low": 56.15,
+      "pct_over": 0.25
     },
     {
-      "symbol": "SIRI",
+      "symbol": "SITM",
       "setups": [
         "orb"
       ],
-      "price": 32.35,
+      "price": 448.87,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 32.19,
-      "or_low": 31.55,
-      "pct_over": 0.5
+      "or_high": 442.4,
+      "or_low": 435.97,
+      "pct_over": 1.46
     },
     {
-      "symbol": "SMA",
+      "symbol": "SKHY",
       "setups": [
         "orb"
       ],
-      "price": 39.72,
+      "price": 129.71,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 39.56,
-      "or_low": 39.2,
-      "pct_over": 0.4
+      "or_high": 129.58,
+      "or_low": 127.59,
+      "pct_over": 0.1
     },
     {
-      "symbol": "SMMT",
+      "symbol": "SMCI",
       "setups": [
         "orb"
       ],
-      "price": 10.72,
+      "price": 25.8,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 10.56,
-      "or_low": 10.14,
-      "pct_over": 1.47
+      "or_high": 25.59,
+      "or_low": 25.1,
+      "pct_over": 0.8
     },
     {
-      "symbol": "SNA",
+      "symbol": "SPOT",
       "setups": [
         "orb"
       ],
-      "price": 361.43,
+      "price": 602.7,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 361.34,
-      "or_low": 357.14,
-      "pct_over": 0.03
+      "or_high": 600.88,
+      "or_low": 581.83,
+      "pct_over": 0.3
+    },
+    {
+      "symbol": "STM",
+      "setups": [
+        "orb"
+      ],
+      "price": 46.37,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 46.34,
+      "or_low": 45.9,
+      "pct_over": 0.06
+    },
+    {
+      "symbol": "SUNB",
+      "setups": [
+        "orb"
+      ],
+      "price": 81.07,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 80.92,
+      "or_low": 80.28,
+      "pct_over": 0.19
+    },
+    {
+      "symbol": "TEL",
+      "setups": [
+        "orb"
+      ],
+      "price": 216.21,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 215.84,
+      "or_low": 213.88,
+      "pct_over": 0.17
     },
     {
       "symbol": "TJX",
       "setups": [
         "orb"
       ],
-      "price": 140.93,
+      "price": 139.58,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 140.8,
-      "or_low": 134.05,
-      "pct_over": 0.09
-    },
-    {
-      "symbol": "TKO",
-      "setups": [
-        "orb"
-      ],
-      "price": 189.57,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 189.51,
-      "or_low": 186.32,
-      "pct_over": 0.03
-    },
-    {
-      "symbol": "TREX",
-      "setups": [
-        "orb"
-      ],
-      "price": 51.02,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 50.96,
-      "or_low": 50.0,
+      "or_high": 139.4,
+      "or_low": 136.98,
       "pct_over": 0.13
+    },
+    {
+      "symbol": "TPR",
+      "setups": [
+        "orb"
+      ],
+      "price": 128.94,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 127.81,
+      "or_low": 126.84,
+      "pct_over": 0.88
+    },
+    {
+      "symbol": "TSM",
+      "setups": [
+        "orb"
+      ],
+      "price": 374.33,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 373.88,
+      "or_low": 365.71,
+      "pct_over": 0.12
     },
     {
       "symbol": "TSN",
       "setups": [
         "orb"
       ],
-      "price": 64.29,
+      "price": 63.49,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 64.09,
-      "or_low": 63.22,
-      "pct_over": 0.31
+      "or_high": 63.48,
+      "or_low": 62.89,
+      "pct_over": 0.02
     },
     {
-      "symbol": "UGI",
+      "symbol": "TTMI",
       "setups": [
         "orb"
       ],
-      "price": 37.87,
+      "price": 73.88,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 37.85,
-      "or_low": 37.04,
-      "pct_over": 0.04
+      "or_high": 73.63,
+      "or_low": 71.12,
+      "pct_over": 0.34
     },
     {
-      "symbol": "UNP",
+      "symbol": "TU",
       "setups": [
         "orb"
       ],
-      "price": 300.2,
+      "price": 10.4,
       "at": "9:50 AM",
       "bar_start": "09:45",
       "bar_index": 3,
-      "or_high": 299.96,
-      "or_low": 295.0,
+      "or_high": 10.33,
+      "or_low": 9.98,
+      "pct_over": 0.68
+    },
+    {
+      "symbol": "TWST",
+      "setups": [
+        "orb"
+      ],
+      "price": 122.69,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 120.96,
+      "or_low": 117.6,
+      "pct_over": 1.43
+    },
+    {
+      "symbol": "UMC",
+      "setups": [
+        "orb"
+      ],
+      "price": 14.07,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 14.05,
+      "or_low": 13.76,
+      "pct_over": 0.19
+    },
+    {
+      "symbol": "URI",
+      "setups": [
+        "orb"
+      ],
+      "price": 1104.27,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 1095.51,
+      "or_low": 1084.56,
+      "pct_over": 0.8
+    },
+    {
+      "symbol": "USB",
+      "setups": [
+        "orb"
+      ],
+      "price": 58.6,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 58.5,
+      "or_low": 58.08,
+      "pct_over": 0.17
+    },
+    {
+      "symbol": "VRSN",
+      "setups": [
+        "orb"
+      ],
+      "price": 308.85,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 308.57,
+      "or_low": 306.15,
+      "pct_over": 0.09
+    },
+    {
+      "symbol": "WDC",
+      "setups": [
+        "orb"
+      ],
+      "price": 311.9,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 311.8,
+      "or_low": 300.82,
+      "pct_over": 0.03
+    },
+    {
+      "symbol": "WFC",
+      "setups": [
+        "orb"
+      ],
+      "price": 81.83,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 81.67,
+      "or_low": 81.12,
+      "pct_over": 0.2
+    },
+    {
+      "symbol": "WMG",
+      "setups": [
+        "orb"
+      ],
+      "price": 33.47,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 33.23,
+      "or_low": 30.9,
+      "pct_over": 0.72
+    },
+    {
+      "symbol": "AXON",
+      "setups": [
+        "orb"
+      ],
+      "price": 321.32,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 320.5,
+      "or_low": 305.04,
+      "pct_over": 0.26
+    },
+    {
+      "symbol": "BMRN",
+      "setups": [
+        "orb"
+      ],
+      "price": 63.58,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 62.5,
+      "or_low": 61.0,
+      "pct_over": 1.73
+    },
+    {
+      "symbol": "HD",
+      "setups": [
+        "orb"
+      ],
+      "price": 336.04,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 335.76,
+      "or_low": 332.36,
       "pct_over": 0.08
     },
     {
-      "symbol": "USAR",
+      "symbol": "INSM",
       "setups": [
         "orb"
       ],
-      "price": 6.91,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 6.76,
-      "or_low": 6.51,
-      "pct_over": 2.25
+      "price": 121.33,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 121.26,
+      "or_low": 118.0,
+      "pct_over": 0.06
     },
     {
-      "symbol": "VRNS",
+      "symbol": "MCD",
       "setups": [
         "orb"
       ],
-      "price": 49.15,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 49.1,
-      "or_low": 49.01,
-      "pct_over": 0.11
+      "price": 271.21,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 269.42,
+      "or_low": 267.47,
+      "pct_over": 0.66
     },
     {
       "symbol": "VVV",
       "setups": [
         "orb"
       ],
-      "price": 33.35,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 33.34,
-      "or_low": 32.37,
-      "pct_over": 0.03
-    },
-    {
-      "symbol": "WEN",
-      "setups": [
-        "orb"
-      ],
-      "price": 8.9,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 8.88,
-      "or_low": 8.57,
-      "pct_over": 0.23
-    },
-    {
-      "symbol": "WSO",
-      "setups": [
-        "orb"
-      ],
-      "price": 297.24,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 296.53,
-      "or_low": 291.78,
-      "pct_over": 0.24
+      "price": 36.72,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 36.66,
+      "or_low": 33.69,
+      "pct_over": 0.16
     }
   ]
 }
