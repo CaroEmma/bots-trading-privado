@@ -197,3 +197,9 @@
 {"fecha": "2026-11-19", "hora": "12:56", "simbolo": "HD", "accion": "omitir", "motivo": "señal vieja (185 min)"}
 {"fecha": "2026-11-19", "hora": "12:56", "simbolo": "STM", "accion": "omitir", "motivo": "señal vieja (190 min)"}
 {"fecha": "2026-11-19", "hora": "12:56", "simbolo": "LYG", "accion": "omitir", "motivo": "señal vieja (190 min)"}
+{"fecha": "2026-11-19", "hora": "13:02", "simbolo": "PYPL", "accion": "omitir", "motivo": "señal vieja (196 min)"}
+{"fecha": "2026-11-19", "hora": "13:02", "simbolo": "SKHY", "accion": "omitir", "motivo": "señal vieja (196 min)"}
+{"fecha": "2026-11-19", "hora": "13:02", "simbolo": "MSFT", "accion": "omitir", "motivo": "señal vieja (196 min)"}
+{"fecha": "2026-11-19", "hora": "13:08", "simbolo": "TSM", "accion": "omitir", "motivo": "noticia con 'halt' (suspensión)"}
+{"fecha": "2026-11-19", "hora": "13:08", "simbolo": "NTSK", "accion": "omitir", "motivo": "señal vieja (202 min)"}
+{"fecha": "2026-11-19", "hora": "13:08", "simbolo": "TEL", "accion": "omitir", "motivo": "señal vieja (202 min)"}
