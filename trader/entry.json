@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "TSCO",
+  "symbol": "LHX",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-19",
   "status": "triggered",
-  "time": "11:10 AM",
-  "bar_start": "11:05",
-  "bar_index": 19,
-  "price": 38.51,
-  "level": 38.5,
+  "time": "10:05 AM",
+  "bar_start": "10:00",
+  "bar_index": 6,
+  "price": 258.12,
+  "level": 257.98,
   "interval": "5m",
   "opening_range": {
-    "high": 38.5,
-    "low": 37.92,
+    "high": 257.98,
+    "low": 255.96,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-19T17:37:51Z",
-  "reason": "the 11:05 bar closed above the range high"
+  "checked_at": "2026-11-19T17:50:00Z",
+  "reason": "the 10:00 bar closed above the range high"
 }

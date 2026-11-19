@@ -21,12 +21,18 @@
    "CBOE": "omitida: señal vieja (11 min)",
    "LIN": "omitida: señal vieja (157 min)",
    "FFIV": "omitida: señal vieja (132 min)",
-   "TSCO": "omitida: señal vieja (87 min)"
+   "TSCO": "omitida: señal vieja (87 min)",
+   "DHR": "omitida: señal vieja (143 min)",
+   "PG": "omitida: señal vieja (133 min)",
+   "UAL": "omitida: señal vieja (73 min)",
+   "NOC": "omitida: timemachine: R promedio simulado -0.121 no es > 0",
+   "CME": "omitida: señal vieja (179 min)",
+   "LHX": "omitida: señal vieja (165 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795109639.392153,
+  "ultimo_scan": 1795110351.959324,
   "sombra": {
    "vistos": [
     "NTAP",
@@ -114,7 +120,8 @@
     "PGR",
     "GIS",
     "AON",
-    "BJ"
+    "BJ",
+    "NOC"
    ],
    "perdidos": [
     "DLR",
