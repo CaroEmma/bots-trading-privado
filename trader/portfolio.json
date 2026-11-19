@@ -1,17 +1,4 @@
 {
-  "cash": 1260.55,
-  "positions": [
-    {
-      "ticker": "WELL",
-      "shares": 15.0,
-      "lots": [
-        {
-          "id": "WELL-1",
-          "date": "2026-11-19",
-          "shares": 15.0,
-          "cost": 3688.8
-        }
-      ]
-    }
-  ]
+  "cash": 4937.35,
+  "positions": []
 }
