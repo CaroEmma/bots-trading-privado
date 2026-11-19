@@ -165,9 +165,10 @@
     "SITM",
     "BMRN",
     "ABVX",
-    "CARR"
+    "CARR",
+    "CG"
    ],
-   "ultimo_scan": 1795104776.623324,
+   "ultimo_scan": 1795105480.141199,
    "limitado": 0,
    "errores": 0
   }

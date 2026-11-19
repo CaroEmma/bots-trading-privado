@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-19T16:12:56Z",
+  "created_at": "2026-11-19T16:24:40Z",
   "mode": "orb",
-  "as_of": "2026-11-19 11:12 ET",
+  "as_of": "2026-11-19 11:24 ET",
   "universe": 5927,
-  "scanned": 1855,
+  "scanned": 1793,
   "failed": 0,
-  "unconfirmed": 606,
+  "unconfirmed": 590,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -355,19 +355,6 @@
       "pct_over": 0.65
     },
     {
-      "symbol": "IBKR",
-      "setups": [
-        "orb"
-      ],
-      "price": 79.06,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 79.01,
-      "or_low": 78.12,
-      "pct_over": 0.06
-    },
-    {
       "symbol": "INTC",
       "setups": [
         "orb"
@@ -446,6 +433,19 @@
       "pct_over": 0.05
     },
     {
+      "symbol": "LYG",
+      "setups": [
+        "orb"
+      ],
+      "price": 5.12,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 5.12,
+      "or_low": 5.1,
+      "pct_over": 0.1
+    },
+    {
       "symbol": "MSFT",
       "setups": [
         "orb"
@@ -470,19 +470,6 @@
       "or_high": 7.82,
       "or_low": 7.73,
       "pct_over": 0.19
-    },
-    {
-      "symbol": "NTAP",
-      "setups": [
-        "orb"
-      ],
-      "price": 179.65,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 179.64,
-      "or_low": 175.5,
-      "pct_over": 0.01
     },
     {
       "symbol": "NTSK",
@@ -743,19 +730,6 @@
       "or_high": 120.96,
       "or_low": 117.6,
       "pct_over": 1.43
-    },
-    {
-      "symbol": "UMC",
-      "setups": [
-        "orb"
-      ],
-      "price": 14.07,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 14.05,
-      "or_low": 13.76,
-      "pct_over": 0.18
     },
     {
       "symbol": "URI",
@@ -1211,6 +1185,19 @@
       "or_high": 36.75,
       "or_low": 33.69,
       "pct_over": 0.44
+    },
+    {
+      "symbol": "CG",
+      "setups": [
+        "orb"
+      ],
+      "price": 38.93,
+      "at": "10:10 AM",
+      "bar_start": "10:05",
+      "bar_index": 7,
+      "or_high": 38.79,
+      "or_low": 38.11,
+      "pct_over": 0.36
     },
     {
       "symbol": "RVMD",
