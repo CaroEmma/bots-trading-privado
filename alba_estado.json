@@ -69,12 +69,18 @@
    "MP": "omitida: señal vieja (143 min)",
    "PHM": "omitida: señal vieja (258 min)",
    "MDLZ": "omitida: timemachine: R promedio simulado -0.016 no es > 0",
-   "INTC": "omitida: señal vieja (258 min)"
+   "INTC": "omitida: señal vieja (258 min)",
+   "DELL": "omitida: señal vieja (248 min)",
+   "DT": "omitida: señal vieja (248 min)",
+   "BLK": "omitida: señal vieja (263 min)",
+   "VRSN": "omitida: señal vieja (268 min)",
+   "COF": "omitida: señal vieja (268 min)",
+   "AXON": "omitida: señal vieja (263 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795115126.616645,
+  "ultimo_scan": 1795115746.782481,
   "sombra": {
    "vistos": [
     "NTAP",
