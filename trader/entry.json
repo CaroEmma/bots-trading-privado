@@ -1,6 +1,6 @@
 {
   "created_by": "trader-entry",
-  "symbol": "GLW",
+  "symbol": "TGT",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-19",
@@ -8,15 +8,15 @@
   "time": "10:05 AM",
   "bar_start": "10:00",
   "bar_index": 6,
-  "price": 113.89,
-  "level": 113.68,
+  "price": 168.11,
+  "level": 167.77,
   "interval": "5m",
   "opening_range": {
-    "high": 113.68,
-    "low": 111.79,
+    "high": 167.77,
+    "low": 165.2,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-19T18:35:25Z",
+  "checked_at": "2026-11-19T18:47:17Z",
   "reason": "the 10:00 bar closed above the range high"
 }

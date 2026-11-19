@@ -51,12 +51,18 @@
    "WMT": "omitida: señal vieja (209 min)",
    "STZ": "omitida: timemachine: R promedio simulado -0.133 no es > 0",
    "GIS": "omitida: señal vieja (95 min)",
-   "GLW": "omitida: señal vieja (210 min)"
+   "GLW": "omitida: señal vieja (210 min)",
+   "ED": "omitida: timemachine: R promedio simulado -0.085 no es > 0",
+   "ECL": "omitida: timemachine: R promedio simulado -0.112 no es > 0",
+   "NLY": "omitida: timemachine: R promedio simulado -0.144 no es > 0",
+   "NOK": "omitida: señal vieja (237 min)",
+   "CIEN": "omitida: señal vieja (222 min)",
+   "TGT": "omitida: señal vieja (222 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795113101.833812,
+  "ultimo_scan": 1795113801.477137,
   "sombra": {
    "vistos": [
     "NTAP",
@@ -146,7 +152,11 @@
     "AON",
     "BJ",
     "NOC",
-    "STZ"
+    "STZ",
+    "ED",
+    "ECL",
+    "NLY",
+    "CL"
    ],
    "perdidos": [
     "DLR",
