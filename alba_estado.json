@@ -117,7 +117,10 @@
     "PG",
     "TDG",
     "TSCO",
-    "UAL"
+    "UAL",
+    "ARGX",
+    "RKT",
+    "MP"
    ],
    "perdidos": [
     "DLR",
@@ -169,7 +172,7 @@
     "CARR",
     "CG"
    ],
-   "ultimo_scan": 1795106176.44112,
+   "ultimo_scan": 1795106879.596286,
    "limitado": 0,
    "errores": 0
   }
