@@ -112,7 +112,10 @@
     "PCG",
     "DHR",
     "AZO",
-    "FFIV"
+    "FFIV",
+    "MDT",
+    "PG",
+    "TDG"
    ],
    "perdidos": [
     "DLR",
@@ -160,9 +163,10 @@
     "TWST",
     "SITM",
     "BMRN",
-    "ABVX"
+    "ABVX",
+    "CARR"
    ],
-   "ultimo_scan": 1795102031.460566,
+   "ultimo_scan": 1795102736.488653,
    "limitado": 0,
    "errores": 0
   }
