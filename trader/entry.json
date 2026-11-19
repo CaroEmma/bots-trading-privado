@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "TEL",
+  "symbol": "CARR",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-19",
   "status": "triggered",
-  "time": "9:50 AM",
-  "bar_start": "09:45",
-  "bar_index": 3,
-  "price": 216.21,
-  "level": 215.88,
+  "time": "10:05 AM",
+  "bar_start": "10:00",
+  "bar_index": 6,
+  "price": 52.57,
+  "level": 52.48,
   "interval": "5m",
   "opening_range": {
-    "high": 215.88,
-    "low": 213.88,
+    "high": 52.48,
+    "low": 51.92,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-19T18:12:50Z",
-  "reason": "the 9:45 bar closed above the range high"
+  "checked_at": "2026-11-19T18:23:46Z",
+  "reason": "the 10:00 bar closed above the range high"
 }

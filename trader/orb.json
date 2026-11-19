@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-19T18:08:45Z",
+  "created_at": "2026-11-19T18:19:53Z",
   "mode": "orb",
-  "as_of": "2026-11-19 13:08 ET",
+  "as_of": "2026-11-19 13:19 ET",
   "universe": 5927,
-  "scanned": 1369,
+  "scanned": 1339,
   "failed": 0,
-  "unconfirmed": 467,
+  "unconfirmed": 456,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -1250,19 +1250,6 @@
       "or_high": 107.55,
       "or_low": 105.1,
       "pct_over": 0.05
-    },
-    {
-      "symbol": "ARGX",
-      "setups": [
-        "orb"
-      ],
-      "price": 946.99,
-      "at": "11:40 AM",
-      "bar_start": "11:35",
-      "bar_index": 25,
-      "or_high": 946.7,
-      "or_low": 936.77,
-      "pct_over": 0.03
     },
     {
       "symbol": "MP",

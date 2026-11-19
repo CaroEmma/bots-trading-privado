@@ -39,12 +39,18 @@
    "MSFT": "omitida: señal vieja (196 min)",
    "TSM": "omitida: noticia con 'halt' (suspensión)",
    "NTSK": "omitida: señal vieja (202 min)",
-   "TEL": "omitida: señal vieja (202 min)"
+   "TEL": "omitida: señal vieja (202 min)",
+   "BABA": "omitida: señal vieja (207 min)",
+   "C": "omitida: señal vieja (207 min)",
+   "ETN": "omitida: señal vieja (207 min)",
+   "P": "omitida: señal vieja (213 min)",
+   "TJX": "omitida: señal vieja (213 min)",
+   "CARR": "omitida: señal vieja (198 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795111725.739915,
+  "ultimo_scan": 1795112392.815242,
   "sombra": {
    "vistos": [
     "NTAP",
