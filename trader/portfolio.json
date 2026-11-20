@@ -1,4 +1,17 @@
 {
-  "cash": 4943.63,
-  "positions": []
+  "cash": 1264.3,
+  "positions": [
+    {
+      "ticker": "SO",
+      "shares": 39.0,
+      "lots": [
+        {
+          "id": "SO-1",
+          "date": "2026-11-20",
+          "shares": 39.0,
+          "cost": 3679.33
+        }
+      ]
+    }
+  ]
 }

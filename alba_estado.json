@@ -2,7 +2,7 @@
  "abiertas": {},
  "hoy": {
   "fecha": "2026-11-20",
-  "entradas": 2,
+  "entradas": 3,
   "pnl": 6.279996000000665,
   "r": 0.15906156200587573,
   "evaluados": {
@@ -31,12 +31,13 @@
    "AMGN": "omitida: señal vieja (114 min)",
    "PGR": "omitida: señal vieja (108 min)",
    "CL": "omitida: señal vieja (138 min)",
-   "JNJ": "omitida: señal vieja (113 min)"
+   "JNJ": "omitida: señal vieja (113 min)",
+   "SO": "COMPRADA"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795194607.946075,
+  "ultimo_scan": 1795194956.419358,
   "sombra": {
    "vistos": [
     "BIIB",
@@ -136,7 +137,9 @@
     "LMT",
     "HCA",
     "ELV",
-    "HUM"
+    "HUM",
+    "SO",
+    "KO"
    ],
    "perdidos": [
     "PH",
@@ -216,7 +219,7 @@
     "VIK",
     "CI"
    ],
-   "ultimo_scan": 1795193594.613132,
+   "ultimo_scan": 1795195310.838166,
    "limitado": 0,
    "errores": 0
   }

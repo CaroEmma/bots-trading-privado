@@ -503,6 +503,32 @@
       "qty": "12",
       "price": 292.85,
       "plain": "SELL 12 UNP at 292.85"
+    },
+    {
+      "at": "2026-11-20T12:15-05:00",
+      "date": "2026-11-20",
+      "index": 1,
+      "fingerprint": "08f27e2f941aa5ac",
+      "symbol": "SO",
+      "side": "buy",
+      "qty": "39",
+      "kind": "entry",
+      "max_loss": 10.92,
+      "stop": 94.16,
+      "plain": "buy 39 SO (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "afd98022-bf24-4aa9-92dc-9e0bb3c2e930",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-20T12:19:45-05:00",
+      "date": "2026-11-20",
+      "status": "filled",
+      "symbol": "SO",
+      "side": "buy",
+      "qty": "39",
+      "price": 94.3418,
+      "plain": "BUY 39 SO at 94.34"
     }
   ]
 }
