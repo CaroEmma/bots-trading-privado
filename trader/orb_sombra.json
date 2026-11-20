@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-20T17:44:17Z",
+  "created_at": "2026-11-20T17:54:19Z",
   "mode": "orb",
-  "as_of": "2026-11-20 12:44 ET",
+  "as_of": "2026-11-20 12:54 ET",
   "universe": 5925,
-  "scanned": 1469,
+  "scanned": 1424,
   "failed": 0,
-  "unconfirmed": 919,
+  "unconfirmed": 879,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -641,6 +641,19 @@
       "pct_over": 0.74
     },
     {
+      "symbol": "WMB",
+      "setups": [
+        "orb"
+      ],
+      "price": 65.75,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 65.72,
+      "or_low": 64.65,
+      "pct_over": 0.03
+    },
+    {
       "symbol": "XOM",
       "setups": [
         "orb"
@@ -704,19 +717,6 @@
       "or_high": 43.27,
       "or_low": 42.91,
       "pct_over": 0.21
-    },
-    {
-      "symbol": "CMCSA",
-      "setups": [
-        "orb"
-      ],
-      "price": 25.33,
-      "at": "10:00 AM",
-      "bar_start": "09:55",
-      "bar_index": 5,
-      "or_high": 25.29,
-      "or_low": 25.07,
-      "pct_over": 0.16
     },
     {
       "symbol": "COIN",
@@ -964,6 +964,19 @@
       "or_high": 132.69,
       "or_low": 129.52,
       "pct_over": 0.54
+    },
+    {
+      "symbol": "SPGI",
+      "setups": [
+        "orb"
+      ],
+      "price": 451.67,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 451.64,
+      "or_low": 446.55,
+      "pct_over": 0.01
     },
     {
       "symbol": "TSCO",
@@ -1356,6 +1369,19 @@
       "pct_over": 0.0
     },
     {
+      "symbol": "WMT",
+      "setups": [
+        "orb"
+      ],
+      "price": 129.94,
+      "at": "10:15 AM",
+      "bar_start": "10:10",
+      "bar_index": 8,
+      "or_high": 129.8,
+      "or_low": 127.22,
+      "pct_over": 0.11
+    },
+    {
       "symbol": "XEL",
       "setups": [
         "orb"
@@ -1486,17 +1512,17 @@
       "pct_over": 0.03
     },
     {
-      "symbol": "CVS",
+      "symbol": "AZO",
       "setups": [
         "orb"
       ],
-      "price": 82.21,
+      "price": 3355.99,
       "at": "10:40 AM",
       "bar_start": "10:35",
       "bar_index": 13,
-      "or_high": 81.95,
-      "or_low": 80.95,
-      "pct_over": 0.32
+      "or_high": 3354.7,
+      "or_low": 3292.98,
+      "pct_over": 0.04
     },
     {
       "symbol": "MRSH",
