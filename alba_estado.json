@@ -139,7 +139,8 @@
     "ELV",
     "HUM",
     "SO",
-    "KO"
+    "KO",
+    "ROST"
    ],
    "perdidos": [
     "PH",
@@ -219,7 +220,7 @@
     "VIK",
     "CI"
    ],
-   "ultimo_scan": 1795195310.838166,
+   "ultimo_scan": 1795196007.971636,
    "limitado": 0,
    "errores": 0
   }

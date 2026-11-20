@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-20T17:21:51Z",
+  "created_at": "2026-11-20T17:33:28Z",
   "mode": "orb",
-  "as_of": "2026-11-20 12:21 ET",
+  "as_of": "2026-11-20 12:33 ET",
   "universe": 5925,
-  "scanned": 1550,
+  "scanned": 1506,
   "failed": 0,
-  "unconfirmed": 970,
+  "unconfirmed": 948,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -1057,19 +1057,6 @@
       "pct_over": 0.9
     },
     {
-      "symbol": "ABBV",
-      "setups": [
-        "orb"
-      ],
-      "price": 288.5,
-      "at": "10:05 AM",
-      "bar_start": "10:00",
-      "bar_index": 6,
-      "or_high": 288.07,
-      "or_low": 286.39,
-      "pct_over": 0.15
-    },
-    {
       "symbol": "AXON",
       "setups": [
         "orb"
@@ -1343,6 +1330,19 @@
       "pct_over": 0.07
     },
     {
+      "symbol": "NEE",
+      "setups": [
+        "orb"
+      ],
+      "price": 84.94,
+      "at": "10:15 AM",
+      "bar_start": "10:10",
+      "bar_index": 8,
+      "or_high": 84.81,
+      "or_low": 84.14,
+      "pct_over": 0.15
+    },
+    {
       "symbol": "O",
       "setups": [
         "orb"
@@ -1601,6 +1601,19 @@
       "or_high": 94.43,
       "or_low": 93.9,
       "pct_over": 0.02
+    },
+    {
+      "symbol": "ROST",
+      "setups": [
+        "orb"
+      ],
+      "price": 216.27,
+      "at": "12:25 PM",
+      "bar_start": "12:20",
+      "bar_index": 34,
+      "or_high": 216.12,
+      "or_low": 208.42,
+      "pct_over": 0.07
     }
   ]
 }
