@@ -143,7 +143,9 @@
     "CVS",
     "WM",
     "UL",
-    "LMT"
+    "LMT",
+    "HCA",
+    "ELV"
    ],
    "perdidos": [
     "PH",
@@ -216,9 +218,11 @@
     "NOW",
     "APG",
     "MLM",
-    "GIS"
+    "GIS",
+    "RKT",
+    "NSC"
    ],
-   "ultimo_scan": 1795191839.394637,
+   "ultimo_scan": 1795192544.570829,
    "limitado": 0,
    "errores": 0
   }
