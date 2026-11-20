@@ -25,12 +25,18 @@
    "UNP": "COMPRADA",
    "NSC": "omitida: señal vieja (102 min)",
    "PH": "omitida: señal vieja (132 min)",
-   "BA": "omitida: señal vieja (127 min)"
+   "BA": "omitida: señal vieja (127 min)",
+   "MKSI": "omitida: señal vieja (134 min)",
+   "PFE": "omitida: señal vieja (124 min)",
+   "AMGN": "omitida: señal vieja (114 min)",
+   "PGR": "omitida: señal vieja (108 min)",
+   "CL": "omitida: señal vieja (138 min)",
+   "JNJ": "omitida: señal vieja (113 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795193944.219574,
+  "ultimo_scan": 1795194607.946075,
   "sombra": {
    "vistos": [
     "BIIB",
@@ -129,7 +135,8 @@
     "UL",
     "LMT",
     "HCA",
-    "ELV"
+    "ELV",
+    "HUM"
    ],
    "perdidos": [
     "PH",

@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "BA",
+  "symbol": "JNJ",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-20",
   "status": "triggered",
-  "time": "9:55 AM",
-  "bar_start": "09:50",
-  "bar_index": 4,
-  "price": 163.48,
-  "level": 163.41,
+  "time": "10:20 AM",
+  "bar_start": "10:15",
+  "bar_index": 9,
+  "price": 272.1,
+  "level": 271.93,
   "interval": "5m",
   "opening_range": {
-    "high": 163.41,
-    "low": 160.15,
+    "high": 271.93,
+    "low": 269.47,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-20T17:02:54Z",
-  "reason": "the 9:50 bar closed above the range high"
+  "checked_at": "2026-11-20T17:13:54Z",
+  "reason": "the 10:15 bar closed above the range high"
 }
