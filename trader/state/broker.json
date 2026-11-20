@@ -457,6 +457,16 @@
       "qty": "14",
       "price": 250.4,
       "plain": "BUY 14 BIIB at 250.40"
+    },
+    {
+      "at": "2026-11-20T10:12:04-05:00",
+      "date": "2026-11-20",
+      "status": "filled",
+      "symbol": "BIIB",
+      "side": "sell",
+      "qty": "14",
+      "price": 252.02,
+      "plain": "SELL 14 BIIB at 252.02"
     }
   ]
 }
