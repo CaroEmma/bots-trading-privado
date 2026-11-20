@@ -224,9 +224,11 @@
     "FSLR",
     "VRSN",
     "GPN",
-    "WWD"
+    "WWD",
+    "ADSK",
+    "HL"
    ],
-   "ultimo_scan": 1795202286.119734,
+   "ultimo_scan": 1795202916.350119,
    "limitado": 0,
    "errores": 0
   }
