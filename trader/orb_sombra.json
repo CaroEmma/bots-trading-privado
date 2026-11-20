@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-20T18:52:05Z",
+  "created_at": "2026-11-20T19:07:37Z",
   "mode": "orb",
-  "as_of": "2026-11-20 13:52 ET",
+  "as_of": "2026-11-20 14:07 ET",
   "universe": 5925,
-  "scanned": 1244,
+  "scanned": 1203,
   "failed": 0,
-  "unconfirmed": 761,
+  "unconfirmed": 726,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -316,19 +316,6 @@
       "pct_over": 0.26
     },
     {
-      "symbol": "PYPL",
-      "setups": [
-        "orb"
-      ],
-      "price": 54.67,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 54.49,
-      "or_low": 53.31,
-      "pct_over": 0.33
-    },
-    {
       "symbol": "RKLB",
       "setups": [
         "orb"
@@ -418,6 +405,19 @@
       "or_high": 121.72,
       "or_low": 119.8,
       "pct_over": 0.08
+    },
+    {
+      "symbol": "WWD",
+      "setups": [
+        "orb"
+      ],
+      "price": 336.25,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 333.22,
+      "or_low": 329.4,
+      "pct_over": 0.91
     },
     {
       "symbol": "AMZN",
@@ -810,6 +810,19 @@
       "pct_over": 0.54
     },
     {
+      "symbol": "KMB",
+      "setups": [
+        "orb"
+      ],
+      "price": 107.9,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 107.83,
+      "or_low": 106.59,
+      "pct_over": 0.07
+    },
+    {
       "symbol": "META",
       "setups": [
         "orb"
@@ -1148,19 +1161,6 @@
       "pct_over": 0.04
     },
     {
-      "symbol": "RIVN",
-      "setups": [
-        "orb"
-      ],
-      "price": 11.15,
-      "at": "10:05 AM",
-      "bar_start": "10:00",
-      "bar_index": 6,
-      "or_high": 11.08,
-      "or_low": 10.82,
-      "pct_over": 0.59
-    },
-    {
       "symbol": "RVMD",
       "setups": [
         "orb"
@@ -1419,19 +1419,6 @@
       "or_high": 271.93,
       "or_low": 269.47,
       "pct_over": 0.06
-    },
-    {
-      "symbol": "NSC",
-      "setups": [
-        "orb"
-      ],
-      "price": 321.1,
-      "at": "10:20 AM",
-      "bar_start": "10:15",
-      "bar_index": 9,
-      "or_high": 321.09,
-      "or_low": 317.03,
-      "pct_over": 0.0
     },
     {
       "symbol": "PGR",

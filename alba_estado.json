@@ -223,9 +223,10 @@
     "ROP",
     "FSLR",
     "VRSN",
-    "GPN"
+    "GPN",
+    "WWD"
    ],
-   "ultimo_scan": 1795200725.214491,
+   "ultimo_scan": 1795201657.18551,
    "limitado": 0,
    "errores": 0
   }
