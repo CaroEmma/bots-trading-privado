@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "UNP",
+  "symbol": "BA",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-20",
   "status": "triggered",
-  "time": "10:35 AM",
-  "bar_start": "10:30",
-  "bar_index": 12,
-  "price": 294.58,
-  "level": 294.5,
+  "time": "9:55 AM",
+  "bar_start": "09:50",
+  "bar_index": 4,
+  "price": 163.48,
+  "level": 163.41,
   "interval": "5m",
   "opening_range": {
-    "high": 294.5,
-    "low": 291.24,
+    "high": 163.41,
+    "low": 160.15,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-20T15:42:38Z",
-  "reason": "the 10:30 bar closed above the range high"
+  "checked_at": "2026-11-20T17:02:54Z",
+  "reason": "the 9:50 bar closed above the range high"
 }

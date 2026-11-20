@@ -1,17 +1,4 @@
 {
-  "cash": 1429.43,
-  "positions": [
-    {
-      "ticker": "UNP",
-      "shares": 12.0,
-      "lots": [
-        {
-          "id": "UNP-1",
-          "date": "2026-11-20",
-          "shares": 12.0,
-          "cost": 3530.6
-        }
-      ]
-    }
-  ]
+  "cash": 4943.63,
+  "positions": []
 }

@@ -493,6 +493,16 @@
       "qty": "12",
       "price": 294.2167,
       "plain": "BUY 12 UNP at 294.22"
+    },
+    {
+      "at": "2026-11-20T11:59:04-05:00",
+      "date": "2026-11-20",
+      "status": "filled",
+      "symbol": "UNP",
+      "side": "sell",
+      "qty": "12",
+      "price": 292.85,
+      "plain": "SELL 12 UNP at 292.85"
     }
   ]
 }

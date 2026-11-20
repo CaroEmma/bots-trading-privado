@@ -1,29 +1,10 @@
 {
- "abiertas": {
-  "UNP": {
-   "orden_id": "855506b6-5ed9-489d-9f5c-e2aaded9126a",
-   "qty": 12,
-   "entrada": 294.216667,
-   "stop": 292.87,
-   "target": 298.0,
-   "fecha": "2026-11-20",
-   "hora": "10:38",
-   "max_loss": 20.52,
-   "tm": {
-    "mc_avg_R": 0.103,
-    "p_target": 0.1982,
-    "p_stop": 0.451,
-    "hist_disparos": 26,
-    "hist_avg_R": -0.205,
-    "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 31 % (target first 19.8 % vs stop first 45.1 %)."
-   }
-  }
- },
+ "abiertas": {},
  "hoy": {
   "fecha": "2026-11-20",
   "entradas": 2,
-  "pnl": 22.680000000000064,
-  "r": 1.173913043478268,
+  "pnl": 6.279996000000665,
+  "r": 0.15906156200587573,
   "evaluados": {
    "BIIB": "COMPRADA",
    "BABA": "omitida: señal vieja (26 min)",
@@ -41,12 +22,15 @@
    "WMB": "omitida: señal vieja (42 min)",
    "CTAS": "omitida: señal vieja (37 min)",
    "HD": "omitida: señal vieja (22 min)",
-   "UNP": "COMPRADA"
+   "UNP": "COMPRADA",
+   "NSC": "omitida: señal vieja (102 min)",
+   "PH": "omitida: señal vieja (132 min)",
+   "BA": "omitida: señal vieja (127 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795189135.181202,
+  "ultimo_scan": 1795193944.219574,
   "sombra": {
    "vistos": [
     "BIIB",
@@ -221,9 +205,11 @@
     "GIS",
     "RKT",
     "NSC",
-    "HSBC"
+    "HSBC",
+    "VIK",
+    "CI"
    ],
-   "ultimo_scan": 1795193236.266326,
+   "ultimo_scan": 1795193594.613132,
    "limitado": 0,
    "errores": 0
   }
