@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-20T15:50:46Z",
+  "created_at": "2026-11-20T16:01:42Z",
   "mode": "orb",
-  "as_of": "2026-11-20 10:50 ET",
+  "as_of": "2026-11-20 11:01 ET",
   "universe": 5925,
-  "scanned": 2004,
+  "scanned": 1951,
   "failed": 0,
-  "unconfirmed": 1285,
+  "unconfirmed": 1248,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -262,19 +262,6 @@
       "or_high": 296.0,
       "or_low": 292.0,
       "pct_over": 0.35
-    },
-    {
-      "symbol": "MDB",
-      "setups": [
-        "orb"
-      ],
-      "price": 296.31,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 293.36,
-      "or_low": 287.22,
-      "pct_over": 1.01
     },
     {
       "symbol": "MSFT",
@@ -849,19 +836,6 @@
       "pct_over": 0.54
     },
     {
-      "symbol": "IONQ",
-      "setups": [
-        "orb"
-      ],
-      "price": 22.55,
-      "at": "10:00 AM",
-      "bar_start": "09:55",
-      "bar_index": 5,
-      "or_high": 22.32,
-      "or_low": 21.45,
-      "pct_over": 1.01
-    },
-    {
       "symbol": "META",
       "setups": [
         "orb"
@@ -1265,6 +1239,19 @@
       "pct_over": 0.02
     },
     {
+      "symbol": "KHC",
+      "setups": [
+        "orb"
+      ],
+      "price": 25.63,
+      "at": "10:10 AM",
+      "bar_start": "10:05",
+      "bar_index": 7,
+      "or_high": 25.59,
+      "or_low": 25.25,
+      "pct_over": 0.14
+    },
+    {
       "symbol": "LLY",
       "setups": [
         "orb"
@@ -1594,13 +1581,26 @@
       "setups": [
         "orb"
       ],
-      "price": 243.92,
+      "price": 244.04,
       "at": "10:50 AM",
       "bar_start": "10:45",
       "bar_index": 15,
       "or_high": 243.76,
       "or_low": 241.95,
-      "pct_over": 0.07
+      "pct_over": 0.11
+    },
+    {
+      "symbol": "LMT",
+      "setups": [
+        "orb"
+      ],
+      "price": 577.02,
+      "at": "10:55 AM",
+      "bar_start": "10:50",
+      "bar_index": 16,
+      "or_high": 577.0,
+      "or_low": 571.0,
+      "pct_over": 0.0
     }
   ]
 }

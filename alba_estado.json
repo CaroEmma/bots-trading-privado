@@ -142,7 +142,8 @@
     "MRSH",
     "CVS",
     "WM",
-    "UL"
+    "UL",
+    "LMT"
    ],
    "perdidos": [
     "PH",
@@ -216,7 +217,7 @@
     "APG",
     "MLM"
    ],
-   "ultimo_scan": 1795189846.131399,
+   "ultimo_scan": 1795190502.055311,
    "limitado": 0,
    "errores": 0
   }
