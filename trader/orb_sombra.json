@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-20T19:39:08Z",
+  "created_at": "2026-11-20T19:49:37Z",
   "mode": "orb",
-  "as_of": "2026-11-20 14:39 ET",
+  "as_of": "2026-11-20 14:49 ET",
   "universe": 5925,
-  "scanned": 1117,
+  "scanned": 1107,
   "failed": 0,
-  "unconfirmed": 666,
+  "unconfirmed": 660,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -485,19 +485,6 @@
       "pct_over": 0.15
     },
     {
-      "symbol": "CPNG",
-      "setups": [
-        "orb"
-      ],
-      "price": 14.67,
-      "at": "9:55 AM",
-      "bar_start": "09:50",
-      "bar_index": 4,
-      "or_high": 14.66,
-      "or_low": 13.8,
-      "pct_over": 0.07
-    },
-    {
       "symbol": "EBAY",
       "setups": [
         "orb"
@@ -535,6 +522,19 @@
       "or_high": 279.52,
       "or_low": 272.83,
       "pct_over": 0.3
+    },
+    {
+      "symbol": "HL",
+      "setups": [
+        "orb"
+      ],
+      "price": 11.08,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 11.07,
+      "or_low": 10.85,
+      "pct_over": 0.11
     },
     {
       "symbol": "INTU",
@@ -652,6 +652,19 @@
       "or_high": 210.0,
       "or_low": 203.18,
       "pct_over": 0.74
+    },
+    {
+      "symbol": "TWLO",
+      "setups": [
+        "orb"
+      ],
+      "price": 178.32,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 178.03,
+      "or_low": 173.62,
+      "pct_over": 0.16
     },
     {
       "symbol": "WMB",
@@ -849,6 +862,19 @@
       "pct_over": 0.3
     },
     {
+      "symbol": "MNST",
+      "setups": [
+        "orb"
+      ],
+      "price": 44.28,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 44.24,
+      "or_low": 43.97,
+      "pct_over": 0.1
+    },
+    {
       "symbol": "MPC",
       "setups": [
         "orb"
@@ -1003,19 +1029,6 @@
       "or_high": 451.64,
       "or_low": 446.55,
       "pct_over": 0.01
-    },
-    {
-      "symbol": "TSCO",
-      "setups": [
-        "orb"
-      ],
-      "price": 39.14,
-      "at": "10:00 AM",
-      "bar_start": "09:55",
-      "bar_index": 5,
-      "or_high": 39.1,
-      "or_low": 38.31,
-      "pct_over": 0.12
     },
     {
       "symbol": "TT",
@@ -1367,19 +1380,6 @@
       "or_high": 129.8,
       "or_low": 127.22,
       "pct_over": 0.11
-    },
-    {
-      "symbol": "XEL",
-      "setups": [
-        "orb"
-      ],
-      "price": 80.26,
-      "at": "10:15 AM",
-      "bar_start": "10:10",
-      "bar_index": 8,
-      "or_high": 80.15,
-      "or_low": 79.57,
-      "pct_over": 0.13
     },
     {
       "symbol": "DUK",
