@@ -1,44 +1,44 @@
 {
   "date": "2026-11-20",
-  "now_new_york": "2026-11-20 09:54",
+  "now_new_york": "2026-11-20 10:42",
   "paper": true,
   "results": [
     {
       "index": 1,
-      "symbol": "BIIB",
+      "symbol": "UNP",
       "side": "buy",
       "kind": "entry",
-      "amount": "14 shares",
-      "value_usd": 3502.52,
-      "entry_ref": 250.18,
+      "amount": "12 shares",
+      "value_usd": 3534.96,
+      "entry_ref": 294.58,
       "entry_ref_from": "plan",
-      "stop": 249.02,
-      "target": 252.02,
-      "risk_per_share": 1.16,
-      "max_loss": 16.24,
-      "reward_risk": 1.59,
-      "fingerprint": "b66890ef8a2ebd6b",
+      "stop": 292.87,
+      "target": 298.0,
+      "risk_per_share": 1.71,
+      "max_loss": 20.52,
+      "reward_risk": 2.0,
+      "fingerprint": "8adfa2190f18c227",
       "verdict": "PASS",
       "reasons": [],
       "warnings": [],
       "info": [
-        "entry 250.18 (the plan's entry), stop 249.02, target 252.02: risk 1.16 a share",
-        "max loss $16.24 (limit $50), reward:risk 1.59 (min 1)",
-        "today before this: 0 of 3 trades, $0 of $150 daily loss"
+        "entry 294.58 (the plan's entry), stop 292.87, target 298.00: risk 1.71 a share",
+        "max loss $20.52 (limit $50), reward:risk 2.00 (min 1)",
+        "today before this: 1 of 3 trades, $16.24 of $150 daily loss"
       ]
     }
   ],
   "pass": 1,
   "block": 0,
   "warnings": [],
-  "cash_after": 1434.83,
+  "cash_after": 1425.07,
   "today": {
-    "orders_placed": 0,
-    "entries_placed": 0,
-    "loss_at_risk": 0.0,
+    "orders_placed": 1,
+    "entries_placed": 1,
+    "loss_at_risk": 16.24,
     "day_trades_5d": null
   },
-  "prices_as_of": "2026-11-20T14:54:14Z",
-  "checked_at": "2026-11-20T14:54:14Z",
+  "prices_as_of": "2026-11-20T15:42:39Z",
+  "checked_at": "2026-11-20T15:42:39Z",
   "orders_file": "trader/orders.json"
 }

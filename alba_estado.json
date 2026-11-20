@@ -1,8 +1,27 @@
 {
- "abiertas": {},
+ "abiertas": {
+  "UNP": {
+   "orden_id": "855506b6-5ed9-489d-9f5c-e2aaded9126a",
+   "qty": 12,
+   "entrada": 294.216667,
+   "stop": 292.87,
+   "target": 298.0,
+   "fecha": "2026-11-20",
+   "hora": "10:38",
+   "max_loss": 20.52,
+   "tm": {
+    "mc_avg_R": 0.103,
+    "p_target": 0.1982,
+    "p_stop": 0.451,
+    "hist_disparos": 26,
+    "hist_avg_R": -0.205,
+    "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 31 % (target first 19.8 % vs stop first 45.1 %)."
+   }
+  }
+ },
  "hoy": {
   "fecha": "2026-11-20",
-  "entradas": 1,
+  "entradas": 2,
   "pnl": 22.680000000000064,
   "r": 1.173913043478268,
   "evaluados": {
@@ -18,12 +37,16 @@
    "UNH": "omitida: señal vieja (21 min)",
    "COF": "omitida: señal vieja (21 min)",
    "SPOT": "omitida: señal vieja (41 min)",
-   "NVO": "omitida: señal vieja (36 min)"
+   "NVO": "omitida: señal vieja (36 min)",
+   "WMB": "omitida: señal vieja (42 min)",
+   "CTAS": "omitida: señal vieja (37 min)",
+   "HD": "omitida: señal vieja (22 min)",
+   "UNP": "COMPRADA"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795188459.909598,
+  "ultimo_scan": 1795189135.181202,
   "sombra": {
    "vistos": [
     "BIIB",
@@ -110,7 +133,12 @@
     "KR",
     "JNJ",
     "DUK",
-    "PGR"
+    "PGR",
+    "CME",
+    "VZ",
+    "UNP",
+    "MDLZ",
+    "CB"
    ],
    "perdidos": [
     "PH",
@@ -181,7 +209,8 @@
     "ANT",
     "TEAM",
     "NOW",
-    "APG"
+    "APG",
+    "MLM"
    ],
    "ultimo_scan": 1795187207.22104,
    "limitado": 0,

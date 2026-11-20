@@ -1,0 +1,28 @@
+{
+  "created_by": "trader-exit",
+  "symbol": "UNP",
+  "side": "buy",
+  "date": "2026-11-20",
+  "setup": "orb",
+  "entry": 294.58,
+  "entry_time": "10:35 AM",
+  "entry_bar": 12,
+  "interval": "5m",
+  "opening_range": {
+    "high": 294.5,
+    "low": 291.24,
+    "minutes": 15
+  },
+  "stop": 292.87,
+  "stop_rule": "or_mid",
+  "stop_label": "opening-range midpoint",
+  "target": 298.0,
+  "target_r": 2.0,
+  "target_label": "2R (two times the risk)",
+  "risk_per_share": 1.71,
+  "reward_risk": 2.0,
+  "flat_by": "15:55",
+  "stop_detail": "($294.50 + $291.24) / 2 = $292.87",
+  "created_at": "2026-11-20T15:42:38Z",
+  "note": "A stop is a plan, not a guarantee: a gap or a fast market can fill past it."
+}

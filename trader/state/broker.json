@@ -467,6 +467,32 @@
       "qty": "14",
       "price": 252.02,
       "plain": "SELL 14 BIIB at 252.02"
+    },
+    {
+      "at": "2026-11-20T10:38-05:00",
+      "date": "2026-11-20",
+      "index": 1,
+      "fingerprint": "8adfa2190f18c227",
+      "symbol": "UNP",
+      "side": "buy",
+      "qty": "12",
+      "kind": "entry",
+      "max_loss": 20.52,
+      "stop": 292.87,
+      "plain": "buy 12 UNP (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "855506b6-5ed9-489d-9f5c-e2aaded9126a",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-20T10:42:42-05:00",
+      "date": "2026-11-20",
+      "status": "filled",
+      "symbol": "UNP",
+      "side": "buy",
+      "qty": "12",
+      "price": 294.2167,
+      "plain": "BUY 12 UNP at 294.22"
     }
   ]
 }

@@ -294,3 +294,7 @@
 {"fecha": "2026-11-20", "hora": "10:27", "simbolo": "COF", "accion": "omitir", "motivo": "señal vieja (21 min)"}
 {"fecha": "2026-11-20", "hora": "10:27", "simbolo": "SPOT", "accion": "omitir", "motivo": "señal vieja (41 min)"}
 {"fecha": "2026-11-20", "hora": "10:27", "simbolo": "NVO", "accion": "omitir", "motivo": "señal vieja (36 min)"}
+{"fecha": "2026-11-20", "hora": "10:33", "simbolo": "WMB", "accion": "omitir", "motivo": "señal vieja (42 min)"}
+{"fecha": "2026-11-20", "hora": "10:33", "simbolo": "CTAS", "accion": "omitir", "motivo": "señal vieja (37 min)"}
+{"fecha": "2026-11-20", "hora": "10:33", "simbolo": "HD", "accion": "omitir", "motivo": "señal vieja (22 min)"}
+{"fecha": "2026-11-20", "hora": "10:38", "simbolo": "UNP", "accion": "comprar", "motivo": "todas las skills en verde", "qty": 12, "fill": 294.216667, "stop": 292.87, "target": 298.0, "tm": {"mc_avg_R": 0.103, "p_target": 0.1982, "p_stop": 0.451, "hist_disparos": 26, "hist_avg_R": -0.205, "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 31 % (target first 19.8 % vs stop first 45.1 %)."}}
