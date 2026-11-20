@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-20T18:17:53Z",
+  "created_at": "2026-11-20T18:29:46Z",
   "mode": "orb",
-  "as_of": "2026-11-20 13:17 ET",
+  "as_of": "2026-11-20 13:29 ET",
   "universe": 5925,
-  "scanned": 1342,
+  "scanned": 1312,
   "failed": 0,
-  "unconfirmed": 828,
+  "unconfirmed": 809,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -706,19 +706,6 @@
       "pct_over": 0.21
     },
     {
-      "symbol": "CMCSA",
-      "setups": [
-        "orb"
-      ],
-      "price": 25.33,
-      "at": "10:00 AM",
-      "bar_start": "09:55",
-      "bar_index": 5,
-      "or_high": 25.29,
-      "or_low": 25.07,
-      "pct_over": 0.16
-    },
-    {
       "symbol": "COIN",
       "setups": [
         "orb"
@@ -1317,19 +1304,6 @@
       "pct_over": 0.05
     },
     {
-      "symbol": "GILD",
-      "setups": [
-        "orb"
-      ],
-      "price": 170.04,
-      "at": "10:15 AM",
-      "bar_start": "10:10",
-      "bar_index": 8,
-      "or_high": 169.66,
-      "or_low": 168.0,
-      "pct_over": 0.22
-    },
-    {
       "symbol": "HD",
       "setups": [
         "orb"
@@ -1367,6 +1341,19 @@
       "or_high": 84.81,
       "or_low": 84.14,
       "pct_over": 0.15
+    },
+    {
+      "symbol": "O",
+      "setups": [
+        "orb"
+      ],
+      "price": 58.52,
+      "at": "10:15 AM",
+      "bar_start": "10:10",
+      "bar_index": 8,
+      "or_high": 58.52,
+      "or_low": 58.04,
+      "pct_over": 0.0
     },
     {
       "symbol": "WMT",
