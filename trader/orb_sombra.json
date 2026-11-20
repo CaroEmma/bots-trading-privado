@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-20T17:54:19Z",
+  "created_at": "2026-11-20T18:06:02Z",
   "mode": "orb",
-  "as_of": "2026-11-20 12:54 ET",
+  "as_of": "2026-11-20 13:06 ET",
   "universe": 5925,
-  "scanned": 1424,
+  "scanned": 1361,
   "failed": 0,
-  "unconfirmed": 879,
+  "unconfirmed": 836,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -719,6 +719,19 @@
       "pct_over": 0.21
     },
     {
+      "symbol": "CMCSA",
+      "setups": [
+        "orb"
+      ],
+      "price": 25.33,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 25.29,
+      "or_low": 25.07,
+      "pct_over": 0.16
+    },
+    {
       "symbol": "COIN",
       "setups": [
         "orb"
@@ -769,6 +782,32 @@
       "or_high": 69.46,
       "or_low": 67.39,
       "pct_over": 0.13
+    },
+    {
+      "symbol": "FN",
+      "setups": [
+        "orb"
+      ],
+      "price": 305.0,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 304.88,
+      "or_low": 289.4,
+      "pct_over": 0.04
+    },
+    {
+      "symbol": "FSLR",
+      "setups": [
+        "orb"
+      ],
+      "price": 152.41,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 152.02,
+      "or_low": 148.88,
+      "pct_over": 0.26
     },
     {
       "symbol": "GAP",
@@ -873,19 +912,6 @@
       "or_high": 252.32,
       "or_low": 248.0,
       "pct_over": 0.17
-    },
-    {
-      "symbol": "PLD",
-      "setups": [
-        "orb"
-      ],
-      "price": 125.12,
-      "at": "10:00 AM",
-      "bar_start": "09:55",
-      "bar_index": 5,
-      "or_high": 124.96,
-      "or_low": 123.12,
-      "pct_over": 0.14
     },
     {
       "symbol": "PLTR",
@@ -1263,19 +1289,6 @@
       "or_high": 474.91,
       "or_low": 466.82,
       "pct_over": 0.04
-    },
-    {
-      "symbol": "T",
-      "setups": [
-        "orb"
-      ],
-      "price": 22.44,
-      "at": "10:10 AM",
-      "bar_start": "10:05",
-      "bar_index": 7,
-      "or_high": 22.38,
-      "or_low": 22.08,
-      "pct_over": 0.27
     },
     {
       "symbol": "TMUS",

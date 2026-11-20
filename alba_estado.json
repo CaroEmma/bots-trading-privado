@@ -219,9 +219,10 @@
     "HSBC",
     "VIK",
     "CI",
-    "ROP"
+    "ROP",
+    "FSLR"
    ],
-   "ultimo_scan": 1795197259.252226,
+   "ultimo_scan": 1795197962.194678,
    "limitado": 0,
    "errores": 0
   }
