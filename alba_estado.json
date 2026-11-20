@@ -138,7 +138,11 @@
     "VZ",
     "UNP",
     "MDLZ",
-    "CB"
+    "CB",
+    "MRSH",
+    "CVS",
+    "WM",
+    "UL"
    ],
    "perdidos": [
     "PH",
@@ -212,7 +216,7 @@
     "APG",
     "MLM"
    ],
-   "ultimo_scan": 1795187207.22104,
+   "ultimo_scan": 1795189846.131399,
    "limitado": 0,
    "errores": 0
   }
