@@ -1,29 +1,29 @@
 {
-  "date": "2026-11-19",
-  "now_new_york": "2026-11-19 10:04",
+  "date": "2026-11-20",
+  "now_new_york": "2026-11-20 09:54",
   "paper": true,
   "results": [
     {
       "index": 1,
-      "symbol": "WELL",
+      "symbol": "BIIB",
       "side": "buy",
       "kind": "entry",
-      "amount": "15 shares",
-      "value_usd": 3695.7,
-      "entry_ref": 246.38,
+      "amount": "14 shares",
+      "value_usd": 3502.52,
+      "entry_ref": 250.18,
       "entry_ref_from": "plan",
-      "stop": 245.44,
-      "target": 248.26,
-      "risk_per_share": 0.94,
-      "max_loss": 14.1,
-      "reward_risk": 2.0,
-      "fingerprint": "83cc956f9029f70b",
+      "stop": 249.02,
+      "target": 252.02,
+      "risk_per_share": 1.16,
+      "max_loss": 16.24,
+      "reward_risk": 1.59,
+      "fingerprint": "b66890ef8a2ebd6b",
       "verdict": "PASS",
       "reasons": [],
       "warnings": [],
       "info": [
-        "entry 246.38 (the plan's entry), stop 245.44, target 248.26: risk 0.94 a share",
-        "max loss $14.10 (limit $50), reward:risk 2.00 (min 1)",
+        "entry 250.18 (the plan's entry), stop 249.02, target 252.02: risk 1.16 a share",
+        "max loss $16.24 (limit $50), reward:risk 1.59 (min 1)",
         "today before this: 0 of 3 trades, $0 of $150 daily loss"
       ]
     }
@@ -31,14 +31,14 @@
   "pass": 1,
   "block": 0,
   "warnings": [],
-  "cash_after": 1253.65,
+  "cash_after": 1434.83,
   "today": {
     "orders_placed": 0,
     "entries_placed": 0,
     "loss_at_risk": 0.0,
     "day_trades_5d": null
   },
-  "prices_as_of": "2026-11-19T15:04:43Z",
-  "checked_at": "2026-11-19T15:04:43Z",
+  "prices_as_of": "2026-11-20T14:54:14Z",
+  "checked_at": "2026-11-20T14:54:14Z",
   "orders_file": "trader/orders.json"
 }

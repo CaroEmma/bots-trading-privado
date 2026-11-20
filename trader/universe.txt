@@ -1449,6 +1449,7 @@ CZFS|Citizens Financial Services, Inc. - Common Stock
 CZNC|Citizens & Northern Corp - Common Stock
 CZR|Caesars Entertainment, Inc. - Common Stock
 CZWI|Citizens Community Bancorp, Inc. - Common Stock
+CZZL|Cizzle Brands Corporation - Common Stock
 D|Dominion Energy, Inc. Common Stock
 DAAQ|Digital Asset Acquisition Corp. - Class A Ordinary shares
 DAC|Danaos Corporation Common Stock
@@ -3336,7 +3337,6 @@ MEI|Methode Electronics, Inc. Common Stock
 MELI|MercadoLibre, Inc. - Common Stock
 MENS|Jyong Biotech Ltd. - Ordinary shares
 MEOH|Methanex Corporation - Common Stock
-MERC|Mercer International Inc. - Common Stock
 MESH|Meshflow Acquisition Corp. - Class A Ordinary Shares
 MESO|Mesoblast Limited - American Depositary Shares
 MET|MetLife, Inc. Common Stock
@@ -3960,7 +3960,6 @@ ONTO|Onto Innovation Inc. Common Stock
 OOMA|Ooma, Inc. Common Stock
 OPAD|Offerpad Solutions Inc. - Class A Common Stock
 OPAL|OPAL Fuels Inc. - Class A Common Stock
-OPAY|OPay Limited American Depositary Shares, each representing ten Ordinary Shares
 OPBK|OP Bancorp - Common Stock
 OPCH|Option Care Health, Inc. - Common Stock
 OPEN|Opendoor Technologies Inc - Common Stock
@@ -5480,7 +5479,6 @@ UTI|Universal Technical Institute Inc Common Stock
 UTL|UNITIL Corporation Common Stock
 UTMD|Utah Medical Products, Inc. - Common Stock
 UTSI|UTStarcom Holdings Corp - Ordinary Shares
-UTZ|Utz Brands Inc Class A Common Stock
 UUUU|Energy Fuels Inc Ordinary Shares (Canada)
 UVE|UNIVERSAL INSURANCE HOLDINGS INC Common Stock
 UVSP|Univest Financial Corporation - Common Stock

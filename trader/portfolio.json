@@ -1,4 +1,17 @@
 {
-  "cash": 4937.35,
-  "positions": []
+  "cash": 1431.75,
+  "positions": [
+    {
+      "ticker": "BIIB",
+      "shares": 14.0,
+      "lots": [
+        {
+          "id": "BIIB-1",
+          "date": "2026-11-20",
+          "shares": 14.0,
+          "cost": 3505.6
+        }
+      ]
+    }
+  ]
 }

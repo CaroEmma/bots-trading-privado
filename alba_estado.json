@@ -1,13 +1,73 @@
 {
- "abiertas": {},
+ "abiertas": {
+  "BIIB": {
+   "orden_id": "e321ad42-e289-4651-bcfe-45d22c62dd20",
+   "qty": 14,
+   "entrada": 250.4,
+   "stop": 249.02,
+   "target": 252.02,
+   "fecha": "2026-11-20",
+   "hora": "09:50",
+   "max_loss": 16.24,
+   "tm": {
+    "mc_avg_R": 0.043,
+    "p_target": 0.3474,
+    "p_stop": 0.6523,
+    "hist_disparos": 28,
+    "hist_avg_R": -0.087,
+    "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 35 % (target first 34.7 % vs stop first 65.2 %)."
+   }
+  }
+ },
  "hoy": {
   "fecha": "2026-11-20",
-  "entradas": 0,
+  "entradas": 1,
   "pnl": 0.0,
   "r": 0.0,
-  "evaluados": {},
-  "universo": false,
+  "evaluados": {
+   "BIIB": "COMPRADA"
+  },
+  "universo": true,
   "sesion": true,
-  "informe": false
+  "informe": false,
+  "ultimo_scan": 1795186225.102861,
+  "sombra": {
+   "vistos": [
+    "BIIB",
+    "EME",
+    "FANG",
+    "KEYS",
+    "PTC",
+    "BRZE",
+    "CARR",
+    "APD",
+    "BABA",
+    "PODD",
+    "SAP",
+    "RIO",
+    "WDAY",
+    "AME",
+    "VST",
+    "SPOT",
+    "NVO",
+    "WMB",
+    "MKSI",
+    "OKE",
+    "CL",
+    "PBR",
+    "ALC",
+    "CPNG",
+    "HPQ",
+    "HAL",
+    "GD",
+    "LIN",
+    "JCI",
+    "ET"
+   ],
+   "perdidos": [],
+   "ultimo_scan": 1795186535.092821,
+   "limitado": 0,
+   "errores": 0
+  }
  }
 }
