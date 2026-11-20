@@ -12,12 +12,18 @@
    "KEYS": "omitida: señal vieja (26 min)",
    "O": "omitida: timemachine: R promedio simulado -0.05 no es > 0",
    "SPGI": "omitida: señal vieja (21 min)",
-   "AXON": "omitida: señal vieja (16 min)"
+   "AXON": "omitida: señal vieja (16 min)",
+   "AZO": "omitida: timemachine: R promedio simulado -0.013 no es > 0",
+   "TECH": "omitida: señal vieja (21 min)",
+   "UNH": "omitida: señal vieja (21 min)",
+   "COF": "omitida: señal vieja (21 min)",
+   "SPOT": "omitida: señal vieja (41 min)",
+   "NVO": "omitida: señal vieja (36 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795187841.307553,
+  "ultimo_scan": 1795188459.909598,
   "sombra": {
    "vistos": [
     "BIIB",
@@ -99,7 +105,12 @@
     "WMT",
     "XEL",
     "NEE",
-    "GILD"
+    "GILD",
+    "AZO",
+    "KR",
+    "JNJ",
+    "DUK",
+    "PGR"
    ],
    "perdidos": [
     "PH",
@@ -169,7 +180,8 @@
     "FIG",
     "ANT",
     "TEAM",
-    "NOW"
+    "NOW",
+    "APG"
    ],
    "ultimo_scan": 1795187207.22104,
    "limitado": 0,

@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "AXON",
+  "symbol": "NVO",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-20",
   "status": "triggered",
-  "time": "10:05 AM",
-  "bar_start": "10:00",
-  "bar_index": 6,
-  "price": 322.98,
-  "level": 322.94,
+  "time": "9:55 AM",
+  "bar_start": "09:50",
+  "bar_index": 4,
+  "price": 38.89,
+  "level": 38.88,
   "interval": "5m",
   "opening_range": {
-    "high": 322.94,
-    "low": 303.5,
+    "high": 38.88,
+    "low": 38.44,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-20T15:21:23Z",
-  "reason": "the 10:00 bar closed above the range high"
+  "checked_at": "2026-11-20T15:31:34Z",
+  "reason": "the 9:50 bar closed above the range high"
 }

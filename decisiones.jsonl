@@ -288,3 +288,9 @@
 {"fecha": "2026-11-20", "hora": "10:17", "simbolo": "O", "accion": "omitir", "motivo": "timemachine: R promedio simulado -0.05 no es > 0", "tm": {"mc_avg_R": -0.05, "p_target": 0.2118, "p_stop": 0.5757, "hist_disparos": 26, "hist_avg_R": 0.089, "veredicto": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 27 % (target first 21.2 % vs stop first 57.6 %)."}}
 {"fecha": "2026-11-20", "hora": "10:17", "simbolo": "SPGI", "accion": "omitir", "motivo": "señal vieja (21 min)"}
 {"fecha": "2026-11-20", "hora": "10:17", "simbolo": "AXON", "accion": "omitir", "motivo": "señal vieja (16 min)"}
+{"fecha": "2026-11-20", "hora": "10:22", "simbolo": "AZO", "accion": "omitir", "motivo": "timemachine: R promedio simulado -0.013 no es > 0", "tm": {"mc_avg_R": -0.013, "p_target": 0.1428, "p_stop": 0.4736, "hist_disparos": 32, "hist_avg_R": -0.229, "veredicto": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 23 % (target first 14.3 % vs stop first 47.4 %)."}}
+{"fecha": "2026-11-20", "hora": "10:22", "simbolo": "TECH", "accion": "omitir", "motivo": "señal vieja (21 min)"}
+{"fecha": "2026-11-20", "hora": "10:22", "simbolo": "UNH", "accion": "omitir", "motivo": "señal vieja (21 min)"}
+{"fecha": "2026-11-20", "hora": "10:27", "simbolo": "COF", "accion": "omitir", "motivo": "señal vieja (21 min)"}
+{"fecha": "2026-11-20", "hora": "10:27", "simbolo": "SPOT", "accion": "omitir", "motivo": "señal vieja (41 min)"}
+{"fecha": "2026-11-20", "hora": "10:27", "simbolo": "NVO", "accion": "omitir", "motivo": "señal vieja (36 min)"}
