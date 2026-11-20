@@ -140,7 +140,8 @@
     "HUM",
     "SO",
     "KO",
-    "ROST"
+    "ROST",
+    "FISV"
    ],
    "perdidos": [
     "PH",
@@ -220,9 +221,11 @@
     "VIK",
     "CI",
     "ROP",
-    "FSLR"
+    "FSLR",
+    "VRSN",
+    "GPN"
    ],
-   "ultimo_scan": 1795199386.01997,
+   "ultimo_scan": 1795200044.573332,
    "limitado": 0,
    "errores": 0
   }
