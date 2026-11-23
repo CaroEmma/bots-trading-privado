@@ -237,7 +237,8 @@
     "BSX",
     "GOOG",
     "C",
-    "T"
+    "T",
+    "SBUX"
    ],
    "perdidos": [
     "ARGX",
@@ -271,7 +272,7 @@
     "CBOE",
     "CARR"
    ],
-   "ultimo_scan": 1795458580.577445,
+   "ultimo_scan": 1795459224.788844,
    "limitado": 0,
    "errores": 0
   }
