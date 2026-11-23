@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-23T18:50:58Z",
+  "created_at": "2026-11-23T18:56:16Z",
   "mode": "orb",
-  "as_of": "2026-11-23 13:50 ET",
+  "as_of": "2026-11-23 13:56 ET",
   "universe": 5925,
-  "scanned": 1169,
+  "scanned": 1143,
   "failed": 0,
-  "unconfirmed": 793,
+  "unconfirmed": 770,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -106,6 +106,19 @@
       "or_high": 161.75,
       "or_low": 158.52,
       "pct_over": 0.48
+    },
+    {
+      "symbol": "HCA",
+      "setups": [
+        "orb"
+      ],
+      "price": 481.6,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 479.4,
+      "or_low": 473.0,
+      "pct_over": 0.46
     },
     {
       "symbol": "ISRG",
@@ -249,6 +262,19 @@
       "or_high": 242.26,
       "or_low": 239.3,
       "pct_over": 0.26
+    },
+    {
+      "symbol": "ABBV",
+      "setups": [
+        "orb"
+      ],
+      "price": 289.15,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 288.0,
+      "or_low": 284.45,
+      "pct_over": 0.4
     },
     {
       "symbol": "AMGN",
@@ -639,6 +665,19 @@
       "or_high": 330.54,
       "or_low": 312.3,
       "pct_over": 0.5
+    },
+    {
+      "symbol": "GLW",
+      "setups": [
+        "orb"
+      ],
+      "price": 109.04,
+      "at": "10:15 AM",
+      "bar_start": "10:10",
+      "bar_index": 8,
+      "or_high": 108.21,
+      "or_low": 104.5,
+      "pct_over": 0.77
     },
     {
       "symbol": "MCHP",
@@ -1276,19 +1315,6 @@
       "or_high": 917.15,
       "or_low": 900.08,
       "pct_over": 0.03
-    },
-    {
-      "symbol": "XEL",
-      "setups": [
-        "orb"
-      ],
-      "price": 80.03,
-      "at": "10:50 AM",
-      "bar_start": "10:45",
-      "bar_index": 15,
-      "or_high": 80.0,
-      "or_low": 79.31,
-      "pct_over": 0.04
     },
     {
       "symbol": "NKE",
