@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "CRM",
+  "symbol": "META",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-23",
   "status": "triggered",
-  "time": "10:35 AM",
-  "bar_start": "10:30",
-  "bar_index": 12,
-  "price": 184.72,
-  "level": 184.49,
+  "time": "11:35 AM",
+  "bar_start": "11:30",
+  "bar_index": 24,
+  "price": 595.7,
+  "level": 595.0,
   "interval": "5m",
   "opening_range": {
-    "high": 184.49,
-    "low": 181.68,
+    "high": 595.0,
+    "low": 579.78,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-23T18:11:32Z",
-  "reason": "the 10:30 bar closed above the range high"
+  "checked_at": "2026-11-23T18:22:11Z",
+  "reason": "the 11:30 bar closed above the range high"
 }

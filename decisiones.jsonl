@@ -360,3 +360,9 @@
 {"fecha": "2026-11-23", "hora": "13:08", "simbolo": "TEL", "accion": "omitir", "motivo": "señal vieja (196 min)"}
 {"fecha": "2026-11-23", "hora": "13:08", "simbolo": "JCI", "accion": "omitir", "motivo": "señal vieja (166 min)"}
 {"fecha": "2026-11-23", "hora": "13:08", "simbolo": "CRM", "accion": "omitir", "motivo": "señal vieja (156 min)"}
+{"fecha": "2026-11-23", "hora": "13:13", "simbolo": "CMG", "accion": "omitir", "motivo": "timemachine: R promedio simulado -0.131 no es > 0", "tm": {"mc_avg_R": -0.131, "p_target": 0.0773, "p_stop": 0.475, "hist_disparos": 26, "hist_avg_R": 0.118, "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 14 % (target first 7.7 % vs stop first 47.5 %)."}}
+{"fecha": "2026-11-23", "hora": "13:13", "simbolo": "B", "accion": "omitir", "motivo": "señal vieja (156 min)"}
+{"fecha": "2026-11-23", "hora": "13:13", "simbolo": "ABT", "accion": "omitir", "motivo": "señal vieja (126 min)"}
+{"fecha": "2026-11-23", "hora": "13:18", "simbolo": "COST", "accion": "omitir", "motivo": "timemachine: R promedio simulado -0.075 no es > 0", "tm": {"mc_avg_R": -0.075, "p_target": 0.0313, "p_stop": 0.3466, "hist_disparos": 33, "hist_avg_R": 0.182, "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 8 % (target first 3.1 % vs stop first 34.7 %)."}}
+{"fecha": "2026-11-23", "hora": "13:18", "simbolo": "NTRA", "accion": "omitir", "motivo": "señal vieja (162 min)"}
+{"fecha": "2026-11-23", "hora": "13:18", "simbolo": "META", "accion": "omitir", "motivo": "señal vieja (107 min)"}
