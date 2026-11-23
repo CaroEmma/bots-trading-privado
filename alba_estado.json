@@ -33,12 +33,18 @@
    "INTU": "omitida: señal vieja (78 min)",
    "JNJ": "omitida: señal vieja (159 min)",
    "TXN": "omitida: señal vieja (159 min)",
-   "HD": "omitida: señal vieja (154 min)"
+   "HD": "omitida: señal vieja (154 min)",
+   "SE": "omitida: señal vieja (74 min)",
+   "OXY": "omitida: señal vieja (159 min)",
+   "ICE": "omitida: señal vieja (124 min)",
+   "TLN": "omitida: señal vieja (79 min)",
+   "ADBE": "omitida: señal vieja (169 min)",
+   "CVNA": "omitida: señal vieja (134 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795454753.215089,
+  "ultimo_scan": 1795455390.097655,
   "sombra": {
    "vistos": [
     "CME",
@@ -177,7 +183,8 @@
     "NEE",
     "META",
     "ALAB",
-    "XYZ"
+    "XYZ",
+    "ON"
    ],
    "perdidos": [
     "ARGX",
