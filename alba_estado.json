@@ -1,29 +1,10 @@
 {
- "abiertas": {
-  "BSX": {
-   "orden_id": "e14bea24-ade9-4130-aaf3-30f6d7c574e8",
-   "qty": 17,
-   "entrada": 42.6,
-   "stop": 42.25,
-   "target": 43.12,
-   "fecha": "2026-11-23",
-   "hora": "13:24",
-   "max_loss": 5.78,
-   "tm": {
-    "mc_avg_R": 0.056,
-    "p_target": 0.1454,
-    "p_stop": 0.4416,
-    "hist_disparos": 29,
-    "hist_avg_R": 0.063,
-    "veredicto": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 25 % (target first 14.5 % vs stop first 44.2 %)."
-   }
-  }
- },
+ "abiertas": {},
  "hoy": {
   "fecha": "2026-11-23",
   "entradas": 2,
-  "pnl": -4.319999999999936,
-  "r": -1.0093457943925148,
+  "pnl": -8.230000000000004,
+  "r": -1.6664886515353805,
   "evaluados": {
    "CME": "COMPRADA",
    "DE": "omitida: señal vieja (101 min)",

@@ -591,6 +591,16 @@
       "qty": "17",
       "price": 42.6,
       "plain": "BUY 17 BSX at 42.60"
+    },
+    {
+      "at": "2026-11-23T15:40:09-05:00",
+      "date": "2026-11-23",
+      "status": "filled",
+      "symbol": "BSX",
+      "side": "sell",
+      "qty": "17",
+      "price": 42.37,
+      "plain": "SELL 17 BSX at 42.37"
     }
   ]
 }

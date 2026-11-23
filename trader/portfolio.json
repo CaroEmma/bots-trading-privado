@@ -1,5 +1,5 @@
 {
-  "cash": 535.78,
+  "cash": 1256.07,
   "positions": [
     {
       "ticker": "SO",
@@ -10,18 +10,6 @@
           "date": "2026-11-20",
           "shares": 39.0,
           "cost": 3679.33
-        }
-      ]
-    },
-    {
-      "ticker": "BSX",
-      "shares": 17.0,
-      "lots": [
-        {
-          "id": "BSX-1",
-          "date": "2026-11-23",
-          "shares": 17.0,
-          "cost": 724.2
         }
       ]
     }
