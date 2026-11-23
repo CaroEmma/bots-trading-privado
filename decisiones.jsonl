@@ -354,3 +354,9 @@
 {"fecha": "2026-11-23", "hora": "12:57", "simbolo": "RTX", "accion": "omitir", "motivo": "señal vieja (105 min)"}
 {"fecha": "2026-11-23", "hora": "12:57", "simbolo": "MPWR", "accion": "omitir", "motivo": "señal vieja (175 min)"}
 {"fecha": "2026-11-23", "hora": "12:57", "simbolo": "QCOM", "accion": "omitir", "motivo": "señal vieja (155 min)"}
+{"fecha": "2026-11-23", "hora": "13:02", "simbolo": "TTWO", "accion": "omitir", "motivo": "señal vieja (156 min)"}
+{"fecha": "2026-11-23", "hora": "13:02", "simbolo": "NEE", "accion": "omitir", "motivo": "señal vieja (91 min)"}
+{"fecha": "2026-11-23", "hora": "13:02", "simbolo": "AFRM", "accion": "omitir", "motivo": "señal vieja (161 min)"}
+{"fecha": "2026-11-23", "hora": "13:08", "simbolo": "TEL", "accion": "omitir", "motivo": "señal vieja (196 min)"}
+{"fecha": "2026-11-23", "hora": "13:08", "simbolo": "JCI", "accion": "omitir", "motivo": "señal vieja (166 min)"}
+{"fecha": "2026-11-23", "hora": "13:08", "simbolo": "CRM", "accion": "omitir", "motivo": "señal vieja (156 min)"}

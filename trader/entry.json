@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "QCOM",
+  "symbol": "CRM",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-23",
   "status": "triggered",
-  "time": "10:25 AM",
-  "bar_start": "10:20",
-  "bar_index": 10,
-  "price": 165.03,
-  "level": 164.87,
+  "time": "10:35 AM",
+  "bar_start": "10:30",
+  "bar_index": 12,
+  "price": 184.72,
+  "level": 184.49,
   "interval": "5m",
   "opening_range": {
-    "high": 164.87,
-    "low": 160.49,
+    "high": 184.49,
+    "low": 181.68,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-23T18:00:56Z",
-  "reason": "the 10:20 bar closed above the range high"
+  "checked_at": "2026-11-23T18:11:32Z",
+  "reason": "the 10:30 bar closed above the range high"
 }

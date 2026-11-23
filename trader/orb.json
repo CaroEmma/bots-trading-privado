@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-23T17:57:39Z",
+  "created_at": "2026-11-23T18:08:15Z",
   "mode": "orb",
-  "as_of": "2026-11-23 12:57 ET",
+  "as_of": "2026-11-23 13:08 ET",
   "universe": 5925,
-  "scanned": 1382,
+  "scanned": 1342,
   "failed": 0,
-  "unconfirmed": 950,
+  "unconfirmed": 925,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -392,6 +392,19 @@
       "or_high": 217.34,
       "or_low": 211.99,
       "pct_over": 0.44
+    },
+    {
+      "symbol": "TEL",
+      "setups": [
+        "orb"
+      ],
+      "price": 213.24,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 213.0,
+      "or_low": 209.28,
+      "pct_over": 0.11
     },
     {
       "symbol": "XOM",

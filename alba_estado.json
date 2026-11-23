@@ -51,12 +51,18 @@
    "DHR": "omitida: señal vieja (135 min)",
    "RTX": "omitida: señal vieja (105 min)",
    "MPWR": "omitida: señal vieja (175 min)",
-   "QCOM": "omitida: señal vieja (155 min)"
+   "QCOM": "omitida: señal vieja (155 min)",
+   "TTWO": "omitida: señal vieja (156 min)",
+   "NEE": "omitida: señal vieja (91 min)",
+   "AFRM": "omitida: señal vieja (161 min)",
+   "TEL": "omitida: señal vieja (196 min)",
+   "JCI": "omitida: señal vieja (166 min)",
+   "CRM": "omitida: señal vieja (156 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795456659.606203,
+  "ultimo_scan": 1795457295.472715,
   "sombra": {
    "vistos": [
     "CME",
