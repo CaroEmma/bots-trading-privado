@@ -125,7 +125,30 @@
     "NXPI",
     "PLTR",
     "AAPL",
-    "SNPS"
+    "SNPS",
+    "BLK",
+    "PDD",
+    "MA",
+    "EQIX",
+    "CL",
+    "MELI",
+    "TTWO",
+    "BRK.B",
+    "CRM",
+    "PFE",
+    "PEP",
+    "PM",
+    "FAST",
+    "MRK",
+    "CCL",
+    "PH",
+    "MAR",
+    "DHR",
+    "B",
+    "GE",
+    "TMO",
+    "WMT",
+    "AAL"
    ],
    "perdidos": [
     "ARGX",
@@ -149,7 +172,7 @@
     "DE",
     "ESTC"
    ],
-   "ultimo_scan": 1795447767.580241,
+   "ultimo_scan": 1795448434.634528,
    "limitado": 0,
    "errores": 0
   }
