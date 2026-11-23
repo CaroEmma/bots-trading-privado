@@ -155,7 +155,15 @@
     "INTU",
     "MDLZ",
     "SHW",
-    "ABT"
+    "ABT",
+    "SCHW",
+    "BAC",
+    "RTX",
+    "URI",
+    "SE",
+    "UPS",
+    "TLN",
+    "PWR"
    ],
    "perdidos": [
     "ARGX",
@@ -179,9 +187,10 @@
     "DE",
     "ESTC",
     "HSY",
-    "NTRA"
+    "NTRA",
+    "GWW"
    ],
-   "ultimo_scan": 1795450350.620956,
+   "ultimo_scan": 1795450990.697161,
    "limitado": 0,
    "errores": 0
   }
