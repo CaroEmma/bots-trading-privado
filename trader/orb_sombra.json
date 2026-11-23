@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-23T18:56:16Z",
+  "created_at": "2026-11-23T19:06:56Z",
   "mode": "orb",
-  "as_of": "2026-11-23 13:56 ET",
+  "as_of": "2026-11-23 14:06 ET",
   "universe": 5925,
-  "scanned": 1143,
+  "scanned": 1145,
   "failed": 0,
-  "unconfirmed": 770,
+  "unconfirmed": 776,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -41,19 +41,6 @@
       "or_high": 220.57,
       "or_low": 218.0,
       "pct_over": 0.07
-    },
-    {
-      "symbol": "ALNY",
-      "setups": [
-        "orb"
-      ],
-      "price": 150.84,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 150.0,
-      "or_low": 146.85,
-      "pct_over": 0.56
     },
     {
       "symbol": "CBOE",
@@ -1666,6 +1653,19 @@
       "or_high": 282.54,
       "or_low": 273.0,
       "pct_over": 0.0
+    },
+    {
+      "symbol": "T",
+      "setups": [
+        "orb"
+      ],
+      "price": 22.28,
+      "at": "1:25 PM",
+      "bar_start": "13:20",
+      "bar_index": 46,
+      "or_high": 22.24,
+      "or_low": 21.98,
+      "pct_over": 0.17
     },
     {
       "symbol": "SBUX",
