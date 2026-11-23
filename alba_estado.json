@@ -239,7 +239,8 @@
     "C",
     "T",
     "SBUX",
-    "SO"
+    "SO",
+    "TMUS"
    ],
    "perdidos": [
     "ARGX",
@@ -277,7 +278,7 @@
     "LMT",
     "ORLY"
    ],
-   "ultimo_scan": 1795464066.601972,
+   "ultimo_scan": 1795464712.355656,
    "limitado": 0,
    "errores": 0
   }
