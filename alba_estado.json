@@ -238,7 +238,8 @@
     "GOOG",
     "C",
     "T",
-    "SBUX"
+    "SBUX",
+    "SO"
    ],
    "perdidos": [
     "ARGX",
@@ -271,9 +272,10 @@
     "ICE",
     "CBOE",
     "CARR",
-    "ZM"
+    "ZM",
+    "DKS"
    ],
-   "ultimo_scan": 1795461453.310296,
+   "ultimo_scan": 1795462098.229573,
    "limitado": 0,
    "errores": 0
   }
