@@ -91,7 +91,18 @@
     "UNH",
     "NVDA",
     "BSP",
-    "OKTA"
+    "OKTA",
+    "ADSK",
+    "TSLA",
+    "EBAY",
+    "NOW",
+    "APP",
+    "AXTI",
+    "FN",
+    "MRVL",
+    "MCHP",
+    "GLW",
+    "MOD"
    ],
    "perdidos": [
     "ARGX",
@@ -111,9 +122,11 @@
     "ALNY",
     "GILD",
     "LLY",
-    "KYMR"
+    "KYMR",
+    "DE",
+    "ESTC"
    ],
-   "ultimo_scan": 1795446463.573877,
+   "ultimo_scan": 1795447123.266564,
    "limitado": 0,
    "errores": 0
   }
