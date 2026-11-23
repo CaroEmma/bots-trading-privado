@@ -555,6 +555,16 @@
       "qty": "2",
       "price": 307.08,
       "plain": "BUY 2 CME at 307.08"
+    },
+    {
+      "at": "2026-11-23T11:43:24-05:00",
+      "date": "2026-11-23",
+      "status": "filled",
+      "symbol": "CME",
+      "side": "sell",
+      "qty": "2",
+      "price": 304.92,
+      "plain": "SELL 2 CME at 304.92"
     }
   ]
 }

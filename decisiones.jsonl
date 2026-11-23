@@ -309,3 +309,6 @@
 {"fecha": "2026-11-20", "hora": "12:10", "simbolo": "JNJ", "accion": "omitir", "motivo": "señal vieja (113 min)"}
 {"fecha": "2026-11-20", "hora": "12:15", "simbolo": "SO", "accion": "comprar", "motivo": "todas las skills en verde", "qty": 39, "fill": 94.341795, "stop": 94.16, "target": 95.0, "tm": {"mc_avg_R": 0.096, "p_target": 0.2694, "p_stop": 0.5418, "hist_disparos": 34, "hist_avg_R": 0.3, "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 33 % (target first 26.9 % vs stop first 54.2 %)."}}
 {"fecha": "2026-11-23", "hora": "09:50", "simbolo": "CME", "accion": "comprar", "motivo": "todas las skills en verde", "qty": 2, "fill": 307.08, "stop": 304.94, "target": 312.92, "tm": {"mc_avg_R": 0.044, "p_target": 0.1274, "p_stop": 0.4209, "hist_disparos": 35, "hist_avg_R": -0.352, "veredicto": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 23 % (target first 12.7 % vs stop first 42.1 %)."}}
+{"fecha": "2026-11-23", "hora": "11:43", "simbolo": "DE", "accion": "omitir", "motivo": "señal vieja (101 min)"}
+{"fecha": "2026-11-23", "hora": "11:43", "simbolo": "TGT", "accion": "omitir", "motivo": "señal vieja (86 min)"}
+{"fecha": "2026-11-23", "hora": "11:43", "simbolo": "BRK.B", "accion": "omitir", "motivo": "señal vieja (76 min)"}

@@ -1,36 +1,20 @@
 {
- "abiertas": {
-  "CME": {
-   "orden_id": "b1e380cc-4525-4efd-9da1-6686273091a5",
-   "qty": 2,
-   "entrada": 307.08,
-   "stop": 304.94,
-   "target": 312.92,
-   "fecha": "2026-11-23",
-   "hora": "09:50",
-   "max_loss": 5.32,
-   "tm": {
-    "mc_avg_R": 0.044,
-    "p_target": 0.1274,
-    "p_stop": 0.4209,
-    "hist_disparos": 35,
-    "hist_avg_R": -0.352,
-    "veredicto": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 23 % (target first 12.7 % vs stop first 42.1 %)."
-   }
-  }
- },
+ "abiertas": {},
  "hoy": {
   "fecha": "2026-11-23",
   "entradas": 1,
-  "pnl": 0.0,
-  "r": 0.0,
+  "pnl": -4.319999999999936,
+  "r": -1.0093457943925148,
   "evaluados": {
-   "CME": "COMPRADA"
+   "CME": "COMPRADA",
+   "DE": "omitida: señal vieja (101 min)",
+   "TGT": "omitida: señal vieja (86 min)",
+   "BRK.B": "omitida: señal vieja (76 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795445440.232172,
+  "ultimo_scan": 1795452204.562489,
   "sombra": {
    "vistos": [
     "CME",
@@ -165,7 +149,9 @@
     "TLN",
     "PWR",
     "COIN",
-    "CMCSA"
+    "CMCSA",
+    "NEE",
+    "META"
    ],
    "perdidos": [
     "ARGX",
@@ -193,7 +179,7 @@
     "GWW",
     "LYV"
    ],
-   "ultimo_scan": 1795451629.771474,
+   "ultimo_scan": 1795451947.69635,
    "limitado": 0,
    "errores": 0
   }

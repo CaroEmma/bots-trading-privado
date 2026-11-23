@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "CME",
+  "symbol": "BRK-B",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-23",
   "status": "triggered",
-  "time": "9:50 AM",
-  "bar_start": "09:45",
-  "bar_index": 3,
-  "price": 307.6,
-  "level": 307.55,
+  "time": "10:30 AM",
+  "bar_start": "10:25",
+  "bar_index": 11,
+  "price": 573.0,
+  "level": 572.98,
   "interval": "5m",
   "opening_range": {
-    "high": 307.55,
-    "low": 302.34,
+    "high": 572.98,
+    "low": 568.35,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-23T14:54:00Z",
-  "reason": "the 9:45 bar closed above the range high"
+  "checked_at": "2026-11-23T16:46:40Z",
+  "reason": "the 10:25 bar closed above the range high"
 }
