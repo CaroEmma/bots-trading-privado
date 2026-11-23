@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "ACN",
+  "symbol": "QCOM",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-23",
   "status": "triggered",
-  "time": "9:50 AM",
-  "bar_start": "09:45",
-  "bar_index": 3,
-  "price": 223.82,
-  "level": 223.62,
+  "time": "10:25 AM",
+  "bar_start": "10:20",
+  "bar_index": 10,
+  "price": 165.03,
+  "level": 164.87,
   "interval": "5m",
   "opening_range": {
-    "high": 223.62,
-    "low": 221.22,
+    "high": 164.87,
+    "low": 160.49,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-23T17:50:21Z",
-  "reason": "the 9:45 bar closed above the range high"
+  "checked_at": "2026-11-23T18:00:56Z",
+  "reason": "the 10:20 bar closed above the range high"
 }

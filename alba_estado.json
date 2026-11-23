@@ -45,12 +45,18 @@
    "MDLZ": "omitida: señal vieja (100 min)",
    "SHW": "omitida: señal vieja (100 min)",
    "ON": "omitida: señal vieja (15 min)",
-   "ACN": "omitida: señal vieja (180 min)"
+   "ACN": "omitida: señal vieja (180 min)",
+   "MCD": "omitida: señal vieja (185 min)",
+   "XOM": "omitida: señal vieja (180 min)",
+   "DHR": "omitida: señal vieja (135 min)",
+   "RTX": "omitida: señal vieja (105 min)",
+   "MPWR": "omitida: señal vieja (175 min)",
+   "QCOM": "omitida: señal vieja (155 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795456024.993406,
+  "ultimo_scan": 1795456659.606203,
   "sombra": {
    "vistos": [
     "CME",
