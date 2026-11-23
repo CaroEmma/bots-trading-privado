@@ -270,9 +270,10 @@
     "RKT",
     "ICE",
     "CBOE",
-    "CARR"
+    "CARR",
+    "ZM"
    ],
-   "ultimo_scan": 1795460816.525982,
+   "ultimo_scan": 1795461453.310296,
    "limitado": 0,
    "errores": 0
   }

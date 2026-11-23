@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-23T19:06:56Z",
+  "created_at": "2026-11-23T19:17:33Z",
   "mode": "orb",
-  "as_of": "2026-11-23 14:06 ET",
+  "as_of": "2026-11-23 14:17 ET",
   "universe": 5925,
-  "scanned": 1145,
+  "scanned": 1103,
   "failed": 0,
-  "unconfirmed": 776,
+  "unconfirmed": 748,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -41,6 +41,19 @@
       "or_high": 220.57,
       "or_low": 218.0,
       "pct_over": 0.07
+    },
+    {
+      "symbol": "ALNY",
+      "setups": [
+        "orb"
+      ],
+      "price": 150.84,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 150.0,
+      "or_low": 146.85,
+      "pct_over": 0.56
     },
     {
       "symbol": "CBOE",
@@ -275,6 +288,19 @@
       "or_high": 446.5,
       "or_low": 440.0,
       "pct_over": 0.27
+    },
+    {
+      "symbol": "BMY",
+      "setups": [
+        "orb"
+      ],
+      "price": 59.21,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 59.0,
+      "or_low": 58.53,
+      "pct_over": 0.36
     },
     {
       "symbol": "CVX",
@@ -784,19 +810,6 @@
       "pct_over": 0.4
     },
     {
-      "symbol": "RKT",
-      "setups": [
-        "orb"
-      ],
-      "price": 13.99,
-      "at": "10:20 AM",
-      "bar_start": "10:15",
-      "bar_index": 9,
-      "or_high": 13.97,
-      "or_low": 13.5,
-      "pct_over": 0.19
-    },
-    {
       "symbol": "SHOP",
       "setups": [
         "orb"
@@ -860,6 +873,19 @@
       "or_high": 124.35,
       "or_low": 121.78,
       "pct_over": 0.48
+    },
+    {
+      "symbol": "ZM",
+      "setups": [
+        "orb"
+      ],
+      "price": 85.24,
+      "at": "10:20 AM",
+      "bar_start": "10:15",
+      "bar_index": 9,
+      "or_high": 85.07,
+      "or_low": 83.42,
+      "pct_over": 0.2
     },
     {
       "symbol": "AAPL",
@@ -1653,19 +1679,6 @@
       "or_high": 282.54,
       "or_low": 273.0,
       "pct_over": 0.0
-    },
-    {
-      "symbol": "T",
-      "setups": [
-        "orb"
-      ],
-      "price": 22.28,
-      "at": "1:25 PM",
-      "bar_start": "13:20",
-      "bar_index": 46,
-      "or_high": 22.24,
-      "or_low": 21.98,
-      "pct_over": 0.17
     },
     {
       "symbol": "SBUX",
