@@ -151,7 +151,11 @@
     "AAL",
     "PYPL",
     "NKE",
-    "MRNA"
+    "MRNA",
+    "INTU",
+    "MDLZ",
+    "SHW",
+    "ABT"
    ],
    "perdidos": [
     "ARGX",
@@ -174,9 +178,10 @@
     "KYMR",
     "DE",
     "ESTC",
-    "HSY"
+    "HSY",
+    "NTRA"
    ],
-   "ultimo_scan": 1795449708.813431,
+   "ultimo_scan": 1795450350.620956,
    "limitado": 0,
    "errores": 0
   }
