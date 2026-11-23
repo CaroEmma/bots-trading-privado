@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "EQIX",
+  "symbol": "HD",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-23",
   "status": "triggered",
-  "time": "10:30 AM",
-  "bar_start": "10:25",
-  "bar_index": 11,
-  "price": 1030.87,
-  "level": 1030.46,
+  "time": "9:55 AM",
+  "bar_start": "09:50",
+  "bar_index": 4,
+  "price": 342.68,
+  "level": 342.48,
   "interval": "5m",
   "opening_range": {
-    "high": 1030.46,
-    "low": 1013.74,
+    "high": 342.48,
+    "low": 339.25,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-23T17:18:32Z",
-  "reason": "the 10:25 bar closed above the range high"
+  "checked_at": "2026-11-23T17:29:11Z",
+  "reason": "the 9:50 bar closed above the range high"
 }

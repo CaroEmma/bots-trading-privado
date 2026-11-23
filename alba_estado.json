@@ -27,12 +27,18 @@
    "BAC": "omitida: señal vieja (58 min)",
    "UPS": "omitida: señal vieja (58 min)",
    "ALAB": "omitida: señal vieja (23 min)",
-   "EQIX": "omitida: señal vieja (108 min)"
+   "EQIX": "omitida: señal vieja (108 min)",
+   "MELI": "omitida: señal vieja (108 min)",
+   "XEL": "omitida: señal vieja (93 min)",
+   "INTU": "omitida: señal vieja (78 min)",
+   "JNJ": "omitida: señal vieja (159 min)",
+   "TXN": "omitida: señal vieja (159 min)",
+   "HD": "omitida: señal vieja (154 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795454114.637086,
+  "ultimo_scan": 1795454753.215089,
   "sombra": {
    "vistos": [
     "CME",
