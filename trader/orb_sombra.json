@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-23T20:22:27Z",
+  "created_at": "2026-11-23T20:27:43Z",
   "mode": "orb",
-  "as_of": "2026-11-23 15:22 ET",
+  "as_of": "2026-11-23 15:27 ET",
   "universe": 5925,
-  "scanned": 955,
+  "scanned": 952,
   "failed": 0,
-  "unconfirmed": 621,
+  "unconfirmed": 619,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -1031,6 +1031,19 @@
       "pct_over": 0.23
     },
     {
+      "symbol": "TEAM",
+      "setups": [
+        "orb"
+      ],
+      "price": 141.69,
+      "at": "10:25 AM",
+      "bar_start": "10:20",
+      "bar_index": 10,
+      "or_high": 140.74,
+      "or_low": 138.19,
+      "pct_over": 0.67
+    },
+    {
       "symbol": "TER",
       "setups": [
         "orb"
@@ -1263,19 +1276,6 @@
       "or_high": 33.99,
       "or_low": 33.11,
       "pct_over": 0.12
-    },
-    {
-      "symbol": "DHR",
-      "setups": [
-        "orb"
-      ],
-      "price": 226.57,
-      "at": "10:40 AM",
-      "bar_start": "10:35",
-      "bar_index": 13,
-      "or_high": 226.35,
-      "or_low": 223.3,
-      "pct_over": 0.09
     },
     {
       "symbol": "DKS",
