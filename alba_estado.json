@@ -148,7 +148,10 @@
     "GE",
     "TMO",
     "WMT",
-    "AAL"
+    "AAL",
+    "PYPL",
+    "NKE",
+    "MRNA"
    ],
    "perdidos": [
     "ARGX",
@@ -170,9 +173,10 @@
     "LLY",
     "KYMR",
     "DE",
-    "ESTC"
+    "ESTC",
+    "HSY"
    ],
-   "ultimo_scan": 1795449076.160117,
+   "ultimo_scan": 1795449708.813431,
    "limitado": 0,
    "errores": 0
   }
