@@ -21,12 +21,18 @@
    "CMCSA": "omitida: señal vieja (37 min)",
    "ISRG": "omitida: señal vieja (137 min)",
    "REGN": "omitida: señal vieja (132 min)",
-   "CL": "omitida: señal vieja (92 min)"
+   "CL": "omitida: señal vieja (92 min)",
+   "MA": "omitida: señal vieja (98 min)",
+   "PH": "omitida: señal vieja (93 min)",
+   "BAC": "omitida: señal vieja (58 min)",
+   "UPS": "omitida: señal vieja (58 min)",
+   "ALAB": "omitida: señal vieja (23 min)",
+   "EQIX": "omitida: señal vieja (108 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795453478.293862,
+  "ultimo_scan": 1795454114.637086,
   "sombra": {
    "vistos": [
     "CME",
@@ -164,7 +170,8 @@
     "CMCSA",
     "NEE",
     "META",
-    "ALAB"
+    "ALAB",
+    "XYZ"
    ],
    "perdidos": [
     "ARGX",
@@ -192,7 +199,9 @@
     "GWW",
     "LYV",
     "BX",
-    "XEL"
+    "XEL",
+    "RKT",
+    "ICE"
    ],
    "ultimo_scan": 1795451947.69635,
    "limitado": 0,

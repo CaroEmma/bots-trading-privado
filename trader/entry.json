@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "CL",
+  "symbol": "EQIX",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-23",
   "status": "triggered",
-  "time": "10:35 AM",
-  "bar_start": "10:30",
-  "bar_index": 12,
-  "price": 98.0,
-  "level": 97.97,
+  "time": "10:30 AM",
+  "bar_start": "10:25",
+  "bar_index": 11,
+  "price": 1030.87,
+  "level": 1030.46,
   "interval": "5m",
   "opening_range": {
-    "high": 97.97,
-    "low": 94.98,
+    "high": 1030.46,
+    "low": 1013.74,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-23T17:07:55Z",
-  "reason": "the 10:30 bar closed above the range high"
+  "checked_at": "2026-11-23T17:18:32Z",
+  "reason": "the 10:25 bar closed above the range high"
 }

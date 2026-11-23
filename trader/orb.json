@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-23T17:04:38Z",
+  "created_at": "2026-11-23T17:15:14Z",
   "mode": "orb",
-  "as_of": "2026-11-23 12:04 ET",
+  "as_of": "2026-11-23 12:15 ET",
   "universe": 5925,
-  "scanned": 1625,
+  "scanned": 1529,
   "failed": 0,
-  "unconfirmed": 1137,
+  "unconfirmed": 1067,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -366,19 +366,6 @@
       "or_high": 182.32,
       "or_low": 180.35,
       "pct_over": 0.35
-    },
-    {
-      "symbol": "NVO",
-      "setups": [
-        "orb"
-      ],
-      "price": 38.8,
-      "at": "9:55 AM",
-      "bar_start": "09:50",
-      "bar_index": 4,
-      "or_high": 38.74,
-      "or_low": 38.47,
-      "pct_over": 0.15
     },
     {
       "symbol": "OXY",
@@ -771,6 +758,19 @@
       "pct_over": 0.4
     },
     {
+      "symbol": "RKT",
+      "setups": [
+        "orb"
+      ],
+      "price": 13.99,
+      "at": "10:20 AM",
+      "bar_start": "10:15",
+      "bar_index": 9,
+      "or_high": 13.97,
+      "or_low": 13.5,
+      "pct_over": 0.19
+    },
+    {
       "symbol": "SHOP",
       "setups": [
         "orb"
@@ -1042,6 +1042,19 @@
       "or_high": 1030.46,
       "or_low": 1013.74,
       "pct_over": 0.04
+    },
+    {
+      "symbol": "ICE",
+      "setups": [
+        "orb"
+      ],
+      "price": 172.54,
+      "at": "10:30 AM",
+      "bar_start": "10:25",
+      "bar_index": 11,
+      "or_high": 172.44,
+      "or_low": 170.45,
+      "pct_over": 0.06
     },
     {
       "symbol": "PDD",
@@ -1536,6 +1549,19 @@
       "or_high": 219.51,
       "or_low": 205.49,
       "pct_over": 0.03
+    },
+    {
+      "symbol": "XYZ",
+      "setups": [
+        "orb"
+      ],
+      "price": 73.85,
+      "at": "12:15 PM",
+      "bar_start": "12:10",
+      "bar_index": 32,
+      "or_high": 73.69,
+      "or_low": 71.99,
+      "pct_over": 0.22
     }
   ]
 }
