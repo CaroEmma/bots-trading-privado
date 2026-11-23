@@ -9,12 +9,18 @@
    "CME": "COMPRADA",
    "DE": "omitida: señal vieja (101 min)",
    "TGT": "omitida: señal vieja (86 min)",
-   "BRK.B": "omitida: señal vieja (76 min)"
+   "BRK.B": "omitida: señal vieja (76 min)",
+   "F": "omitida: señal vieja (116 min)",
+   "BLK": "omitida: señal vieja (76 min)",
+   "COIN": "omitida: señal vieja (26 min)",
+   "DVN": "omitida: señal vieja (117 min)",
+   "PDD": "omitida: señal vieja (87 min)",
+   "V": "omitida: señal vieja (127 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795452204.562489,
+  "ultimo_scan": 1795452838.924216,
   "sombra": {
    "vistos": [
     "CME",
@@ -177,7 +183,8 @@
     "HSY",
     "NTRA",
     "GWW",
-    "LYV"
+    "LYV",
+    "BX"
    ],
    "ultimo_scan": 1795451947.69635,
    "limitado": 0,
