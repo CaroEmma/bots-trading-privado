@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "V",
+  "symbol": "CL",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-23",
   "status": "triggered",
-  "time": "9:50 AM",
-  "bar_start": "09:45",
-  "bar_index": 3,
-  "price": 410.11,
-  "level": 410.02,
+  "time": "10:35 AM",
+  "bar_start": "10:30",
+  "bar_index": 12,
+  "price": 98.0,
+  "level": 97.97,
   "interval": "5m",
   "opening_range": {
-    "high": 410.02,
-    "low": 404.01,
+    "high": 97.97,
+    "low": 94.98,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-23T16:57:14Z",
-  "reason": "the 9:45 bar closed above the range high"
+  "checked_at": "2026-11-23T17:07:55Z",
+  "reason": "the 10:30 bar closed above the range high"
 }

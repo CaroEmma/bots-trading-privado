@@ -318,3 +318,9 @@
 {"fecha": "2026-11-23", "hora": "11:53", "simbolo": "DVN", "accion": "omitir", "motivo": "señal vieja (117 min)"}
 {"fecha": "2026-11-23", "hora": "11:53", "simbolo": "PDD", "accion": "omitir", "motivo": "señal vieja (87 min)"}
 {"fecha": "2026-11-23", "hora": "11:53", "simbolo": "V", "accion": "omitir", "motivo": "señal vieja (127 min)"}
+{"fecha": "2026-11-23", "hora": "11:59", "simbolo": "UAL", "accion": "omitir", "motivo": "señal vieja (102 min)"}
+{"fecha": "2026-11-23", "hora": "11:59", "simbolo": "MRNA", "accion": "omitir", "motivo": "señal vieja (62 min)"}
+{"fecha": "2026-11-23", "hora": "11:59", "simbolo": "CMCSA", "accion": "omitir", "motivo": "señal vieja (37 min)"}
+{"fecha": "2026-11-23", "hora": "12:04", "simbolo": "ISRG", "accion": "omitir", "motivo": "señal vieja (137 min)"}
+{"fecha": "2026-11-23", "hora": "12:04", "simbolo": "REGN", "accion": "omitir", "motivo": "señal vieja (132 min)"}
+{"fecha": "2026-11-23", "hora": "12:04", "simbolo": "CL", "accion": "omitir", "motivo": "señal vieja (92 min)"}

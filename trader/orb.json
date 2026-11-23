@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-23T16:53:59Z",
+  "created_at": "2026-11-23T17:04:38Z",
   "mode": "orb",
-  "as_of": "2026-11-23 11:53 ET",
+  "as_of": "2026-11-23 12:04 ET",
   "universe": 5925,
-  "scanned": 1694,
+  "scanned": 1625,
   "failed": 0,
-  "unconfirmed": 1188,
+  "unconfirmed": 1137,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -41,19 +41,6 @@
       "or_high": 220.57,
       "or_low": 218.0,
       "pct_over": 0.07
-    },
-    {
-      "symbol": "ALNY",
-      "setups": [
-        "orb"
-      ],
-      "price": 150.84,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 150.0,
-      "or_low": 146.85,
-      "pct_over": 0.56
     },
     {
       "symbol": "CBRS",
@@ -810,6 +797,19 @@
       "pct_over": 0.0
     },
     {
+      "symbol": "UAL",
+      "setups": [
+        "orb"
+      ],
+      "price": 106.79,
+      "at": "10:20 AM",
+      "bar_start": "10:15",
+      "bar_index": 9,
+      "or_high": 106.79,
+      "or_low": 104.39,
+      "pct_over": 0.01
+    },
+    {
       "symbol": "UBER",
       "setups": [
         "orb"
@@ -1265,19 +1265,6 @@
       "pct_over": 0.24
     },
     {
-      "symbol": "NTRA",
-      "setups": [
-        "orb"
-      ],
-      "price": 296.12,
-      "at": "10:40 AM",
-      "bar_start": "10:35",
-      "bar_index": 13,
-      "or_high": 295.98,
-      "or_low": 286.11,
-      "pct_over": 0.05
-    },
-    {
       "symbol": "PH",
       "setups": [
         "orb"
@@ -1289,6 +1276,19 @@
       "or_high": 917.15,
       "or_low": 900.08,
       "pct_over": 0.03
+    },
+    {
+      "symbol": "XEL",
+      "setups": [
+        "orb"
+      ],
+      "price": 80.03,
+      "at": "10:50 AM",
+      "bar_start": "10:45",
+      "bar_index": 15,
+      "or_high": 80.0,
+      "or_low": 79.31,
+      "pct_over": 0.04
     },
     {
       "symbol": "NKE",
@@ -1523,6 +1523,19 @@
       "or_high": 83.96,
       "or_low": 83.36,
       "pct_over": 0.11
+    },
+    {
+      "symbol": "ALAB",
+      "setups": [
+        "orb"
+      ],
+      "price": 219.58,
+      "at": "11:55 AM",
+      "bar_start": "11:50",
+      "bar_index": 28,
+      "or_high": 219.51,
+      "or_low": 205.49,
+      "pct_over": 0.03
     }
   ]
 }

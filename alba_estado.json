@@ -15,12 +15,18 @@
    "COIN": "omitida: señal vieja (26 min)",
    "DVN": "omitida: señal vieja (117 min)",
    "PDD": "omitida: señal vieja (87 min)",
-   "V": "omitida: señal vieja (127 min)"
+   "V": "omitida: señal vieja (127 min)",
+   "UAL": "omitida: señal vieja (102 min)",
+   "MRNA": "omitida: señal vieja (62 min)",
+   "CMCSA": "omitida: señal vieja (37 min)",
+   "ISRG": "omitida: señal vieja (137 min)",
+   "REGN": "omitida: señal vieja (132 min)",
+   "CL": "omitida: señal vieja (92 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795452838.924216,
+  "ultimo_scan": 1795453478.293862,
   "sombra": {
    "vistos": [
     "CME",
@@ -157,7 +163,8 @@
     "COIN",
     "CMCSA",
     "NEE",
-    "META"
+    "META",
+    "ALAB"
    ],
    "perdidos": [
     "ARGX",
@@ -184,7 +191,8 @@
     "NTRA",
     "GWW",
     "LYV",
-    "BX"
+    "BX",
+    "XEL"
    ],
    "ultimo_scan": 1795451947.69635,
    "limitado": 0,
