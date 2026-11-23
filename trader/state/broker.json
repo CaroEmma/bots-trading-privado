@@ -565,6 +565,32 @@
       "qty": "2",
       "price": 304.92,
       "plain": "SELL 2 CME at 304.92"
+    },
+    {
+      "at": "2026-11-23T13:24-05:00",
+      "date": "2026-11-23",
+      "index": 1,
+      "fingerprint": "c4a7e2a233fe33e6",
+      "symbol": "BSX",
+      "side": "buy",
+      "qty": "17",
+      "kind": "entry",
+      "max_loss": 5.78,
+      "stop": 42.25,
+      "plain": "buy 17 BSX (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "e14bea24-ade9-4130-aaf3-30f6d7c574e8",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-23T13:27:37-05:00",
+      "date": "2026-11-23",
+      "status": "filled",
+      "symbol": "BSX",
+      "side": "buy",
+      "qty": "17",
+      "price": 42.6,
+      "plain": "BUY 17 BSX at 42.60"
     }
   ]
 }

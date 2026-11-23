@@ -1,8 +1,27 @@
 {
- "abiertas": {},
+ "abiertas": {
+  "BSX": {
+   "orden_id": "e14bea24-ade9-4130-aaf3-30f6d7c574e8",
+   "qty": 17,
+   "entrada": 42.6,
+   "stop": 42.25,
+   "target": 43.12,
+   "fecha": "2026-11-23",
+   "hora": "13:24",
+   "max_loss": 5.78,
+   "tm": {
+    "mc_avg_R": 0.056,
+    "p_target": 0.1454,
+    "p_stop": 0.4416,
+    "hist_disparos": 29,
+    "hist_avg_R": 0.063,
+    "veredicto": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 25 % (target first 14.5 % vs stop first 44.2 %)."
+   }
+  }
+ },
  "hoy": {
   "fecha": "2026-11-23",
-  "entradas": 1,
+  "entradas": 2,
   "pnl": -4.319999999999936,
   "r": -1.0093457943925148,
   "evaluados": {
@@ -63,12 +82,14 @@
    "ABT": "omitida: señal vieja (126 min)",
    "COST": "omitida: timemachine: R promedio simulado -0.075 no es > 0",
    "NTRA": "omitida: señal vieja (162 min)",
-   "META": "omitida: señal vieja (107 min)"
+   "META": "omitida: señal vieja (107 min)",
+   "GOOGL": "omitida: timemachine: R promedio simulado -0.146 no es > 0",
+   "BSX": "COMPRADA"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795457934.238704,
+  "ultimo_scan": 1795458256.285047,
   "sombra": {
    "vistos": [
     "CME",
@@ -211,7 +232,12 @@
     "ON",
     "CMG",
     "COST",
-    "SYK"
+    "SYK",
+    "GOOGL",
+    "BSX",
+    "GOOG",
+    "C",
+    "T"
    ],
    "perdidos": [
     "ARGX",
@@ -242,9 +268,10 @@
     "XEL",
     "RKT",
     "ICE",
-    "CBOE"
+    "CBOE",
+    "CARR"
    ],
-   "ultimo_scan": 1795451947.69635,
+   "ultimo_scan": 1795458580.577445,
    "limitado": 0,
    "errores": 0
   }

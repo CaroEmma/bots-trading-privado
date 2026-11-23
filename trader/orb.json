@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-23T18:18:54Z",
+  "created_at": "2026-11-23T18:24:16Z",
   "mode": "orb",
-  "as_of": "2026-11-23 13:18 ET",
+  "as_of": "2026-11-23 13:24 ET",
   "universe": 5925,
-  "scanned": 1295,
+  "scanned": 1263,
   "failed": 0,
-  "unconfirmed": 887,
+  "unconfirmed": 866,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -732,6 +732,19 @@
       "pct_over": 0.46
     },
     {
+      "symbol": "CARR",
+      "setups": [
+        "orb"
+      ],
+      "price": 52.36,
+      "at": "10:20 AM",
+      "bar_start": "10:15",
+      "bar_index": 9,
+      "or_high": 52.24,
+      "or_low": 51.2,
+      "pct_over": 0.23
+    },
+    {
       "symbol": "CIEN",
       "setups": [
         "orb"
@@ -1109,6 +1122,19 @@
       "pct_over": 0.03
     },
     {
+      "symbol": "CRM",
+      "setups": [
+        "orb"
+      ],
+      "price": 184.72,
+      "at": "10:35 AM",
+      "bar_start": "10:30",
+      "bar_index": 12,
+      "or_high": 184.49,
+      "or_low": 181.68,
+      "pct_over": 0.12
+    },
+    {
       "symbol": "FAST",
       "setups": [
         "orb"
@@ -1250,19 +1276,6 @@
       "or_high": 321.53,
       "or_low": 315.18,
       "pct_over": 0.24
-    },
-    {
-      "symbol": "NTRA",
-      "setups": [
-        "orb"
-      ],
-      "price": 296.12,
-      "at": "10:40 AM",
-      "bar_start": "10:35",
-      "bar_index": 13,
-      "or_high": 295.98,
-      "or_low": 286.11,
-      "pct_over": 0.05
     },
     {
       "symbol": "PH",
@@ -1588,6 +1601,32 @@
       "or_high": 313.55,
       "or_low": 308.26,
       "pct_over": 0.17
+    },
+    {
+      "symbol": "BSX",
+      "setups": [
+        "orb"
+      ],
+      "price": 42.54,
+      "at": "1:20 PM",
+      "bar_start": "13:15",
+      "bar_index": 45,
+      "or_high": 42.5,
+      "or_low": 42.01,
+      "pct_over": 0.09
+    },
+    {
+      "symbol": "GOOGL",
+      "setups": [
+        "orb"
+      ],
+      "price": 284.77,
+      "at": "1:20 PM",
+      "bar_start": "13:15",
+      "bar_index": 45,
+      "or_high": 284.6,
+      "or_low": 275.36,
+      "pct_over": 0.06
     }
   ]
 }

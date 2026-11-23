@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-23T14:54:02Z",
+  "as_of": "2026-11-23T18:27:34Z",
   "source": "yahoo",
   "note": "Delayed quotes for alerts and sizing checks. Your broker's price is the one that fills. detail.fetched is when each price was read.",
   "prices": {
@@ -23,7 +23,8 @@
     "BIIB": 250.18,
     "UNP": 294.175,
     "SO": 94.32,
-    "CME": 307.17
+    "CME": 307.17,
+    "BSX": 42.585
   },
   "detail": {
     "SPCX": {
@@ -151,6 +152,12 @@
       "time": "2026-11-23T14:53:50Z",
       "source": "yahoo",
       "fetched": "2026-11-23T14:54:02Z"
+    },
+    "BSX": {
+      "prev_close": 41.98,
+      "time": "2026-11-23T18:27:31Z",
+      "source": "yahoo",
+      "fetched": "2026-11-23T18:27:34Z"
     }
   }
 }

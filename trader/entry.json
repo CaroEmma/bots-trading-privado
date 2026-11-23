@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "META",
+  "symbol": "BSX",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-23",
   "status": "triggered",
-  "time": "11:35 AM",
-  "bar_start": "11:30",
-  "bar_index": 24,
-  "price": 595.7,
-  "level": 595.0,
+  "time": "1:20 PM",
+  "bar_start": "13:15",
+  "bar_index": 45,
+  "price": 42.54,
+  "level": 42.5,
   "interval": "5m",
   "opening_range": {
-    "high": 595.0,
-    "low": 579.78,
+    "high": 42.5,
+    "low": 42.01,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-23T18:22:11Z",
-  "reason": "the 11:30 bar closed above the range high"
+  "checked_at": "2026-11-23T18:27:33Z",
+  "reason": "the 13:15 bar closed above the range high"
 }
