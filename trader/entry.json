@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "SO",
+  "symbol": "CME",
   "setup": "orb",
   "side": "buy",
-  "date": "2026-11-20",
+  "date": "2026-11-23",
   "status": "triggered",
-  "time": "12:15 PM",
-  "bar_start": "12:10",
-  "bar_index": 32,
-  "price": 94.44,
-  "level": 94.43,
+  "time": "9:50 AM",
+  "bar_start": "09:45",
+  "bar_index": 3,
+  "price": 307.6,
+  "level": 307.55,
   "interval": "5m",
   "opening_range": {
-    "high": 94.43,
-    "low": 93.9,
+    "high": 307.55,
+    "low": 302.34,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-20T17:19:42Z",
-  "reason": "the 12:10 bar closed above the range high"
+  "checked_at": "2026-11-23T14:54:00Z",
+  "reason": "the 9:45 bar closed above the range high"
 }

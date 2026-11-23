@@ -1,13 +1,73 @@
 {
- "abiertas": {},
+ "abiertas": {
+  "CME": {
+   "orden_id": "b1e380cc-4525-4efd-9da1-6686273091a5",
+   "qty": 2,
+   "entrada": 307.08,
+   "stop": 304.94,
+   "target": 312.92,
+   "fecha": "2026-11-23",
+   "hora": "09:50",
+   "max_loss": 5.32,
+   "tm": {
+    "mc_avg_R": 0.044,
+    "p_target": 0.1274,
+    "p_stop": 0.4209,
+    "hist_disparos": 35,
+    "hist_avg_R": -0.352,
+    "veredicto": "Leans toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 23 % (target first 12.7 % vs stop first 42.1 %)."
+   }
+  }
+ },
  "hoy": {
   "fecha": "2026-11-23",
-  "entradas": 0,
+  "entradas": 1,
   "pnl": 0.0,
   "r": 0.0,
-  "evaluados": {},
-  "universo": false,
+  "evaluados": {
+   "CME": "COMPRADA"
+  },
+  "universo": true,
   "sesion": true,
-  "informe": false
+  "informe": false,
+  "ultimo_scan": 1795445440.232172,
+  "sombra": {
+   "vistos": [
+    "CME",
+    "TPR",
+    "V",
+    "ISRG",
+    "NDAQ",
+    "O",
+    "PGR",
+    "JNJ",
+    "TXN",
+    "WM",
+    "ADBE",
+    "UL",
+    "CPRT",
+    "NVS",
+    "ACN",
+    "F",
+    "YUMC",
+    "CTAS",
+    "HD",
+    "HLN",
+    "OXY",
+    "CVX",
+    "RSG",
+    "XOM",
+    "KDP",
+    "SPGI",
+    "MCD",
+    "TEL",
+    "VRTX",
+    "LIN"
+   ],
+   "perdidos": [],
+   "ultimo_scan": 1795445780.267286,
+   "limitado": 0,
+   "errores": 0
+  }
  }
 }

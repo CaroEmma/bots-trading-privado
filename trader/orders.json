@@ -1,29 +1,29 @@
 {
   "created_by": "trader-budget",
-  "created_at": "2026-11-20T17:19:44Z",
+  "created_at": "2026-11-23T14:54:02Z",
   "status": "proposed",
   "paper": true,
   "note": "Proposals only. Nothing is placed until trader-risk passes each order and you say yes to it in the chat.",
-  "source": "trader/plan.json (SO orb 2026-11-20)",
+  "source": "trader/plan.json (CME orb 2026-11-23)",
   "orders": [
     {
-      "symbol": "SO",
+      "symbol": "CME",
       "side": "buy",
-      "qty": "39",
+      "qty": "2",
       "type": "market",
       "time_in_force": "day",
       "order_class": "bracket",
-      "take_profit_limit_price": "95.00",
-      "stop_loss_stop_price": "94.16",
-      "why": "opening-range breakout on SO: 39 shares, bound by your position cap (39 x 0.28 = $10.92 at the stop)",
+      "take_profit_limit_price": "312.92",
+      "stop_loss_stop_price": "304.94",
+      "why": "opening-range breakout on CME: 2 shares, bound by your cash after the buffer (2 x 2.66 = $5.32 at the stop)",
       "plan": {
-        "entry": 94.44,
-        "stop": 94.16,
-        "target": 95.0,
-        "risk_per_share": 0.28,
-        "max_loss": 10.92,
+        "entry": 307.6,
+        "stop": 304.94,
+        "target": 312.92,
+        "risk_per_share": 2.66,
+        "max_loss": 5.32,
         "setup": "orb",
-        "entry_time": "12:15 PM",
+        "entry_time": "9:50 AM",
         "flat_by": "15:55"
       }
     }

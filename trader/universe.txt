@@ -528,6 +528,7 @@ AVTX|Avalo Therapeutics, Inc. - Common Stock
 AVX|Avax One Technology Ltd. - Common Shares
 AVXL|Anavex Life Sciences Corp. - Common Stock
 AVY|Avery Dennison Corporation Common Stock
+AVZO|Avenzo Therapeutics, Inc. - Common Stock
 AWF|Alliancebernstein Global High Income Fund
 AWI|Armstrong World Industries Inc Common Stock
 AWK|American Water Works Company, Inc. Common Stock
@@ -713,8 +714,7 @@ BIO.B|Bio-Rad Laboratories, Inc. Class B Common Stock
 BIOA|BioAge Labs, Inc. - Common Stock
 BIOT|Instinct Bio Technical Company Holdings Inc. - Common stock
 BIOX|Bioceres Crop Solutions Corp. - Ordinary Shares
-BIP|Brookfield Infrastructure Partners LP Limited Partnership Units
-BIPC|Brookfield Infrastructure Corporation Brookfield Infrastructure Corporation
+BIP|Brookfield Infrastructure Partners Inc. Class A Subordinate Voting Shares
 BIRD|Smartbird, Inc. - Class A Common Stock
 BIRK|Birkenstock Holding plc Ordinary Shares
 BIT|BlackRock Multi-Sector Income Trust Common Shares of Beneficial Interest
@@ -726,7 +726,6 @@ BJDX|Bluejay Diagnostics, Inc. - Common Stock
 BJRI|BJ's Restaurants, Inc. - Common Stock
 BKD|Brookdale Senior Living Inc. Common Stock
 BKE|Buckle, Inc. (The) Common Stock
-BKHA|Black Hawk Acquisition Corporation - Class A Ordinary Shares
 BKKT|Bakkt, Inc. Class A Common Stock
 BKNG|Booking Holdings Inc. - Common Stock
 BKR|Baker Hughes Company - Common Stock
@@ -1184,6 +1183,7 @@ CLVT|Clarivate Plc Ordinary Shares
 CLW|Clearwater Paper Corporation Common Stock
 CLWT|Euro Tech Holdings Company Limited - Ordinary Shares
 CLX|Clorox Company (The) Common Stock
+CLYD|Clywedog Therapeutics Holdings, Inc. - Common Stock
 CLYM|Climb Bio, Inc. - Common Stock
 CM|Canadian Imperial Bank of Commerce Common Stock
 CMBT|CMB.TECH NV Ordinary Shares
@@ -1872,6 +1872,7 @@ EVO|Evotec SE - American Depositary Shares each representing 1/2 of one ordinary
 EVOX|Evolution Global Acquisition Corp - Class A Ordinary Shares
 EVR|Evercore Inc. Class A Common Stock
 EVRG|Evergy, Inc. - Common Stock
+EVRL|Everli Global Holdings - Class A Ordinary Shares
 EVT|Eaton Vance Tax Advantaged Dividend Income Fund Common Shares of Beneficial Interest
 EVTC|Evertec, Inc. Common Stock
 EVTL|Vertical Aerospace Ltd. Ordinary Shares
@@ -2218,7 +2219,7 @@ GERN|Geron Corporation - Common Stock
 GEV|GE Vernova Inc. Common Stock
 GEVO|Gevo, Inc. - Common Stock
 GF|New Germany Fund, Inc. (The) Common Stock
-GFAI|Guardforce AI Co., Limited - Ordinary Shares
+GFAI|Guardforce AI Co., Limited - Class A Ordinary Shares
 GFF|Griffon Corporation Common Stock
 GFI|Gold Fields Limited American Depositary Shares
 GFL|GFL Environmental Inc. Subordinate voting shares, no par value
@@ -3249,7 +3250,6 @@ MA|Mastercard Incorporated Common Stock
 MAA|Mid-America Apartment Communities, Inc. Common Stock
 MAAS|Maase Inc. - Class A Ordinary Shares
 MAC|Macerich Company (The) Common Stock
-MACI|Melar Acquisition Corp. I - Class A Ordinary Shares
 MAGH|Magnitude International Ltd - Ordinary Shares
 MAGN|Magnera Corporation Common Stock
 MAIA|MAIA Biotechnology, Inc. Common Stock
@@ -4542,7 +4542,6 @@ RLJ|RLJ Lodging Trust Common Shares of Beneficial Interest $0.01 par value
 RLMD|Relmada Therapeutics, Inc. - Common Stock
 RLTY|Cohen & Steers Real Estate Opportunities and Income Fund Common Shares of Beneficial Interest
 RLX|RLX Technology Inc. American Depositary Shares, each representing the right to receive one (1) Class A ordinary share
-RLYB|Rallybio Corporation - Common Stock
 RM|Regional Management Corp. Common Stock
 RMBI|Richmond Mutual Bancorporation, Inc. - Common Stock
 RMBS|Rambus, Inc. - Common Stock
@@ -5520,6 +5519,7 @@ VERA|Vera Therapeutics, Inc. - Class A Common Stock
 VERI|Veritone, Inc. - Common Stock
 VERU|Veru Inc. - Common Stock
 VERX|Vertex, Inc. - Class A Common Stock
+VESI|Vesicor Therapeutics Holdings, Inc. - Class A Ordinary Shares
 VET|Vermilion Energy Inc. Common (Canada)
 VFC|V.F. Corporation Common Stock
 VFF|Village Farms International, Inc. - Common Shares

@@ -1,5 +1,5 @@
 {
-  "cash": 1264.3,
+  "cash": 650.14,
   "positions": [
     {
       "ticker": "SO",
@@ -10,6 +10,18 @@
           "date": "2026-11-20",
           "shares": 39.0,
           "cost": 3679.33
+        }
+      ]
+    },
+    {
+      "ticker": "CME",
+      "shares": 2.0,
+      "lots": [
+        {
+          "id": "CME-1",
+          "date": "2026-11-23",
+          "shares": 2.0,
+          "cost": 614.16
         }
       ]
     }
