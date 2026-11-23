@@ -273,9 +273,11 @@
     "CBOE",
     "CARR",
     "ZM",
-    "DKS"
+    "DKS",
+    "LMT",
+    "ORLY"
    ],
-   "ultimo_scan": 1795462755.267715,
+   "ultimo_scan": 1795463416.832129,
    "limitado": 0,
    "errores": 0
   }
