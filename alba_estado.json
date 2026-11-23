@@ -102,7 +102,30 @@
     "MRVL",
     "MCHP",
     "GLW",
-    "MOD"
+    "MOD",
+    "UAL",
+    "DIS",
+    "UBER",
+    "FLEX",
+    "CIEN",
+    "SHOP",
+    "INSM",
+    "APH",
+    "VST",
+    "CVNA",
+    "INTC",
+    "MTSI",
+    "QCOM",
+    "TGT",
+    "AFRM",
+    "JCI",
+    "TER",
+    "STM",
+    "CMI",
+    "NXPI",
+    "PLTR",
+    "AAPL",
+    "SNPS"
    ],
    "perdidos": [
     "ARGX",
@@ -126,7 +149,7 @@
     "DE",
     "ESTC"
    ],
-   "ultimo_scan": 1795447123.266564,
+   "ultimo_scan": 1795447767.580241,
    "limitado": 0,
    "errores": 0
   }
