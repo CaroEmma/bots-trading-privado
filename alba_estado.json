@@ -163,7 +163,9 @@
     "SE",
     "UPS",
     "TLN",
-    "PWR"
+    "PWR",
+    "COIN",
+    "CMCSA"
    ],
    "perdidos": [
     "ARGX",
@@ -188,9 +190,10 @@
     "ESTC",
     "HSY",
     "NTRA",
-    "GWW"
+    "GWW",
+    "LYV"
    ],
-   "ultimo_scan": 1795450990.697161,
+   "ultimo_scan": 1795451629.771474,
    "limitado": 0,
    "errores": 0
   }
