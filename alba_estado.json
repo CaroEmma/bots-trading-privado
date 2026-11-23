@@ -39,12 +39,18 @@
    "ICE": "omitida: señal vieja (124 min)",
    "TLN": "omitida: señal vieja (79 min)",
    "ADBE": "omitida: señal vieja (169 min)",
-   "CVNA": "omitida: señal vieja (134 min)"
+   "CVNA": "omitida: señal vieja (134 min)",
+   "BX": "omitida: señal vieja (80 min)",
+   "INTC": "omitida: señal vieja (140 min)",
+   "MDLZ": "omitida: señal vieja (100 min)",
+   "SHW": "omitida: señal vieja (100 min)",
+   "ON": "omitida: señal vieja (15 min)",
+   "ACN": "omitida: señal vieja (180 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795455390.097655,
+  "ultimo_scan": 1795456024.993406,
   "sombra": {
    "vistos": [
     "CME",
