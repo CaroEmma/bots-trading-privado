@@ -144,7 +144,8 @@
     "BBIO",
     "BA",
     "WMB",
-    "ROIV"
+    "ROIV",
+    "NVO"
    ],
    "perdidos": [
     "MCK",
@@ -262,7 +263,7 @@
     "ADM",
     "O"
    ],
-   "ultimo_scan": 1795547873.831042,
+   "ultimo_scan": 1795548486.523132,
    "limitado": 0,
    "errores": 0
   }
