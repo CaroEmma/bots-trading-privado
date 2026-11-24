@@ -220,9 +220,13 @@
     "BR",
     "CMG",
     "ECHO",
-    "ROP"
+    "ROP",
+    "HON",
+    "SLF",
+    "HL",
+    "WDAY"
    ],
-   "ultimo_scan": 1795536158.447757,
+   "ultimo_scan": 1795536814.322959,
    "limitado": 0,
    "errores": 0
   }
