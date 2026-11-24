@@ -138,7 +138,8 @@
     "HCA",
     "ARGX",
     "QCOM",
-    "URI"
+    "URI",
+    "BBY"
    ],
    "perdidos": [
     "MCK",
@@ -242,9 +243,10 @@
     "CDE",
     "SLB",
     "PATH",
-    "CAH"
+    "CAH",
+    "MDGL"
    ],
-   "ultimo_scan": 1795542155.907137,
+   "ultimo_scan": 1795542861.510019,
    "limitado": 0,
    "errores": 0
   }
