@@ -128,7 +128,8 @@
     "MELI",
     "AZN",
     "MNST",
-    "UPS"
+    "UPS",
+    "OKTA"
    ],
    "perdidos": [
     "MCK",
@@ -228,9 +229,10 @@
     "HL",
     "WDAY",
     "CME",
-    "LOW"
+    "LOW",
+    "CDE"
    ],
-   "ultimo_scan": 1795538159.420873,
+   "ultimo_scan": 1795538823.880423,
    "limitado": 0,
    "errores": 0
   }
