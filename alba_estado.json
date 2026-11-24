@@ -129,7 +129,10 @@
     "AZN",
     "MNST",
     "UPS",
-    "OKTA"
+    "OKTA",
+    "RKT",
+    "SHW",
+    "SNOW"
    ],
    "perdidos": [
     "MCK",
@@ -230,9 +233,10 @@
     "WDAY",
     "CME",
     "LOW",
-    "CDE"
+    "CDE",
+    "SLB"
    ],
-   "ultimo_scan": 1795538823.880423,
+   "ultimo_scan": 1795539434.110512,
    "limitado": 0,
    "errores": 0
   }
