@@ -244,9 +244,10 @@
     "SLB",
     "PATH",
     "CAH",
-    "MDGL"
+    "MDGL",
+    "CTAS"
    ],
-   "ultimo_scan": 1795542861.510019,
+   "ultimo_scan": 1795543545.167955,
    "limitado": 0,
    "errores": 0
   }
