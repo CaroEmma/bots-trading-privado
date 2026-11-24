@@ -216,9 +216,11 @@
     "AKAM",
     "CSX",
     "ICE",
-    "BR"
+    "BR",
+    "CMG",
+    "ECHO"
    ],
-   "ultimo_scan": 1795534751.615838,
+   "ultimo_scan": 1795535453.91526,
    "limitado": 0,
    "errores": 0
   }
