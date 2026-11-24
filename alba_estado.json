@@ -127,7 +127,8 @@
     "GMAB",
     "MELI",
     "AZN",
-    "MNST"
+    "MNST",
+    "UPS"
    ],
    "perdidos": [
     "MCK",
@@ -226,9 +227,10 @@
     "SLF",
     "HL",
     "WDAY",
-    "CME"
+    "CME",
+    "LOW"
    ],
-   "ultimo_scan": 1795537497.067072,
+   "ultimo_scan": 1795538159.420873,
    "limitado": 0,
    "errores": 0
   }

@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-24T16:24:57Z",
+  "created_at": "2026-11-24T16:35:59Z",
   "mode": "orb",
-  "as_of": "2026-11-24 11:24 ET",
+  "as_of": "2026-11-24 11:35 ET",
   "universe": 5925,
-  "scanned": 1786,
+  "scanned": 1696,
   "failed": 0,
-  "unconfirmed": 1107,
+  "unconfirmed": 1040,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -433,19 +433,6 @@
       "pct_over": 0.09
     },
     {
-      "symbol": "ICE",
-      "setups": [
-        "orb"
-      ],
-      "price": 174.75,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 174.63,
-      "or_low": 171.73,
-      "pct_over": 0.07
-    },
-    {
       "symbol": "INTU",
       "setups": [
         "orb"
@@ -483,19 +470,6 @@
       "or_high": 317.15,
       "or_low": 314.0,
       "pct_over": 0.03
-    },
-    {
-      "symbol": "KKR",
-      "setups": [
-        "orb"
-      ],
-      "price": 94.06,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 93.85,
-      "or_low": 90.75,
-      "pct_over": 0.23
     },
     {
       "symbol": "LMT",
@@ -927,6 +901,19 @@
       "pct_over": 0.43
     },
     {
+      "symbol": "ALC",
+      "setups": [
+        "orb"
+      ],
+      "price": 76.57,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 76.49,
+      "or_low": 74.82,
+      "pct_over": 0.1
+    },
+    {
       "symbol": "ALNY",
       "setups": [
         "orb"
@@ -1187,6 +1174,19 @@
       "pct_over": 0.31
     },
     {
+      "symbol": "SE",
+      "setups": [
+        "orb"
+      ],
+      "price": 65.83,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 65.66,
+      "or_low": 64.03,
+      "pct_over": 0.26
+    },
+    {
       "symbol": "SHEL",
       "setups": [
         "orb"
@@ -1328,6 +1328,32 @@
       "or_high": 131.29,
       "or_low": 129.74,
       "pct_over": 0.01
+    },
+    {
+      "symbol": "XEL",
+      "setups": [
+        "orb"
+      ],
+      "price": 80.95,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 80.66,
+      "or_low": 79.88,
+      "pct_over": 0.36
+    },
+    {
+      "symbol": "XOM",
+      "setups": [
+        "orb"
+      ],
+      "price": 158.96,
+      "at": "9:55 AM",
+      "bar_start": "09:50",
+      "bar_index": 4,
+      "or_high": 158.91,
+      "or_low": 157.06,
+      "pct_over": 0.03
     },
     {
       "symbol": "APP",
@@ -1588,6 +1614,19 @@
       "or_high": 1407.42,
       "or_low": 1369.84,
       "pct_over": 0.16
+    },
+    {
+      "symbol": "LOW",
+      "setups": [
+        "orb"
+      ],
+      "price": 228.81,
+      "at": "10:05 AM",
+      "bar_start": "10:00",
+      "bar_index": 6,
+      "or_high": 228.7,
+      "or_low": 224.34,
+      "pct_over": 0.05
     },
     {
       "symbol": "MRK",
@@ -1902,19 +1941,6 @@
       "pct_over": 0.76
     },
     {
-      "symbol": "SNY",
-      "setups": [
-        "orb"
-      ],
-      "price": 51.16,
-      "at": "10:25 AM",
-      "bar_start": "10:20",
-      "bar_index": 10,
-      "or_high": 51.06,
-      "or_low": 50.29,
-      "pct_over": 0.2
-    },
-    {
       "symbol": "GMAB",
       "setups": [
         "orb"
@@ -1965,6 +1991,19 @@
       "or_high": 42.49,
       "or_low": 42.06,
       "pct_over": 0.05
+    },
+    {
+      "symbol": "UPS",
+      "setups": [
+        "orb"
+      ],
+      "price": 108.94,
+      "at": "11:25 AM",
+      "bar_start": "11:20",
+      "bar_index": 22,
+      "or_high": 108.82,
+      "or_low": 107.95,
+      "pct_over": 0.11
     }
   ]
 }
