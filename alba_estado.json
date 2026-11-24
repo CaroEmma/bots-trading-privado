@@ -267,9 +267,10 @@
     "MDB",
     "NVR",
     "LNG",
-    "ETR"
+    "ETR",
+    "IDXX"
    ],
-   "ultimo_scan": 1795551557.470953,
+   "ultimo_scan": 1795552173.671152,
    "limitado": 0,
    "errores": 0
   }
