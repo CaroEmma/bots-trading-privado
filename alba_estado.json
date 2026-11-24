@@ -264,9 +264,11 @@
     "O",
     "ROK",
     "MDLN",
-    "MDB"
+    "MDB",
+    "NVR",
+    "LNG"
    ],
-   "ultimo_scan": 1795550327.877868,
+   "ultimo_scan": 1795550943.431,
    "limitado": 0,
    "errores": 0
   }
