@@ -136,7 +136,9 @@
     "BIIB",
     "DKS",
     "HCA",
-    "ARGX"
+    "ARGX",
+    "QCOM",
+    "URI"
    ],
    "perdidos": [
     "MCK",
@@ -242,7 +244,7 @@
     "PATH",
     "CAH"
    ],
-   "ultimo_scan": 1795541493.504019,
+   "ultimo_scan": 1795542155.907137,
    "limitado": 0,
    "errores": 0
   }
