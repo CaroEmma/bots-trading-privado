@@ -134,7 +134,9 @@
     "SHW",
     "SNOW",
     "BIIB",
-    "DKS"
+    "DKS",
+    "HCA",
+    "ARGX"
    ],
    "perdidos": [
     "MCK",
@@ -237,9 +239,10 @@
     "LOW",
     "CDE",
     "SLB",
-    "PATH"
+    "PATH",
+    "CAH"
    ],
-   "ultimo_scan": 1795540837.168087,
+   "ultimo_scan": 1795541493.504019,
    "limitado": 0,
    "errores": 0
   }
