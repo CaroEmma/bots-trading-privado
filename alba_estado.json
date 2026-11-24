@@ -139,7 +139,10 @@
     "ARGX",
     "QCOM",
     "URI",
-    "BBY"
+    "BBY",
+    "PDD",
+    "BBIO",
+    "BA"
    ],
    "perdidos": [
     "MCK",
@@ -245,9 +248,10 @@
     "PATH",
     "CAH",
     "MDGL",
-    "CTAS"
+    "CTAS",
+    "PGR"
    ],
-   "ultimo_scan": 1795543545.167955,
+   "ultimo_scan": 1795544244.796318,
    "limitado": 0,
    "errores": 0
   }
