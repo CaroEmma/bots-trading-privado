@@ -1653,7 +1653,6 @@ EAT|Brinker International, Inc. Common Stock
 EBAY|eBay Inc. - Common Stock
 EBC|Eastern Bankshares, Inc. - Common Stock
 EBF|Ennis, Inc. Common Stock
-EBMT|Eagle Bancorp Montana, Inc. - Common Stock
 EBON|Ebang International Holdings Inc. - Class A Ordinary Shares
 EBS|Emergent BioSolutions Inc. Common Stock
 EC|Ecopetrol S.A. American Depositary Shares
@@ -2772,7 +2771,6 @@ IOVA|Iovance Biotherapeutics, Inc. - Common Stock
 IP|International Paper Company Common Stock
 IPAR|Interparfums, Inc. - Common Stock
 IPDN|Professional Diversity Network, Inc. - Common Stock
-IPFX|Inflection Point Acquisition Corp. VI - Class A Ordinary Shares
 IPGP|IPG Photonics Corporation - Common Stock
 IPHA|Innate Pharma S.A. - American Depositary Shares
 IPHX|Inflection Point Acquisition Corp. VIII - Class A Ordinary Shares
@@ -3874,6 +3872,7 @@ OBDC|Blue Owl Capital Corporation Common Stock
 OBE|Obsidian Energy Ltd. Common Shares
 OBIO|Orchestra BioMed Holdings, Inc. - Ordinary Shares
 OBK|Origin Bancorp, Inc. Common Stock
+OBMT|Opportunity Bancorp, Inc. - Common Stock
 OBT|Orange County Bancorp, Inc. - Common Stock
 OBX|Obsidian Therapeutics, Inc. - Common Stock
 OC|Owens Corning Inc Common Stock New
@@ -4393,6 +4392,7 @@ QRHC|Quest Resource Holding Corporation - Common Stock
 QS|QuantumScape Corporation - Common Stock
 QSEA|Quartzsea Acquisition Corporation - Ordinary Shares
 QSI|Quantum-Si Incorporated - Class A Common Stock
+QSPC|Quantum Space, Inc. Class A-1 Common Stock
 QSR|Restaurant Brands International Inc. Common Shares
 QTEX|QTREX Quantum Ltd. - Ordinary Shares
 QTI|QT Imaging Holdings, Inc. - Common Stock

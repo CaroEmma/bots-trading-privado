@@ -601,6 +601,32 @@
       "qty": "17",
       "price": 42.37,
       "plain": "SELL 17 BSX at 42.37"
+    },
+    {
+      "at": "2026-11-24T09:55-05:00",
+      "date": "2026-11-24",
+      "index": 1,
+      "fingerprint": "4a9f0e702340f151",
+      "symbol": "WMT",
+      "side": "buy",
+      "qty": "5",
+      "kind": "entry",
+      "max_loss": 4.05,
+      "stop": 130.51,
+      "plain": "buy 5 WMT (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "934454ef-2dd0-4378-b7b3-64162667f3bf",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-24T09:59:35-05:00",
+      "date": "2026-11-24",
+      "status": "filled",
+      "symbol": "WMT",
+      "side": "buy",
+      "qty": "5",
+      "price": 131.34,
+      "plain": "BUY 5 WMT at 131.34"
     }
   ]
 }
