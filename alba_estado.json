@@ -123,7 +123,9 @@
     "GILD",
     "KMB",
     "SNY",
-    "IP"
+    "IP",
+    "GMAB",
+    "MELI"
    ],
    "perdidos": [
     "MCK",
@@ -212,9 +214,11 @@
     "CLS",
     "CNQ",
     "AKAM",
-    "CSX"
+    "CSX",
+    "ICE",
+    "BR"
    ],
-   "ultimo_scan": 1795534053.016677,
+   "ultimo_scan": 1795534751.615838,
    "limitado": 0,
    "errores": 0
   }
