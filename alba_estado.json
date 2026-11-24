@@ -266,9 +266,10 @@
     "MDLN",
     "MDB",
     "NVR",
-    "LNG"
+    "LNG",
+    "ETR"
    ],
-   "ultimo_scan": 1795550943.431,
+   "ultimo_scan": 1795551557.470953,
    "limitado": 0,
    "errores": 0
   }
