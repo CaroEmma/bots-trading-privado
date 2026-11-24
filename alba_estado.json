@@ -234,9 +234,10 @@
     "CME",
     "LOW",
     "CDE",
-    "SLB"
+    "SLB",
+    "PATH"
    ],
-   "ultimo_scan": 1795539434.110512,
+   "ultimo_scan": 1795540143.016756,
    "limitado": 0,
    "errores": 0
   }
