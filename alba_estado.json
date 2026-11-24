@@ -1,29 +1,10 @@
 {
- "abiertas": {
-  "WMT": {
-   "orden_id": "934454ef-2dd0-4378-b7b3-64162667f3bf",
-   "qty": 5,
-   "entrada": 131.34,
-   "stop": 130.51,
-   "target": 132.88,
-   "fecha": "2026-11-24",
-   "hora": "09:55",
-   "max_loss": 4.05,
-   "tm": {
-    "mc_avg_R": 0.147,
-    "p_target": 0.233,
-    "p_stop": 0.4619,
-    "hist_disparos": 37,
-    "hist_avg_R": 0.145,
-    "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 34 % (target first 23.3 % vs stop first 46.2 %)."
-   }
-  }
- },
+ "abiertas": {},
  "hoy": {
   "fecha": "2026-11-24",
   "entradas": 1,
-  "pnl": 0.0,
-  "r": 0.0,
+  "pnl": 1.4999999999999147,
+  "r": 0.36144578313250414,
   "evaluados": {
    "ADP": "omitida: timemachine: R promedio simulado -0.003 no es > 0",
    "BSX": "omitida: timemachine: R promedio simulado -0.068 no es > 0",

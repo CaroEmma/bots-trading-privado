@@ -1,5 +1,5 @@
 {
-  "cash": 599.37,
+  "cash": 1257.57,
   "positions": [
     {
       "ticker": "SO",
@@ -10,18 +10,6 @@
           "date": "2026-11-20",
           "shares": 39.0,
           "cost": 3679.33
-        }
-      ]
-    },
-    {
-      "ticker": "WMT",
-      "shares": 5.0,
-      "lots": [
-        {
-          "id": "WMT-1",
-          "date": "2026-11-24",
-          "shares": 5.0,
-          "cost": 656.7
         }
       ]
     }
