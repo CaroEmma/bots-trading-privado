@@ -126,7 +126,8 @@
     "IP",
     "GMAB",
     "MELI",
-    "AZN"
+    "AZN",
+    "MNST"
    ],
    "perdidos": [
     "MCK",
@@ -224,9 +225,10 @@
     "HON",
     "SLF",
     "HL",
-    "WDAY"
+    "WDAY",
+    "CME"
    ],
-   "ultimo_scan": 1795536814.322959,
+   "ultimo_scan": 1795537497.067072,
    "limitado": 0,
    "errores": 0
   }
