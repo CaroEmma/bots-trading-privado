@@ -142,7 +142,8 @@
     "BBY",
     "PDD",
     "BBIO",
-    "BA"
+    "BA",
+    "WMB"
    ],
    "perdidos": [
     "MCK",
@@ -251,9 +252,10 @@
     "CTAS",
     "PGR",
     "MDLZ",
-    "GWW"
+    "GWW",
+    "ORLY"
    ],
-   "ultimo_scan": 1795545634.580669,
+   "ultimo_scan": 1795546277.010213,
    "limitado": 0,
    "errores": 0
   }
