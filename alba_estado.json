@@ -125,7 +125,8 @@
     "SNY",
     "IP",
     "GMAB",
-    "MELI"
+    "MELI",
+    "AZN"
    ],
    "perdidos": [
     "MCK",
@@ -218,9 +219,10 @@
     "ICE",
     "BR",
     "CMG",
-    "ECHO"
+    "ECHO",
+    "ROP"
    ],
-   "ultimo_scan": 1795535453.91526,
+   "ultimo_scan": 1795536158.447757,
    "limitado": 0,
    "errores": 0
   }
