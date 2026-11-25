@@ -197,9 +197,11 @@
     "TEL",
     "FSLR",
     "LOW",
-    "UL"
+    "UL",
+    "EQNR",
+    "ZM"
    ],
-   "ultimo_scan": 1795623191.002286,
+   "ultimo_scan": 1795623889.11682,
    "limitado": 0,
    "errores": 0
   }
