@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-25T16:02:13Z",
+  "created_at": "2026-11-25T16:13:11Z",
   "mode": "orb",
-  "as_of": "2026-11-25 11:02 ET",
+  "as_of": "2026-11-25 11:13 ET",
   "universe": 5924,
-  "scanned": 1951,
+  "scanned": 1875,
   "failed": 0,
-  "unconfirmed": 1366,
+  "unconfirmed": 1309,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -1239,19 +1239,6 @@
       "pct_over": 0.22
     },
     {
-      "symbol": "CVS",
-      "setups": [
-        "orb"
-      ],
-      "price": 81.28,
-      "at": "10:10 AM",
-      "bar_start": "10:05",
-      "bar_index": 7,
-      "or_high": 81.21,
-      "or_low": 80.02,
-      "pct_over": 0.08
-    },
-    {
       "symbol": "IR",
       "setups": [
         "orb"
@@ -1328,6 +1315,19 @@
       "or_high": 23.17,
       "or_low": 22.89,
       "pct_over": 0.04
+    },
+    {
+      "symbol": "UL",
+      "setups": [
+        "orb"
+      ],
+      "price": 66.45,
+      "at": "10:15 AM",
+      "bar_start": "10:10",
+      "bar_index": 8,
+      "or_high": 66.41,
+      "or_low": 66.13,
+      "pct_over": 0.06
     },
     {
       "symbol": "UNP",
@@ -1486,19 +1486,6 @@
       "pct_over": 0.09
     },
     {
-      "symbol": "CMCSA",
-      "setups": [
-        "orb"
-      ],
-      "price": 25.58,
-      "at": "10:45 AM",
-      "bar_start": "10:40",
-      "bar_index": 14,
-      "or_high": 25.57,
-      "or_low": 25.35,
-      "pct_over": 0.02
-    },
-    {
       "symbol": "MA",
       "setups": [
         "orb"
@@ -1525,17 +1512,17 @@
       "pct_over": 0.04
     },
     {
-      "symbol": "CMI",
+      "symbol": "LOW",
       "setups": [
         "orb"
       ],
-      "price": 407.45,
+      "price": 233.13,
       "at": "10:55 AM",
       "bar_start": "10:50",
       "bar_index": 16,
-      "or_high": 407.33,
-      "or_low": 400.51,
-      "pct_over": 0.03
+      "or_high": 233.11,
+      "or_low": 229.86,
+      "pct_over": 0.01
     },
     {
       "symbol": "UPS",
@@ -1575,6 +1562,19 @@
       "or_high": 79.93,
       "or_low": 79.24,
       "pct_over": 0.02
+    },
+    {
+      "symbol": "INSM",
+      "setups": [
+        "orb"
+      ],
+      "price": 170.36,
+      "at": "11:10 AM",
+      "bar_start": "11:05",
+      "bar_index": 19,
+      "or_high": 170.35,
+      "or_low": 170.1,
+      "pct_over": 0.01
     }
   ]
 }

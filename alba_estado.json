@@ -131,7 +131,8 @@
     "AJG",
     "UPS",
     "WFC",
-    "ASTS"
+    "ASTS",
+    "INSM"
    ],
    "perdidos": [
     "LMT",
@@ -194,9 +195,11 @@
     "SMCI",
     "SMTC",
     "TEL",
-    "FSLR"
+    "FSLR",
+    "LOW",
+    "UL"
    ],
-   "ultimo_scan": 1795622533.757703,
+   "ultimo_scan": 1795623191.002286,
    "limitado": 0,
    "errores": 0
   }
