@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "NOW",
+  "symbol": "CLS",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-25",
   "status": "triggered",
-  "time": "10:05 AM",
-  "bar_start": "10:00",
-  "bar_index": 6,
-  "price": 90.04,
-  "level": 90.0,
+  "time": "12:55 PM",
+  "bar_start": "12:50",
+  "bar_index": 40,
+  "price": 184.04,
+  "level": 183.98,
   "interval": "5m",
   "opening_range": {
-    "high": 90.0,
-    "low": 86.85,
+    "high": 183.98,
+    "low": 169.54,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-25T19:19:05Z",
-  "reason": "the 10:00 bar closed above the range high"
+  "checked_at": "2026-11-25T19:31:02Z",
+  "reason": "the 12:50 bar closed above the range high"
 }
