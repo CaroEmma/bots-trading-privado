@@ -385,3 +385,6 @@
 {"fecha": "2026-11-25", "hora": "13:47", "simbolo": "UNP", "accion": "omitir", "motivo": "señal vieja (216 min)"}
 {"fecha": "2026-11-25", "hora": "13:47", "simbolo": "LOW", "accion": "omitir", "motivo": "señal vieja (176 min)"}
 {"fecha": "2026-11-25", "hora": "13:47", "simbolo": "CRCL", "accion": "omitir", "motivo": "señal vieja (71 min)"}
+{"fecha": "2026-11-25", "hora": "13:52", "simbolo": "VIK", "accion": "omitir", "motivo": "señal vieja (71 min)"}
+{"fecha": "2026-11-25", "hora": "13:52", "simbolo": "LMT", "accion": "omitir", "motivo": "señal vieja (246 min)"}
+{"fecha": "2026-11-25", "hora": "13:52", "simbolo": "GOOG", "accion": "omitir", "motivo": "señal vieja (241 min)"}

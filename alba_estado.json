@@ -16,12 +16,15 @@
    "PM": "omitida: señal vieja (80 min)",
    "UNP": "omitida: señal vieja (216 min)",
    "LOW": "omitida: señal vieja (176 min)",
-   "CRCL": "omitida: señal vieja (71 min)"
+   "CRCL": "omitida: señal vieja (71 min)",
+   "VIK": "omitida: señal vieja (71 min)",
+   "LMT": "omitida: señal vieja (246 min)",
+   "GOOG": "omitida: señal vieja (241 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795632424.493098,
+  "ultimo_scan": 1795632733.314614,
   "sombra": {
    "vistos": [
     "ENB",
