@@ -192,7 +192,12 @@
     "BMNR",
     "CRCL",
     "BRK.B",
-    "DG"
+    "DG",
+    "MSFT",
+    "NBIS",
+    "ASML",
+    "SNOW",
+    "BE"
    ],
    "perdidos": [
     "LMT",
@@ -265,7 +270,7 @@
     "CI",
     "EBAY"
    ],
-   "ultimo_scan": 1795628520.371669,
+   "ultimo_scan": 1795629125.604035,
    "limitado": 0,
    "errores": 0
   }
