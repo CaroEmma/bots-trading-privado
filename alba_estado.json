@@ -114,7 +114,17 @@
     "IR",
     "APP",
     "CSX",
-    "BILL"
+    "BILL",
+    "SHW",
+    "PG",
+    "HD",
+    "HON",
+    "TTWO",
+    "MMM",
+    "MCD",
+    "NEE",
+    "GE",
+    "CRH"
    ],
    "perdidos": [
     "LMT",
@@ -179,7 +189,7 @@
     "TEL",
     "FSLR"
    ],
-   "ultimo_scan": 1795620510.756343,
+   "ultimo_scan": 1795621208.810511,
    "limitado": 0,
    "errores": 0
   }
