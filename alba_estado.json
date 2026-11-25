@@ -25,12 +25,18 @@
    "O": "omitida: señal vieja (236 min)",
    "CMCSA": "omitida: señal vieja (202 min)",
    "WFC": "omitida: señal vieja (187 min)",
-   "SYK": "omitida: señal vieja (127 min)"
+   "SYK": "omitida: señal vieja (127 min)",
+   "SNY": "omitida: señal vieja (128 min)",
+   "VRTX": "omitida: señal vieja (53 min)",
+   "PWR": "omitida: señal vieja (28 min)",
+   "ADP": "omitida: señal vieja (144 min)",
+   "SPGI": "omitida: señal vieja (129 min)",
+   "NOW": "omitida: señal vieja (254 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795633398.115541,
+  "ultimo_scan": 1795634111.910105,
   "sombra": {
    "vistos": [
     "ENB",
@@ -208,7 +214,12 @@
     "AAOI",
     "WAT",
     "PWR",
-    "KYMR"
+    "KYMR",
+    "SNDK",
+    "CRWD",
+    "ZS",
+    "DDOG",
+    "LRCX"
    ],
    "perdidos": [
     "LMT",

@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-25T19:03:18Z",
+  "created_at": "2026-11-25T19:15:12Z",
   "mode": "orb",
-  "as_of": "2026-11-25 14:03 ET",
+  "as_of": "2026-11-25 14:15 ET",
   "universe": 5924,
-  "scanned": 1235,
+  "scanned": 1206,
   "failed": 0,
-  "unconfirmed": 1000,
+  "unconfirmed": 975,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -80,19 +80,6 @@
       "or_high": 210.31,
       "or_low": 207.19,
       "pct_over": 0.09
-    },
-    {
-      "symbol": "EOG",
-      "setups": [
-        "orb"
-      ],
-      "price": 148.18,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 147.58,
-      "or_low": 145.51,
-      "pct_over": 0.41
     },
     {
       "symbol": "IBKR",
@@ -927,19 +914,6 @@
       "pct_over": 0.07
     },
     {
-      "symbol": "WDC",
-      "setups": [
-        "orb"
-      ],
-      "price": 260.61,
-      "at": "10:00 AM",
-      "bar_start": "09:55",
-      "bar_index": 5,
-      "or_high": 259.6,
-      "or_low": 251.38,
-      "pct_over": 0.39
-    },
-    {
       "symbol": "ADBE",
       "setups": [
         "orb"
@@ -1653,6 +1627,19 @@
       "or_high": 64.8,
       "or_low": 63.63,
       "pct_over": 0.37
+    },
+    {
+      "symbol": "APLD",
+      "setups": [
+        "orb"
+      ],
+      "price": 11.56,
+      "at": "12:05 PM",
+      "bar_start": "12:00",
+      "bar_index": 30,
+      "or_high": 11.48,
+      "or_low": 10.86,
+      "pct_over": 0.65
     },
     {
       "symbol": "AXP",
@@ -2459,6 +2446,71 @@
       "or_high": 173.5,
       "or_low": 164.49,
       "pct_over": 0.05
+    },
+    {
+      "symbol": "CRWD",
+      "setups": [
+        "orb"
+      ],
+      "price": 206.71,
+      "at": "2:05 PM",
+      "bar_start": "14:00",
+      "bar_index": 54,
+      "or_high": 206.44,
+      "or_low": 200.77,
+      "pct_over": 0.13
+    },
+    {
+      "symbol": "SNDK",
+      "setups": [
+        "orb"
+      ],
+      "price": 72.56,
+      "at": "2:05 PM",
+      "bar_start": "14:00",
+      "bar_index": 54,
+      "or_high": 72.52,
+      "or_low": 69.3,
+      "pct_over": 0.05
+    },
+    {
+      "symbol": "ZS",
+      "setups": [
+        "orb"
+      ],
+      "price": 228.13,
+      "at": "2:05 PM",
+      "bar_start": "14:00",
+      "bar_index": 54,
+      "or_high": 227.71,
+      "or_low": 220.79,
+      "pct_over": 0.18
+    },
+    {
+      "symbol": "DDOG",
+      "setups": [
+        "orb"
+      ],
+      "price": 158.38,
+      "at": "2:10 PM",
+      "bar_start": "14:05",
+      "bar_index": 55,
+      "or_high": 158.25,
+      "or_low": 152.12,
+      "pct_over": 0.08
+    },
+    {
+      "symbol": "LRCX",
+      "setups": [
+        "orb"
+      ],
+      "price": 183.43,
+      "at": "2:10 PM",
+      "bar_start": "14:05",
+      "bar_index": 55,
+      "or_high": 183.28,
+      "or_low": 175.76,
+      "pct_over": 0.08
     }
   ]
 }

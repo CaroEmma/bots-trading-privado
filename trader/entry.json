@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "SYK",
+  "symbol": "NOW",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-25",
   "status": "triggered",
-  "time": "12:00 PM",
-  "bar_start": "11:55",
-  "bar_index": 29,
-  "price": 329.09,
-  "level": 329.03,
+  "time": "10:05 AM",
+  "bar_start": "10:00",
+  "bar_index": 6,
+  "price": 90.04,
+  "level": 90.0,
   "interval": "5m",
   "opening_range": {
-    "high": 329.03,
-    "low": 322.58,
+    "high": 90.0,
+    "low": 86.85,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-25T19:07:10Z",
-  "reason": "the 11:55 bar closed above the range high"
+  "checked_at": "2026-11-25T19:19:05Z",
+  "reason": "the 10:00 bar closed above the range high"
 }
