@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "WELL",
+  "symbol": "PANW",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-25",
   "status": "triggered",
-  "time": "12:20 PM",
-  "bar_start": "12:15",
-  "bar_index": 33,
-  "price": 246.51,
-  "level": 246.37,
+  "time": "10:00 AM",
+  "bar_start": "09:55",
+  "bar_index": 5,
+  "price": 349.12,
+  "level": 348.83,
   "interval": "5m",
   "opening_range": {
-    "high": 246.37,
-    "low": 243.62,
+    "high": 348.83,
+    "low": 337.41,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-25T19:54:54Z",
-  "reason": "the 12:15 bar closed above the range high"
+  "checked_at": "2026-11-25T20:06:50Z",
+  "reason": "the 9:55 bar closed above the range high"
 }

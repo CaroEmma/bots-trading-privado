@@ -49,12 +49,18 @@
    "C": "omitida: señal vieja (288 min)",
    "ROP": "omitida: señal vieja (289 min)",
    "JPM": "omitida: señal vieja (169 min)",
-   "WELL": "omitida: señal vieja (154 min)"
+   "WELL": "omitida: señal vieja (154 min)",
+   "VST": "omitida: señal vieja (300 min)",
+   "CSX": "omitida: señal vieja (285 min)",
+   "HD": "omitida: señal vieja (265 min)",
+   "HON": "omitida: señal vieja (271 min)",
+   "KO": "omitida: señal vieja (151 min)",
+   "PANW": "omitida: señal vieja (306 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795636257.871186,
+  "ultimo_scan": 1795636973.028179,
   "sombra": {
    "vistos": [
     "ENB",
