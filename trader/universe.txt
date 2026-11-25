@@ -667,6 +667,7 @@ BF.B|Brown Forman Inc Class B Common Stock
 BFAM|Bright Horizons Family Solutions Inc. Common Stock
 BFC|Bank First Corporation - Common Stock
 BFH|Bread Financial Holdings, Inc. Common Stock
+BFLR|BlueFlare, Inc. - Common Stock
 BFLY|Butterfly Network, Inc. Class A Common Stock
 BFRG|Bullfrog AI Holdings, Inc. - Common Stock
 BFRI|Biofrontera Inc. - Common Stock
@@ -2045,7 +2046,6 @@ FN|Fabrinet Ordinary Shares
 FNB|F.N.B. Corporation Common Stock
 FND|Floor & Decor Holdings, Inc. Common Stock
 FNF|Fidelity National Financial, Inc. Common Stock
-FNGR|FingerMotion, Inc. - common stock
 FNKO|Funko, Inc. - Class A Common Stock
 FNLC|First Bancorp, Inc (ME) - Common Stock
 FNRN|First Northern Community Bancorp - Common stock
@@ -4058,7 +4058,6 @@ PAR|PAR Technology Corporation Common Stock
 PARA|Parabolic Technologies, Inc. - Class A Common Stock
 PARK|Park Dental Partners, Inc. - Common Stock
 PARR|Par Pacific Holdings, Inc. Common Stock
-PASG|Passage Bio, Inc. - Common Stock
 PASW|Ping An Biomedical Co., Ltd. - Class A Ordinary Shares
 PATH|UiPath, Inc. Class A Common Stock
 PATK|Patrick Industries, Inc. - Common Stock
@@ -4558,6 +4557,7 @@ RMR|The RMR Group Inc. - Class A Common Stock
 RMSG|Real Messenger Corporation - Ordinary Shares
 RMT|Royce Micro-Cap Trust, Inc. Common Stock
 RMTI|Rockwell Medical, Inc. - Common Stock
+RMTX|Remix Therapeutics, Inc. - Common Stock
 RNA|Atrium Therapeutics, Inc. - Common Stock
 RNAC|Cartesian Therapeutics, Inc. - Common Stock
 RNAQ|Rainier Acquisition Corporation - Class A Ordinary Shares
@@ -4657,7 +4657,6 @@ SACH|Sachem Capital Corp. Common Shares
 SAEN|Genenta Science S.p.A. - American Depositary Shares
 SAFE|Safehold Inc. New Common Stock
 SAFT|Safety Insurance Group, Inc. - Common Stock
-SAFX|XCF Global, Inc. - Class A Common Stock
 SAGT|SAGTEC GLOBAL LIMITED - Class A Ordinary shares
 SAGU|Shreya Acquisition Group Class A Ordinary Shares
 SAH|Sonic Automotive, Inc. Common Stock

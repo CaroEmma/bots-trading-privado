@@ -637,6 +637,32 @@
       "qty": "5",
       "price": 131.64,
       "plain": "SELL 5 WMT at 131.64"
+    },
+    {
+      "at": "2026-11-25T09:50-05:00",
+      "date": "2026-11-25",
+      "index": 1,
+      "fingerprint": "8b8aa8a38dcc7895",
+      "symbol": "LNG",
+      "side": "buy",
+      "qty": "2",
+      "kind": "entry",
+      "max_loss": 6.16,
+      "stop": 293.41,
+      "plain": "buy 2 LNG (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "ee6b8685-6825-4908-9184-cb2e78fabc30",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-25T09:54:17-05:00",
+      "date": "2026-11-25",
+      "status": "filled",
+      "symbol": "LNG",
+      "side": "buy",
+      "qty": "2",
+      "price": 296.73,
+      "plain": "BUY 2 LNG at 296.73"
     }
   ]
 }
