@@ -663,6 +663,16 @@
       "qty": "2",
       "price": 296.73,
       "plain": "BUY 2 LNG at 296.73"
+    },
+    {
+      "at": "2026-11-25T13:35:19-05:00",
+      "date": "2026-11-25",
+      "status": "filled",
+      "symbol": "LNG",
+      "side": "sell",
+      "qty": "2",
+      "price": 300.77,
+      "plain": "SELL 2 LNG at 300.77"
     }
   ]
 }

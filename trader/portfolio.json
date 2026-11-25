@@ -1,5 +1,5 @@
 {
-  "cash": 664.11,
+  "cash": 1265.65,
   "positions": [
     {
       "ticker": "SO",
@@ -10,18 +10,6 @@
           "date": "2026-11-20",
           "shares": 39.0,
           "cost": 3679.33
-        }
-      ]
-    },
-    {
-      "ticker": "LNG",
-      "shares": 2.0,
-      "lots": [
-        {
-          "id": "LNG-1",
-          "date": "2026-11-25",
-          "shares": 2.0,
-          "cost": 593.46
         }
       ]
     }

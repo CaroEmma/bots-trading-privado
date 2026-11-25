@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-25T18:25:33Z",
+  "created_at": "2026-11-25T18:30:35Z",
   "mode": "orb",
-  "as_of": "2026-11-25 13:25 ET",
+  "as_of": "2026-11-25 13:30 ET",
   "universe": 5924,
-  "scanned": 1316,
+  "scanned": 1285,
   "failed": 0,
-  "unconfirmed": 1064,
+  "unconfirmed": 1040,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -93,6 +93,19 @@
       "or_high": 147.58,
       "or_low": 145.51,
       "pct_over": 0.41
+    },
+    {
+      "symbol": "HSY",
+      "setups": [
+        "orb"
+      ],
+      "price": 180.34,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 179.81,
+      "or_low": 178.05,
+      "pct_over": 0.29
     },
     {
       "symbol": "IBKR",
@@ -1291,19 +1304,6 @@
       "pct_over": 0.07
     },
     {
-      "symbol": "MCD",
-      "setups": [
-        "orb"
-      ],
-      "price": 282.7,
-      "at": "10:35 AM",
-      "bar_start": "10:30",
-      "bar_index": 12,
-      "or_high": 282.35,
-      "or_low": 279.55,
-      "pct_over": 0.12
-    },
-    {
       "symbol": "MMM",
       "setups": [
         "orb"
@@ -1772,6 +1772,19 @@
       "pct_over": 0.12
     },
     {
+      "symbol": "NTRA",
+      "setups": [
+        "orb"
+      ],
+      "price": 293.72,
+      "at": "12:05 PM",
+      "bar_start": "12:00",
+      "bar_index": 30,
+      "or_high": 293.57,
+      "or_low": 284.46,
+      "pct_over": 0.05
+    },
+    {
       "symbol": "ORLY",
       "setups": [
         "orb"
@@ -1900,19 +1913,6 @@
       "or_high": 95.64,
       "or_low": 92.92,
       "pct_over": 0.21
-    },
-    {
-      "symbol": "ICE",
-      "setups": [
-        "orb"
-      ],
-      "price": 176.1,
-      "at": "12:10 PM",
-      "bar_start": "12:05",
-      "bar_index": 31,
-      "or_high": 176.05,
-      "or_low": 174.89,
-      "pct_over": 0.03
     },
     {
       "symbol": "NFLX",
@@ -2188,19 +2188,6 @@
       "pct_over": 0.87
     },
     {
-      "symbol": "DUK",
-      "setups": [
-        "orb"
-      ],
-      "price": 132.65,
-      "at": "12:35 PM",
-      "bar_start": "12:30",
-      "bar_index": 36,
-      "or_high": 132.65,
-      "or_low": 131.05,
-      "pct_over": 0.0
-    },
-    {
       "symbol": "KO",
       "setups": [
         "orb"
@@ -2446,6 +2433,19 @@
       "or_high": 566.0,
       "or_low": 553.98,
       "pct_over": 0.02
+    },
+    {
+      "symbol": "WAT",
+      "setups": [
+        "orb"
+      ],
+      "price": 456.93,
+      "at": "1:20 PM",
+      "bar_start": "13:15",
+      "bar_index": 45,
+      "or_high": 455.61,
+      "or_low": 440.0,
+      "pct_over": 0.29
     }
   ]
 }

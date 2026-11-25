@@ -1,37 +1,21 @@
 {
- "abiertas": {
-  "LNG": {
-   "orden_id": "ee6b8685-6825-4908-9184-cb2e78fabc30",
-   "qty": 2,
-   "entrada": 296.73,
-   "stop": 293.41,
-   "target": 300.76,
-   "fecha": "2026-11-25",
-   "hora": "09:50",
-   "max_loss": 6.16,
-   "tm": {
-    "mc_avg_R": 0.113,
-    "p_target": 0.2571,
-    "p_stop": 0.5094,
-    "hist_disparos": 34,
-    "hist_avg_R": 0.207,
-    "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 34 % (target first 25.7 % vs stop first 50.9 %)."
-   }
-  }
- },
+ "abiertas": {},
  "hoy": {
   "fecha": "2026-11-25",
   "entradas": 1,
-  "pnl": 0.0,
-  "r": 0.0,
+  "pnl": 8.079999999999927,
+  "r": 1.2168674698795097,
   "evaluados": {
    "ENB": "omitida: budget: No order: reward:risk 0.96 (target 46.63, entry 46.41, stop 46.18) is under your minimum 1, so trader-risk would block it. No order. Skip it, or make a new plan",
-   "LNG": "COMPRADA"
+   "LNG": "COMPRADA",
+   "LIN": "omitida: señal vieja (224 min)",
+   "PTC": "omitida: señal vieja (219 min)",
+   "PEP": "omitida: señal vieja (209 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795618221.55208,
+  "ultimo_scan": 1795631719.557846,
   "sombra": {
    "vistos": [
     "ENB",
@@ -206,7 +190,8 @@
     "CEG",
     "AAPL",
     "ORCL",
-    "AAOI"
+    "AAOI",
+    "WAT"
    ],
    "perdidos": [
     "LMT",
@@ -281,9 +266,24 @@
     "VIK",
     "PINS",
     "DUK",
-    "MDLN"
+    "MDLN",
+    "HSY",
+    "WM",
+    "PGR",
+    "WMB",
+    "MSI",
+    "ROP",
+    "IQV",
+    "PATH",
+    "NVO",
+    "DAL",
+    "SYNA",
+    "HL",
+    "CDNS",
+    "EQT",
+    "APLD"
    ],
-   "ultimo_scan": 1795631133.030888,
+   "ultimo_scan": 1795631434.852817,
    "limitado": 0,
    "errores": 0
   }
