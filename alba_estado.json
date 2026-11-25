@@ -186,7 +186,13 @@
     "NXPI",
     "ALAB",
     "CRDO",
-    "PM"
+    "PM",
+    "KO",
+    "MSTR",
+    "BMNR",
+    "CRCL",
+    "BRK.B",
+    "DG"
    ],
    "perdidos": [
     "LMT",
@@ -259,7 +265,7 @@
     "CI",
     "EBAY"
    ],
-   "ultimo_scan": 1795627865.387771,
+   "ultimo_scan": 1795628520.371669,
    "limitado": 0,
    "errores": 0
   }
