@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "PEP",
+  "symbol": "CRCL",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-25",
   "status": "triggered",
-  "time": "10:10 AM",
-  "bar_start": "10:05",
-  "bar_index": 7,
-  "price": 144.6,
-  "level": 144.6,
+  "time": "12:40 PM",
+  "bar_start": "12:35",
+  "bar_index": 37,
+  "price": 46.17,
+  "level": 46.17,
   "interval": "5m",
   "opening_range": {
-    "high": 144.6,
-    "low": 143.75,
+    "high": 46.17,
+    "low": 43.2,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-25T18:39:12Z",
-  "reason": "the 10:05 bar closed above the range high"
+  "checked_at": "2026-11-25T18:51:01Z",
+  "reason": "the 12:35 bar closed above the range high"
 }

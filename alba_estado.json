@@ -10,12 +10,18 @@
    "LNG": "COMPRADA",
    "LIN": "omitida: señal vieja (224 min)",
    "PTC": "omitida: señal vieja (219 min)",
-   "PEP": "omitida: señal vieja (209 min)"
+   "PEP": "omitida: señal vieja (209 min)",
+   "AMAT": "omitida: señal vieja (225 min)",
+   "MA": "omitida: señal vieja (175 min)",
+   "PM": "omitida: señal vieja (80 min)",
+   "UNP": "omitida: señal vieja (216 min)",
+   "LOW": "omitida: señal vieja (176 min)",
+   "CRCL": "omitida: señal vieja (71 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795631719.557846,
+  "ultimo_scan": 1795632424.493098,
   "sombra": {
    "vistos": [
     "ENB",
@@ -191,7 +197,8 @@
     "AAPL",
     "ORCL",
     "AAOI",
-    "WAT"
+    "WAT",
+    "PWR"
    ],
    "perdidos": [
     "LMT",
