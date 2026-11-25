@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "NTRA",
+  "symbol": "WELL",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-25",
   "status": "triggered",
-  "time": "12:05 PM",
-  "bar_start": "12:00",
-  "bar_index": 30,
-  "price": 293.72,
-  "level": 293.57,
+  "time": "12:20 PM",
+  "bar_start": "12:15",
+  "bar_index": 33,
+  "price": 246.51,
+  "level": 246.37,
   "interval": "5m",
   "opening_range": {
-    "high": 293.57,
-    "low": 284.46,
+    "high": 246.37,
+    "low": 243.62,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-25T19:42:58Z",
-  "reason": "the 12:00 bar closed above the range high"
+  "checked_at": "2026-11-25T19:54:54Z",
+  "reason": "the 12:15 bar closed above the range high"
 }

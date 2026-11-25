@@ -43,12 +43,18 @@
    "MDLN": "omitida: señal vieja (237 min)",
    "CI": "omitida: señal vieja (197 min)",
    "CMG": "omitida: señal vieja (197 min)",
-   "NTRA": "omitida: señal vieja (157 min)"
+   "NTRA": "omitida: señal vieja (157 min)",
+   "KYMR": "omitida: señal vieja (53 min)",
+   "SNDK": "omitida: señal vieja (43 min)",
+   "C": "omitida: señal vieja (288 min)",
+   "ROP": "omitida: señal vieja (289 min)",
+   "JPM": "omitida: señal vieja (169 min)",
+   "WELL": "omitida: señal vieja (154 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795635542.512685,
+  "ultimo_scan": 1795636257.871186,
   "sombra": {
    "vistos": [
     "ENB",
