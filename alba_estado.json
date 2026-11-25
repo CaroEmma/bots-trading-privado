@@ -132,7 +132,15 @@
     "UPS",
     "WFC",
     "ASTS",
-    "INSM"
+    "INSM",
+    "CMG",
+    "MRSH",
+    "NKE",
+    "V",
+    "AEM",
+    "NEM",
+    "CVNA",
+    "RKT"
    ],
    "perdidos": [
     "LMT",
@@ -201,7 +209,7 @@
     "EQNR",
     "ZM"
    ],
-   "ultimo_scan": 1795623889.11682,
+   "ultimo_scan": 1795624604.001226,
    "limitado": 0,
    "errores": 0
   }
