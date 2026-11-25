@@ -200,7 +200,8 @@
     "BE",
     "CLS",
     "INTC",
-    "TSLA"
+    "TSLA",
+    "MRNA"
    ],
    "perdidos": [
     "LMT",
@@ -272,9 +273,10 @@
     "AXON",
     "CI",
     "EBAY",
-    "VIK"
+    "VIK",
+    "PINS"
    ],
-   "ultimo_scan": 1795629777.884659,
+   "ultimo_scan": 1795630468.053912,
    "limitado": 0,
    "errores": 0
   }
