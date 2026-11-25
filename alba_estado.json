@@ -201,7 +201,12 @@
     "CLS",
     "INTC",
     "TSLA",
-    "MRNA"
+    "MRNA",
+    "VRTX",
+    "CEG",
+    "AAPL",
+    "ORCL",
+    "AAOI"
    ],
    "perdidos": [
     "LMT",
@@ -274,9 +279,11 @@
     "CI",
     "EBAY",
     "VIK",
-    "PINS"
+    "PINS",
+    "DUK",
+    "MDLN"
    ],
-   "ultimo_scan": 1795630468.053912,
+   "ultimo_scan": 1795631133.030888,
    "limitado": 0,
    "errores": 0
   }
