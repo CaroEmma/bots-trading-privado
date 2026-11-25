@@ -126,7 +126,12 @@
     "GE",
     "CRH",
     "CMCSA",
-    "MA"
+    "MA",
+    "CMI",
+    "AJG",
+    "UPS",
+    "WFC",
+    "ASTS"
    ],
    "perdidos": [
     "LMT",
@@ -191,7 +196,7 @@
     "TEL",
     "FSLR"
    ],
-   "ultimo_scan": 1795621879.931001,
+   "ultimo_scan": 1795622533.757703,
    "limitado": 0,
    "errores": 0
   }
