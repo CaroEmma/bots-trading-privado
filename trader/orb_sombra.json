@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-25T15:17:03Z",
+  "created_at": "2026-11-25T15:28:30Z",
   "mode": "orb",
-  "as_of": "2026-11-25 10:17 ET",
+  "as_of": "2026-11-25 10:28 ET",
   "universe": 5924,
-  "scanned": 2264,
+  "scanned": 2176,
   "failed": 0,
-  "unconfirmed": 1348,
+  "unconfirmed": 1336,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -615,6 +615,19 @@
       "pct_over": 0.05
     },
     {
+      "symbol": "FSLR",
+      "setups": [
+        "orb"
+      ],
+      "price": 146.07,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 144.15,
+      "or_low": 141.69,
+      "pct_over": 1.34
+    },
+    {
       "symbol": "FTNT",
       "setups": [
         "orb"
@@ -940,19 +953,6 @@
       "pct_over": 1.74
     },
     {
-      "symbol": "SMTC",
-      "setups": [
-        "orb"
-      ],
-      "price": 82.78,
-      "at": "10:00 AM",
-      "bar_start": "09:55",
-      "bar_index": 5,
-      "or_high": 80.6,
-      "or_low": 78.2,
-      "pct_over": 2.7
-    },
-    {
       "symbol": "SNPS",
       "setups": [
         "orb"
@@ -1003,6 +1003,32 @@
       "or_high": 455.0,
       "or_low": 439.12,
       "pct_over": 0.56
+    },
+    {
+      "symbol": "TDG",
+      "setups": [
+        "orb"
+      ],
+      "price": 1133.52,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 1130.54,
+      "or_low": 1106.5,
+      "pct_over": 0.26
+    },
+    {
+      "symbol": "TEL",
+      "setups": [
+        "orb"
+      ],
+      "price": 204.76,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 203.43,
+      "or_low": 200.08,
+      "pct_over": 0.66
     },
     {
       "symbol": "TER",
@@ -1243,13 +1269,13 @@
       "setups": [
         "orb"
       ],
-      "price": 11.79,
+      "price": 11.78,
       "at": "10:05 AM",
       "bar_start": "10:00",
       "bar_index": 6,
       "or_high": 11.77,
       "or_low": 11.57,
-      "pct_over": 0.21
+      "pct_over": 0.13
     },
     {
       "symbol": "NUE",
@@ -1302,32 +1328,6 @@
       "or_high": 12.39,
       "or_low": 11.97,
       "pct_over": 0.16
-    },
-    {
-      "symbol": "TEM",
-      "setups": [
-        "orb"
-      ],
-      "price": 52.96,
-      "at": "10:05 AM",
-      "bar_start": "10:00",
-      "bar_index": 6,
-      "or_high": 52.63,
-      "or_low": 50.12,
-      "pct_over": 0.63
-    },
-    {
-      "symbol": "TRV",
-      "setups": [
-        "orb"
-      ],
-      "price": 405.59,
-      "at": "10:05 AM",
-      "bar_start": "10:00",
-      "bar_index": 6,
-      "or_high": 405.05,
-      "or_low": 402.06,
-      "pct_over": 0.13
     },
     {
       "symbol": "U",
@@ -1460,19 +1460,6 @@
       "pct_over": 0.15
     },
     {
-      "symbol": "WCN",
-      "setups": [
-        "orb"
-      ],
-      "price": 186.26,
-      "at": "10:10 AM",
-      "bar_start": "10:05",
-      "bar_index": 7,
-      "or_high": 185.88,
-      "or_low": 183.79,
-      "pct_over": 0.2
-    },
-    {
       "symbol": "APP",
       "setups": [
         "orb"
@@ -1484,6 +1471,19 @@
       "or_high": 370.0,
       "or_low": 355.01,
       "pct_over": 0.26
+    },
+    {
+      "symbol": "CSX",
+      "setups": [
+        "orb"
+      ],
+      "price": 49.85,
+      "at": "10:15 AM",
+      "bar_start": "10:10",
+      "bar_index": 8,
+      "or_high": 49.81,
+      "or_low": 49.36,
+      "pct_over": 0.07
     },
     {
       "symbol": "T",
@@ -1503,13 +1503,26 @@
       "setups": [
         "orb"
       ],
-      "price": 289.48,
+      "price": 289.49,
       "at": "10:15 AM",
       "bar_start": "10:10",
       "bar_index": 8,
       "or_high": 289.45,
       "or_low": 287.8,
       "pct_over": 0.01
+    },
+    {
+      "symbol": "BILL",
+      "setups": [
+        "orb"
+      ],
+      "price": 61.57,
+      "at": "10:25 AM",
+      "bar_start": "10:20",
+      "bar_index": 10,
+      "or_high": 61.54,
+      "or_low": 61.45,
+      "pct_over": 0.05
     }
   ]
 }

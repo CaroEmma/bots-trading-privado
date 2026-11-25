@@ -112,7 +112,9 @@
     "UNP",
     "T",
     "IR",
-    "APP"
+    "APP",
+    "CSX",
+    "BILL"
    ],
    "perdidos": [
     "LMT",
@@ -173,9 +175,11 @@
     "VRT",
     "IREN",
     "SMCI",
-    "SMTC"
+    "SMTC",
+    "TEL",
+    "FSLR"
    ],
-   "ultimo_scan": 1795619822.798736,
+   "ultimo_scan": 1795620510.756343,
    "limitado": 0,
    "errores": 0
   }
