@@ -55,12 +55,18 @@
    "HD": "omitida: señal vieja (265 min)",
    "HON": "omitida: señal vieja (271 min)",
    "KO": "omitida: señal vieja (151 min)",
-   "PANW": "omitida: señal vieja (306 min)"
+   "PANW": "omitida: señal vieja (306 min)",
+   "SAP": "omitida: señal vieja (312 min)",
+   "DASH": "omitida: señal vieja (307 min)",
+   "DIS": "omitida: señal vieja (197 min)",
+   "BRK.B": "omitida: señal vieja (158 min)",
+   "DDOG": "omitida: señal vieja (68 min)",
+   "LRCX": "omitida: señal vieja (68 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795636973.028179,
+  "ultimo_scan": 1795637690.105148,
   "sombra": {
    "vistos": [
     "ENB",
@@ -334,7 +340,8 @@
     "HL",
     "CDNS",
     "EQT",
-    "APLD"
+    "APLD",
+    "MKSI"
    ],
    "ultimo_scan": 1795631434.852817,
    "limitado": 0,

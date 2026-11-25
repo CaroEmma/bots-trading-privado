@@ -424,3 +424,9 @@
 {"fecha": "2026-11-25", "hora": "15:02", "simbolo": "HON", "accion": "omitir", "motivo": "señal vieja (271 min)"}
 {"fecha": "2026-11-25", "hora": "15:02", "simbolo": "KO", "accion": "omitir", "motivo": "señal vieja (151 min)"}
 {"fecha": "2026-11-25", "hora": "15:02", "simbolo": "PANW", "accion": "omitir", "motivo": "señal vieja (306 min)"}
+{"fecha": "2026-11-25", "hora": "15:08", "simbolo": "SAP", "accion": "omitir", "motivo": "señal vieja (312 min)"}
+{"fecha": "2026-11-25", "hora": "15:08", "simbolo": "DASH", "accion": "omitir", "motivo": "señal vieja (307 min)"}
+{"fecha": "2026-11-25", "hora": "15:08", "simbolo": "DIS", "accion": "omitir", "motivo": "señal vieja (197 min)"}
+{"fecha": "2026-11-25", "hora": "15:14", "simbolo": "BRK.B", "accion": "omitir", "motivo": "señal vieja (158 min)"}
+{"fecha": "2026-11-25", "hora": "15:14", "simbolo": "DDOG", "accion": "omitir", "motivo": "señal vieja (68 min)"}
+{"fecha": "2026-11-25", "hora": "15:14", "simbolo": "LRCX", "accion": "omitir", "motivo": "señal vieja (68 min)"}

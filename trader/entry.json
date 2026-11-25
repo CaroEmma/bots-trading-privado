@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "PANW",
+  "symbol": "LRCX",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-25",
   "status": "triggered",
-  "time": "10:00 AM",
-  "bar_start": "09:55",
-  "bar_index": 5,
-  "price": 349.12,
-  "level": 348.83,
+  "time": "2:10 PM",
+  "bar_start": "14:05",
+  "bar_index": 55,
+  "price": 183.43,
+  "level": 183.28,
   "interval": "5m",
   "opening_range": {
-    "high": 348.83,
-    "low": 337.41,
+    "high": 183.28,
+    "low": 175.76,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-25T20:06:50Z",
-  "reason": "the 9:55 bar closed above the range high"
+  "checked_at": "2026-11-25T20:18:47Z",
+  "reason": "the 14:05 bar closed above the range high"
 }

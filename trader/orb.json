@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-25T20:02:53Z",
+  "created_at": "2026-11-25T20:14:50Z",
   "mode": "orb",
-  "as_of": "2026-11-25 15:02 ET",
+  "as_of": "2026-11-25 15:14 ET",
   "universe": 5924,
-  "scanned": 1144,
+  "scanned": 1108,
   "failed": 0,
-  "unconfirmed": 917,
+  "unconfirmed": 881,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -93,6 +93,19 @@
       "or_high": 49.57,
       "or_low": 48.92,
       "pct_over": 0.42
+    },
+    {
+      "symbol": "HSY",
+      "setups": [
+        "orb"
+      ],
+      "price": 180.34,
+      "at": "9:50 AM",
+      "bar_start": "09:45",
+      "bar_index": 3,
+      "or_high": 179.81,
+      "or_low": 178.05,
+      "pct_over": 0.29
     },
     {
       "symbol": "LMT",
@@ -615,6 +628,19 @@
       "pct_over": 1.13
     },
     {
+      "symbol": "MKSI",
+      "setups": [
+        "orb"
+      ],
+      "price": 180.24,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 179.85,
+      "or_low": 175.06,
+      "pct_over": 0.22
+    },
+    {
       "symbol": "MPC",
       "setups": [
         "orb"
@@ -730,6 +756,19 @@
       "or_high": 55.94,
       "or_low": 55.28,
       "pct_over": 0.05
+    },
+    {
+      "symbol": "SAP",
+      "setups": [
+        "orb"
+      ],
+      "price": 209.2,
+      "at": "10:00 AM",
+      "bar_start": "09:55",
+      "bar_index": 5,
+      "or_high": 209.14,
+      "or_low": 207.08,
+      "pct_over": 0.03
     },
     {
       "symbol": "SHOP",
@@ -1122,19 +1161,6 @@
       "pct_over": 0.16
     },
     {
-      "symbol": "IR",
-      "setups": [
-        "orb"
-      ],
-      "price": 81.67,
-      "at": "10:10 AM",
-      "bar_start": "10:05",
-      "bar_index": 7,
-      "or_high": 81.53,
-      "or_low": 80.14,
-      "pct_over": 0.17
-    },
-    {
       "symbol": "MSI",
       "setups": [
         "orb"
@@ -1460,19 +1486,6 @@
       "pct_over": 0.05
     },
     {
-      "symbol": "CMG",
-      "setups": [
-        "orb"
-      ],
-      "price": 37.28,
-      "at": "11:25 AM",
-      "bar_start": "11:20",
-      "bar_index": 22,
-      "or_high": 37.26,
-      "or_low": 36.64,
-      "pct_over": 0.05
-    },
-    {
       "symbol": "MRSH",
       "setups": [
         "orb"
@@ -1627,19 +1640,6 @@
       "or_high": 64.8,
       "or_low": 63.63,
       "pct_over": 0.37
-    },
-    {
-      "symbol": "APLD",
-      "setups": [
-        "orb"
-      ],
-      "price": 11.56,
-      "at": "12:05 PM",
-      "bar_start": "12:00",
-      "bar_index": 30,
-      "or_high": 11.48,
-      "or_low": 10.86,
-      "pct_over": 0.65
     },
     {
       "symbol": "AXP",
