@@ -19,12 +19,18 @@
    "CRCL": "omitida: señal vieja (71 min)",
    "VIK": "omitida: señal vieja (71 min)",
    "LMT": "omitida: señal vieja (246 min)",
-   "GOOG": "omitida: señal vieja (241 min)"
+   "GOOG": "omitida: señal vieja (241 min)",
+   "TMO": "omitida: señal vieja (241 min)",
+   "CB": "omitida: señal vieja (236 min)",
+   "O": "omitida: señal vieja (236 min)",
+   "CMCSA": "omitida: señal vieja (202 min)",
+   "WFC": "omitida: señal vieja (187 min)",
+   "SYK": "omitida: señal vieja (127 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795632733.314614,
+  "ultimo_scan": 1795633398.115541,
   "sombra": {
    "vistos": [
     "ENB",
@@ -201,7 +207,8 @@
     "ORCL",
     "AAOI",
     "WAT",
-    "PWR"
+    "PWR",
+    "KYMR"
    ],
    "perdidos": [
     "LMT",
