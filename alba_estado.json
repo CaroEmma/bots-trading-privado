@@ -124,7 +124,9 @@
     "MCD",
     "NEE",
     "GE",
-    "CRH"
+    "CRH",
+    "CMCSA",
+    "MA"
    ],
    "perdidos": [
     "LMT",
@@ -189,7 +191,7 @@
     "TEL",
     "FSLR"
    ],
-   "ultimo_scan": 1795621208.810511,
+   "ultimo_scan": 1795621879.931001,
    "limitado": 0,
    "errores": 0
   }
