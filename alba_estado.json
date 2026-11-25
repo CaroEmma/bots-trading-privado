@@ -140,7 +140,11 @@
     "AEM",
     "NEM",
     "CVNA",
-    "RKT"
+    "RKT",
+    "IONQ",
+    "ADP",
+    "DIS",
+    "ADSK"
    ],
    "perdidos": [
     "LMT",
@@ -208,9 +212,10 @@
     "UL",
     "EQNR",
     "ZM",
-    "B"
+    "B",
+    "AXON"
    ],
-   "ultimo_scan": 1795625303.386583,
+   "ultimo_scan": 1795625994.883819,
    "limitado": 0,
    "errores": 0
   }
