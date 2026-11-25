@@ -61,12 +61,18 @@
    "DIS": "omitida: señal vieja (197 min)",
    "BRK.B": "omitida: señal vieja (158 min)",
    "DDOG": "omitida: señal vieja (68 min)",
-   "LRCX": "omitida: señal vieja (68 min)"
+   "LRCX": "omitida: señal vieja (68 min)",
+   "CVX": "omitida: señal vieja (334 min)",
+   "TTWO": "omitida: señal vieja (289 min)",
+   "MRSH": "omitida: señal vieja (239 min)",
+   "DG": "omitida: señal vieja (170 min)",
+   "IBKR": "omitida: señal vieja (340 min)",
+   "NFLX": "omitida: señal vieja (200 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795637690.105148,
+  "ultimo_scan": 1795638407.740177,
   "sombra": {
    "vistos": [
     "ENB",

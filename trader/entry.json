@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "LRCX",
+  "symbol": "NFLX",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-25",
   "status": "triggered",
-  "time": "2:10 PM",
-  "bar_start": "14:05",
-  "bar_index": 55,
-  "price": 183.43,
-  "level": 183.28,
+  "time": "12:10 PM",
+  "bar_start": "12:05",
+  "bar_index": 31,
+  "price": 58.28,
+  "level": 58.22,
   "interval": "5m",
   "opening_range": {
-    "high": 183.28,
-    "low": 175.76,
+    "high": 58.22,
+    "low": 57.08,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-25T20:18:47Z",
-  "reason": "the 14:05 bar closed above the range high"
+  "checked_at": "2026-11-25T20:30:45Z",
+  "reason": "the 12:05 bar closed above the range high"
 }
