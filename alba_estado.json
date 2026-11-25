@@ -37,12 +37,18 @@
    "UPS": "omitida: señal vieja (210 min)",
    "MSI": "omitida: señal vieja (261 min)",
    "OKTA": "omitida: señal vieja (151 min)",
-   "CLS": "omitida: señal vieja (96 min)"
+   "CLS": "omitida: señal vieja (96 min)",
+   "FIX": "omitida: señal vieja (276 min)",
+   "PYPL": "omitida: señal vieja (276 min)",
+   "MDLN": "omitida: señal vieja (237 min)",
+   "CI": "omitida: señal vieja (197 min)",
+   "CMG": "omitida: señal vieja (197 min)",
+   "NTRA": "omitida: señal vieja (157 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795634827.214885,
+  "ultimo_scan": 1795635542.512685,
   "sombra": {
    "vistos": [
     "ENB",
@@ -225,7 +231,8 @@
     "CRWD",
     "ZS",
     "DDOG",
-    "LRCX"
+    "LRCX",
+    "UAL"
    ],
    "perdidos": [
     "LMT",

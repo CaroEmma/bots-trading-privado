@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "CLS",
+  "symbol": "NTRA",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-25",
   "status": "triggered",
-  "time": "12:55 PM",
-  "bar_start": "12:50",
-  "bar_index": 40,
-  "price": 184.04,
-  "level": 183.98,
+  "time": "12:05 PM",
+  "bar_start": "12:00",
+  "bar_index": 30,
+  "price": 293.72,
+  "level": 293.57,
   "interval": "5m",
   "opening_range": {
-    "high": 183.98,
-    "low": 169.54,
+    "high": 293.57,
+    "low": 284.46,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-25T19:31:02Z",
-  "reason": "the 12:50 bar closed above the range high"
+  "checked_at": "2026-11-25T19:42:58Z",
+  "reason": "the 12:00 bar closed above the range high"
 }
