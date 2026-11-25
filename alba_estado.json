@@ -185,7 +185,8 @@
     "BLK",
     "NXPI",
     "ALAB",
-    "CRDO"
+    "CRDO",
+    "PM"
    ],
    "perdidos": [
     "LMT",
@@ -255,9 +256,10 @@
     "ZM",
     "B",
     "AXON",
-    "CI"
+    "CI",
+    "EBAY"
    ],
-   "ultimo_scan": 1795627256.332912,
+   "ultimo_scan": 1795627865.387771,
    "limitado": 0,
    "errores": 0
   }
