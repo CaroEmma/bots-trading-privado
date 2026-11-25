@@ -173,7 +173,19 @@
     "BX",
     "COIN",
     "RKLB",
-    "QCOM"
+    "QCOM",
+    "COHR",
+    "DHR",
+    "WELL",
+    "PH",
+    "MAR",
+    "TT",
+    "AMZN",
+    "APH",
+    "BLK",
+    "NXPI",
+    "ALAB",
+    "CRDO"
    ],
    "perdidos": [
     "LMT",
@@ -242,9 +254,10 @@
     "EQNR",
     "ZM",
     "B",
-    "AXON"
+    "AXON",
+    "CI"
    ],
-   "ultimo_scan": 1795626606.763286,
+   "ultimo_scan": 1795627256.332912,
    "limitado": 0,
    "errores": 0
   }
