@@ -197,7 +197,10 @@
     "NBIS",
     "ASML",
     "SNOW",
-    "BE"
+    "BE",
+    "CLS",
+    "INTC",
+    "TSLA"
    ],
    "perdidos": [
     "LMT",
@@ -268,9 +271,10 @@
     "B",
     "AXON",
     "CI",
-    "EBAY"
+    "EBAY",
+    "VIK"
    ],
-   "ultimo_scan": 1795629125.604035,
+   "ultimo_scan": 1795629777.884659,
    "limitado": 0,
    "errores": 0
   }
