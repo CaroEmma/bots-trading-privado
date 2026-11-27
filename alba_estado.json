@@ -231,7 +231,9 @@
     "INTC",
     "PG",
     "XEL",
-    "T"
+    "T",
+    "ABBV",
+    "MCD"
    ],
    "perdidos": [
     "UL",
@@ -274,7 +276,7 @@
     "SWKS",
     "CHTR"
    ],
-   "ultimo_scan": 1795799720.339444,
+   "ultimo_scan": 1795800358.359397,
    "limitado": 0,
    "errores": 0
   }
