@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-27T17:49:43Z",
+  "created_at": "2026-11-27T17:55:37Z",
   "mode": "orb",
-  "as_of": "2026-11-27 12:49 ET",
+  "as_of": "2026-11-27 12:55 ET",
   "universe": 5922,
-  "scanned": 1270,
+  "scanned": 1256,
   "failed": 0,
-  "unconfirmed": 754,
+  "unconfirmed": 753,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -67,19 +67,6 @@
       "or_high": 347.59,
       "or_low": 343.48,
       "pct_over": 0.15
-    },
-    {
-      "symbol": "BTI",
-      "setups": [
-        "orb"
-      ],
-      "price": 60.31,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 60.28,
-      "or_low": 59.59,
-      "pct_over": 0.04
     },
     {
       "symbol": "BUD",
@@ -953,6 +940,19 @@
       "pct_over": 0.19
     },
     {
+      "symbol": "UAL",
+      "setups": [
+        "orb"
+      ],
+      "price": 106.49,
+      "at": "10:25 AM",
+      "bar_start": "10:20",
+      "bar_index": 10,
+      "or_high": 106.11,
+      "or_low": 105.0,
+      "pct_over": 0.35
+    },
+    {
       "symbol": "JNJ",
       "setups": [
         "orb"
@@ -1094,19 +1094,6 @@
       "or_high": 131.27,
       "or_low": 130.0,
       "pct_over": 0.72
-    },
-    {
-      "symbol": "STM",
-      "setups": [
-        "orb"
-      ],
-      "price": 40.62,
-      "at": "10:40 AM",
-      "bar_start": "10:35",
-      "bar_index": 13,
-      "or_high": 40.39,
-      "or_low": 39.68,
-      "pct_over": 0.57
     },
     {
       "symbol": "STX",
@@ -1731,6 +1718,19 @@
       "or_high": 106.13,
       "or_low": 104.67,
       "pct_over": 0.08
+    },
+    {
+      "symbol": "WDC",
+      "setups": [
+        "orb"
+      ],
+      "price": 289.22,
+      "at": "12:55 PM",
+      "bar_start": "12:50",
+      "bar_index": 40,
+      "or_high": 287.55,
+      "or_low": 280.65,
+      "pct_over": 0.58
     }
   ]
 }
