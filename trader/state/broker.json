@@ -673,6 +673,32 @@
       "qty": "2",
       "price": 300.77,
       "plain": "SELL 2 LNG at 300.77"
+    },
+    {
+      "at": "2026-11-27T09:50-05:00",
+      "date": "2026-11-27",
+      "index": 1,
+      "fingerprint": "099a0ed91a13402f",
+      "symbol": "TTWO",
+      "side": "buy",
+      "qty": "3",
+      "kind": "entry",
+      "max_loss": 5.88,
+      "stop": 228.55,
+      "plain": "buy 3 TTWO (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "61032880-ae4b-48e8-bd0f-39421b3d99b9",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-27T09:54:38-05:00",
+      "date": "2026-11-27",
+      "status": "filled",
+      "symbol": "TTWO",
+      "side": "buy",
+      "qty": "3",
+      "price": 230.07,
+      "plain": "BUY 3 TTWO at 230.07"
     }
   ]
 }

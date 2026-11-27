@@ -1,0 +1,28 @@
+{
+  "created_by": "trader-exit",
+  "symbol": "TTWO",
+  "side": "buy",
+  "date": "2026-11-27",
+  "setup": "orb",
+  "entry": 230.51,
+  "entry_time": "9:50 AM",
+  "entry_bar": 3,
+  "interval": "5m",
+  "opening_range": {
+    "high": 230.5,
+    "low": 226.61,
+    "minutes": 15
+  },
+  "stop": 228.55,
+  "stop_rule": "or_mid",
+  "stop_label": "opening-range midpoint",
+  "target": 234.43,
+  "target_r": 2.0,
+  "target_label": "2R (two times the risk)",
+  "risk_per_share": 1.96,
+  "reward_risk": 2.0,
+  "flat_by": "12:55",
+  "stop_detail": "($230.50 + $226.61) / 2 = $228.555, rounded down",
+  "created_at": "2026-11-27T14:54:35Z",
+  "note": "A stop is a plan, not a guarantee: a gap or a fast market can fill past it."
+}

@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-25T14:54:15Z",
+  "as_of": "2026-11-27T14:54:36Z",
   "source": "yahoo",
   "note": "Delayed quotes for alerts and sizing checks. Your broker's price is the one that fills. detail.fetched is when each price was read.",
   "prices": {
@@ -27,7 +27,8 @@
     "BSX": 42.585,
     "WMT": 131.32,
     "ENB": 46.41,
-    "LNG": 296.49
+    "LNG": 296.49,
+    "TTWO": 229.754
   },
   "detail": {
     "SPCX": {
@@ -179,6 +180,12 @@
       "time": "2026-11-25T14:54:05Z",
       "source": "yahoo",
       "fetched": "2026-11-25T14:54:15Z"
+    },
+    "TTWO": {
+      "prev_close": 227.34,
+      "time": "2026-11-27T14:54:34Z",
+      "source": "yahoo",
+      "fetched": "2026-11-27T14:54:36Z"
     }
   }
 }

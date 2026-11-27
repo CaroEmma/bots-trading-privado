@@ -2344,7 +2344,7 @@ GRBK|Green Brick Partners, Inc. Common Stock
 GRC|Gorman-Rupp Company (The) Common Stock
 GRCE|Grace Therapeutics, Inc. - Common Stock
 GRDN|Guardian Pharmacy Services, Inc. Class A Common Stock
-GRDX|GridAI Technologies Corp. - Common Stock
+GRDX|GridAI Power Corp. - Common Stock
 GRF|Eagle Capital Growth Fund, Inc. Common Stock
 GRFS|Grifols, S.A. - American Depositary Shares
 GRI|GRI Bio, Inc. - Common Stock
@@ -2444,7 +2444,6 @@ HCKT|The Hackett Group, Inc. - Common Stock
 HCM|HUTCHMED (China) Limited - American Depositary Shares
 HCMA|HCM III Acquisition Corp. - Class A Ordinary Share
 HCSG|Healthcare Services Group, Inc. - Common Stock
-HCTI|Healthcare Triangle, Inc. - Common Stock
 HCWB|HCW Biologics Inc. - Common Stock
 HD|Home Depot, Inc. (The) Common Stock
 HDB|HDFC Bank Limited Common Stock
@@ -4766,7 +4765,7 @@ SGHC|Super Group (SGHC) Limited Ordinary Shares
 SGHT|Sight Sciences, Inc. - Common Stock
 SGI|Somnigroup International Inc. Common Stock
 SGLD|Scorpio Gold Corporation - Common Stock
-SGLY|Singularity Future Technology Ltd. - Common Stock
+SGLY|Compower Ltd. - Common Stock
 SGML|Sigma Lithium Corporation - common shares
 SGMT|Sagimet Biosciences Inc. - Series A Common Stock
 SGP|SpyGlass Pharma, Inc. - Common Stock
@@ -5628,7 +5627,6 @@ VTS|Vitesse Energy, Inc. Common Stock
 VTSI|VirTra, Inc. - Common Stock
 VTVT|vTv Therapeutics Inc. - Class A Common Stock
 VUZI|Vuzix Corporation - Common Stock
-VVOS|Vivos Therapeutics, Inc. - Common Stock
 VVR|Invesco Senior Income Trust Common Stock (DE)
 VVV|Valvoline Inc. Common Stock
 VVVV|vVARDIS Holding AG Class A Ordinary Shares

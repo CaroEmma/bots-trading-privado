@@ -1,13 +1,58 @@
 {
- "abiertas": {},
+ "abiertas": {
+  "TTWO": {
+   "orden_id": "61032880-ae4b-48e8-bd0f-39421b3d99b9",
+   "qty": 3,
+   "entrada": 230.07,
+   "stop": 228.55,
+   "target": 234.43,
+   "fecha": "2026-11-27",
+   "hora": "09:50",
+   "max_loss": 5.88,
+   "tm": {
+    "mc_avg_R": 0.188,
+    "p_target": 0.319,
+    "p_stop": 0.5285,
+    "hist_disparos": 31,
+    "hist_avg_R": 0.152,
+    "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 38 % (target first 31.9 % vs stop first 52.8 %)."
+   }
+  }
+ },
  "hoy": {
   "fecha": "2026-11-27",
-  "entradas": 0,
+  "entradas": 1,
   "pnl": 0.0,
   "r": 0.0,
-  "evaluados": {},
-  "universo": false,
+  "evaluados": {
+   "TTWO": "COMPRADA"
+  },
+  "universo": true,
   "sesion": true,
-  "informe": false
+  "informe": false,
+  "ultimo_scan": 1795791044.732062,
+  "sombra": {
+   "vistos": [
+    "TTWO",
+    "FER",
+    "INSM",
+    "ONC",
+    "V",
+    "BIIB",
+    "BRO",
+    "COST",
+    "SJM",
+    "BTI",
+    "DIS",
+    "SYY",
+    "BIP",
+    "PEP",
+    "RSG"
+   ],
+   "perdidos": [],
+   "ultimo_scan": 0,
+   "limitado": 0,
+   "errores": 0
+  }
  }
 }

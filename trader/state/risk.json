@@ -1,44 +1,46 @@
 {
-  "date": "2026-11-25",
-  "now_new_york": "2026-11-25 09:54",
+  "date": "2026-11-27",
+  "now_new_york": "2026-11-27 09:54",
   "paper": true,
   "results": [
     {
       "index": 1,
-      "symbol": "LNG",
+      "symbol": "TTWO",
       "side": "buy",
       "kind": "entry",
-      "amount": "2 shares",
-      "value_usd": 592.98,
-      "entry_ref": 296.49,
+      "amount": "3 shares",
+      "value_usd": 691.53,
+      "entry_ref": 230.51,
       "entry_ref_from": "plan",
-      "stop": 293.41,
-      "target": 300.76,
-      "risk_per_share": 3.08,
-      "max_loss": 6.16,
-      "reward_risk": 1.39,
-      "fingerprint": "8b8aa8a38dcc7895",
+      "stop": 228.55,
+      "target": 234.43,
+      "risk_per_share": 1.96,
+      "max_loss": 5.88,
+      "reward_risk": 2.0,
+      "fingerprint": "099a0ed91a13402f",
       "verdict": "PASS",
       "reasons": [],
       "warnings": [],
       "info": [
-        "entry 296.49 (the plan's entry), stop 293.41, target 300.76: risk 3.08 a share",
-        "max loss $6.16 (limit $50), reward:risk 1.39 (min 1)",
+        "entry 230.51 (the plan's entry), stop 228.55, target 234.43: risk 1.96 a share",
+        "max loss $5.88 (limit $50), reward:risk 2.00 (min 1)",
         "today before this: 0 of 3 trades, $0 of $150 daily loss"
       ]
     }
   ],
   "pass": 1,
   "block": 0,
-  "warnings": [],
-  "cash_after": 664.59,
+  "warnings": [
+    "early close at 1:00 p.m. today (day after Thanksgiving): no new entries after 12:30"
+  ],
+  "cash_after": 574.12,
   "today": {
     "orders_placed": 0,
     "entries_placed": 0,
     "loss_at_risk": 0.0,
     "day_trades_5d": null
   },
-  "prices_as_of": "2026-11-25T14:54:15Z",
-  "checked_at": "2026-11-25T14:54:16Z",
+  "prices_as_of": "2026-11-27T14:54:36Z",
+  "checked_at": "2026-11-27T14:54:36Z",
   "orders_file": "trader/orders.json"
 }
