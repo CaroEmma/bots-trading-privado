@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "TTWO",
+  "symbol": "ZM",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-27",
   "status": "triggered",
-  "time": "9:50 AM",
-  "bar_start": "09:45",
-  "bar_index": 3,
-  "price": 230.51,
-  "level": 230.5,
+  "time": "9:55 AM",
+  "bar_start": "09:50",
+  "bar_index": 4,
+  "price": 91.84,
+  "level": 91.83,
   "interval": "5m",
   "opening_range": {
-    "high": 230.5,
-    "low": 226.61,
+    "high": 91.83,
+    "low": 88.99,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-27T14:54:34Z",
-  "reason": "the 9:45 bar closed above the range high"
+  "checked_at": "2026-11-27T16:22:08Z",
+  "reason": "the 9:50 bar closed above the range high"
 }

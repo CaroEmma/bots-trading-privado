@@ -699,6 +699,16 @@
       "qty": "3",
       "price": 230.07,
       "plain": "BUY 3 TTWO at 230.07"
+    },
+    {
+      "at": "2026-11-27T11:18:23-05:00",
+      "date": "2026-11-27",
+      "status": "filled",
+      "symbol": "TTWO",
+      "side": "sell",
+      "qty": "3",
+      "price": 228.52,
+      "plain": "SELL 3 TTWO at 228.52"
     }
   ]
 }

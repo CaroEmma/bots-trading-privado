@@ -1,36 +1,20 @@
 {
- "abiertas": {
-  "TTWO": {
-   "orden_id": "61032880-ae4b-48e8-bd0f-39421b3d99b9",
-   "qty": 3,
-   "entrada": 230.07,
-   "stop": 228.55,
-   "target": 234.43,
-   "fecha": "2026-11-27",
-   "hora": "09:50",
-   "max_loss": 5.88,
-   "tm": {
-    "mc_avg_R": 0.188,
-    "p_target": 0.319,
-    "p_stop": 0.5285,
-    "hist_disparos": 31,
-    "hist_avg_R": 0.152,
-    "veredicto": "Close to break-even: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 38 % (target first 31.9 % vs stop first 52.8 %)."
-   }
-  }
- },
+ "abiertas": {},
  "hoy": {
   "fecha": "2026-11-27",
   "entradas": 1,
-  "pnl": 0.0,
-  "r": 0.0,
+  "pnl": -4.649999999999949,
+  "r": -1.0197368421052642,
   "evaluados": {
-   "TTWO": "COMPRADA"
+   "TTWO": "COMPRADA",
+   "ADSK": "omitida: señal vieja (77 min)",
+   "MRSH": "omitida: señal vieja (77 min)",
+   "ZM": "omitida: señal vieja (87 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795791044.732062,
+  "ultimo_scan": 1795796302.780669,
   "sombra": {
    "vistos": [
     "TTWO",
@@ -173,7 +157,10 @@
     "BHP",
     "FTNT",
     "PGR",
-    "RIOT"
+    "RIOT",
+    "AG",
+    "RBRK",
+    "NET"
    ],
    "perdidos": [
     "UL",
@@ -216,7 +203,7 @@
     "SWKS",
     "CHTR"
    ],
-   "ultimo_scan": 1795795659.370095,
+   "ultimo_scan": 1795796014.919658,
    "limitado": 0,
    "errores": 0
   }

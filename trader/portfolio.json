@@ -1,5 +1,5 @@
 {
-  "cash": 575.44,
+  "cash": 1261.0,
   "positions": [
     {
       "ticker": "SO",
@@ -10,18 +10,6 @@
           "date": "2026-11-20",
           "shares": 39.0,
           "cost": 3679.33
-        }
-      ]
-    },
-    {
-      "ticker": "TTWO",
-      "shares": 3.0,
-      "lots": [
-        {
-          "id": "TTWO-1",
-          "date": "2026-11-27",
-          "shares": 3.0,
-          "cost": 690.21
         }
       ]
     }
