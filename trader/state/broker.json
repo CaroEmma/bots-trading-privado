@@ -709,6 +709,32 @@
       "qty": "3",
       "price": 228.52,
       "plain": "SELL 3 TTWO at 228.52"
+    },
+    {
+      "at": "2026-11-27T11:58-05:00",
+      "date": "2026-11-27",
+      "index": 1,
+      "fingerprint": "f48ceeee54f48e7d",
+      "symbol": "SYK",
+      "side": "buy",
+      "qty": "2",
+      "kind": "entry",
+      "max_loss": 8.3,
+      "stop": 330.38,
+      "plain": "buy 2 SYK (ALBA, paper autom\u00e1tico)",
+      "status": "placed",
+      "broker_order_id": "e873d9bf-cff3-4ca8-813e-ad67e5bfc143",
+      "auto_paper": true
+    },
+    {
+      "at": "2026-11-27T12:02:26-05:00",
+      "date": "2026-11-27",
+      "status": "filled",
+      "symbol": "SYK",
+      "side": "buy",
+      "qty": "2",
+      "price": 334.685,
+      "plain": "BUY 2 SYK at 334.69"
     }
   ]
 }

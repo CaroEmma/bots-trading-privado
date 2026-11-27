@@ -1,5 +1,5 @@
 {
-  "cash": 1261.0,
+  "cash": 591.63,
   "positions": [
     {
       "ticker": "SO",
@@ -10,6 +10,18 @@
           "date": "2026-11-20",
           "shares": 39.0,
           "cost": 3679.33
+        }
+      ]
+    },
+    {
+      "ticker": "SYK",
+      "shares": 2.0,
+      "lots": [
+        {
+          "id": "SYK-1",
+          "date": "2026-11-27",
+          "shares": 2.0,
+          "cost": 669.37
         }
       ]
     }

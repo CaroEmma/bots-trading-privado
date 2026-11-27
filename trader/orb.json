@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-27T16:52:33Z",
+  "created_at": "2026-11-27T16:58:33Z",
   "mode": "orb",
-  "as_of": "2026-11-27 11:52 ET",
+  "as_of": "2026-11-27 11:58 ET",
   "universe": 5922,
-  "scanned": 1479,
+  "scanned": 1453,
   "failed": 0,
-  "unconfirmed": 840,
+  "unconfirmed": 851,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -43,19 +43,6 @@
       "pct_over": 0.24
     },
     {
-      "symbol": "ANF",
-      "setups": [
-        "orb"
-      ],
-      "price": 183.94,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 183.75,
-      "or_low": 173.55,
-      "pct_over": 0.1
-    },
-    {
       "symbol": "AON",
       "setups": [
         "orb"
@@ -67,19 +54,6 @@
       "or_high": 347.59,
       "or_low": 343.48,
       "pct_over": 0.15
-    },
-    {
-      "symbol": "BTI",
-      "setups": [
-        "orb"
-      ],
-      "price": 60.31,
-      "at": "9:50 AM",
-      "bar_start": "09:45",
-      "bar_index": 3,
-      "or_high": 60.28,
-      "or_low": 59.59,
-      "pct_over": 0.04
     },
     {
       "symbol": "BUD",
@@ -1588,6 +1562,123 @@
       "or_high": 132.32,
       "or_low": 131.68,
       "pct_over": 0.12
+    },
+    {
+      "symbol": "ADI",
+      "setups": [
+        "orb"
+      ],
+      "price": 343.61,
+      "at": "11:55 AM",
+      "bar_start": "11:50",
+      "bar_index": 28,
+      "or_high": 343.5,
+      "or_low": 336.93,
+      "pct_over": 0.03
+    },
+    {
+      "symbol": "AEM",
+      "setups": [
+        "orb"
+      ],
+      "price": 171.38,
+      "at": "11:55 AM",
+      "bar_start": "11:50",
+      "bar_index": 28,
+      "or_high": 171.36,
+      "or_low": 168.2,
+      "pct_over": 0.01
+    },
+    {
+      "symbol": "AMD",
+      "setups": [
+        "orb"
+      ],
+      "price": 420.57,
+      "at": "11:55 AM",
+      "bar_start": "11:50",
+      "bar_index": 28,
+      "or_high": 420.12,
+      "or_low": 405.51,
+      "pct_over": 0.11
+    },
+    {
+      "symbol": "B",
+      "setups": [
+        "orb"
+      ],
+      "price": 36.35,
+      "at": "11:55 AM",
+      "bar_start": "11:50",
+      "bar_index": 28,
+      "or_high": 36.33,
+      "or_low": 35.83,
+      "pct_over": 0.06
+    },
+    {
+      "symbol": "C",
+      "setups": [
+        "orb"
+      ],
+      "price": 116.26,
+      "at": "11:55 AM",
+      "bar_start": "11:50",
+      "bar_index": 28,
+      "or_high": 116.15,
+      "or_low": 115.21,
+      "pct_over": 0.1
+    },
+    {
+      "symbol": "DHR",
+      "setups": [
+        "orb"
+      ],
+      "price": 228.74,
+      "at": "11:55 AM",
+      "bar_start": "11:50",
+      "bar_index": 28,
+      "or_high": 228.54,
+      "or_low": 227.12,
+      "pct_over": 0.09
+    },
+    {
+      "symbol": "INTC",
+      "setups": [
+        "orb"
+      ],
+      "price": 56.65,
+      "at": "11:55 AM",
+      "bar_start": "11:50",
+      "bar_index": 28,
+      "or_high": 56.56,
+      "or_low": 55.15,
+      "pct_over": 0.17
+    },
+    {
+      "symbol": "SYK",
+      "setups": [
+        "orb"
+      ],
+      "price": 334.01,
+      "at": "11:55 AM",
+      "bar_start": "11:50",
+      "bar_index": 28,
+      "or_high": 334.0,
+      "or_low": 326.77,
+      "pct_over": 0.0
+    },
+    {
+      "symbol": "USB",
+      "setups": [
+        "orb"
+      ],
+      "price": 59.68,
+      "at": "11:55 AM",
+      "bar_start": "11:50",
+      "bar_index": 28,
+      "or_high": 59.65,
+      "or_low": 59.0,
+      "pct_over": 0.05
     }
   ]
 }

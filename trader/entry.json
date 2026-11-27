@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "ORCL",
+  "symbol": "SYK",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-27",
   "status": "triggered",
-  "time": "11:35 AM",
-  "bar_start": "11:30",
-  "bar_index": 24,
-  "price": 107.27,
-  "level": 107.25,
+  "time": "11:55 AM",
+  "bar_start": "11:50",
+  "bar_index": 28,
+  "price": 334.01,
+  "level": 334.0,
   "interval": "5m",
   "opening_range": {
-    "high": 107.25,
-    "low": 104.72,
+    "high": 334.0,
+    "low": 326.77,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-27T16:56:21Z",
-  "reason": "the 11:30 bar closed above the range high"
+  "checked_at": "2026-11-27T17:02:22Z",
+  "reason": "the 11:50 bar closed above the range high"
 }

@@ -1,8 +1,27 @@
 {
- "abiertas": {},
+ "abiertas": {
+  "SYK": {
+   "orden_id": "e873d9bf-cff3-4ca8-813e-ad67e5bfc143",
+   "qty": 2,
+   "entrada": 334.685,
+   "stop": 330.38,
+   "target": 341.27,
+   "fecha": "2026-11-27",
+   "hora": "11:58",
+   "max_loss": 8.3,
+   "tm": {
+    "mc_avg_R": 0.112,
+    "p_target": 0.0003,
+    "p_stop": 0.0176,
+    "hist_disparos": 27,
+    "hist_avg_R": 0.268,
+    "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 2 % (target first 0.0 % vs stop first 1.8 %)."
+   }
+  }
+ },
  "hoy": {
   "fecha": "2026-11-27",
-  "entradas": 1,
+  "entradas": 2,
   "pnl": -4.649999999999949,
   "r": -1.0197368421052642,
   "evaluados": {
@@ -27,12 +46,13 @@
    "PLTR": "omitida: señal vieja (55 min)",
    "CAT": "omitida: señal vieja (21 min)",
    "ASTS": "omitida: señal vieja (31 min)",
-   "ORCL": "omitida: señal vieja (21 min)"
+   "ORCL": "omitida: señal vieja (21 min)",
+   "SYK": "COMPRADA"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795798352.990149,
+  "ultimo_scan": 1795798713.013874,
   "sombra": {
    "vistos": [
     "TTWO",
@@ -199,7 +219,18 @@
     "WMT",
     "CDE",
     "BE",
-    "CRWV"
+    "CRWV",
+    "SYK",
+    "AEM",
+    "ADI",
+    "USB",
+    "B",
+    "DHR",
+    "C",
+    "AMD",
+    "INTC",
+    "PG",
+    "XEL"
    ],
    "perdidos": [
     "UL",
@@ -242,7 +273,7 @@
     "SWKS",
     "CHTR"
    ],
-   "ultimo_scan": 1795796014.919658,
+   "ultimo_scan": 1795799017.066783,
    "limitado": 0,
    "errores": 0
   }

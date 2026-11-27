@@ -458,3 +458,4 @@
 {"fecha": "2026-11-27", "hora": "11:52", "simbolo": "CAT", "accion": "omitir", "motivo": "señal vieja (21 min)"}
 {"fecha": "2026-11-27", "hora": "11:52", "simbolo": "ASTS", "accion": "omitir", "motivo": "señal vieja (31 min)"}
 {"fecha": "2026-11-27", "hora": "11:52", "simbolo": "ORCL", "accion": "omitir", "motivo": "señal vieja (21 min)"}
+{"fecha": "2026-11-27", "hora": "11:58", "simbolo": "SYK", "accion": "comprar", "motivo": "todas las skills en verde", "qty": 2, "fill": 334.685, "stop": 330.38, "target": 341.27, "tm": {"mc_avg_R": 0.112, "p_target": 0.0003, "p_stop": 0.0176, "hist_disparos": 27, "hist_avg_R": 0.268, "veredicto": "Strongly toward the stop: at 2R the target has to come first in 33 % of the replays that hit one side; it did in 2 % (target first 0.0 % vs stop first 1.8 %)."}}

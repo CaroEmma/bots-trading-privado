@@ -1,0 +1,31 @@
+{
+  "created_by": "trader-budget",
+  "created_at": "2026-11-27T17:02:23Z",
+  "status": "proposed",
+  "paper": true,
+  "note": "Proposals only. Nothing is placed until trader-risk passes each order and you say yes to it in the chat.",
+  "source": "trader/plan.json (SYK orb 2026-11-27)",
+  "orders": [
+    {
+      "symbol": "SYK",
+      "side": "buy",
+      "qty": "2",
+      "type": "market",
+      "time_in_force": "day",
+      "order_class": "bracket",
+      "take_profit_limit_price": "341.27",
+      "stop_loss_stop_price": "330.38",
+      "why": "opening-range breakout on SYK: 2 shares, bound by your cash after the buffer (2 x 4.15 = $8.30 at the stop)",
+      "plan": {
+        "entry": 334.53,
+        "stop": 330.38,
+        "target": 341.27,
+        "risk_per_share": 4.15,
+        "max_loss": 8.3,
+        "setup": "orb",
+        "entry_time": "11:55 AM",
+        "flat_by": "12:55"
+      }
+    }
+  ]
+}

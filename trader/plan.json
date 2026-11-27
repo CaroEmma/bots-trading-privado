@@ -1,0 +1,28 @@
+{
+  "created_by": "trader-exit",
+  "symbol": "SYK",
+  "side": "buy",
+  "date": "2026-11-27",
+  "setup": "orb",
+  "entry": 334.01,
+  "entry_time": "11:55 AM",
+  "entry_bar": 28,
+  "interval": "5m",
+  "opening_range": {
+    "high": 334.0,
+    "low": 326.77,
+    "minutes": 15
+  },
+  "stop": 330.38,
+  "stop_rule": "or_mid",
+  "stop_label": "opening-range midpoint",
+  "target": 341.27,
+  "target_r": 2.0,
+  "target_label": "2R (two times the risk)",
+  "risk_per_share": 3.63,
+  "reward_risk": 2.0,
+  "flat_by": "12:55",
+  "stop_detail": "($334.00 + $326.77) / 2 = $330.385, rounded down",
+  "created_at": "2026-11-27T17:02:22Z",
+  "note": "A stop is a plan, not a guarantee: a gap or a fast market can fill past it."
+}
