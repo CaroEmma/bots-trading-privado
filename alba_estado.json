@@ -103,7 +103,33 @@
     "ALC",
     "NVO",
     "MDLN",
-    "TME"
+    "TME",
+    "EOG",
+    "AVGO",
+    "XOM",
+    "IBM",
+    "NKE",
+    "NXT",
+    "RGTI",
+    "AXON",
+    "HPQ",
+    "IONQ",
+    "COHR",
+    "ANT",
+    "NXPI",
+    "QCOM",
+    "SNDK",
+    "RIVN",
+    "MA",
+    "META",
+    "EMR",
+    "TXN",
+    "ON",
+    "VRTX",
+    "RKLB",
+    "CVNA",
+    "RBLX",
+    "QBTS"
    ],
    "perdidos": [
     "UL",
@@ -146,7 +172,7 @@
     "SWKS",
     "CHTR"
    ],
-   "ultimo_scan": 1795792291.093463,
+   "ultimo_scan": 1795792953.617948,
    "limitado": 0,
    "errores": 0
   }
