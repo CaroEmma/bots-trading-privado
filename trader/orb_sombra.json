@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-27T17:37:54Z",
+  "created_at": "2026-11-27T17:49:43Z",
   "mode": "orb",
-  "as_of": "2026-11-27 12:37 ET",
+  "as_of": "2026-11-27 12:49 ET",
   "universe": 5922,
-  "scanned": 1286,
+  "scanned": 1270,
   "failed": 0,
-  "unconfirmed": 762,
+  "unconfirmed": 754,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -563,6 +563,19 @@
       "pct_over": 0.01
     },
     {
+      "symbol": "MDLN",
+      "setups": [
+        "orb"
+      ],
+      "price": 41.08,
+      "at": "10:10 AM",
+      "bar_start": "10:05",
+      "bar_index": 7,
+      "or_high": 40.99,
+      "or_low": 40.47,
+      "pct_over": 0.22
+    },
+    {
       "symbol": "NEE",
       "setups": [
         "orb"
@@ -940,19 +953,6 @@
       "pct_over": 0.19
     },
     {
-      "symbol": "UAL",
-      "setups": [
-        "orb"
-      ],
-      "price": 106.49,
-      "at": "10:25 AM",
-      "bar_start": "10:20",
-      "bar_index": 10,
-      "or_high": 106.11,
-      "or_low": 105.0,
-      "pct_over": 0.35
-    },
-    {
       "symbol": "JNJ",
       "setups": [
         "orb"
@@ -1068,6 +1068,19 @@
       "or_high": 205.45,
       "or_low": 197.79,
       "pct_over": 0.12
+    },
+    {
+      "symbol": "SHOP",
+      "setups": [
+        "orb"
+      ],
+      "price": 142.26,
+      "at": "10:40 AM",
+      "bar_start": "10:35",
+      "bar_index": 13,
+      "or_high": 142.16,
+      "or_low": 138.6,
+      "pct_over": 0.07
     },
     {
       "symbol": "SPCX",
@@ -1711,13 +1724,13 @@
       "setups": [
         "orb"
       ],
-      "price": 106.23,
+      "price": 106.21,
       "at": "12:35 PM",
       "bar_start": "12:30",
       "bar_index": 36,
       "or_high": 106.13,
       "or_low": 104.67,
-      "pct_over": 0.09
+      "pct_over": 0.08
     }
   ]
 }
