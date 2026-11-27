@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "AXTI",
+  "symbol": "JNJ",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-27",
   "status": "triggered",
-  "time": "10:45 AM",
-  "bar_start": "10:40",
-  "bar_index": 14,
-  "price": 34.85,
-  "level": 34.85,
+  "time": "10:30 AM",
+  "bar_start": "10:25",
+  "bar_index": 11,
+  "price": 274.85,
+  "level": 274.79,
   "interval": "5m",
   "opening_range": {
-    "high": 34.85,
-    "low": 32.66,
+    "high": 274.79,
+    "low": 272.62,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-27T16:33:37Z",
-  "reason": "the 10:40 bar closed above the range high"
+  "checked_at": "2026-11-27T16:45:38Z",
+  "reason": "the 10:25 bar closed above the range high"
 }

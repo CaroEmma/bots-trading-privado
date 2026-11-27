@@ -15,12 +15,18 @@
    "NEE": "omitida: señal vieja (77 min)",
    "SAP": "omitida: señal vieja (68 min)",
    "WAT": "omitida: señal vieja (53 min)",
-   "AXTI": "omitida: señal vieja (48 min)"
+   "AXTI": "omitida: señal vieja (48 min)",
+   "DIS": "omitida: señal vieja (109 min)",
+   "DVN": "omitida: señal vieja (104 min)",
+   "SBUX": "omitida: señal vieja (89 min)",
+   "EOG": "omitida: señal vieja (90 min)",
+   "RIVN": "omitida: señal vieja (85 min)",
+   "JNJ": "omitida: señal vieja (75 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795796985.859319,
+  "ultimo_scan": 1795797693.678327,
   "sombra": {
    "vistos": [
     "TTWO",
@@ -168,7 +174,16 @@
     "RBRK",
     "NET",
     "ASTS",
-    "SKHY"
+    "SKHY",
+    "MS",
+    "TECK",
+    "ARGX",
+    "ORCL",
+    "GE",
+    "BX",
+    "CMI",
+    "ROK",
+    "MCHP"
    ],
    "perdidos": [
     "UL",
