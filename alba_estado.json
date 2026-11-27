@@ -230,7 +230,8 @@
     "AMD",
     "INTC",
     "PG",
-    "XEL"
+    "XEL",
+    "T"
    ],
    "perdidos": [
     "UL",
@@ -273,7 +274,7 @@
     "SWKS",
     "CHTR"
    ],
-   "ultimo_scan": 1795799017.066783,
+   "ultimo_scan": 1795799720.339444,
    "limitado": 0,
    "errores": 0
   }
