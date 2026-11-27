@@ -159,7 +159,16 @@
     "STM",
     "SPCX",
     "MU",
-    "WULF"
+    "WULF",
+    "AXTI",
+    "TMUS",
+    "MPC",
+    "AAPL",
+    "JPM",
+    "ALAB",
+    "CRDO",
+    "PLTR",
+    "SNOW"
    ],
    "perdidos": [
     "UL",
@@ -202,7 +211,7 @@
     "SWKS",
     "CHTR"
    ],
-   "ultimo_scan": 1795794264.835374,
+   "ultimo_scan": 1795794962.145655,
    "limitado": 0,
    "errores": 0
   }
