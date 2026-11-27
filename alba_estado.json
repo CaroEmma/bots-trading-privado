@@ -9,12 +9,18 @@
    "TTWO": "COMPRADA",
    "ADSK": "omitida: señal vieja (77 min)",
    "MRSH": "omitida: señal vieja (77 min)",
-   "ZM": "omitida: señal vieja (87 min)"
+   "ZM": "omitida: señal vieja (87 min)",
+   "AMZN": "omitida: señal vieja (77 min)",
+   "LIN": "omitida: señal vieja (77 min)",
+   "NEE": "omitida: señal vieja (77 min)",
+   "SAP": "omitida: señal vieja (68 min)",
+   "WAT": "omitida: señal vieja (53 min)",
+   "AXTI": "omitida: señal vieja (48 min)"
   },
   "universo": true,
   "sesion": true,
   "informe": false,
-  "ultimo_scan": 1795796302.780669,
+  "ultimo_scan": 1795796985.859319,
   "sombra": {
    "vistos": [
     "TTWO",
@@ -160,7 +166,9 @@
     "RIOT",
     "AG",
     "RBRK",
-    "NET"
+    "NET",
+    "ASTS",
+    "SKHY"
    ],
    "perdidos": [
     "UL",

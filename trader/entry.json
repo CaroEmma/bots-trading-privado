@@ -1,22 +1,22 @@
 {
   "created_by": "trader-entry",
-  "symbol": "ZM",
+  "symbol": "AXTI",
   "setup": "orb",
   "side": "buy",
   "date": "2026-11-27",
   "status": "triggered",
-  "time": "9:55 AM",
-  "bar_start": "09:50",
-  "bar_index": 4,
-  "price": 91.84,
-  "level": 91.83,
+  "time": "10:45 AM",
+  "bar_start": "10:40",
+  "bar_index": 14,
+  "price": 34.85,
+  "level": 34.85,
   "interval": "5m",
   "opening_range": {
-    "high": 91.83,
-    "low": 88.99,
+    "high": 34.85,
+    "low": 32.66,
     "minutes": 15
   },
   "source": "yahoo",
-  "checked_at": "2026-11-27T16:22:08Z",
-  "reason": "the 9:50 bar closed above the range high"
+  "checked_at": "2026-11-27T16:33:37Z",
+  "reason": "the 10:40 bar closed above the range high"
 }
