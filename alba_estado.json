@@ -168,7 +168,12 @@
     "ALAB",
     "CRDO",
     "PLTR",
-    "SNOW"
+    "SNOW",
+    "MPWR",
+    "BHP",
+    "FTNT",
+    "PGR",
+    "RIOT"
    ],
    "perdidos": [
     "UL",
@@ -211,7 +216,7 @@
     "SWKS",
     "CHTR"
    ],
-   "ultimo_scan": 1795794962.145655,
+   "ultimo_scan": 1795795659.370095,
    "limitado": 0,
    "errores": 0
   }
