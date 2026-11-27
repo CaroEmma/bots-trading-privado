@@ -142,7 +142,24 @@
     "JNJ",
     "GM",
     "RDDT",
-    "PM"
+    "PM",
+    "CVX",
+    "ANET",
+    "WY",
+    "WAT",
+    "GFI",
+    "NOK",
+    "SHOP",
+    "OKTA",
+    "KEYS",
+    "ECHO",
+    "STX",
+    "HPE",
+    "CLS",
+    "STM",
+    "SPCX",
+    "MU",
+    "WULF"
    ],
    "perdidos": [
     "UL",
@@ -185,7 +202,7 @@
     "SWKS",
     "CHTR"
    ],
-   "ultimo_scan": 1795793610.82641,
+   "ultimo_scan": 1795794264.835374,
    "limitado": 0,
    "errores": 0
   }
