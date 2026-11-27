@@ -1,12 +1,12 @@
 {
   "created_by": "trader-scanner",
-  "created_at": "2026-11-27T17:25:58Z",
+  "created_at": "2026-11-27T17:37:54Z",
   "mode": "orb",
-  "as_of": "2026-11-27 12:25 ET",
+  "as_of": "2026-11-27 12:37 ET",
   "universe": 5922,
-  "scanned": 1321,
+  "scanned": 1286,
   "failed": 0,
-  "unconfirmed": 773,
+  "unconfirmed": 762,
   "source": "yahoo",
   "or_minutes": 15,
   "interval": "5m",
@@ -420,19 +420,6 @@
       "pct_over": 0.04
     },
     {
-      "symbol": "ZM",
-      "setups": [
-        "orb"
-      ],
-      "price": 91.84,
-      "at": "9:55 AM",
-      "bar_start": "09:50",
-      "bar_index": 4,
-      "or_high": 91.83,
-      "or_low": 88.99,
-      "pct_over": 0.01
-    },
-    {
       "symbol": "ZS",
       "setups": [
         "orb"
@@ -823,19 +810,6 @@
       "pct_over": 0.06
     },
     {
-      "symbol": "ON",
-      "setups": [
-        "orb"
-      ],
-      "price": 64.45,
-      "at": "10:20 AM",
-      "bar_start": "10:15",
-      "bar_index": 9,
-      "or_high": 64.31,
-      "or_low": 62.62,
-      "pct_over": 0.23
-    },
-    {
       "symbol": "RBLX",
       "setups": [
         "orb"
@@ -1018,19 +992,6 @@
       "pct_over": 0.1
     },
     {
-      "symbol": "OXY",
-      "setups": [
-        "orb"
-      ],
-      "price": 54.63,
-      "at": "10:35 AM",
-      "bar_start": "10:30",
-      "bar_index": 12,
-      "or_high": 54.62,
-      "or_low": 54.27,
-      "pct_over": 0.02
-    },
-    {
       "symbol": "CLS",
       "setups": [
         "orb"
@@ -1109,19 +1070,6 @@
       "pct_over": 0.12
     },
     {
-      "symbol": "SHOP",
-      "setups": [
-        "orb"
-      ],
-      "price": 142.26,
-      "at": "10:40 AM",
-      "bar_start": "10:35",
-      "bar_index": 13,
-      "or_high": 142.16,
-      "or_low": 138.6,
-      "pct_over": 0.07
-    },
-    {
       "symbol": "SPCX",
       "setups": [
         "orb"
@@ -1198,6 +1146,19 @@
       "or_high": 200.0,
       "or_low": 189.85,
       "pct_over": 0.22
+    },
+    {
+      "symbol": "AXTI",
+      "setups": [
+        "orb"
+      ],
+      "price": 34.85,
+      "at": "10:45 AM",
+      "bar_start": "10:40",
+      "bar_index": 14,
+      "or_high": 34.85,
+      "or_low": 32.66,
+      "pct_over": 0.01
     },
     {
       "symbol": "CRDO",
@@ -1744,6 +1705,19 @@
       "or_high": 283.19,
       "or_low": 281.0,
       "pct_over": 0.01
+    },
+    {
+      "symbol": "NEM",
+      "setups": [
+        "orb"
+      ],
+      "price": 106.23,
+      "at": "12:35 PM",
+      "bar_start": "12:30",
+      "bar_index": 36,
+      "or_high": 106.13,
+      "or_low": 104.67,
+      "pct_over": 0.09
     }
   ]
 }
