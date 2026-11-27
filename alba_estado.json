@@ -129,7 +129,20 @@
     "RKLB",
     "CVNA",
     "RBLX",
-    "QBTS"
+    "QBTS",
+    "SAP",
+    "XYZ",
+    "ABNB",
+    "EL",
+    "TSLA",
+    "F",
+    "SN",
+    "UAL",
+    "SUNB",
+    "JNJ",
+    "GM",
+    "RDDT",
+    "PM"
    ],
    "perdidos": [
     "UL",
@@ -172,7 +185,7 @@
     "SWKS",
     "CHTR"
    ],
-   "ultimo_scan": 1795792953.617948,
+   "ultimo_scan": 1795793610.82641,
    "limitado": 0,
    "errores": 0
   }
